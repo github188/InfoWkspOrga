@@ -142,12 +142,6 @@
 		"version": "3.51.0-2014.06.20",
 		"lastChecked": "2016-03-09"
 	}, {
-		"name": "Select2",
-		"url": "http://ivaynberg.github.com/select2/index.html",
-		"sources": "https://github.com/fabdouglas/select2",
-		"version": "3.5.4+#1873+#4193",
-		"lastChecked": "2016-04-15"
-	}, {
 		"name": "DataTables",
 		"url": "http://legacy.datatables.net/ref",
 		"sources": "https://github.com/DataTables/DataTables",
