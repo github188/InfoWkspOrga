@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <!-- sends logs to logback-beagle eclipse plugin -->
+  <!-- Remove it in production environment         -->
+  <consolePlugin />
+
+  <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+    <layout class="ch.qos.logback.classic.PatternLayout">
+      <Pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} | [%-5level] %logger{35}.%M - %msg%n</Pattern>
+    </layout>
+  </appender>
+
+  <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>G:/temp/logs/infowksporga/infowksporga-biz.log</file>
+    <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      <!-- daily rollover -->
+      <fileNamePattern>infowksporga-biz.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+      <!-- keep 30 days' worth of history -->
+      <maxHistory>30</maxHistory>
+    </rollingPolicy>
+
+    <encoder>
+      <pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} | [%-5level] %logger{35}.%M - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="org.springframework.jdbc.datasource" level="INFO" additivity="false">
+   <appender-ref ref="console" />
+    <appender-ref ref="FILE" />
+  </logger>
+  
+  <logger name="org.hibernate" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+  <logger name="org.hibernate.SQL" level="WARN" additivity="false" >
+   <appender-ref ref="console" />
+  </logger>
+  <logger name="org.hibernate.type" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+  <logger name="org.hibernate.hql.ast.AST" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+  <logger name="org.hibernate.tool.hbm2ddl" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+  <logger name="org.hibernate.hql" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+  <logger name="org.hibernate.cache" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+   <logger name="org.hibernate.jdbc" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+
+
+  
+  <logger name="org.springframework" level="DEBUG" additivity="false">
+   <appender-ref ref="console" />
+  </logger>
+  
+  
+ 
+  <logger name="com.sgu" level="WARN" additivity="false">
+   <appender-ref ref="console" />
+    <appender-ref ref="FILE" />
+  </logger>
+  
+
+  <root level="INFO">
+    <appender-ref ref="console" />
+    <appender-ref ref="FILE" />
+  </root>
+</configuration>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.5" icons="true">  
+  <object id="1" language="java" name="com.sgu.projectmanager.jws.ProjectManagerFrame" project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/ProjectManagerFrame.java" binary="false" 
+    label="projectManagerFrame" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="47" y="0"/>  
+  </object>  
+  <object id="2" language="java" name="com.sgu.projectmanager.jws.facade.external.FrameInitializerFacade" 
+    project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/facade/external/FrameInitializerFacade.java" 
+    binary="false" label="frameInitializerFacade" type="class" autoSize="true">    
+    <position height="-1" width="-1" x="195" y="0"/>  
+  </object>
+</sequence-diagram>

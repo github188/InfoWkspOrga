@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- configurationDate="2015/10/26 21:32:52" -->
+<xmlPerspective id="2" name="perspective.gfi.name" icon="/icons/customer/GFI.png" description="perspective.gfi.description" owner="admin" order="1" enabled="true" partage="PUBLIC">
+    <!-- This Template is used to initialized main base node just under the Root Node "Classeur" it's checked at webapp startup -->
+    <!-- +++++++++ -->
+    <!-- Root Node -->
+    <!-- +++++++++ -->
+    <xmlWorkspace id="1" name="perspective.tree.node.root" icon="/icons/workspace.png" description="perspective.tree.node.root.description" owner="admin" order="1" enabled="true" partage="PUBLIC" childrenWrkspCreationEnabled="true">
+        <!-- Directory contains help to configure & use Application -->
+        <xmlWorkspace id="2" name="perspective.tree.node.help" icon="/icons/help.png" description="perspective.tree.node.help.description" owner="admin" order="1" enabled="true" partage="PUBLIC"  childrenWrkspCreationEnabled="true"/>
+       
+        <!-- ${User} is replaced by current user login -->
+        <xmlWorkspace id="${User}" name="${User}" description="perspective.tree.node.user.tooltip" tags="current-user, moi" type="USER" enabled="true" owner="${User}" icon="/icons/user.png" bold="true" color="rgb(0, 0, 255)" order="2" childrenWrkspCreationEnabled="true" italic="true" category="USER" partage="PRIVATE">
+            <xmlWorkspace id="8" name="Perso" description="Pas touche" tags="current-user, moi, perso" type="USER" enabled="true" owner="${User}" icon="/icons/user.png" bold="false" color="rgb(0, 0, 0)" order="2" childrenWrkspCreationEnabled="true" italic="false" category="USER" partage="PRIVATE" />
+            <xmlWorkspace id="9" name="Outils" description="" tags="current-user, moi, perso, outils" type="TOOLS" enabled="true" owner="${User}" icon="/icons/toolbox.png" bold="false" color="rgb(0, 0, 0)" order="2" childrenWrkspCreationEnabled="true" italic="false" category="TOOLS" partage="PRIVATE">
+                <xmlWorkspace id="10" name="Outils-Web" description="" tags="current-user, moi, perso, outils, web" type="USER" enabled="true" owner="${User}" icon="/icons/tools-web.png" bold="false" color="rgb(0, 0, 0)" order="2" childrenWrkspCreationEnabled="true" italic="false" category="TOOLS" partage="PRIVATE" />
+            </xmlWorkspace>
+        </xmlWorkspace>
+       
+        <xmlWorkspace id="3" name="perspective.tree.node.documentation" icon="/icons/books.png" owner="${User}" order="1" enabled="true" partage="PUBLIC" childrenWrkspCreationEnabled="true">
+            <xmlWorkspace id="4" name="Java" icon="/icons/java.png" owner="${User}" order="1" enabled="true" partage="PUBLIC" childrenWrkspCreationEnabled="true" />
+            <xmlWorkspace id="5" name="Javascript" icon="/icons/javascript.png" owner="${User}" order="1" enabled="true" partage="PUBLIC" childrenWrkspCreationEnabled="true"/>
+            <xmlWorkspace id="6" name="CSS" icon="/icons/css.png" owner="${User}" order="1" enabled="true" partage="PUBLIC" childrenWrkspCreationEnabled="true"/>
+            <xmlWorkspace id="7" name="perspective.tree.node.documentation.regex" icon="/icons/regex.png" owner="${User}" order="1" enabled="true" partage="PUBLIC" childrenWrkspCreationEnabled="true"/>
+        </xmlWorkspace>
+       
+        <!-- use to organize Gfi workspaces plaquettes, information sur l'entreprise, modéle de document, etc... -->
+        <xmlWorkspace id="11" name="Gfi Informatique" tags="Gfi" type="ENTREPRISE" enabled="true" owner="admin" icon="/icons/customer/GFI.png" bold="true" color="rgb(247,148,29)" order="3" childrenWrkspCreationEnabled="true" category="Default" partage="PUBLIC">
+            <!-- use to organize enterprise WorkBook, La paye, la gestion RH, etc... -->
+            <xmlWorkspace  id="4" name="Classeurs - RH" tags="RH" type="GESTION" enabled="true" owner="admin" icon="/icons/Address-book.png" bold="false" color="rgb(0, 0, 0)" order="4" childrenWrkspCreationEnabled="true" category="Default" partage="PUBLIC" />
+            <xmlWorkspace  id="4" name="perspective.tree.node.project.template" tags="Master, Template" type="TEMPLATE" enabled="true" owner="admin" icon="/icons/template.png" bold="true" color="rgb(0, 0, 0)" order="4" childrenWrkspCreationEnabled="false" category="Default" partage="PUBLIC" />
+            
+            <!-- use to organize Projects -->
+            <xmlWorkspace id="12" name="perspective.tree.node.project" tags="init,Project" type="PROJECT" enabled="true" owner="admin" icon="/icons/project.png" bold="true" color="rgb(0, 0, 0)" order="5" childrenWrkspCreationEnabled="true" category="Default" partage="PUBLIC">
+                <xmlWorkspace id="13" name="SNCF - CDSSP" tags="SNCF,Project" type="PROJECT" description="L'objectif du projet et de faciliter la prise en charge des demandes du client tout en respectant le SLA défini au contrat" enabled="true" owner="admin" icon="/icons/customer/SNCF.png" bold="true" color="rgb(0, 0, 0)" order="5" childrenWrkspCreationEnabled="true" category="Default" partage="PUBLIC" />
+                <xmlWorkspace id="14" name="SNCF - CARS/CROSS" tags="SNCF,Project" type="PROJECT" description="L'objectif du projet et de faciliter la prise en charge des demandes du client tout en respectant le SLA défini au contrat" enabled="true" owner="admin" icon="/icons/customer/SNCF.png" bold="true" color="rgb(0, 0, 0)" order="5" childrenWrkspCreationEnabled="true" category="Default" partage="PUBLIC" />
+            </xmlWorkspace>
+            
+            <!-- use to organize TMA -->
+            <xmlWorkspace id="15" name="perspective.tree.node.tma" tags="init,TMA" type="TMA" enabled="true" owner="admin" icon="/icons/tma.png" bold="true" color="rgb(0, 0, 0)" order="6" childrenWrkspCreationEnabled="true" customer="BNPP" category="Default" partage="PUBLIC" masterId="5" projectId="1">
+                <!-- A definir dans les paramètres de config du workspace <preference name="BNPP_PROJECT_DIRECTORY" version="LAST" <preference name="GENERAL" 
+					version="LAST" -->
+            </xmlWorkspace>
+        </xmlWorkspace>
+    </xmlWorkspace>
+</xmlPerspective>

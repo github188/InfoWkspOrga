@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<title>Complex Layout Demo</title>
+
+	<!-- DEMO styles - specific to this page -->
+	<link rel="stylesheet" type="text/css" href="./complex.css" />
+	<!--[if lte IE 7]>
+		<style type="text/css"> body { font-size: 85%; } </style>
+	<![endif]-->
+
+	<script type="text/javascript" src="../../../jquery/jquery.js"></script>
+	<script type="text/javascript" src="../../../jquery-ui/jquery-ui.js"></script>
+	<script type="text/javascript" src="../jquery.layout.js"></script>
+
+<script type="text/javascript">
+/*
+ * complex.html
+ *
+ * This is a demonstration page for the jQuery layout widget
+ *
+ *	NOTE: For best code readability, view this with a fixed-space font and tabs equal to 4-chars
+ */
+
+	var outerLayout;
+
+	/*
+	*#######################
+	*     ON PAGE LOAD
+	*#######################
+	*/
+	$(document).ready( function() {
+		// create the OUTER LAYOUT
+		outerLayout = $("body").layout( layoutSettings_Outer );
+
+		/*******************************
+		 ***  CUSTOM LAYOUT BUTTONS  ***
+		 *******************************
+		 *
+		 * Add SPANs to the east/west panes for customer "close" and "pin" buttons
+		 *
+		 * COULD have hard-coded span, div, button, image, or any element to use as a 'button'...
+		 * ... but instead am adding SPANs via script - THEN attaching the layout-events to them
+		 *
+		 * CSS will size and position the spans, as well as set the background-images
+		 */
+
+		// save selector strings to vars so we don't have to repeat it
+		// must prefix paneClass with "body > " to target ONLY the outerLayout panes
+		var westSelector = " .ui-layout-west"; // outer-west pane
+
+		 // CREATE SPANs for pin-buttons - using a generic class as identifiers
+		$("<span></span>").addClass("pin-button").prependTo( westSelector );
+		// BIND events to pin-buttons to make them functional
+		outerLayout.addPinBtn( westSelector +" .pin-button", "west");
+
+		 // CREATE SPANs for close-buttons - using unique IDs as identifiers
+		$("<span></span>").attr("id", "west-closer" ).prependTo( westSelector );
+		// BIND layout events to close-buttons to make them functional
+		outerLayout.addCloseBtn("#west-closer", "west");
+
+
+	});
+
+
+	/*
+	*###########################
+	* Planning LAYOUT SETTINGS
+	*###########################
+	*
+	* This configuration illustrates how extensively the layout can be customized
+	* ALL SETTINGS ARE OPTIONAL - and there are more available than shown below
+	*
+	* These settings are set in 'sub-key format' - ALL data must be in a nested data-structures
+	* All default settings (applied to all panes) go inside the defaults:{} key
+	* Pane-specific settings go inside their keys: north:{}, south:{}, center:{}, etc
+	*/
+	var layoutSettings_Outer = {
+		name: "outerLayout" // NO FUNCTIONAL USE, but could be used by custom code to 'identify' a layout
+		// options.defaults apply to ALL PANES - but overridden by pane-specific settings
+	,	defaults: {
+			size:					"auto"
+		,	minSize:				50
+		,	paneClass:				"pane" 		// default = 'ui-layout-pane'
+		,	resizerClass:			"resizer"	// default = 'ui-layout-resizer'
+		,	togglerClass:			"toggler"	// default = 'ui-layout-toggler'
+		,	buttonClass:			"button"	// default = 'ui-layout-button'
+		,	contentSelector:		".content"	// inner div to auto-size so only it scrolls, not the entire pane!
+		,	contentIgnoreSelector:	"span"		// 'paneSelector' for content to 'ignore' when measuring room for content
+		,	togglerLength_open:		35			// WIDTH of toggler on north/south edges - HEIGHT on east/west edges
+		,	togglerLength_closed:	35			// "100%" OR -1 = full height
+		,	hideTogglerOnSlide:		true		// hide the toggler when pane is 'slid open'
+		,	togglerTip_open:		"Close This Pane"
+		,	togglerTip_closed:		"Open This Pane"
+		,	resizerTip:				"Resize This Pane"
+		//	effect defaults - overridden on some panes
+		,	fxName:					"slide"		// none, slide, drop, scale
+		,	fxSpeed_open:			750
+		,	fxSpeed_close:			1500
+		,	fxSettings_open:		{ easing: "easeInQuint" }
+		,	fxSettings_close:		{ easing: "easeOutQuint" }
+	}
+	
+	,	west: {
+			size:					400
+		,	spacing_closed:			21			// wider space when closed
+		,	togglerLength_closed:	21			// make toggler 'square' - 21x21
+		,	togglerAlign_closed:	"top"		// align to top of resizer
+		,	togglerLength_open:		0			// NONE - using custom togglers INSIDE west-pane
+		,	togglerTip_open:		"Close West Pane"
+		,	togglerTip_closed:		"Open West Pane"
+		,	resizerTip_open:		"Resize West Pane"
+		,	slideTrigger_open:		"click" 	// default
+		,	initClosed:				false
+		//	add 'bounce' option to default 'slide' effect
+		,	fxName:					"drop" // none, slide, drop, scale
+		,	fxSpeed:				"normal"
+		,	fxSettings_open:		{ easing: "easeInQuint" }
+		,	fxSettings_close:		{ easing: "easeOutQuint" }
+		}
+	
+	,	center: {
+	  size:					250
+		,	spacing_closed:			21			// wider space when closed
+		,	togglerLength_closed:	21			// make toggler 'square' - 21x21
+		,	togglerAlign_closed:	"top"		// align to top of resizer
+		,	togglerLength_open:		0 			// NONE - using custom togglers INSIDE east-pane
+		,	togglerTip_open:		"Close East Pane"
+		,	togglerTip_closed:		"Open East Pane"
+		,	resizerTip_open:		"Resize East Pane"
+		,	slideTrigger_open:		"click"
+		,	initClosed:				true
+		//	override default effect, speed, and settings
+		,	fxName:					"drop"
+		,	fxSpeed:				"normal"
+		,	fxSettings:				{ easing: "" } // nullify default easing
+		}
+	};
+
+</script>
+
+</head>
+<body>
+
+<div class="ui-layout-west">
+
+	<div class="header">Outer - West</div>
+
+	<div class="content">
+		<h3><b>Outer Layout</b></h3>
+		
+	</div>
+
+	<div class="footer">Automatically positioned footer</div>
+
+</div>
+
+
+	<div class="pane ui-layout-center">
+		<h3 class="header">Inner - Center</h3>
+		<div class="content">
+		<h3><b>Outer Layout</b></h3>
+		
+		<p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+			<p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+			<p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+			<p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p><p>...</p>
+		
+	</div>
+		
+		<div class="footer">Center panes can have headers &amp; footers too</div>
+	</div>
+
+	
+		
+
+
+
+
+</body>
+</html> 

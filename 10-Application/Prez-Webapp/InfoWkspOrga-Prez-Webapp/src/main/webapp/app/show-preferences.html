@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Tool</title>
+<link rel="icon" type="image/png" href="images/app.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+
+<link id="pageTheme" rel="stylesheet" type="text/css"	href="../lib/jquery-easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="../lib/jquery-easyui/themes/icon.css">
+<link rel="stylesheet" type="text/css"	href="../lib/jquery-easyui/themes/color.css">
+
+<link rel="stylesheet" type="text/css"
+	href="../app/windows/preferences/preferences.css">
+
+<script src="../lib/utilApp.js">
+	
+</script>
+
+<script>
+	var theme = getURLParameter("theme");
+	if (theme != null) {
+    var link = document.getElementsByTagName("link")[1];
+    link.setAttribute('href', '../lib/jquery-easyui/themes/' + theme + '/easyui.css');
+	}
+</script>
+
+
+<script data-main="windows/preferences/main" src="../lib/requirejs/require.js">
+	//main.js est chargé automatiquement grâce à l'attribut data-main dans la balise script de require.js
+</script>
+
+</head>
+
+<body>
+
+
+
+	<div id="screen" class="" data-options="fit:true">
+			
+	</div>
+
+</body>
+
+</html>

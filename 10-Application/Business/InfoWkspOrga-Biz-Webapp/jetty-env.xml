@@ -1,0 +1,28 @@
+ <!-- jetty-env.xml is an optional Jetty file that configures JNDI resources for an individual webapp.
+  The format of jetty-env.xml is the same as jetty.xml –it is an XML mapping of the Jetty API.
+  http://www.eclipse.org/jetty/documentation/current/jetty-env-xml.html
+
+
+  <?xml version="1.0"?>
+  <!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+-->
+
+
+ <Configure class="org.eclipse.jetty.webapp.WebAppContext">
+
+   <!-- =============================================================== -->
+   <!-- Configure the datasource -->
+   <!-- =============================================================== -->
+   <New id="infowksporga-datasource" class="org.eclipse.jetty.plus.jndi.Resource">
+     <Arg>jdbc/PMG_Datasource</Arg>
+     <Arg>
+         <New class="org.apache.commons.dbcp.BasicDataSource">
+            <Set name="driverClassName">com.mysql.jdbc.Driver</Set>
+            <Set name="url">jdbc:mysql://localhost:3306/infowksporga</Set>
+            <Set name="username">root</Set>
+            <Set name="password">Jnspqm.1</Set>
+         </New>
+     </Arg>
+   </New>
+
+ </Configure>

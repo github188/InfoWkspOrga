@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SNCF - CDS-SP - Centralisation et priorisation des demandes</title>
+<link rel="icon" type="image/png" href="images/customer/SNCF.png" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#3F51B5">
+<meta charset="utf-8" />
+
+
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/themes/aristo/theme.css" />
+
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/layout/ultima/css/nanoscroller.css" />
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/layout/ultima/css/animate.css" />
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/layout/ultima/css/ripple.css" />
+
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/layout/ultima/css/primefaces-ultima-indigo.css" />
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/layout/ultima/css/layout-indigo.css" />
+
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/plugins/jquery-ui.css" />
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/plugins/perfect-scrollbar.css" />
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/build/primeui.css" />
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/dist/layout/ultima/fa/font-awesome.css" />
+
+<link type="text/css" rel="stylesheet" href="sncf/cds-sp/pilotConsole.css" />
+
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/jquery/jquery.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/jquery/jquery-ui-plugins.js"></script>
+
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/js/nanoscroller.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/js/ripple.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/js/swipe.js"></script>
+
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/js/core.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/layout/ultima/js/layout.js"></script>
+
+<!-- Dependencies of some widgets -->
+<script type="text/javascript" src="../lib/prime-ui/dist/plugins/plugins-all.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/plugins/mustache.min.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/plugins/perfect-scrollbar.js"></script>
+
+<!-- X-TAG for PrimeElements -->
+<script type="text/javascript" src="../lib/prime-ui/dist/plugins/x-tag-core.min.js"></script>
+
+<!-- PrimeUI -->
+<script type="text/javascript" src="../lib/prime-ui/dist/build/primeui.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/dist/build/primeelements.js"></script>
+
+
+
+
+
+
+<script src="../lib/utilApp.js">
+	
+</script>
+
+
+
+
+<!--  script data-main="sncf/cds-sp/main" src="../lib/requirejs/require.js">
+	//main.js est chargé automatiquement grâce à l'attribut data-main dans la balise script de require.js
+</script>
+ -->
+
+
+</head>
+
+<body class="main-body layout-compact">
+
+    <div class="layout-wrapper menu-layout-static">
+
+        <div class="topbar clearfix">
+            <div class="topbar-left">
+                <div class="logo">
+
+                    <span class="logo-gfi"><span class="bu-gfi">CDSSP</span> </span>
+
+
+                </div>
+            </div>
+
+            <div class="topbar-right">
+                <a id="menu-button" href="#"> <i></i>
+                </a> <a id="topbar-menu-button" href="#"> <i class="material-icons">menu</i>
+                </a>
+
+                <div class="app-title">Gestion des Demandes</div>
+
+                <ul class="topbar-items fadeInDown animated">
+
+                    <li><a href="#"> <i class="topbar-icon material-icons animated swing">settings</i> <span class=""></span> <span
+                            class="topbar-item-name">Configuration</span>
+                    </a>
+                        <ul class="ultima-menu animated">
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">menu</i><span>Static
+                                        Menu</span></a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">exit_to_app</i><span>Overlay
+                                        Menu</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">border_horizontal</i><span>Horizontal
+                                        Menu</span></a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">contacts</i><span>Inline
+                                        Profile</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">person_pin</i><span>Top
+                                        Profile</span> </a></li>
+                        </ul></li>
+
+
+                    <li><a href="#"> <i class="topbar-icon material-icons animated swing"></i> <span
+                            class="topbar-badge animated rubberBand">5</span> <span class="topbar-item-name">Messages</span>
+                    </a>
+                        <ul class="ultima-menu animated">
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">alarm</i> <span>ARS
+                                        - 5612</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">help</i> <span>MAIA
+                                        - 2312</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">feedback</i> <span>ARS
+                                        - 9612</span></a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">lock</i> <span>CARS
+                                        - 6362</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">phone</i> <span>01
+                                        25 26 32 12</span> </a></li>
+                        </ul></li>
+
+
+                    <li><a href="#"> <i class="topbar-icon material-icons"></i> <span class="topbar-badge animated rubberBand">4</span>
+                            <span class="topbar-item-name">Demandes à qualifier</span>
+                    </a></li>
+
+                </ul>
+
+
+            </div>
+        </div>
+        <form id="menuform" name="menuform" method="post" action="/ultima/dashboard.xhtml" enctype="application/x-www-form-urlencoded">
+            <input type="hidden" name="menuform" value="menuform" />
+
+            <div class="layout-menu ">
+                <div class="nano">
+                    <div class="nano-content menu-scroll-content">
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#"> <span class="profile-name">Sébastien Guisse</span> <i
+                                class="material-icons"></i>
+                            </a>
+                        </div>
+
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">person</i> <span>Profile</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">security</i> <span>Privacy</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">settings_application</i>
+                                    <span>Settings</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">power_settings_new</i> <span>Logout</span>
+                            </a></li>
+                        </ul>
+                        <ul id="menuform:main_menu" class="ultima-menu clearfix">
+
+                            <li id="menuform:um_console" class="active-menuitem" role="menuitem"><a href="#" class="ripplelink"><i
+                                    class="material-icons">bug_report</i><span>Console</span></a></li>
+
+                            <li id="menuform:um_dashboard" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Dashboard</span></a></li>
+
+                            <li id="menuform:um_so_planning" role="menuitem"><a href="#" class="ripplelink"><i
+                                    class="material-icons">map</i><span>Planning</span></a></li>
+
+                            <li id="menuform:um_skills" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">lightbulb_outline</i><span>Catalogue
+                                        de Services</span></a></li>
+
+                            <li id="menuform:um_matrics" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">grid_on</i><span>Matrice
+                                        des compétences</span></a></li>
+
+                            <li id="menuform:um_utils" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">build</i><span>Utils</span></a></li>
+
+                            <li id="menuform:um_reports" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">description</i><span>Reports</span><span
+                                    class="ink animate"></span><i class="material-icons">&#xE313;</i></a>
+                                <ul role="menu">
+                                    <li id="menuform:um_reports_01" role="menuitem"><a href="#" class="ripplelink"><i
+                                            class="material-icons">assessment</i><span>Report 01</span></a></li>
+                                    <li id="menuform:um_reports_02" role="menuitem"><a href="#" class="ripplelink"><i
+                                            class="material-icons">input</i><span>Report 02</span></a></li>
+                                    <li id="menuform:um_reports_03" role="menuitem"><a href="#" class="ripplelink"><i
+                                            class="material-icons">grid_on</i><span>Report 03</span></a></li>
+                                </ul></li>
+
+                            <li id="menuform:um_doc" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">find_in_page</i><span>Documentation</span></a></li>
+                        </ul>
+
+                        <script id="menuform:main_menu_s" type="text/javascript">
+																									PrimeFaces.cw("Ultima", "me", {
+	                                                  id : "menuform:main_menu"
+                                                  });
+																								</script>
+
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+        <div class="layout-main">
+            <div class="ui-g dashboard">
+
+                <div class="ui-g-12 ui-md-8 ui-fluid">
+                    <div data-widget="widget_j_idt43" class="ui-panel ui-widget ui-widget-content ui-corner-all" id="j_idt43">
+                        <div class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all" id="j_idt43_header">
+                            <span class="ui-panel-title">Les demandes</span>
+                        </div>
+                        <div class="ui-panel-content ui-widget-content" id="j_idt43_content">
+
+
+
+
+                            <div id="tabView">
+                                <ul>
+                                    <li><a href="#tab1">A Qualifier (4)</a></li>
+                                    <li><a href="#tab2">En cours (16)</a></li>
+                                    <li><a href="#tab3">Traitées (21)</a></li>
+                                </ul>
+                                <div>
+
+
+
+                                    <div id="tab1" class="ui-datatable ui-widget ui-datatable-reflow">
+                                        <div class="ui-datatable-header ui-widget-header ui-corner-top" style="background-color: #F39200;">Nouvelles
+                                            - A qualifier</div>
+                                        <input id="globalFilterTab1" placeholder="Global Filter" size="30" style="margin: 5px 5px 5px 5px;"></input>
+                                        <div id="tableToQualify">
+                                            <script type="text/javascript">
+                                            var localData = [
+                                                             {'status': 'A qualifier', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows', 
+                                                            	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                            	 {'status': 'A qualifier', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows', 
+                                                              	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                              	 {'status': 'A qualifier', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows', 
+                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                                	 
+                                                            	 {'status': 'A qualifier', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows', 
+                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'}
+                                                             
+                                                         ];
+                                                      
+                                                         $('#tableToQualify').puidatatable({
+                                                             responsive: true,
+                                                             sortMode: 'multiple',
+                                                             globalFilter:'#globalFilterTab1',
+                                                             columns: [
+                                                                 {field: 'status', headerText: 'Statut', sortable: true},
+                                                                 {field: 'dueDate', headerText: 'Due Date', sortable: true, filter: true},
+                                                                 {field: 'tpsRestantBrut', headerText: 'Tps rest. brut', sortable: true, filter: true},
+                                                                 {field: 'tpsRestantUtil', headerText: 'Tps rest. util', sortable: true, filter: true},
+                                                                 {field: 'tpstraitement', headerText: 'Tps trt.', sortable: true},
+                                                                 {field: 'domaine', headerText: 'Domaine', sortable: true},
+                                                                 {field: 'competence', headerText: 'Compétence', sortable: true},
+                                                                 {field: 'id', headerText: 'Identifiant', sortable: true},
+                                                                 {field: 'label', headerText: 'Libellé / Résumé', sortable: true},
+                                                                 {field: 'assignedTo', headerText: 'Assigné à', sortable: true},
+                                                                 {field: 'urgency', headerText: 'Urgence', sortable: true, filter: true}
+                                                             ],
+                                                             datasource: localData,
+                                                             selectionMode: 'single',
+                                                             rowSelect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Selected', detail: (data.id + ' ' + data.status)}]);
+                                                             },
+                                                             rowUnselect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Unselected', detail: (data.id + ' ' + data.status)}]);
+                                                             }
+                                                         });
+                                                         
+																						</script>
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div id="tab2" class="ui-datatable ui-widget ui-datatable-reflow">
+                                        <div class="ui-datatable-header ui-widget-header ui-corner-top">En cours de traitement</div>
+                                        <input id="globalFilterTab2" placeholder="Global Filter" size="30" style="margin: 5px 5px 5px 5px;"></input>
+                                        <div id="tablesStarted">
+                                            <script type="text/javascript">
+                                            var localData = [
+{'status': 'To Treat', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Pending', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Blocked', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+{'status': 'Wait Response', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+{'status': 'To Treat', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Pending', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Blocked', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+{'status': 'Wait Response', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+{'status': 'To Treat', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Pending', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Blocked', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+{'status': 'Wait Response', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+{'status': 'To Treat', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Pending', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+{'status': 'Blocked', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'}
+                                                                                        
+                                                         ];
+                                                      
+                                                         $('#tablesStarted').puidatatable({
+                                                             responsive: true,
+                                                             sortMode: 'multiple',
+                                                             globalFilter:'#globalFilterTab2',
+                                                             columns: [
+                                                                 {field: 'status', headerText: 'Statut', sortable: true},
+                                                                 {field: 'dueDate', headerText: 'Due Date', sortable: true, filter: true},
+                                                                 {field: 'tpsRestantBrut', headerText: 'Tps rest. brut', sortable: true, filter: true},
+                                                                 {field: 'tpsRestantUtil', headerText: 'Tps rest. util', sortable: true, filter: true},
+                                                                 {field: 'tpstraitement', headerText: 'Tps trt.', sortable: true},
+                                                                 {field: 'domaine', headerText: 'Domaine', sortable: true},
+                                                                 {field: 'competence', headerText: 'Compétence', sortable: true},
+                                                                 {field: 'id', headerText: 'Identifiant', sortable: true},
+                                                                 {field: 'label', headerText: 'Libellé / Résumé', sortable: true},
+                                                                 {field: 'assignedTo', headerText: 'Assigné à', sortable: true},
+                                                                 {field: 'urgency', headerText: 'Urgence', sortable: true, filter: true}
+                                                             ],
+                                                             datasource: localData,
+                                                             selectionMode: 'single',
+                                                             rowSelect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Selected', detail: (data.id + ' ' + data.status)}]);
+                                                             },
+                                                             rowUnselect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Unselected', detail: (data.id + ' ' + data.status)}]);
+                                                             }
+                                                         });
+                                                         
+																						</script>
+
+
+                                        </div>
+                                    </div>
+
+
+                                    <div id="tab3" class="ui-datatable ui-widget ui-datatable-reflow">
+                                        <div class="ui-datatable-header ui-widget-header ui-corner-top" style="background-color: #85ab2e;">Traitées - En
+											attente de clôture client</div>
+                                        <input id="globalFilterTab3" placeholder="Global Filter" size="30" style="margin: 5px 5px 5px 5px;"></input>
+                                        <div id="tableTreated">
+                                            <script type="text/javascript">
+                                            var localData = [
+                                                             {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                              	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                              	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                              	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                              	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Voyageurs', 'competence': 'Windows',                                                        	 'id': 'ARS-24637', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Trains', 'competence': 'Windows',                                                               	 'id': 'ARS-24639', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Non'},
+                                                              	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'Agence', 'competence': 'Windows',                                                                	 'id': 'ARS-24638', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'},
+                                                            	 {'status': 'Treated', 'dueDate': '01/01/2017', 'tpsRestantBrut': '01h20', 'tpsRestantUtil': '01h20', 'tpstraitement': '00h00', 'domaine': 'TGV', 'competence': 'Windows',                                                              	 'id': 'ARS-24633', 'label': 'Résumé de la demande', 'assignedTo': '', 'urgency': 'Oui'}
+                                                             
+                                                         ];
+                                                      
+                                                         $('#tableTreated').puidatatable({
+                                                             responsive: true,
+                                                             sortMode: 'multiple',
+                                                             globalFilter:'#globalFilterTab3',
+                                                             columns: [
+                                                                 {field: 'status', headerText: 'Statut', sortable: true},
+                                                                 {field: 'dueDate', headerText: 'Due Date', sortable: true, filter: true},
+                                                                 {field: 'tpsRestantBrut', headerText: 'Tps rest. brut', sortable: true, filter: true},
+                                                                 {field: 'tpsRestantUtil', headerText: 'Tps rest. util', sortable: true, filter: true},
+                                                                 {field: 'tpstraitement', headerText: 'Tps trt.', sortable: true},
+                                                                 {field: 'domaine', headerText: 'Domaine', sortable: true},
+                                                                 {field: 'competence', headerText: 'Compétence', sortable: true},
+                                                                 {field: 'id', headerText: 'Identifiant', sortable: true},
+                                                                 {field: 'label', headerText: 'Libellé / Résumé', sortable: true},
+                                                                 {field: 'assignedTo', headerText: 'Assigné à', sortable: true},
+                                                                 {field: 'urgency', headerText: 'Urgence', sortable: true, filter: true}
+                                                             ],
+                                                             datasource: localData,
+                                                             selectionMode: 'single',
+                                                             rowSelect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Selected', detail: (data.id + ' ' + data.status)}]);
+                                                             },
+                                                             rowUnselect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Unselected', detail: (data.id + ' ' + data.status)}]);
+                                                             }
+                                                         });
+                                                         
+																						</script>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="ui-g-12 ui-md-4">
+                    <div data-widget="widget_j_idt58" class="ui-panel ui-widget ui-widget-content ui-corner-all" id="j_idt58">
+                        <div class="ui-panel-titlebar ui-widget-header ui-helper-clearfix ui-corner-all" id="j_idt58_header">
+                            <span class="ui-panel-title">Demande Sélectionnée : ARS-24633 </span>
+                            <span id="messages"/>
+                        </div>
+                        <div class="ui-panel-content ui-widget-content" id="j_idt58_content">
+
+                            <div id="multiple">
+                                <h3>1. Qualification de la demande</h3>
+                                <div id="tableCompetence">
+                                
+                                
+                                <script type="text/javascript">
+                                            var localData = [
+                                                                 {'id': '10', 'label': 'Purge répertoire', 'competence': 'Windows', 'levelWait': '2', 'tpstraitement': '00h30'},
+                                                                 {'id': '11', 'label': 'Purge répertoire', 'competence': 'Java', 'levelWait': '3', 'tpstraitement': '00h30'},
+                                                                 {'id': '12', 'label': 'Purge répertoire', 'competence': '.net', 'levelWait': '4', 'tpstraitement': '01h30'},
+                                                                 {'id': '13', 'label': 'Purge répertoire', 'competence': 'Hibernate', 'levelWait': '4', 'tpstraitement': '02h00'},
+                                                             		 {'id': '14', 'label': 'Purge répertoire', 'competence': 'IBM-MQ series', 'levelWait': '1', 'tpstraitement': '00h30'},
+                                                             	 	 {'id': '15', 'label': 'Purge répertoire', 'competence': 'Linux', 'levelWait': '2', 'tpstraitement': '00h30'},
+                                                                 {'id': '16', 'label': 'Purge répertoire', 'competence': 'C#', 'levelWait': '3', 'tpstraitement': '00h30'},
+                                                                 {'id': '17', 'label': 'Purge répertoire', 'competence': 'PHP', 'levelWait': '4', 'tpstraitement': '01h30'},
+                                                                 {'id': '18', 'label': 'Purge répertoire', 'competence': 'XML', 'levelWait': '4', 'tpstraitement': '02h00'},
+                                                            		 {'id': '19', 'label': 'Purge répertoire', 'competence': 'UML', 'levelWait': '1', 'tpstraitement': '00h30'},
+                                                                			 
+                                                             
+                                                         ];
+                                                      
+                                                         $('#tableCompetence').puidatatable({
+                                                             responsive: true,
+                                                             sortMode: 'multiple',
+                                                             paginator: {
+                                                               rows: 5
+                                                           },
+                                                             columns: [
+                                                                 {field: 'id', headerText: '', headerStyle:'display:none', bodyStyle :'display:none'},
+                                                                 {field: 'label', headerText: '', headerStyle:'display:none', bodyStyle :'display:none'},
+                                                                 {field: 'competence', headerText: 'Liste du Catalogue', sortable: true, filter: true,
+                                                                	 content: function(data) {
+                                                                     return $('<div class="ui-g">'+
+                                                                              '<div class="ui-g-6 tableCompetences">               Id: <b>'+data.id+'</b></div><div class="ui-g-6 tableCompetences"> Libellé : <b>'+ data.label +'</b></div>'+
+                                                                              '<div class="ui-g-6 tableCompetences">       Compétence: <b>'+data.competence+'</b></div><div class="ui-g-6 tableCompetences"> Niveau: <b>'+ data.levelWait +'</b></div>'+
+                                                                              '<div class="ui-g-12 tableCompetences">Tps trt. estimé : <b>'+data.tpstraitement+'</b></div>'+
+                                                                              '</div>').puipanel();
+                                                                	 }
+                                                                 },
+                                                                 
+                                                                 {field: 'levelWait', headerText: '', headerStyle:'display:none', bodyStyle :'display:none'},
+                                                                 {field: 'tpstraitement', headerText: '', headerStyle:'display:none', bodyStyle :'display:none'},
+                                                             ],
+                                                             datasource: localData,
+                                                             selectionMode: 'single',
+                                                             rowSelect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Selected', detail: (data.id + ' ' + data.competence)}]);
+                                                             },
+                                                             rowUnselect: function(event, data) {
+                                                                 $('#messages').puigrowl('show', [{severity: 'info', summary: 'Row Unselected', detail: (data.id + ' ' + data.competence)}]);
+                                                             }
+                                                         });
+                                                         
+                                                                                        </script>
+                                
+                                
+                                
+                                
+                                
+                                </div>
+
+                                <h3>2. Affectation à un collaborateur</h3>
+                                <div>Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film,
+                                    The_Godfather, parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening
+                                    The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito
+                                    flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a
+                                    living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black
+                                    Hand Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's
+                                    communal stature grows.</div>
+
+                                <h3>3. Résumé</h3>
+                                <div>After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo returned
+                                    to the well for this third and final story of the fictional Corleone crime family. Two decades have
+                                    passed, and crime kingpin Michael Corleone, now divorced from his wife Kay has nearly succeeded in
+                                    keeping his promise that his family would one day be completely legitimate.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="footer">
+                <div class="card clearfix">
+                    <span class="footer-text-left"><a href="http://www.gfi.world">Gfi Informatique</a>, Copyright &copy; 2016</span> <span
+                        class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span> <span>All Rights Reserved</span></span>
+                </div>
+            </div>
+        </div>
+        <!--  end layout main -->
+
+
+        <script id="j_idt35:j_idt95_s" type="text/javascript">
+									$(document).ready(function() {
+	                  // jQuery code goes here
+
+	                  PrimeFaces.cw("DataTable", "widget_j_idt35_j_idt95", {
+	                    id : "j_idt35:j_idt95",
+	                    selectionMode : "single",
+	                    reflow : true
+	                  });
+
+	                  $('#tabView').puitabview();
+	                  $('#multiple').puiaccordion({
+		                  multiple : true
+	                  });
+	                  
+	                  $('#messages').puigrowl();
+
+                  });
+								</script>
+</body>
+
+
+
+
+
+</html>

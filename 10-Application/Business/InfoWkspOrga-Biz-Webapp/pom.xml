@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sgu.project</groupId>
+    <artifactId>main-project-pom</artifactId>
+    <version>3.0.0</version>
+    <!-- projectmanager.version -->
+    
+	</parent>
+
+	<groupId>com.sgu.infowksporga</groupId>
+	<artifactId>business-webapp</artifactId>
+	<version>1.0.0</version>
+	<packaging>war</packaging>
+	<name>Information Workspace Organizer Business Webapp</name>
+	<description>This pom is used to build Information Workspace Organizer Webapp Business project</description>
+
+
+	<build>
+		<finalName>info-wrksp-orga-biz</finalName>
+	</build>
+
+	<dependencies>
+
+    <dependency>
+		  <groupId>com.sgu.framework</groupId>
+		  <artifactId>fwk-core</artifactId>
+		  <version>3.0.0</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>com.sgu.infowksporga</groupId>
+			<artifactId>business</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sgu.infowksporga</groupId>
+			<artifactId>common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.2.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>oracle</groupId>
+			<artifactId>ojdbc14</artifactId>
+			<version>10.2.0.2</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		
+	</dependencies>
+
+</project>

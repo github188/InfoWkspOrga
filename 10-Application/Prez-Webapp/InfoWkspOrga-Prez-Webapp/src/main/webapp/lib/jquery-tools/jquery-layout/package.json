@@ -1,0 +1,22 @@
+{
+  "name": "jquery-ui-layout",
+  "version": "1.4.4",
+  "description": "jQuery-UI-Layout ================",
+  "main": "jquery.layout.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Philzen/jQuery-UI-Layout.git"
+  },
+  "keywords": [
+    "jquery",
+    "layout",
+    "layoutmanager",
+    "extjs"
+  ],
+  "author": "Philzen <phil@patient-radio.de> (https://github.com/philzen)",
+  "licenses": ["GNU", "MIT"],
+  "bugs": {
+    "url": "https://github.com/Philzen/jQuery-UI-Layout/issues"
+  },
+  "homepage": "http://layout.jquery-dev.net/"
+}

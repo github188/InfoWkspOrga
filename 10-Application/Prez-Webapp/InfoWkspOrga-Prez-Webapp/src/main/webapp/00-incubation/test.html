@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Capacité Planning (CAPLA)</title>
+<link rel="icon" type="image/png" href="../02-imgs/app.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+
+<!-- *************************************************************************************************************************** -->
+<!-- *************************************************************************************************************************** -->
+<!-- External Libraries (JS & CSS)                                                                                               -->
+<!-- *************************************************************************************************************************** -->
+<!-- *************************************************************************************************************************** -->
+<script src="./test.js" type="text/javascript"></script>
+<script src="./moment-with-locales.js" type="text/javascript"></script>
+
+
+
+<script>
+
+    function buildScreen () {
+		   moment.lang('fr');
+		   var projectStartDate = moment("01/01/2016", "DD/MM/YYYY");
+		   var projectEndDate = moment("21/02/2016", "DD/MM/YYYY");
+       var dateCalculator = new DateCalculator (projectStartDate, projectEndDate);
+
+       //dateCalculator.buildMonthList ("days");
+       dateCalculator.buildDayList ("days");
+       
+    }
+
+</script>
+
+</head>
+
+<body onload="buildScreen()">
+
+  <div id="content"></div>
+
+
+		
+</body>
+</html>
+
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+>
+
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- <mvc:annotation-driven /> -->
+
+	<!--Note HandlerMapping Spring3.1 began -->
+	<bean class="com.sgu.core.framework.web.servlet.GRequestMappingHandlerMapping" />
+	
+	<!--Note HandlerAdapter Spring3.1 began -->
+	<!-- Configure to plugin JSON as request and response in method handler -->
+	<bean class="com.sgu.core.framework.web.servlet.GRequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="javaMessageConverter" />
+				<ref bean="jsonMessageConverter" />
+				<ref bean="xmlMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- Configure bean to convert XML to POJO and vice versa -->
+	<bean id="xmlMessageConverter" class="com.sgu.core.framework.web.rest.GMarshallingXmlHttpMessageConverter">
+		<property name="marshaller" ref="xmlMarshaller" />
+		<property name="unmarshaller" ref="xmlUmarshaller" />
+	</bean>
+
+	<bean id="xmlMarshaller" class="com.sgu.core.framework.serialization.xml.GXStreamMarshaller"/>
+	<bean id="xmlUmarshaller" class="com.sgu.core.framework.serialization.xml.GXStreamMarshaller"/>
+
+
+
+	<!-- Configure bean to convert JSON to POJO and vice versa -->
+	<bean id="jsonMessageConverter" class="com.sgu.core.framework.web.rest.GMappingJackson2HttpMessageConverter">
+		<property name="objectMapper" ref="jsonObjectMapper" />
+	</bean>
+
+	<bean id="jsonObjectMapper" class="com.sgu.core.framework.serialization.json.GMappingJackson2ObjectMapper"/>
+
+
+	<!-- Configure bean to convert Serialized Object to POJO and vice versa -->
+	<bean id="javaMessageConverter" class="com.sgu.core.framework.web.rest.GJavaObjectToByteArrayHttpMessageConverter"/>
+
+
+
+
+	<!-- https://spring.io/blog/2013/05/11/content-negotiation-using-spring-mvc.
+		http://www.baeldung.com/spring-mvc-content-negotiation-json-xml
+		https://dzone.com/articles/spring-rest-web-service-and
+		Total customization - see below for explanation.
+
+		Enabling Content Negotiation in Spring MVC Spring supports a couple of conventions for selecting the format required:
+
+		URL suffixes and/or a URL parameter.
+		These work alongside the use of Accept headers. As a result, the content-type can be requested in any of three ways. By default they are checked
+		in this order:
+		- Add a path extension (suffix) in the URL. So, if the incoming URL is something like http://myserver/myapp/accounts/list.html
+		then HTML is required. For a spreadsheet the URL should be http://myserver/myapp/accounts/list.xls.
+		- The suffix to media-type mapping is automatically defined via the JavaBeans Activation Framework or JAF (so activation.jar must be on the
+		class path).
+		- A URL parameter like this: http://myserver/myapp/accounts/list?format=xls.
+		The name of the parameter is format by default, but this may be changed. Using a parameter is disabled by default, but when enabled, it is
+		checked
+		second. Finally the Accept HTTP header property is checked. This is how HTTP is actually defined to work, but, as previously mentioned, it
+		can
+		be problematic to use. What we did, in both cases: Disabled path extension. Note that favor does not mean use one approach in preference to
+		another,
+		it just enables or disables it.
+
+		The order of checking is always path extension, parameter, Accept header.
+
+		Enable the use of the URL parameter
+		but instead of using the default parameter, format, we will use mediaType instead. Ignore the Accept header completely. This is often the best
+		approach if most of your clients are actually web-browsers (typically making REST calls via AJAX). Don't use the JAF, instead specify the media
+		type mappings manually - we only wish to support JSON and XML. The ContentNegotiationManager created by either setup is an implementation of
+		ContentNegotationStrategy that implements the PPA Strategy (path extension, then parameter, then Accept header) -->
+
+	<bean name="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		
+		<!-- *1* Is there an extension (eg .xml/.json) with the request? -->
+		<property name="favorPathExtension" value="false" />
+		
+		<!-- *2* Is there a parameter (eg ?mediaType=json)  with the request? -->
+		<property name="favorParameter" value="false" />
+		<property name="parameterName" value="mediaType" />
+		
+		<!-- *3* Is there a accept header specified in the request? -->
+		<property name="ignoreAcceptHeader" value="false" />
+		
+		<property name="useJaf" value="false" />
+		<property name="defaultContentType" value="application/x-java-serialized-object" />
+
+		<property name="mediaTypes">
+			<map>
+				<entry key="java" value="application/x-java-serialized-object" />
+				<entry key="json" value="application/json" />
+				<entry key="xml"  value="application/xml" />
+			</map>
+		</property>
+	</bean>
+
+
+
+	<!-- Scan the JavaConfig -->
+	<context:component-scan base-package="com.sgu.infowksporga.web.rest.controller" />
+
+
+</beans>

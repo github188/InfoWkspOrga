@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://jboss.org/kie/6.0.0/kmodule">
+<!-- 
+  
+Kbase Attributes
+Attribute name			Default value		Admitted values							Meaning
+name								none						any													The name with which retrieve this KieBase from the KieContainer. 
+																																This is the only mandatory attribute.
+includes						none						any comma separated list		A comma separated list of other KieBases contained in this kmodule. 
+																																The artifacts of all these KieBases will be also included in this one.
+packages						all							any comma separated list		By default all the Drools artifacts under the resources folder, 
+																																at any level, are included into the KieBase. This attribute allows to limit 
+																																the artifacts that will be 
+																																compiled in this KieBase to only the ones belonging to the list of packages.
+default							false						true, false									Defines if this KieBase is the default one for this module, 
+																																so it can be created from the KieContainer without passing any name to it. 
+																																There can be at most one default KieBase in each module.
+equalsBehavior			identity				identity, equality					Defines the behavior of Drools when a new fact is inserted into the Working Memory. 
+																																With identity it always create a new FactHandle unless the same object isn't already present in the Working Memory, 
+																																while with equality only if the newly inserted object is not equal (according to its equal method) 
+																																to an already existing fact.
+eventProcessingMode	cloud						cloud, stream	 							When compiled in cloud mode the KieBase treats events as normal facts, 
+																																while in stream mode allow temporal reasoning on them.
+declarativeAgenda		disabled				disabled, enabled						Defines if the Declarative Agenda is enabled or not.
+
+
+
+KSession Attributes
+Attribute name			Default value		Admitted values							Meaning
+name								none						any													The name with which retrieve this KieSession from the KieContainer. 
+																																This is the only mandatory attribute.
+type								stateful				stateful, stateless					A stateful session allows to iteratively work with the Working Memory, 
+																																while a stateless one is a one-off execution of a Working Memory with a provided data set.
+default							false						true, false									Defines if this KieSession is the default one for this module, 
+																																so it can be created from the KieContainer without passing any name to it. 
+																																In each module there can be at most one default KieSession for each type.
+clockType						realtime				realtime, pseudo						Defines if events timestamps are determined by the system clock or by a psuedo clock 
+																																controlled by the application. This clock is specially useful for unit testing temporal rules.
+beliefSystem				simple					simple, jtms, defeasible		Defines the type of belief system used by the KieSession.
+
+listeners-ref				none						bean reference							Specifies the reference to the event listeners group
+-->
+
+	<!-- 
+	<kbase name="kbase-template" eventProcessingMode="cloud" equalsBehavior="equality" declarativeAgenda="disabled"
+		packages="com.sgu.infowksporga.business.rules.???">
+		
+		<ksession name="ksession-template" type="stateful" default="false" clockType="realtime">
+
+			<listeners>
+				<ruleRuntimeEventListener type="com.sgu.infowksporga.business.rules.debug.PMDebugRuleRuntimeEventListener" />
+				<agendaEventListener type="com.sgu.infowksporga.business.rules.debug.PMDebugAgendaEventListener" />
+				<processEventListener type="com.sgu.infowksporga.business.rules.debug.PMDebugProcessEventListener" />
+				
+				<ruleRuntimeEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugRuleRuntimeEventListener" />
+				<agendaEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugAgendaEventListener" />
+				<processEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugProcessEventListener" />
+				
+				
+				<processEventListener type="com.sgu.core.framework.drools.eventlistener.fault.TrackingFaultEventListener" />
+
+			</listeners>
+			
+			<workItemHandlers>
+				<workItemHandler name="Transfer Funds" type="com.sample.banking.rules.workitem.TransfertFundHandler" />
+			</workItemHandlers>
+      
+		</ksession>
+	</kbase>
+	
+	-->
+	
+	<kbase name="kbase-properties" eventProcessingMode="cloud" equalsBehavior="identity" declarativeAgenda="disabled"
+    packages="com.sgu.core.framework.drools.validation.rules.properties">
+
+    <ksession name="ksession-properties" type="stateful" default="false" clockType="realtime">
+
+
+      <listeners>
+        <ruleRuntimeEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugRuleRuntimeEventListener" />
+        <agendaEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugAgendaEventListener" />
+        <processEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugProcessEventListener" />
+
+        <processEventListener type="com.sgu.core.framework.drools.eventlistener.fault.TrackingFaultEventListener" />
+
+      </listeners>
+
+    </ksession>
+  </kbase>
+	
+	<kbase name="kbase-authentification" eventProcessingMode="cloud" equalsBehavior="identity" declarativeAgenda="disabled"
+		packages="com.sgu.infowksporga.business.rules.authentification">
+		
+		<ksession name="ksession-authentification" type="stateful" default="false" clockType="realtime">
+
+			<listeners>
+        <ruleRuntimeEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugRuleRuntimeEventListener" /> 
+				<agendaEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugAgendaEventListener" />
+				<processEventListener type="com.sgu.core.framework.drools.eventlistener.debug.DebugProcessEventListener" />
+				
+				<processEventListener type="com.sgu.core.framework.drools.eventlistener.fault.TrackingFaultEventListener" />
+
+			</listeners>
+			
+		</ksession>
+	</kbase>
+	
+	
+	
+
+</kmodule>
+
+
+

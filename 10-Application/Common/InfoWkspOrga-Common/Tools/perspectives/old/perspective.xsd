@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="PerspectiveConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Preferences"/>
+        <xs:element maxOccurs="unbounded" ref="Element"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Preferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="preference"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="preference">
+    <xs:complexType>
+      <xs:attribute name="code" use="required" type="xs:NCName"/>
+      <xs:attribute name="version" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Element">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="Cmmi"/>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="Element"/>
+          <xs:element ref="Preferences"/>
+          <xs:element ref="ForProjects"/>
+        </xs:choice>
+        <xs:element minOccurs="0" ref="Elements"/>
+      </xs:sequence>
+      <xs:attribute name="I18N" use="required"/>
+      <xs:attribute name="allowWrkspCreation" type="xs:boolean"/>
+      <xs:attribute name="bold" type="xs:boolean"/>
+      <xs:attribute name="color" type="xs:NCName"/>
+      <xs:attribute name="italic" type="xs:boolean"/>
+      <xs:attribute name="strike" type="xs:boolean"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="underline" type="xs:boolean"/>
+      <xs:attribute name="visibility" use="required"/>
+      <xs:attribute name="wrkspCode" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cmmi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="searchInView"/>
+      </xs:sequence>
+      <xs:attribute name="I18N" use="required"/>
+      <xs:attribute name="allowWrkspCreation" use="required" type="xs:boolean"/>
+      <xs:attribute name="model" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="searchInView">
+    <xs:complexType>
+      <xs:attribute name="projectCode"/>
+      <xs:attribute name="wkspCode"/>
+      <xs:attribute name="wrkspType" type="xs:NCName"/>
+      <xs:attribute name="wrkspVisibility" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForProjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:sequence minOccurs="0">
+          <xs:element ref="configuration"/>
+          <xs:element ref="informations"/>
+          <xs:element ref="Preferences"/>
+        </xs:sequence>
+        <xs:element ref="Element"/>
+      </xs:sequence>
+      <xs:attribute name="visibility" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="configuration">
+    <xs:complexType>
+      <xs:attribute name="excludeCategory" use="required"/>
+      <xs:attribute name="includeCategory" use="required"/>
+      <xs:attribute name="table" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="informations">
+    <xs:complexType>
+      <xs:attribute name="excludeCategory" use="required"/>
+      <xs:attribute name="includeCategory" use="required"/>
+      <xs:attribute name="table" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Elements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="Preferences"/>
+      </xs:sequence>
+      <xs:attribute name="excludeWrkspCode"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

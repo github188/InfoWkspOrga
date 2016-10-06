@@ -1,0 +1,103 @@
+
+<table class="table-flat" style="width:auto;">
+	<tr>
+		<td><span style="color:#999">Themes:</span></td>
+		<td>
+			<select id="cb-theme" style="width:120px;height:25px"></select>
+		</td>
+		<td><span style="color:#999">Début du projet:</span></td>
+		<td id="begin-date">
+			<input id="txtPrjBeginDate" class="easyui-datebox" required data-options="formatter:myformatter,parser:myparser" style="width:120px;height:25px"></input>
+		</td>
+		<td><span style="color:#999">Fin du projet:</span></td>
+		<td id="end-date">
+			<input id="txtPrjEndDate" class="easyui-datebox" required data-options="formatter:myformatter,parser:myparser" style="width:120px;height:25px"></input>
+		</td>
+		<td>
+			<a href="#" id="btnDisplayPlanning" class="easyui-linkbutton">Afficher Planning</a>
+		</td>
+	</tr>
+</table>
+			
+<script>
+	$(function(){
+	  
+		var themes = [
+			{value:'default',text:'Default',group:'Base'},
+			{value:'gray',text:'Gray',group:'Base'},
+			{value:'metro',text:'Metro',group:'Base'},
+			{value:'material',text:'Material',group:'Base'},
+			{value:'bootstrap',text:'Bootstrap',group:'Base'},
+			{value:'black',text:'Black',group:'Base'},
+			{value:'metro-blue',text:'Metro Blue',group:'Metro'},
+			{value:'metro-gray',text:'Metro Gray',group:'Metro'},
+			{value:'metro-green',text:'Metro Green',group:'Metro'},
+			{value:'metro-orange',text:'Metro Orange',group:'Metro'},
+			{value:'metro-red',text:'Metro Red',group:'Metro'},
+			{value:'ui-cupertino',text:'Cupertino',group:'UI'},
+			{value:'ui-dark-hive',text:'Dark Hive',group:'UI'},
+			{value:'ui-pepper-grinder',text:'Pepper Grinder',group:'UI'},
+			{value:'ui-sunny',text:'Sunny',group:'UI'}
+		];
+		
+		$('#cb-theme').combobox({
+			groupField:'group',
+			data: themes,
+			editable:false,
+			panelHeight:'auto',
+			onChange:onChangeTheme,
+			onLoadSuccess:function() {
+				//$(this).combobox('setValue', 'default');
+			}
+		});
+		
+		
+		$('#txtPrjBeginDate').datebox().datebox('calendar').calendar({firstDay: 1});
+		$('#txtPrjEndDate').datebox().datebox('calendar').calendar({firstDay: 1});
+		
+		
+    /*    $('#txtPrjBeginDate').datebox().datebox('calendar').calendar({
+            validator: function(date){
+                var now = new Date();
+                var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                return d1<=date;
+            }
+        });
+    */
+
+    /*    $('#txtPrjEndDate').datebox().datebox('calendar').calendar({
+            validator: function(date){
+                var now = new Date();
+                var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                return d1<=date ;
+            }
+        });*/
+        
+        
+        
+	});	
+	
+	function myformatter(date){
+        var d = date.getDate();
+        var m = date.getMonth()+1;
+        var y = date.getFullYear();
+        return (d<10?('0'+d):d)+'/'+(m<10?('0'+m):m)+'/'+y;
+    }
+    function myparser(s){
+        if (!s) return new Date();
+        var ss = (s.split('/'));
+        var d = parseInt(ss[0],10);
+        var m = parseInt(ss[1],10);
+        var y = parseInt(ss[2],10);
+        if (!isNaN(y) && !isNaN(m) && !isNaN(d)){
+            return new Date(y,m-1,d);
+        } else {
+            return new Date();
+        }
+    }
+	
+	function onChangeTheme(theme) {
+	  window.location = "http://localhost:8080/maze-explorer-prez/?theme=" + theme;
+	}
+	
+</script>

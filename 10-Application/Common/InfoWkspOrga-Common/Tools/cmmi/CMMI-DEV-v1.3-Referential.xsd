@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="cmmi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="category"/>
+      </xs:sequence>
+      <xs:attribute name="code" use="required" type="xs:NCName"/>
+      <xs:attribute name="for" use="required"/>
+      <xs:attribute name="version" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="category">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="process"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="process">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element ref="description"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="goal"/>
+      </xs:sequence>
+      <xs:attribute name="code" use="required"/>
+      <xs:attribute name="staged" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="goal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element ref="description"/>
+        <xs:element maxOccurs="unbounded" ref="practice"/>
+      </xs:sequence>
+      <xs:attribute name="code" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="practice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="label"/>
+        <xs:element ref="description"/>
+        <xs:element ref="indirectQuestion"/>
+        <xs:element ref="directQuestion"/>
+      </xs:sequence>
+      <xs:attribute name="code" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indirectQuestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en"/>
+        <xs:element ref="fr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="directQuestion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en"/>
+        <xs:element ref="fr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="label">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en"/>
+        <xs:element ref="fr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="en"/>
+        <xs:element ref="fr"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="en" type="xs:string"/>
+  <xs:element name="fr" type="xs:string"/>
+</xs:schema>

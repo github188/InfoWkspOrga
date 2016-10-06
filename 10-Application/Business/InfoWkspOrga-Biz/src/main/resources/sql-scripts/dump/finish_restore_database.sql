@@ -1,0 +1,5 @@
+
+SET FOREIGN_KEY_CHECKS = 1;
+COMMIT;
+
+-- SET GLOBAL general_log = 'OFF'; 

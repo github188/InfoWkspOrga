@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="xmlPreference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmlPreference"/>
+      </xs:sequence>
+      <xs:attribute name="category" type="xs:NCName"/>
+      <xs:attribute name="constraints"/>
+      <xs:attribute name="description"/>
+      <xs:attribute name="enabled" type="xs:boolean"/>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+      <xs:attribute name="localization" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="order" type="xs:integer"/>
+      <xs:attribute name="owner" use="required" type="xs:NCName"/>
+      <xs:attribute name="partage" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required" type="xs:NCName"/>
+      <xs:attribute name="updatable" type="xs:boolean"/>
+      <xs:attribute name="value"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

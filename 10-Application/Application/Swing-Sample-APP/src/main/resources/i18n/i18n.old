@@ -1,0 +1,747 @@
+
+
+
+menu.file.send.files = Envoyer les fichiers sélectionnés
+menu.file.send.files.tooltip = Utilise l'outil d'envoi de mail installé sur votre machine
+menu.file.send.files.mnemonic=E
+menu.file.send.files.shortcut=control M
+menu.file.send.files.icon=/icons/mail-send.png
+menu.file.exit = Quitter
+menu.file.exit.tooltip = Quitter
+menu.file.exit.mnemonic=Q
+menu.file.exit.shortcut=control Q
+menu.file.exit.icon=/icons/door_in.png
+menu.file.zip = Zip
+menu.file.zip.tooltip = Zip les fichiers sélectionnés de toutes les vues
+menu.file.zip.mnemonic = Z
+menu.file.zip.shortcut = control Z
+menu.file.zip.icon = /icons/zip.png
+
+
+
+menu.edit.cut.file.explorer.view.files = Couper les fichiers et répertoires
+menu.edit.cut.file.explorer.view.files.tooltip = Couper les fichiers et répertoires sélectionnés depuis les différentes vues
+menu.edit.cut.file.explorer.view.files.mnemonic=o
+menu.edit.cut.file.explorer.view.files.icon=/icons/cut.png
+menu.edit.copy.file.explorer.view.files = Copier les fichiers et répertoires
+menu.edit.copy.file.explorer.view.files.tooltip = Copier les fichiers et répertoires sélectionnés depuis les différentes vues
+menu.edit.copy.file.explorer.view.files.mnemonic=C
+menu.edit.copy.file.explorer.view.files.icon=/icons/copy.png
+menu.edit.paste.file.explorer.view.files = Coller les fichiers et répertoires
+menu.edit.paste.file.explorer.view.files.tooltip = Coller les fichiers et répertoires dans le dernier répertoire sélectionné
+menu.edit.paste.file.explorer.view.files.mnemonic=l
+menu.edit.paste.file.explorer.view.files.icon=/icons/paste.png
+menu.edit.remove.file.explorer.view.files = Supprimer tous les fichiers et répertoires
+menu.edit.remove.file.explorer.view.files.tooltip = Déplace tous les fichiers et répertoires de toutes les vues du workspace en cours dans la poubelle de l'OS
+menu.edit.remove.file.explorer.view.files.mnemonic=S
+menu.edit.remove.file.explorer.view.files.icon=/icons/trash.png
+
+
+menu.perspective.properties.display = Afficher les propriétés
+menu.perspective.properties.display.tooltip = Affiche les propriétés de la perspective sélectionnée
+menu.perspective.properties.display.mnemonic=A
+#menu.perspective.properties.display.shortcut=control P
+menu.perspective.properties.display.icon=/icons/perspective-edit.png
+menu.perspective.new = Nouvelle perspective
+menu.perspective.new.tooltip = Créer une nouvelle perspective
+menu.perspective.new.mnemonic=N
+#menu.perspective.new.shortcut=control N
+menu.perspective.new.icon=/icons/perspective-add.png
+menu.perspective.remove = Supprimer perspective
+menu.perspective.remove.tooltip = Supprime la perspective courante
+menu.perspective.remove.mnemonic=S
+#menu.perspective.remove.shortcut=control D
+menu.perspective.remove.icon=/icons/perspective-delete.png
+menu.perspective.copy = Dupliquer perspective
+menu.perspective.copy.tooltip = Duplique la perspective sélectionnée
+menu.perspective.copy.mnemonic=D
+#menu.perspective.copy.shortcut=control shift D
+menu.perspective.copy.icon=/icons/perspective-duplicate.png
+
+
+
+menu.workpace.properties.display = Afficher les propriétés
+menu.workpace.properties.display.tooltip = Affiche les propriétés du Workspace sélectionné
+menu.workpace.properties.display.mnemonic=A
+menu.workpace.properties.display.shortcut=control W
+menu.workpace.properties.display.icon=/icons/workspace-edit.png
+menu.workspace.define.tab.title = Modifier le titre de l'onglet
+menu.workspace.define.tab.title.tooltip = Permet de modifier le titre de l'onglet sélectionné
+menu.workspace.define.tab.title.mnemonic=t
+menu.workspace.define.tab.title.shortcut=control T
+menu.workspace.define.tab.title.icon=/icons/tab-edit.png
+menu.workpace.new = Nouveau worskspace
+menu.workpace.new.tooltip = Créer un nouveau workspace
+menu.workpace.new.mnemonic=N
+menu.workpace.new.shortcut=control N
+menu.workpace.new.icon=/icons/workspace-add.png
+menu.workpace.remove = Supprimer workspace
+menu.workpace.remove.tooltip = Supprime le workspace courant
+menu.workpace.remove.mnemonic=S
+menu.workpace.remove.shortcut=control D
+menu.workpace.remove.icon=/icons/workspace-delete.png
+menu.workpace.copy = Dupliquer workspace
+menu.workpace.copy.tooltip = Duplique le workspace sélectionné
+menu.workpace.copy.mnemonic=D
+menu.workpace.copy.shortcut=control shift D
+menu.workpace.copy.icon=/icons/workspace-duplicate.png
+
+#Menu vues
+menu.workspace.views = Ajouter des Vues
+menu.workspace.views.tooltip = Permet d'ajouter des Vues au Workspace courant
+menu.workspace.views.mnemonic=V
+menu.workspace.views.icon=/icons/view.png
+
+menu.workspace.views.workspace.map = Workspace Map
+menu.workspace.views.workspace.map.tooltip = <html>Ajoute une vue de type : <b>Workspace Map</b><br>Equivalent à un site map.</html>
+menu.workspace.views.workspace.map.mnemonic=M
+menu.workspace.views.workspace.map.shortcut=control M
+menu.workspace.views.workspace.map.icon=/icons/map.png
+
+menu.workspace.views.directory.desk = Répertoire Local
+menu.workspace.views.file.explorer.tooltip = <html>Ajoute une vue de type : <b>Répertoire Local</b></html>
+menu.workspace.views.file.explorer.mnemonic=R
+menu.workspace.views.file.explorer.shortcut=control R
+menu.workspace.views.file.explorer.icon=/images/textfield/helper/directoryfile/directory.png
+
+menu.workspace.views.quick.action = Action rapide
+menu.workspace.views.quick.action.tooltip = <html>Ajoute une vue de type : <b>Action Rapide</b></html>
+menu.workspace.views.quick.action.mnemonic=A
+menu.workspace.views.quick.action.shortcut=control A
+menu.workspace.views.quick.action.icon=/icons/calendar-task.png
+
+menu.workspace.views.link = Liens
+menu.workspace.views.link.tooltip = <html>Ajoute une vue de type : <b>Liens</b></html>
+menu.workspace.views.link.mnemonic=L
+menu.workspace.views.link.shortcut=control L
+menu.workspace.views.link.icon=/icons/world_link.png
+
+
+
+menu.workspace.views.project.configuration = Projet - Configuration
+menu.workspace.views.project.configuration.tooltip = <html>Ajoute une vue de type : <b>Projet - Configuration</b></html>
+menu.workspace.views.project.configuration.mnemonic=P
+menu.workspace.views.project.configuration.shortcut=control P
+menu.workspace.views.project.configuration.icon=/icons/project-16-16-px.png
+
+
+menu.user.manage = Gérer les utilisateurs
+menu.user.manage.mnemonic=G
+menu.user.manage.icon=/icons/group-gear.png
+menu.user.import = Importer des utilisateurs
+menu.user.import.tooltip = <html>Importe des Utilisateurs depuis un fichier CSV<br>LOGIN; NOM; PRENOM; PASSWORD; EMAIL 1; EMAIL 2</html>
+menu.user.import.mnemonic=I
+menu.user.import.icon=/icons/import.png
+menu.user.import.project.affectation = Importer les affections projets
+menu.user.import.project.affectation.tooltip = <html>Importe des affectations des utilisateurs sur les projets depuis un fichier CSV<br>LOGIN; CODE_PROJET</html>
+menu.user.import.project.affectation.mnemonic=a
+menu.user.import.project.affectation.icon=/icons/import.png
+
+
+menu.project.create = Créer un projet
+menu.project.create.mnemonic=C
+menu.project.create.icon=/icons/project-add.png
+menu.project.update = Modifier un projet
+menu.project.update.mnemonic=M
+menu.project.update.icon=/icons/project-update.png
+menu.project.remove = Supprimer un projet
+menu.project.remove.mnemonic=C
+menu.project.remove.icon=/icons/project-remove.png
+
+menu.project.import = Importer des projets
+menu.project.import.tooltip = <html>Importe des projets depuis l'export Vigireport RQO des projets</html>
+menu.project.import.mnemonic=I
+menu.project.import.icon=/icons/import.png
+
+
+
+menu.window.preferences = Préférences
+menu.window.preferences.tooltip = Affiche les préférences générales
+menu.window.preferences.mnemonic=P
+menu.window.preferences.shortcut=control P
+menu.window.preferences.icon=/icons/preferences.png
+
+menu.help = Aide
+menu.help.mnemonic=A
+menu.help.display.workpace.layout = Afficher le layout du Workspace
+menu.help.display.workpace.layout.tooltip = Affiche le layout du Workspace courant
+menu.help.display.workpace.layout.icon=/icons/layout.png
+
+# Question message
+workspace.remove.confirm.message = Veuillez confirmer la supression du workspace : \n<b>{0}</b>
+workspace.change.confirm.message= Le workspace suivant <b>{0}</b> a changé.\nVoulez vous le sauvegarder avant de poursuivre ?
+project.remove.confirm.message = Veuillez confirmer la supression du projet : \n<b>{0}</b>
+
+# Information Message
+user.import.completed = L'import des utilisateurs est terminé.
+user.import.project.affectation.completed = L'import des affections utilisateurs aux projet est terminé.
+project.import.completed = L'import des projets est terminé.
+perspective.saving.completed = La sauvegarde de la perspective <b>{0}</b> est terminée.
+perspective.reload.completed = Le rechargement de la perspective est terminé.
+generate.rsla.completed = La génération des projets ({0}) suivant est terminée :\n{1}
+add.delivery.in.excel.validate = L''ajout de l''entrée a été effectuée pour <br>le type de délivery : <b>{0}</b>
+
+#Property Table fields description
+Repertoire-racine.description = Renseignez le répertoire racine du projet<br><b>Exemple :</b> \\10.250.236.12/projets/MonProjet<br>c:/projets/répertoire
+
+#Project Table properties
+CMMI-Level.description = Renseignez dans ce champ le niveau CMMI (de 2 à 5) que doit respecter ce projet.<br>Influe sur les niveaux affichés dans l'arbre CMMI
+Directory-Version.description = Renseignez dans ce champ la version des préférences de dossier à utiliser pour ce projet.<br>\
+                                cf menu Fenêtre -> Préferences -><br>\
+                                GFI - CSN -> Répertoires Projets<br>\
+                                GFI - CSN -> Répertoires TMA<br>\
+                                BNP Paribas -> Répertoires Projets<br>\
+                                BNP Paribas -> Répertoires TMA
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Connexion Dialog
+#----------------------------------------------------------------------------------------------------------------------------
+
+connexion.error.bad.login = Le login n'existe pas
+connexion.error.bad.password = Le mot de passe est KO
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Perspective tree / CMMI
+#----------------------------------------------------------------------------------------------------------------------------
+
+perspective.node.root = Perspective Root
+perspective.node.help = Help
+perspective.node.cmmi.development = CMMI-Développement
+perspective.node.cmmi.service = CMMI-Service
+perspective.node.cmmi.acquisition = CMMI-Acquisition
+perspective.node.PROJECT = Projets
+perspective.node.TMA = TMA
+perspective.node.workspaces = Workspaces
+perspective.node.workspaces.common = Commun
+perspective.node.workspaces.custom = Custom
+
+perspective.action.refresh = Rafraîchir
+perspective.action.refresh.tooltip = Recharge la perspective
+perspective.action.refresh.icon=/icons/refresh.png
+
+perspective.action.collapse = Plier le noeud sélectionné
+perspective.action.collapse.tooltip = Plie le noeud sélectionné ainsi que tous les sous noeuds
+perspective.action.collapse.icon=/icons/collapse.png
+
+perspective.action.expand = Ouvrir le noeud sélectionné
+perspective.action.expand.tooltip = Ouvre le noeud sélectionné ainsi que tous les sous noeuds
+perspective.action.expand.icon=/icons/expand.png
+
+perspective.error.no.pref.cmmi.level.defined.for.project = <HTML>La variable de préférence <b>{0}</b> n''a pas été définie pour <b>{1}</b>.<br/>La valeur prise par défaut est le <b>niveau {2}</b>.
+perspective.warning.no.dynamic.view.affected = Il n''y a pas de vue affectée à :<br><b>{0}</b>
+
+perspective.loading.error.parameter.code.mandatory = Le code de la perspective n'est pas définit ni en paramètre du service, ni dans la table des préférences !!
+perspective.loading.error.perspective.configuration.mandatory = <HTML>Pas de configuration de <u>perspective</u> trouvée pour le code <b>{0}</b>!!
+perspective.loading.error.preferences.configuration.mandatory = <HTML>Pas de configuration de <u>préférence</u> trouvée pour le code <b>{0}</b>!!
+perspective.loading.error.perspective.configuration.bad.xml = <HTML>Le XML de la configuration de la <u>perspective</u> n'est pas correct.
+perspective.loading.error.preferences.configuration.bad.xml = <HTML>Le XML de la configuration des <u>préférences</u> de la perspective n'est pas correct.
+
+perspective.error.message.bad.URL = <HTML>L''URL <b>{0}</b> ne permet pas de charger un fichier XML correct.
+
+pespective.remove.confirm.message = Veuillez confirmer la suppression de la perspective suivante :\n<b>{0}</b>
+#----------------------------------------------------------------------------------------------------------------------------
+# Perspective Properties - Dialog
+#----------------------------------------------------------------------------------------------------------------------------
+perspective.properties.dlg.title = Perspective
+perspective.properties.dlg.title.create = Perspective - Création
+perspective.properties.dlg.title.update = Perspective - Modification
+perspective.properties.dlg.title.duplicate = Perspective - Duplication
+perspective.properties.dlg.title.consult = Perspective - Consultation
+perspective.properties.dlg.fieldset.properties = Propriétés de la perspective
+perspective.properties.dlg.fieldset.historique = Historique
+perspective.properties.dlg.lbl.code = Code de la perspective :
+perspective.properties.dlg.lbl.description = Description :
+perspective.properties.dlg.lbl.type = Type :
+perspective.properties.dlg.lbl.configuration = Configuration :
+perspective.properties.dlg.lbl.user.cre = Créé par :
+perspective.properties.dlg.lbl.user.maj = Modifié par :
+perspective.properties.dlg.lbl.le = <HTML><B>{0}</B> le <B>{1}</B>
+perspective.properties.dlg.lbl.tab.perspective = Perspective Tree
+perspective.properties.dlg.lbl.tab.preferences = Préférences Tree
+perspective.properties.dlg.fieldset.tree.configuration = Configuration du tree view
+
+perspective.properties.dlg.action.cancel = Annuler
+perspective.properties.dlg.action.validate = Valider
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Workspace Loading
+#----------------------------------------------------------------------------------------------------------------------------
+workspace.loading.cmmi.dynamic = Workspace dynamique : Non configurable, basé sur l'affectation du processus CMMI sélectionné dans les vues
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Workspace Properties - Dialog
+#----------------------------------------------------------------------------------------------------------------------------
+
+workspace.properties.dlg.lbl.code = Code du workspace :
+workspace.properties.dlg.lbl.projectCode = Code projet :
+workspace.properties.dlg.lbl.type = Type :
+workspace.properties.dlg.lbl.visibility = Visibilité :
+workspace.properties.dlg.lbl.visibility.tooltip = Niveau de rattachement du workspace dans la perspective
+workspace.properties.dlg.lbl.access = Accés :
+workspace.properties.dlg.lbl.access.tooltip = Gére l'accés aux autres utilisateurs
+workspace.properties.dlg.fieldset.historique = Historique
+workspace.properties.dlg.lbl.user.cre = Créé par :
+workspace.properties.dlg.lbl.user.maj = Modifié par :
+workspace.properties.dlg.lbl.le = <HTML><B>{0}</B> le <B>{1}</B>
+
+workspace.properties.dlg.action.cancel = Annuler
+workspace.properties.dlg.action.validate = Valider
+
+workspace.properties.error.combination = <HTML>La creation de ce workspace ne sera pas visible dans la perspective en cours.<br/><br/>\
+                                         Voici la liste des combinaisons possibles sur le modéle <b>Visibilité_Type_Projet</b> (si projet non possible : _projet = vide).<br/>\
+                                         {0}.<br/><br/>\
+                                         Veuillez modifier les propriétés de votre workspace avec l''une de ces combinaisons.
+#----------------------------------------------------------------------------------------------------------------------------
+# Workspace Tab Title - Dialog
+#----------------------------------------------------------------------------------------------------------------------------
+workspace.tab.title.dlg.title = Titre Onglet
+workspace.tab.title.dlg.fieldset = Propriétés du titre de l'onglet
+workspace.tab.title.dlg.lbl.title.level = Niveau de l'onglet :
+workspace.tab.title.dlg.lbl.title.level.tooltip = Niveau de l'onglet par rapport à la vue sélectionnée (0 = le premier; 1 celui au dessus; 2 ...)
+workspace.tab.title.dlg.lbl.title = Titre de l'onglet :
+
+workspace.tab.title.dlg.action.cancel = Annuler
+workspace.tab.title.dlg.action.validate = Valider
+
+workspace.tab.title.level.not.exist = Ce niveau d'onglet n'existe pas !
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Preferences Dialog box
+#----------------------------------------------------------------------------------------------------------------------------
+preferences.dlg.title = Préférences
+preferences.dlg.lbl.filter = Filtre :
+preferences.dlg.lbl.filter.tooltip = Utilisez '*' pour effectuer une recherche
+
+preferences.dlg.filter.apply = Un Filtre est appliqué sur cette vue
+
+preferences.dlg.chk.filter = Sur les feuilles
+preferences.dlg.chk.filter.tooltip = Si coché recherche sur les feuilles de l'arbre si non, recherche sur les "Répertoires"
+
+preferences.dlg.lbl.version = Version :
+preferences.dlg.lbl.version.tooltip = <html>Ce champ permet de sélectionner la version des propriétés à afficher.<br/>\
+                                       Si la version est mise à vide avant l'enregistrement, une nouvelle version des propriétés est créée <br/>\
+                                       à partir de la dernière version des propriétés affichées.<br/>\
+                                       La version "0" correspond à la version initiale importée par Batch en Base.<br/>\
+                                       Une puce <font color="green"/><b>verte</b></font> indique que la version peut encore être modifée.<br/>\
+                                       Une puce <font color="red"/><b>rouge</b></font> indique que la version peut <b> plus </b> être modifée.<br/></html>
+
+preferences.dlg.version.fieldset.properties = Propriétés
+
+preferences.dlg.version.chk.locked = Version verrouillée
+preferences.dlg.version.chk.locked.tooltip = Si cette case est cochée, il n'est plus possible de modifier les propriétés de la version
+
+preferences.dlg.version.lbl.comment = Commentaire :
+preferences.dlg.version.lbl.comment.tooltip = <html>Permet d'indiquer les modifications apportées à la version.<br/>\
+                                                    Pensez à ajouter le user et la date en début de commentaire,<br/>\
+                                                    <u>Example :</u><br/>\
+                                                    <b>gdupont le 14/06/2013</b> :<br/>\
+                                                    - Modification de la propriété "xxxx"\
+                                                    - Ajout de la propriété "yyyy"
+
+preferences.dlg.version.fieldset.historique = Historique de la version
+preferences.dlg.version.lbl.user.cre = Créée par :
+preferences.dlg.version.lbl.user.maj = Modifiée par :
+preferences.dlg.version.lbl.le = <HTML><B>{0}</B> le <B>{1}</B>
+
+preferences.dlg.action.cancel = Annuler
+preferences.dlg.action.apply = Appliquer
+preferences.dlg.action.apply.tooltip = Enregistre en base uniquement les informations saisies dans le cadre du tree item sélectionné (arbre de gauche)
+preferences.dlg.action.restore.default = Restaurer
+preferences.dlg.action.restore.tooltip = Restaure les informations initiales dans le cadre du tree item sélectionné (arbre de gauche)
+
+preferences.dlg.action.refresh = Rafraîchir
+preferences.dlg.action.refresh.tooltip = Recharge les préférences en mémoire (depuis la base de données)
+preferences.dlg.action.refresh.icon=/icons/refresh.png
+
+preferences.dlg.action.collapse = Plier le noeud sélectionné
+preferences.dlg.action.collapse.tooltip = Plie le noeud sélectionné ainsi que tous les sous noeuds
+preferences.dlg.action.collapse.icon=/icons/collapse.png
+
+preferences.dlg.action.expand = Ouvrir le noeud sélectionné
+preferences.dlg.action.expand.tooltip = Ouvre le noeud sélectionné ainsi que tous les sous noeuds
+preferences.dlg.action.expand.icon=/icons/expand.png
+
+
+preferences.message.error.save.property.with.no.value = <html>Les valeurs des catégories/propriétés suivantes ne sont pas renseignées (un espace = renseigné) : <br/><b>{0}</b></html>
+preferences.message.error.save.no.property = Pour effectuer la sauvegarde, il faut à minima une propriété de renseigné.
+preferences.message.reload.completed = Les préférences ont été rechargées en mémoire (depuis la base de données)
+preferences.message.save.completed   = Les préférences ont été sauvegardées en base et mise à jour en mémoire.
+preferences.message.restore.completed   = Les préférences ont été restaurées à partir de celles conservées en mémoire.
+
+preferences.tree.select.tree.node = Sélectioner un item de l'arbre
+
+preferences.tree.desc.generic = Etendre l'arbre pour éditer les préférences de l'item sélectionné.
+preferences.tree.title = Préférences
+preferences.tree.generales.title = Générales
+preferences.tree.generales.title.description = <html>Renseignez les informations globales à l'application.<br/></html>
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Common Properties - View
+#----------------------------------------------------------------------------------------------------------------------------
+properties.view.action.properties = Propriétés de la vue
+properties.view.action.properties.tooltip = Configure la vue sélectionnée
+properties.view.action.properties.icon=/icons/properties.png
+
+properties.view.action.validate = Valider
+properties.view.action.validate.icon=/icons/save_database.png
+properties.view.action.validate.tooltip = Enregistre les propriétés en base de données
+properties.view.action.restore = Restaurer
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Project Configuration View - Properties DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+properties.view.properties.dlg.title =  Configuration de la vue
+properties.view.properties.dlg.fieldset = Propriétés
+properties.view.properties.dlg.lbl.title = Titre :
+properties.view.properties.dlg.lbl.title.tooltip = Définit le titre de la vue
+properties.view.properties.dlg.lbl.propertyViewClass = Classe de la Vue :
+properties.view.properties.dlg.lbl.propertyViewClass.tooltip = <HTML>Définit la classe qui sera chargée pour afficher la vue.<br>\
+                                                               Vérifier que la classe posséde bien un constructeur par défaut <br>\
+                                                               et extends de AbstractPropertiesView !!
+
+properties.view.properties.dlg.action.cancel = Annuler
+properties.view.properties.dlg.action.validate = Valider
+properties.view.properties.dlg.action.validate.icon=/icons/save_memory.png
+properties.view.properties.dlg.action.validate.tooltip = <HTML> Enregistre les informations en mémoire.<br/>Il faut sauvegarder le workspace complet <b>(Ctrl+S)</b> pour enregistrer les informations en base de données
+
+properties.view.properties.message.restore.ok = Les propriétés ont été réinitialisées.
+
+properties.view.properties.dlg.lbl.propertyViewClass.error.bad.extension = <HTML>Cette classe n''hérite pas de <br>{0}
+properties.view.properties.dlg.lbl.propertyViewClass.error.not.exist = Cette classe n'existe pas !!
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Project Properties - Dialog (Creation project)
+#----------------------------------------------------------------------------------------------------------------------------
+project.properties.dlg.title = Projet
+project.properties.dlg.title.create = Projet - Création
+project.properties.dlg.title.update = Projet - Modification
+project.properties.dlg.title.duplicate = Projet - Duplication
+project.properties.dlg.title.consult = Projet - Consultation
+project.properties.dlg.fieldset.title = Propriétés du projet
+project.properties.dlg.lbl.code = Code :
+project.properties.dlg.lbl.visibility = Visibilité :
+project.properties.dlg.lbl.active = Projet actif
+project.properties.dlg.lbl.visibility.tooltip = Niveau de rattachement du projet dans la perspective
+project.properties.dlg.fieldset.historique = Historique
+project.properties.dlg.lbl.user.cre = Créé par :
+project.properties.dlg.lbl.user.maj = Modifié par :
+project.properties.dlg.lbl.le = <HTML><B>{0}</B> le <B>{1}</B>
+
+
+project.properties.dlg.action.cancel = Annuler
+project.properties.dlg.action.validate = Valider
+
+project.visibility.error = <html>Cette visibilité <b>{0}</b> n''est pas autorisée : Valeurs valides <br/>==> {1}
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Configuration Project Properties - View
+#----------------------------------------------------------------------------------------------------------------------------
+project.configuration.view.properties.title = Propriétés du projet
+project.configuration.view.properties.description = <html>Ces propriétés sont utilisées par l'application pour gérer le projet</html>
+
+project.configuration.view.properties.message.save.ok = Les propriétés ont été sauvegardées en Base de Données.
+
+project.configuration.view.error.cmmi.level = Le champ "CMMI-Level" doit être compris entre 2 et 5
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Preferences / PROJET - Répertoire CSB
+#----------------------------------------------------------------------------------------------------------------------------
+repertoireDeBase = Répertoire de base
+repertoireDeBase.shortDescription = <html>Renseigner le répertoire origine<br>à partir duquel tous les autres répertoires seront basés<html>
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Common component CMMI assignement to view
+#----------------------------------------------------------------------------------------------------------------------------
+cmmi.assignment.action.collapse = Plier le noeud
+cmmi.assignment.action.collapse.tooltip = Plie le noeud sélectionné ainsi que tous les sous noeuds
+cmmi.assignment.action.collapse.icon=/icons/collapse.png
+
+cmmi.assignment.action.expand = Ouvrir le noeud
+cmmi.assignment.action.expand.tooltip = Ouvre le noeud sélectionné ainsi que tous les sous noeuds
+cmmi.assignment.action.expand.icon=/icons/expand.png
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Directory content view
+#----------------------------------------------------------------------------------------------------------------------------
+file.explorer.view.lbl.filter = Filtre :
+file.explorer.view.lbl.filter.tooltip = Utilisez '*' pour effectuer une recherche en case insensitive (ex : *rech* => Contient reCh)
+
+
+
+file.explorer.view.remove.files.question = Veuillez confirmer la suppression des fichiers et/ou répertoires suivant :\n<b>{0}</b>
+
+file.explorer.view.error = Probléme detecté sur le chemin de la Vue ''<b>{0}</b>''\nCode : ''{1}''\n==> Ce chemin :''{2}''\nOu ce Chemin : ''{3}''\nn''existent pas !!!
+file.explorer.view.warning.file.not.renamed = Le fichier ou le dossier n'a pas pu être renommé !
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Directory content view - Properties DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+file.explorer.view.properties.dlg.title = Propriétés de la vue 'Répertoire'
+file.explorer.view.properties.dlg.tab.general = Générales
+file.explorer.view.properties.dlg.tab.cmmi = CMMI
+file.explorer.view.properties.dlg.fieldset = Propriétés
+file.explorer.view.properties.dlg.lbl.viewCode = Code :
+file.explorer.view.properties.dlg.lbl.viewCode.tooltip = Code de la vue
+file.explorer.view.properties.dlg.lbl.viewTitle = Titre :
+file.explorer.view.properties.dlg.lbl.viewTitle.tooltip = Défini le titre de la vue au format I18N (ou direct)
+file.explorer.view.properties.dlg.lbl.traduction =
+file.explorer.view.properties.dlg.lbl.traduction.tooltip = Affiche la traduction du titre de la vue, si elle est trouvée dans les fichiers I18N, sinon N/A
+file.explorer.view.properties.dlg.lbl.directoryPath.project = Chemin d'accès au projet :
+file.explorer.view.properties.dlg.lbl.directoryPath.project.tooltip = Indique le chemin d'accès au projet, utilisé pour les chemins relatifs
+file.explorer.view.properties.dlg.lbl.directoryPath.default = Chemin répertoire par défaut :
+file.explorer.view.properties.dlg.lbl.directoryPath.default.tooltip = Chemin de répertoire defini par le code de la vue (cf preferences)
+file.explorer.view.properties.dlg.lbl.directoryPath = Chemin répertoire :
+file.explorer.view.properties.dlg.lbl.directoryPath.tooltip = Défini le Répertoire racine de la vue
+
+file.explorer.view.properties.dlg.lbl.configuration = Configuration :
+file.explorer.view.properties.dlg.lbl.configuration.tooltip = <HTML>Si cette case est coché, on affichera dans le workspace la configuration spécifique définie sinon ce sera celle commune à tous.
+file.explorer.view.properties.dlg.chkb.configuration = <HTML>Spécifique au projet <font color="red"><b>{0}</b></font>
+file.explorer.view.properties.dlg.fieldset.identity = Identification de la vue
+
+file.explorer.view.properties.dlg.fieldset.configuration.common = <HTML> Configuration <b>Commune</b>
+file.explorer.view.properties.dlg.fieldset.configuration.standard = <HTML> Configuration
+file.explorer.view.properties.dlg.fieldset.configuration.specific =  <HTML> Configuration spécifique à <font color="red"><b>{0}</b></font>
+
+
+file.explorer.view.properties.dlg.action.cancel = Annuler
+file.explorer.view.properties.dlg.action.validate = Valider
+file.explorer.view.properties.dlg.action.validate.icon=/icons/save_memory.png
+file.explorer.view.properties.dlg.action.validate.tooltip = <HTML> Enregistre les informations en mémoire.<br/>Il faut sauvegarder le workspace complet <b>(Ctrl+S)</b> pour enregistrer les informations en base de données 
+
+
+
+
+file.explorer.view.properties.dlg.error.not.directory = <html>Les informations renseignées ne permettent pas<br>de déterminer un répertoire valide</html>
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Link content view
+#----------------------------------------------------------------------------------------------------------------------------
+link.content.view.error.link.loading = Une erreur s''est produite lors du chargement de l''URL\n{0}
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Quick Action - View
+#----------------------------------------------------------------------------------------------------------------------------
+quick.action.view.title = Action
+quick.action.view.fieldset = Renseignez les paramètres de l'action
+quick.action.view.action.properties = Propriétés de la vue
+quick.action.view.action.properties.tooltip = Configure la vue sélectionnée
+quick.action.view.action.properties.icon=/icons/properties.png
+
+quick.action.view.lbl.description = Description :
+quick.action.view.lbl.description.tooltip = Le fichier doit contenir la variable #DESCRIPTION#
+quick.action.view.lbl.visibility = Visibilité :
+quick.action.view.lbl.visibility.tooltip = Le fichier doit contenir la variable #VISIBILITY#
+quick.action.view.lbl.author = Auteur :
+quick.action.view.lbl.author.tooltip = Le fichier doit contenir la variable #AUTHOR#
+quick.action.view.lbl.date.planified = Date prévue :
+quick.action.view.lbl.date.planified.tooltip = Le fichier doit contenir la variable #DATE_PLANIFIED#
+quick.action.view.lbl.date.creation = Date de création :
+quick.action.view.lbl.date.creation.tooltip = Le fichier doit contenir la variable #DATE_CREATION#
+quick.action.view.lbl.action.origin = Origine :
+quick.action.view.lbl.action.origin.tooltip = <html>Le fichier doit contenir la variable #ORIGIN#<br>Les valeurs peuvent être PP, COPIL, COSUI, ...</html>
+quick.action.view.lbl.category = Catégorie :
+quick.action.view.lbl.category.tooltip = Le fichier doit contenir la variable #CATEGORY#
+quick.action.view.lbl.priority = Priorité :
+quick.action.view.lbl.priority.tooltip = Le fichier doit contenir la variable #PRIORITY#
+quick.action.view.lbl.comment = Commentaire :
+quick.action.view.lbl.comment.tooltip = Le fichier doit contenir la variable #COMMENT#
+quick.action.view.lbl.owner = Responsable :
+quick.action.view.lbl.owner.tooltip = Le fichier doit contenir la variable #OWNER#
+
+quick.action.view.action.reset = Reset
+quick.action.view.action.validate = Ajouter
+quick.action.view.action.validate.tooltip = Ajoute une action dans le fichier specifié dans les propriétés de la vue
+
+
+quick.action.view.action.error = Impossible de trouver un fichier situé dans le répertoire : \n''{0}'' \nAyant pour pattern : \n''{1}''
+quick.action.view.action.configuration.error = Probléme detecté sur la configuration de la vue ''<b>{0}</b>''
+quick.action.view.action.message.validate = La nouvelle action a bien été ajoutée dans le fichier !
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Quick Action View - Properties DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+quick.action.view.properties.dlg.title =  Propriétés de la vue 'Action'
+quick.action.view.properties.dlg.fieldset = Propriétés
+quick.action.view.properties.dlg.lbl.title = Titre :
+quick.action.view.properties.dlg.lbl.title.tooltip = Définit le titre de la vue
+quick.action.view.properties.dlg.lbl.project.path = Chemin d'accès au projet :
+quick.action.view.properties.dlg.lbl.actionFilePath = Chemin du fichier d'actions :
+quick.action.view.properties.dlg.lbl.actionFilePath.tooltip = Chemin relatif à celui du projet ou le chemin réel
+quick.action.view.properties.dlg.lbl.actionFilePattern = Pattern du fichier d'actions :
+quick.action.view.properties.dlg.lbl.actionFilePattern.tooltip = <html>Utilisez une '*' pour préciser l'endroit ou se trouve la date dans le nom du fichier qui contient les actions<br>Seul le fichier le plus récent sera modifié<br>Exemple : <b>CSN_PACT_Plan-d'action-*.xls</b> -> CSN_PACT_Plan-d'action-20130321.xls</html>
+
+quick.action.view.properties.dlg.lbl.configuration = Configuration :
+quick.action.view.properties.dlg.lbl.configuration.tooltip = <HTML>Si cette case est coché, on affichera dans le workspace la configuration spécifique définie sinon ce sera celle commune à tous.
+quick.action.view.properties.dlg.chkb.configuration = <HTML>Spécifique au projet <font color="red"><b>{0}</b></font>
+quick.action.view.properties.dlg.fieldset.identity = Identification de la vue
+
+quick.action.view.properties.dlg.fieldset.configuration.common = <HTML> Configuration <b>Commune</b>
+quick.action.view.properties.dlg.fieldset.configuration.standard = <HTML> Configuration
+quick.action.view.properties.dlg.fieldset.configuration.specific =  <HTML> Configuration spécifique à <font color="red"><b>{0}</b></font>
+
+quick.action.view.properties.dlg.action.cancel = Annuler
+quick.action.view.properties.dlg.action.validate = Valider
+quick.action.view.properties.dlg.action.validate.icon=/icons/save_memory.png
+quick.action.view.properties.dlg.action.validate.tooltip = <HTML> Enregistre les informations en mémoire.<br/>Il faut sauvegarder le workspace complet <b>(Ctrl+S)</b> pour enregistrer les informations en base de données
+
+quick.action.view.properties.dlg.error.not.directory = <html>Les informations renseignées ne permettent pas<br>de déterminer un répertoire valide</html>
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Link - View
+#----------------------------------------------------------------------------------------------------------------------------
+link.view.action.properties = Propriétés de la vue
+link.view.action.properties.tooltip = Configure la vue sélectionnée
+link.view.action.properties.icon=/icons/properties.png
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Link View - Properties DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+link.view.properties.dlg.title =  Propriétés de la vue 'Liens'
+link.view.properties.dlg.tab.general = Générales
+link.view.properties.dlg.tab.cmmi = CMMI
+link.view.properties.dlg.fieldset = Propriétés
+link.view.properties.dlg.lbl.title = Titre :
+link.view.properties.dlg.lbl.title.tooltip = Définit le titre de la vue
+link.view.properties.dlg.lbl.traduction =
+link.view.properties.dlg.lbl.Link.list = Liste des liens :
+link.view.properties.dlg.table.column.action = Action
+link.view.properties.dlg.table.column.link.title = Libellé
+link.view.properties.dlg.table.column.link.url = URL
+
+link.view.properties.dlg.action.table.add.link = Ajouter un lien
+link.view.properties.dlg.action.table.add.link.tooltip = Ajoute une ligne dans le tableau
+link.view.properties.dlg.action.table.add.link.icon = /images/common/add.png
+
+link.view.properties.dlg.action.table.delete.link = Supprimer un lien
+link.view.properties.dlg.action.table.delete.link.tooltip = Supprimer le lien
+link.view.properties.dlg.action.table.delete.link.icon = /images/common/delete.png
+
+
+link.view.properties.dlg.lbl.configuration = Configuration :
+link.view.properties.dlg.lbl.configuration.tooltip = <HTML>Si cette case est coché, on affichera dans le workspace la configuration spécifique définie sinon ce sera celle commune à tous.
+link.view.properties.dlg.chkb.configuration = <HTML>Spécifique au projet <font color="red"><b>{0}</b></font>
+link.view.properties.dlg.fieldset.identity = Identification de la vue
+
+link.view.properties.dlg.fieldset.configuration.common = <HTML> Configuration <b>Commune</b>
+link.view.properties.dlg.fieldset.configuration.standard = <HTML> Configuration
+link.view.properties.dlg.fieldset.configuration.specific =  <HTML> Configuration spécifique à <font color="red"><b>{0}</b></font>
+
+link.view.properties.dlg.action.cancel = Annuler
+link.view.properties.dlg.action.validate = Valider
+link.view.properties.dlg.action.validate.icon=/icons/save_memory.png
+link.view.properties.dlg.action.validate.tooltip = <HTML> Enregistre les informations en mémoire.<br/>Il faut sauvegarder le workspace complet <b>(Ctrl+S)</b> pour enregistrer les informations en base de données
+
+#----------------------------------------------------------------------------------------------------------------------------
+# HTML - View
+#----------------------------------------------------------------------------------------------------------------------------
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# HTML View - Properties DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+html.view.properties.dlg.title =  Propriétés de la vue 'HTML'
+html.view.properties.dlg.tab.general = Générales
+html.view.properties.dlg.tab.cmmi = CMMI
+html.view.properties.dlg.fieldset = Propriétés
+html.view.properties.dlg.lbl.traduction =
+html.view.properties.dlg.lbl.zoom = Zoom :
+html.view.properties.dlg.lbl.zoom.tooltip = Définit le zoom à utiliser pour l'affichage de la vue entre 1 et 400 % (100 % par defaut)
+html.view.properties.dlg.lbl.html = Code HTML :
+html.view.properties.dlg.lbl.html.tooltip = Définit le code HTML à afficher dans la vue
+
+html.view.properties.dlg.lbl.configuration = Configuration :
+html.view.properties.dlg.lbl.configuration.tooltip = <HTML>Si cette case est coché, on affichera dans le workspace la configuration spécifique définie sinon ce sera celle commune à tous.
+html.view.properties.dlg.chkb.configuration = <HTML>Spécifique au projet <font color="red"><b>{0}</b></font>
+
+html.view.properties.dlg.fieldset.configuration.common = <HTML> Configuration <b>Commune</b>
+html.view.properties.dlg.fieldset.configuration.standard = <HTML> Configuration
+html.view.properties.dlg.fieldset.configuration.specific =  <HTML> Configuration spécifique à <font color="red"><b>{0}</b></font>
+
+html.view.properties.dlg.action.cancel = Annuler
+html.view.properties.dlg.action.validate = Valider
+html.view.properties.dlg.action.validate.icon=/icons/save_memory.png
+html.view.properties.dlg.action.validate.tooltip = <HTML> Enregistre les informations en mémoire.<br/>\
+                                                          Il faut sauvegarder le workspace complet <b>(Ctrl+S)</b> pour enregistrer les informations en base de données
+
+html.view.properties.dlg.message.warning.specific.configuration = Vous avez defini un contenu <b>Spécifique</b> pour cette vue.<br/>\
+                                                                  Cependant vous n''avez pas coché la case <b> Configuration : Spécifique au projet <font color="red">{0}</font></b><br/>\
+                                                                  Cette configuration sera perdue lors de l''enregistrement du workspace<br/><br/>\
+                                                                  Désirez vous cocher cette case pour prendre en compte la configuration spécifique pour ce projet ?
+#----------------------------------------------------------------------------------------------------------------------------
+# Workspace MAP - View
+#----------------------------------------------------------------------------------------------------------------------------
+workspaceMap.view.title =  Site map du Workspace
+
+workspaceMap.view.action.properties = Propriétés de la vue
+workspaceMap.view.action.properties.tooltip = Configure la vue sélectionnée
+workspaceMap.view.action.properties.icon=/icons/properties.png
+# Pour les autres Même valeurs que pour HTML
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Workspace MAP - View - Properties DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+workspaceMap.view.properties.dlg.title =  Propriétés de la vue 'Workspace Map'
+# Pour les autres Même valeurs que pour HTML
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# Import Data DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+import.data.dlg.title = Importer des données
+import.data.dlg.fieldset.projets = Importer les projets
+import.data.dlg.fieldset.users = Importer les utilisateurs
+import.data.dlg.fieldset.perspectives = Importer les associations utilisateur/projets
+import.data.dlg.lbl.file = Fichier à importer :
+import.data.dlg.lbl.file.tooltip = Indiquer le fichier à importer
+
+#----------------------------------------------------------------------------------------------------------------------------
+# ZIP Data DIALOG
+#----------------------------------------------------------------------------------------------------------------------------
+zip.selected.files.dlg.title = Zip des fichiers
+zip.selected.files.dlg.fieldset = Création du fichier ZIP
+zip.selected.files.dlg.lbl.file = Nom et destination du ZIP :
+zip.selected.files.dlg.lbl.file.tooltip = Indiquer le chemin et le nom du fichier ZIP
+
+zip.selected.files.dlg.chk.keep.file.dir = Conserver le chemin des fichiers
+zip.selected.files.dlg.chk.keep.file.dir.tooltip = Si cette case est cochée, on conserve le chemin de fichier depuis la racine
+
+
+zip.selected.files.dlg.lbl.exclude.file = Exclure les fichiers :
+zip.selected.files.dlg.lbl.exclude.file.tooltip = <HTML>Peux contenir des fichiers, des répertoires sous la forme :<br/>*.class<br/>target<br/>Séparé par les ";"<br/>Example : *.class;target;suivi*01.* </HTML>
+
+zip.selected.files.dlg.lbl.include.file = Inclure les fichiers :
+zip.selected.files.dlg.lbl.include.file.tooltip = <HTML>Peux contenir des fichiers, des répertoires sous la forme :<br/>*.class<br/>target<br/>Séparé par les ";"<br/>Example : *.pdf;*.doc;*.xls </HTML>
+
+zip.selected.files.dlg.filechooser.file.filter.zip.description = Fichiers zip (*.zip)
+
+zip.selected.files.dlg.action.validate = Valider
+
+zip.selected.files.message.finish = Tous les fichiers sélectionnés ont été <u>zippés</u> dans le fichier<br/><b>{0}</b>
+zip.selected.files.message.interrupted = Le zip a été interrompu !
+zip.selected.files.message.load.files = La liste des fichiers à traiter est en cours de constitution. Merci de patienter ...
+zip.selected.files.message.traitment.file = Traitement du fichier : {0}
+zip.selected.files.message.no.file.selected = Vous n'avez pas selectionné de fichier à compresser !
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------
+# CMMI process selection PANEL
+#----------------------------------------------------------------------------------------------------------------------------
+CMMI.process.selection.fieldset.properties = Sélection des process CMMI
+CMMI.tree.node.root.source = <html><body><b>Réferentiel des process CMMI (non sélectionnés)</b></body></html>
+CMMI.tree.node.root.destination = <html><body><b>Process CMMI affectés à la vue</b></body></html>
+
+CMMI.process.selection.add = Ajouter <<
+CMMI.process.selection.add.icon=/icons/add.png
+
+CMMI.process.selection.remove = Retirer >>
+CMMI.process.selection.remove.icon=/icons/delete.png
+
+CMMI.process.selection.error.root.not.selectable = Vous ne pouvez pas sélectionner le noeud root !\nLe traitement des autres noeuds va se poursuivre...
+CMMI.process.selection.error.no.selection = Vous n'avez pas sélectionné de noeuds à déplacer !

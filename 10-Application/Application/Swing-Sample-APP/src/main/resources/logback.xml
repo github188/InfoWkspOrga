@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- sends logs to logback-beagle eclipse plugin -->
+	<!-- Remove it in production environment -->
+	<consolePlugin />
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<Pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} | [%-5level] %logger{35}.%M - %msg%n</Pattern>
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>G:/temp/logs/infowrksporga/infowrksporga-jfx.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!-- daily rollover -->
+			<fileNamePattern>infowrksporga-jfx.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+			<!-- keep 30 days' worth of history -->
+			<maxHistory>30</maxHistory>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%d{dd/MM/yyyy HH:mm:ss.SSS} | [%-5level] %logger{35}.%M - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+
+  <logger name="com.sgu.core" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="console" />
+	</logger>
+	
+	<logger name="com.sgu.infowksporga" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<logger name="org.springframework" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<logger name="org.kie" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="console" />
+	</logger>
+	
+	<logger name="org.apache.http" additivity="false">
+    <level value="WARN" />
+    <appender-ref ref="console" />
+  </logger>
+
+	<logger name="org.drools" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<logger name="org.jpbm" additivity="false">
+		<level value="WARN" />
+		<appender-ref ref="console" />
+	</logger>
+
+
+	<root level="WARN">
+		<appender-ref ref="console" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

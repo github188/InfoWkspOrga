@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	
+	<persistence-unit name="pu" transaction-type="RESOURCE_LOCAL">
+		<mapping-file>META-INF/orm.xml</mapping-file>
+		
+		<class>com.sgu.infowksporga.business.entity.User</class>
+		<class>com.sgu.infowksporga.business.entity.I18n</class>
+		<class>com.sgu.infowksporga.business.entity.Lock</class>
+		<class>com.sgu.infowksporga.business.entity.Perspective</class>
+		<class>com.sgu.infowksporga.business.entity.Preference</class>
+		<class>com.sgu.infowksporga.business.entity.Project</class>
+		<class>com.sgu.infowksporga.business.entity.ProjectConfiguration</class>
+		<class>com.sgu.infowksporga.business.entity.View</class>
+		<class>com.sgu.infowksporga.business.entity.Workspace</class>
+		<class>com.sgu.infowksporga.business.entity.PerspectiveWorkspaces</class>
+		<class>com.sgu.infowksporga.business.entity.ViewAttribute</class>
+		
+		
+		<properties>
+				<property name="hibernate.ejb.resource_scanner" value="com.sgu.core.framework.dao.ResourceScanner" />
+				<property name="hibernate.archive.autodetection" value="class" />
+				<property name="javax.persistence.validation.mode" value="callback,ddl" />
+				<property name="hibernate.validator.apply_to_ddl" value="true" />
+				<property name="hibernate.validator.autoregister_listeners" value="true" />
+				<property name="hibernate.check_nullability" value="true" />
+				
+				<property name="hibernate.format_sql" value="true" />
+				<property name="hibernate.show_sql" value="true" />
+				
+				<property name="hibernate.cache.use_second_level_cache" value="false" />
+				<property name="hibernate.cache.use_structured_cache" value="false" />
+				<property name="hibernate.cache.use_structured_entries" value="false" />
+				
+				<!-- true or false. Setting which indicates whether or not the new IdentifierGenerator implementations are used 
+				     for AUTO, TABLE and SEQUENCE. Default to false to keep backward compatibility. -->
+				<property name="hibernate.id.new_generator_mappings" value="false" />
+				
+				<property name="hibernate.max_fetch_depth" value="4" />
+				
+				<property name="hibernate.physical_naming_strategy" value="com.sgu.core.framework.dao.jpa.PhysicalNamingStrategyLowerCase" />
+				<property name="hibernate.implicit_naming_strategy" value="com.sgu.core.framework.dao.jpa.ImplicitNamingStrategyNiceJpaImpl" />
+				<!-- property name="hibernate.ejb.identifier_generator_strategy_provider" value="com.sgu.core.framework.dao.jpa.IdentifierGeneratorStrategyProvider" / -->
+				
+				<property name="hibernate.auto_quote_keyword" value="true"/>
+				<property name="hibernate.connection.charSet" value="UTF-8" />
+				
+			</properties>
+	</persistence-unit>
+</persistence>

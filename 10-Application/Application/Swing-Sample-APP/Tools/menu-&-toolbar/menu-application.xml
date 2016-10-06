@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu-application>
+
+	<menu name="menu.file">
+		<menuItem tag-name="SEND_FILE_BY_MAIL_TAG" />
+		<menuItem tag-name="ZIP_SELECTED_FILES_ACTION" />
+		<separator />
+		<menuItem tag-name="EXIT_TAG" />
+
+	</menu>
+
+	<menu name="menu.edit">
+		<menuItem tag-name="UNSELECT_NODES_FOR_ALL_DIRECTORY_DESK_VIEW_TAG" />
+		<menuItem tag-name="CUT_DIRECTORY_DESK_VIEW_FILES_TAG" />
+		<menuItem tag-name="COPY_DIRECTORY_DESK_VIEW_FILES_TAG" />
+		<menuItem tag-name="PASTE_DIRECTORY_DESK_VIEW_FILES_TAG" />
+		<separator />
+		<menuItem tag-name="REMOVE_DIRECTORY_DESK_VIEW_FILES_TAG" />
+	</menu>
+
+	<menu name="menu.perspective">
+		<menuItem tag-name="PERSPECTIVE_CREATE_TAG" />
+		<menuItem tag-name="PERSPECTIVE_COPY_TAG" />
+		<menuItem tag-name="PERSPECTIVE_UPDATE_PROPERTIES_TAG" />
+		<separator />
+		<menuItem tag-name="PERSPECTIVE_REMOVE_TAG" />
+	</menu>
+
+	<menu name="menu.workspace">
+		<menuItem tag-name="WORKSPACE_CREATE_TAG" />
+		<menuItem tag-name="WORKSPACE_COPY_TAG" />
+		<menuItem tag-name="WORKSPACE_UPDATE_PROPERTIES_TAG" />
+		<menuItem tag-name="WORKSPACE_DEFINE_TAB_TITLE_TAG" />
+		<menuItem tag-name="WORKSPACE_SAVE_TAG" />
+		<separator />
+		<menu name="menu.workspace.views">
+			<menuItem tag-name="ADD_DIRECTORY_DESK_VIEW_TAG" />
+			<menuItem tag-name="ADD_HTML_VIEW_TAG" />
+			<menuItem tag-name="ADD_LINK_VIEW_TAG" />
+			<separator />
+			<menuItem tag-name="ADD_WORKSPACE_MAP_VIEW_TAG" />
+			<separator />
+			<menuItem tag-name="ADD_QUICK_ACTION_VIEW_TAG" />
+			<menuItem tag-name="ADD_PROJECT_CONFIGURATION_VIEW_TAG" />
+		</menu>
+		<separator />
+		<menuItem tag-name="WORKSPACE_REMOVE_TAG" />
+	</menu>
+
+	<menu name="menu.user">
+		<menuItem tag-name="MANAGE_USER_TAG" />
+		<menuItem tag-name="IMPORT_USER_TAG" />
+		<menuItem tag-name="IMPORT_USER_PROJECTS_AFFECTATION" />
+
+	</menu>
+
+	<menu name="menu.project">
+		<menuItem tag-name="CREATE_PROJECT_TAG" />
+		<menuItem tag-name="UPDATE_PROJECT_TAG" />
+		<menuItem tag-name="IMPORT_PROJECT_TAG" />
+		<separator />
+		<menuItem tag-name="REMOVE_PROJECT_TAG" />
+
+		<separator />
+		<menuItem tag-name="GENERATE_RSLA_TAG" />
+
+	</menu>
+
+	<menu name="menu.window">
+		<menuItem tag-name="PREFERENCES_DISPLAY_TAG" />
+	</menu>
+
+	<menu name="menu.help">
+		<menuItem tag-name="WORKSPACE_DISPLAY_LAYOUT_TAG" />
+		<separator />
+		<menuItem tag-name="ABOUT_TAG" />
+
+	</menu>
+
+
+</menu-application>

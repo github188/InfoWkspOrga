@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="xmlPerspective">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="xmlWorkspace"/>
+      </xs:sequence>
+      <xs:attribute name="description" use="required" type="xs:NCName"/>
+      <xs:attribute name="enabled" use="required" type="xs:integer"/>
+      <xs:attribute name="icon" use="required"/>
+      <xs:attribute name="id" use="required" type="xs:integer"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="order" use="required" type="xs:integer"/>
+      <xs:attribute name="owner" use="required" type="xs:NCName"/>
+      <xs:attribute name="partage" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="xmlWorkspace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="xmlWorkspace"/>
+      </xs:sequence>
+      <xs:attribute name="baseFolder"/>
+      <xs:attribute name="bold" use="required" type="xs:boolean"/>
+      <xs:attribute name="category"/>
+      <xs:attribute name="childrenWrkspCreationEnabled" use="required" type="xs:boolean"/>
+      <xs:attribute name="color"/>
+      <xs:attribute name="created_by" use="required"/>
+      <xs:attribute name="customer"/>
+      <xs:attribute name="description"/>
+      <xs:attribute name="enabled" use="required" type="xs:boolean"/>
+      <xs:attribute name="icon"/>
+      <xs:attribute name="id" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="italic" use="required" type="xs:boolean"/>
+      <xs:attribute name="layout"/>
+      <xs:attribute name="masterId"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="order" use="required" type="xs:integer"/>
+      <xs:attribute name="owner" use="required"/>
+      <xs:attribute name="parentId"/>
+      <xs:attribute name="partage" use="required"/>
+      <xs:attribute name="projectId" type="xs:integer"/>
+      <xs:attribute name="strike" use="required" type="xs:boolean"/>
+      <xs:attribute name="tags"/>
+      <xs:attribute name="type" use="required"/>
+      <xs:attribute name="underline" use="required" type="xs:boolean"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

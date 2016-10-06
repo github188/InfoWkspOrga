@@ -1,0 +1,15 @@
+<project name="livraison" basedir=".">
+
+	<target name="copy-files-env-local">
+		<copy todir="./src/main/resources" overwrite="true">
+			<fileset dir="./src/main/resources/env-local" includes="*.*" />
+		</copy>
+	</target>
+
+	<target name="copy-files-env-prod">
+		<copy todir="./src/main/resources" overwrite="true">
+			<fileset dir="./src/main/resources/env-prod" includes="*.*" />
+		</copy>
+	</target>
+
+</project>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu-application>
+
+	<menu name="menu.file">
+		<menuItem name="SEND_SELECTED_FILES_BY_MAIL" />
+		<menuItem name="ZIP_SELECTED_FILES" />
+		<separator />
+		<menuItem name="EXIT" />
+
+	</menu>
+	
+	
+	 <menu name="menu.edit">
+		<menuItem name="UNSELECT_NODES_FOR_ALL_DIRECTORIES_DESK_VIEW" />
+		<menuItem name="CUT_SELECTED_DIRECTORIES_FILES" />
+		<menuItem name="COPY_SELECTED_DIRECTORIES_FILES" />
+		<menuItem name="PASTE_SELECTED_DIRECTORIES_FILES" />
+		<separator />
+		<menuItem name="DELETE_SELECTED_DIRECTORIES_FILES" />
+	</menu>
+	
+
+	<menu name="menu.workspace">
+		<!--
+			
+			<menuItem name="WORKSPACE_COPY" />                 
+			<menuItem name="WORKSPACE_UPDATE_PROPERTIES" />
+			<menuItem name="WORKSPACE_DEFINE_TAB_TITLE" />
+
+		-->
+		<menuItem name="WORKSPACE_NEW" />
+		<menuItem name="WORKSPACE_UPDATE" />
+		<menuItem name="WORKSPACE_SAVE" />
+		<!--
+			<separator />
+
+			<menuItem name="WORKSPACE_REMOVE" />
+		-->
+	</menu>
+
+
+	<menu name="menu.view">
+
+		<menuItem name="ADD_FILE_EXPLORER_VIEW" />
+		<menuItem name="ADD_HTML_VIEW" />
+		<menuItem name="ADD_WEB_VIEW" />
+
+
+		<!--<menuItem name="ADD_LINK_VIEW" />
+			<separator />
+
+			<separator />
+			<menuItem name="ADD_QUICK_ACTION_VIEW" />
+			<menuItem name="ADD_PROJECT_CONFIGURATION_VIEW" />
+		-->
+	</menu>
+
+	<!-- <menu name="menu.edit">
+		<menuItem name="UNSELECT_NODES_FOR_ALL_DIRECTORY_DESK_VIEW" />
+		<menuItem name="CUT_DIRECTORY_DESK_VIEW_FILES" />
+		<menuItem name="COPY_DIRECTORY_DESK_VIEW_FILES" />
+		<menuItem name="PASTE_DIRECTORY_DESK_VIEW_FILES" />
+		<separator />
+		<menuItem name="REMOVE_DIRECTORY_DESK_VIEW_FILES" />
+		</menu>
+
+		<menu name="menu.perspective">
+		<menuItem name="PERSPECTIVE_CREATE" />
+		<menuItem name="PERSPECTIVE_COPY" />
+		<menuItem name="PERSPECTIVE_UPDATE_PROPERTIES" />
+		<separator />
+		<menuItem name="PERSPECTIVE_REMOVE" />
+		</menu>
+
+		<menu name="menu.workspace">
+		<menuItem name="WORKSPACE_CREATE" />
+		<menuItem name="WORKSPACE_COPY" />
+		<menuItem name="WORKSPACE_UPDATE_PROPERTIES" />
+		<menuItem name="WORKSPACE_DEFINE_TAB_TITLE" />
+		<menuItem name="WORKSPACE_SAVE" />
+		<separator />
+
+		<separator />
+		<menuItem name="WORKSPACE_REMOVE" />
+		</menu>
+
+		<menu name="menu.user">
+		<menuItem name="MANAGE_USER" />
+		<menuItem name="IMPORT_USER" />
+		<menuItem name="IMPORT_USER_PROJECTS_AFFECTATION" />
+
+		</menu>
+
+		<menu name="menu.project">
+		<menuItem name="CREATE_PROJECT" />
+		<menuItem name="UPDATE_PROJECT" />
+		<menuItem name="IMPORT_PROJECT" />
+		<separator />
+		<menuItem name="REMOVE_PROJECT" />
+
+		<separator />
+		<menuItem name="GENERATE_RSLA" />
+
+		</menu>
+	-->
+	<menu name="menu.window">
+		<menuItem name="PREFERENCES" />
+
+	</menu>
+
+	<menu name="menu.help">
+		<menuItem name="SHOW_WORKSPACE_LAYOUT" />
+		<separator />
+		<menuItem name="ABOUT" />
+
+	</menu>
+
+
+</menu-application>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="AuthenticateUserIn" structureRef="com.sgu.infowksporga.business.pivot.authentication.AuthenticateUserIn" />
+  <itemDefinition id="User" structureRef="com.sgu.infowksporga.business.entity.User" />
+  <itemDefinition id="RuleMessages" structureRef="com.sgu.core.framework.drools.rules.validation.RuleMessages" />
+  <process processType="Private" isExecutable="true" id="process-check-authentification" name="Process Check Authentification " tns:packageName="com.sgu.infowksporga.business.rules.authentification" tns:version="1.0" >
+
+    <extensionElements>
+     <tns:import name="java.util.List" />
+     <tns:import name="com.sgu.infowksporga.business.pivot.authentication.AuthenticateUserIn" />
+     <tns:import name="com.sgu.core.framework.pivot.Message" />
+     <tns:import name="java.lang.String" />
+     <tns:import name="com.sgu.infowksporga.business.entity.User" />
+     <tns:import name="com.sgu.core.framework.drools.rules.validation.RuleMessages" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="ruleMessages" itemSubjectRef="RuleMessages"/>
+    <property id="authenticationIn" itemSubjectRef="AuthenticateUserIn"/>
+    <property id="user" itemSubjectRef="User"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name=""  isInterrupting="true">
+    </startEvent>
+    <businessRuleTask id="BusinessRuleTask_3" name="Check User info Validity" g:ruleFlowGroup="Validity" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </businessRuleTask>
+    <exclusiveGateway id="ExclusiveGateway_1" name="hasError ?" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <businessRuleTask id="BusinessRuleTask_2" name="Check Mandatory" g:ruleFlowGroup="Mandatory" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </businessRuleTask>
+    <endEvent id="EndEvent_2" name="Mandatory Field(s) error" >
+        <terminateEventDefinition />
+    </endEvent>
+    <businessRuleTask id="BusinessRuleTask_1" name="Initialization" g:ruleFlowGroup="Initialization" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </businessRuleTask>
+    <scriptTask id="ScriptTask_1" name="Insert Facts in rule Engine" scriptFormat="http://www.java.com/java" >
+      <script>// Insert Facts in ksession
+kcontext.getKnowledgeRuntime().insert(ruleMessages);
+kcontext.getKnowledgeRuntime().insert(authenticationIn);
+
+if (user != null) {
+  kcontext.getKnowledgeRuntime().insert(user);
+}</script>
+    </scriptTask>
+    <endEvent id="EndEvent_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <endEvent id="EndEvent_1" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="ExclusiveGateway_1-BusinessRuleTask_3" sourceRef="ExclusiveGateway_1" targetRef="BusinessRuleTask_3" name="OK - User != null" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return ruleMessages.hasError() == false &amp;&amp; user != null</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="BusinessRuleTask_2-ExclusiveGateway_1" sourceRef="BusinessRuleTask_2" targetRef="ExclusiveGateway_1" />
+    <sequenceFlow id="BusinessRuleTask_1-BusinessRuleTask_2" sourceRef="BusinessRuleTask_1" targetRef="BusinessRuleTask_2" />
+    <sequenceFlow id="ExclusiveGateway_1-EndEvent_2" sourceRef="ExclusiveGateway_1" targetRef="EndEvent_2" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return ruleMessages.hasError() == true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="ScriptTask_1-BusinessRuleTask_1" sourceRef="ScriptTask_1" targetRef="BusinessRuleTask_1" />
+    <sequenceFlow id="_1-ScriptTask_1" sourceRef="_1" targetRef="ScriptTask_1" />
+    <sequenceFlow id="BusinessRuleTask_3-EndEvent_3" sourceRef="BusinessRuleTask_3" targetRef="EndEvent_3" />
+    <sequenceFlow id="ExclusiveGateway_1-EndEvent_1" sourceRef="ExclusiveGateway_1" targetRef="EndEvent_1" name="OK - User = null" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return ruleMessages.hasError() == false &amp;&amp; user == null</conditionExpression>
+    </sequenceFlow>
+
+    <association id="Association_1"  sourceRef="TextAnnotation_1"  targetRef="_1" />
+    <association id="Association_2"  sourceRef="TextAnnotation_2"  targetRef="BusinessRuleTask_3" />
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="process-check-authentification" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="438" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="BusinessRuleTask_3" >
+        <dc:Bounds x="407" y="427" width="110" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ExclusiveGateway_1" >
+        <dc:Bounds x="437" y="340" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="BusinessRuleTask_2" >
+        <dc:Bounds x="407" y="257" width="110" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_2" >
+        <dc:Bounds x="634" y="341" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="BusinessRuleTask_1" >
+        <dc:Bounds x="407" y="177" width="110" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ScriptTask_1" >
+        <dc:Bounds x="374" y="91" width="175" height="64" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_3" >
+        <dc:Bounds x="438" y="514" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="EndEvent_1" >
+        <dc:Bounds x="234" y="341" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="ExclusiveGateway_1-BusinessRuleTask_3" >
+        <di:waypoint x="461" y="364" />
+        <di:waypoint x="462" y="407" />
+        <di:waypoint x="462" y="407" />
+        <di:waypoint x="462" y="452" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="BusinessRuleTask_2-ExclusiveGateway_1" >
+        <di:waypoint x="462" y="282" />
+        <di:waypoint x="462" y="321" />
+        <di:waypoint x="462" y="321" />
+        <di:waypoint x="461" y="364" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="BusinessRuleTask_1-BusinessRuleTask_2" >
+        <di:waypoint x="462" y="202" />
+        <di:waypoint x="462" y="240" />
+        <di:waypoint x="462" y="240" />
+        <di:waypoint x="462" y="282" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="ExclusiveGateway_1-EndEvent_2" >
+        <di:waypoint x="461" y="364" />
+        <di:waypoint x="556" y="365" />
+        <di:waypoint x="556" y="365" />
+        <di:waypoint x="658" y="365" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="ScriptTask_1-BusinessRuleTask_1" >
+        <di:waypoint x="461" y="123" />
+        <di:waypoint x="462" y="164" />
+        <di:waypoint x="462" y="164" />
+        <di:waypoint x="462" y="202" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-ScriptTask_1" >
+        <di:waypoint x="462" y="48" />
+        <di:waypoint x="462" y="76" />
+        <di:waypoint x="462" y="76" />
+        <di:waypoint x="461" y="123" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="BusinessRuleTask_3-EndEvent_3" >
+        <di:waypoint x="462" y="452" />
+        <di:waypoint x="462" y="496" />
+        <di:waypoint x="462" y="496" />
+        <di:waypoint x="462" y="538" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="ExclusiveGateway_1-EndEvent_1" >
+        <di:waypoint x="461" y="364" />
+        <di:waypoint x="365" y="365" />
+        <di:waypoint x="365" y="365" />
+        <di:waypoint x="258" y="365" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

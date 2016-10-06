@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- configurationDate="2015/10/26 21:32:52" -->
+<xmlPerspective id="3"  name="perspective.user.name" icon="/icons/user.png" 
+                description="perspective.user.description" owner="admin" order="3" 
+                enabled='true' partage="PRIVATE">
+	<!-- This Template is used to initialized main base node just under the Root Node "Classeur" it's checked at webapp startup -->
+
+	<!-- +++++++++ -->
+	<!-- Root Node -->
+	<!-- +++++++++ -->
+	<xmlWorkspace id="1" name="perspective.tree.node.root">
+
+		<!-- Directory contains help to configure & use Project Manager -->
+		<xmlWorkspace id="2" name="perspective.tree.node.help" />
+
+		<!-- ${User} is replaced by current user login -->
+		<xmlWorkspace id="${User}" name="${User}" description="perspective.tree.node.user.tooltip" 
+		              tags="init, current-user, moi"
+			type="USER"  enabled="true" owner="${User}" icon="/icons/user.png" bold="true" 
+			color="rgb(0, 0, 255)"
+			order="2" childrenWrkspCreationEnabled="true" italic="true" category="USER" 
+			partage="PRIVATE" />
+
+  </xmlWorkspace>
+
+
+</xmlPerspective>
+
+
+

@@ -1,0 +1,19 @@
+// Insert Facts for the rules files (DRL, XLS, ...)
+		kSession.insert(pivotIn);
+		kSession.insert(messages);
+		kSession.insert(user);
+
+		// Last is the first agenda launch
+		final Agenda agenda = kSession.getAgenda();
+		agenda.getAgendaGroup("Validity").setFocus(); // 3 - Third group of rules launch
+		agenda.getAgendaGroup("Mandatory").setFocus(); // 2 - Second group of rules launch
+		agenda.getAgendaGroup("Initialization").setFocus(); // 1 - First group of rules launch
+
+		final int nbRulesFired = kSession.fireAllRules();
+
+		LOGGER.debug("nbRules fired = {}", nbRulesFired);
+		displayErrorMessage(messages);
+
+		if (messages.hasError()) {
+			LOGGER.error("Rules not compliant");
+		}

@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"></html>
+<head id="j_idt2">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#3F51B5">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/theme-primefaces-ultima-indigo.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/components.css">
+<script type="text/javascript" src="../lib/prime-ui/jquery.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/core.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/components.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/jquery-plugins.js"></script>
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/inputswitch.css">
+<script type="text/javascript" src="../lib/prime-ui/inputswitch.js"></script>
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/keyboard.css">
+<script type="text/javascript" src="../lib/prime-ui/keyboard.js"></script>
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/nanoscroller.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/animate.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/ripple.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout-indigo.css">
+<script type="text/javascript">if(window.PrimeFaces){PrimeFaces.settings.locale='en_US';}</script>
+<title>PrimeFaces Ultima</title>
+<script type="text/javascript" src="../lib/prime-ui/nanoscroller.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/layout.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/ripple.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/swipe.js"></script>
+<script>try {  for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){    var lastpass_f = document.forms[lastpass_iter];    if(typeof(lastpass_f.lpsubmitorig)=="undefined"){      if (typeof(lastpass_f.submit) == "function") {        lastpass_f.lpsubmitorig = lastpass_f.submit;        lastpass_f.submit = function(){          var form = this;          try {            if (document.documentElement && 'createEvent' in document)            {              var forms = document.getElementsByTagName('form');              for (var i=0 ; i<forms.length ; ++i)                if (forms[i]==form)                {                  var element = document.createElement('lpformsubmitdataelement');                  element.setAttribute('formnum',i);                  element.setAttribute('from','submithook');                  document.documentElement.appendChild(element);                  var evt = document.createEvent('Events');                  evt.initEvent('lpformsubmit',true,false);                  element.dispatchEvent(evt);                  break;                }            }          } catch (e) {}          try {            form.lpsubmitorig();          } catch (e) {}        }      }    }  }} catch (e) {}</script>
+<div></div>
+</head>
+<body class="main-body layout-compact">
+
+    <div class="layout-wrapper menu-layout-static">
+
+        <div class="topbar clearfix">
+            <div class="topbar-left">
+                <div class="logo"></div>
+            </div>
+
+            <div class="topbar-right">
+                <a id="menu-button" href="#"> <i></i>
+                </a> <a id="topbar-menu-button" href="#"> <i class="material-icons">menu</i>
+                </a>
+                <ul class="topbar-items fadeInDown animated">
+                    <li><a href="#"> <i class="topbar-icon material-icons"></i> <span class="topbar-item-name">Settings</span>
+                    </a>
+                        <ul class="ultima-menu animated">
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Change Theme</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Favorites</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Lock Screen</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Wallpaper</span>
+                            </a></li>
+                        </ul></li>
+                    <li><a href="#"> <i class="topbar-icon material-icons animated swing"></i> <span
+                            class="topbar-badge animated rubberBand">5</span> <span class="topbar-item-name">Messages</span>
+                    </a>
+                        <ul class="ultima-menu animated">
+                            <li role="menuitem"><a href="#" class="topbar-message"><img id="j_idt15"
+                                    src="../lib/prime-ui/images/avatar1.png" alt="" width="35"> <span>Give
+                                        me a call</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><img id="j_idt17"
+                                    src="../lib/prime-ui/images/avatar2.png" alt="" width="35"> <span>Sales
+                                        reports attached</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><img id="j_idt19"
+                                    src="../lib/prime-ui/images/avatar3.png" alt="" width="35"> <span>About
+                                        your invoice</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><img id="j_idt21"
+                                    src="../lib/prime-ui/images/avatar2.png" alt="" width="35"> <span>Meeting
+                                        today at 10pm</span> </a></li>
+                            <li role="menuitem"><a href="#" class="topbar-message"><img id="j_idt23"
+                                    src="../lib/prime-ui/images/avatar4.png" alt="" width="35"> <span>Out
+                                        of office</span> </a></li>
+                        </ul></li>
+                    <li><a href="#"> <i class="topbar-icon material-icons"></i> <span class="topbar-badge animated rubberBand">4</span>
+                            <span class="topbar-item-name">Notifications</span>
+                    </a>
+                        <ul class="ultima-menu animated">
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Pending tasks</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Meeting today at 3pm</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Download documents</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#"> <i class="material-icons"></i> <span>Book flight</span>
+                            </a></li>
+                        </ul></li>
+                    <li class="search-item"><span class="md-inputfield"><input id="j_idt26" name="j_idt26"
+                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox" aria-disabled="false"
+                            aria-readonly="false" type="text"> <label>Search</label> <i class="topbar-icon material-icons"></i></span></li>
+                </ul>
+            </div>
+        </div>
+        <form id="menuform" name="menuform" method="post" action="/ultima/forms.xhtml" enctype="application/x-www-form-urlencoded">
+            <input name="menuform" value="menuform" type="hidden">
+
+            <div class="layout-menu ">
+                <div class="nano has-scrollbar">
+                    <div class="nano-content menu-scroll-content" tabindex="0" style="margin-right: -17px;">
+                        <div class="profile">
+                            <div class="profile-image"></div>
+                            <a id="profile-options" href="#"> <span class="profile-name">Jane Williams</span> <i class="material-icons"></i>
+                            </a>
+                        </div>
+
+                        <ul id="profile-menu" class="ultima-menu">
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">person</i> <span>Profile</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">security</i> <span>Privacy</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">settings_application</i>
+                                    <span>Settings</span>
+                            </a></li>
+                            <li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">power_settings_new</i> <span>Logout</span>
+                            </a></li>
+                        </ul>
+                        <ul id="menuform:j_idt32" class="ultima-menu clearfix">
+                            <li id="menuform:um_dashboard" role="menuitem"><a href="/ultima/dashboard.xhtml"><i
+                                    class="material-icons"></i><span>Dashboard</span></a></li>
+                            <li id="menuform:themes" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">palette</i><span>Themes</span><span
+                                    class="ink animate"></span><i class="material-icons"></i></a>
+                            <ul role="menu">
+                                    <li id="menuform:theme1" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme1':'menuform:theme1'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Indigo - Pink</span></a></li>
+                                    <li id="menuform:theme2" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme2':'menuform:theme2'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Brown - Green</span></a></li>
+                                    <li id="menuform:theme3" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme3':'menuform:theme3'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Blue - Amber</span></a></li>
+                                    <li id="menuform:theme4" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme4':'menuform:theme4'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Blue Grey - Green</span></a></li>
+                                    <li id="menuform:theme5" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme5':'menuform:theme5'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Dark - Blue</span></a></li>
+                                    <li id="menuform:theme6" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme6':'menuform:theme6'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Dark - Green</span></a></li>
+                                    <li id="menuform:theme7" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme7':'menuform:theme7'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Green - Yellow</span></a></li>
+                                    <li id="menuform:theme8" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme8':'menuform:theme8'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Purple - Cyan</span></a></li>
+                                    <li id="menuform:theme9" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme9':'menuform:theme9'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Purple - Amber</span></a></li>
+                                    <li id="menuform:theme10" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme10':'menuform:theme10'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Teal - Lime</span></a></li>
+                                    <li id="menuform:theme11" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme11':'menuform:theme11'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Cyan - Amber</span></a></li>
+                                    <li id="menuform:theme12" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:theme12':'menuform:theme12'}).submit('menuform');return false;"><i
+                                            class="material-icons">brush</i><span>Grey - Deep Orange</span></a></li>
+                                </ul></li>
+                            <li id="menuform:um_customization" role="menuitem"><a href="#" class="ripplelink"><i
+                                    class="material-icons">settings_application</i><span>Customization</span><span class="ink animate"></span><i
+                                    class="material-icons"></i></a>
+                            <ul role="menu">
+                                    <li id="menuform:custom1" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom1':'menuform:custom1'}).submit('menuform');return false;"><i
+                                            class="material-icons">fiber_manual_record</i><span>Compact Size</span></a></li>
+                                    <li id="menuform:custom2" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom2':'menuform:custom2'}).submit('menuform');return false;"><i
+                                            class="material-icons">fiber_smart_record</i><span>Material Size</span></a></li>
+                                    <li id="menuform:custom3" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom3':'menuform:custom3'}).submit('menuform');return false;"><i
+                                            class="material-icons">menu</i><span>Static Menu</span></a></li>
+                                    <li id="menuform:custom4" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom4':'menuform:custom4'}).submit('menuform');return false;"><i
+                                            class="material-icons">exit_to_app</i><span>Overlay Menu</span></a></li>
+                                    <li id="menuform:custom5" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom5':'menuform:custom5'}).submit('menuform');return false;"><i
+                                            class="material-icons">border_horizontal</i><span>Horizontal Menu</span></a></li>
+                                    <li id="menuform:custom6" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom6':'menuform:custom6'}).submit('menuform');return false;"><i
+                                            class="material-icons">label_outline</i><span>Light Menu</span></a></li>
+                                    <li id="menuform:custom7" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom7':'menuform:custom7'}).submit('menuform');return false;"><i
+                                            class="material-icons">label</i><span>Dark Menu</span></a></li>
+                                    <li id="menuform:custom8" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom8':'menuform:custom8'}).submit('menuform');return false;"><i
+                                            class="material-icons">contacts</i><span>Inline Profile</span></a></li>
+                                    <li id="menuform:custom9" role="menuitem"><a href="#"
+                                        onclick="PrimeFaces.addSubmitParam('menuform',{'menuform:custom9':'menuform:custom9'}).submit('menuform');return false;"><i
+                                            class="material-icons">person_pin</i><span>Top Profile</span></a></li>
+                                </ul></li>
+                            <li id="menuform:um_components" role="menuitem" class="active-menuitem"><a href="#" class="ripplelink"><i
+                                    class="material-icons">list</i><span>Components</span><span class="ink animate"></span><i
+                                    class="material-icons"></i></a>
+                            <ul role="menu" style="display: block;">
+                                    <li id="menuform:um_sample" role="menuitem"><a href="/ultima/sample.xhtml"><i
+                                            class="material-icons">desktop_mac</i><span>Sample Page</span></a></li>
+                                    <li id="menuform:um_forms" role="menuitem"><a href="/ultima/forms.xhtml"><i
+                                            class="material-icons">input</i><span>Forms</span></a></li>
+                                    <li id="menuform:um_data" role="menuitem"><a href="/ultima/data.xhtml"><i
+                                            class="material-icons">grid_on</i><span>Data</span></a></li>
+                                    <li id="menuform:um_panels" role="menuitem"><a href="/ultima/panel.xhtml"><i
+                                            class="material-icons">content_paste</i><span>Panels</span></a></li>
+                                    <li id="menuform:um_overlays" role="menuitem" class="active-menuitem"><a
+                                        href="/ultima/overlay.xhtml"><i class="material-icons">content_copy</i><span>Overlays</span></a></li>
+                                    <li id="menuform:um_menus" role="menuitem"><a href="/ultima/menu.xhtml"><i
+                                            class="material-icons">menu</i><span>Menus</span></a></li>
+                                    <li id="menuform:um_messages" role="menuitem"><a href="/ultima/messages.xhtml"><i
+                                            class="material-icons">message</i><span>Messages</span></a></li>
+                                    <li id="menuform:um_charts" role="menuitem"><a href="/ultima/charts.xhtml"><i
+                                            class="material-icons">insert_chart</i><span>Charts</span></a></li>
+                                    <li id="menuform:um_file" role="menuitem"><a href="/ultima/file.xhtml"><i
+                                            class="material-icons">attach_file</i><span>File</span></a></li>
+                                    <li id="menuform:um_misc" role="menuitem"><a href="/ultima/misc.xhtml"><i
+                                            class="material-icons">toys</i><span>Misc</span></a></li>
+                                </ul></li>
+                            <li id="menuform:um_default" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">get_app</i><span>Template
+                                        Pages</span><span class="ink animate"></span><i class="material-icons"></i></a>
+                            <ul role="menu">
+                                    <li id="menuform:um_db_landing" role="menuitem"><a href="/ultima/landing.xhtml"><i
+                                            class="material-icons">flight_land</i><span>Landing</span></a></li>
+                                    <li id="menuform:um_empty" role="menuitem"><a href="/ultima/empty.xhtml"><i
+                                            class="material-icons">hourglass_empty</i><span>Empty Page</span></a></li>
+                                    <li id="menuform:um_login" role="menuitem"><a href="/ultima/login.xhtml"><i
+                                            class="material-icons">verified_user</i><span>Login Page</span></a></li>
+                                    <li id="menuform:um_error" role="menuitem"><a href="/ultima/error.xhtml"><i
+                                            class="material-icons">error</i><span>Error Page</span></a></li>
+                                    <li id="menuform:um_404" role="menuitem"><a href="/ultima/404.xhtml"><i class="material-icons">error_outline</i><span>404
+                                                Page</span></a></li>
+                                    <li id="menuform:um_access" role="menuitem"><a href="/ultima/access.xhtml"><i
+                                            class="material-icons">security</i><span>Access Denied Page</span></a></li>
+                                </ul></li>
+                            <li id="menuform:um_hierarchy" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">menu</i><span>Menu
+                                        Hierarchy</span><span class="ink animate"></span><i class="material-icons"></i></a>
+                            <ul role="menu">
+                                    <li id="menuform:um_sm1" role="menuitem"><a href="#" class="ripplelink"><i
+                                            class="material-icons">subject</i><span>Submenu 1</span><span class="ink animate"></span><i
+                                            class="material-icons"></i></a>
+                                    <ul role="menu">
+                                            <li id="menuform:um_sm11" role="menuitem"><a href="#" class="ripplelink"><i
+                                                    class="material-icons">subject</i><span>Submenu 1.1</span><span class="ink animate"></span><i
+                                                    class="material-icons"></i></a>
+                                            <ul role="menu">
+                                                    <li id="menuform:um_lnk111" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 1.1.1</span></a></li>
+                                                    <li id="menuform:um_lnk112" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 1.1.2</span></a></li>
+                                                    <li id="menuform:um_lnk113" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 1.1.3</span></a></li>
+                                                </ul></li>
+                                            <li id="menuform:um_sm12" role="menuitem"><a href="#" class="ripplelink"><i
+                                                    class="material-icons">subject</i><span>Submenu 1.2</span><span class="ink animate"></span><i
+                                                    class="material-icons"></i></a>
+                                            <ul role="menu">
+                                                    <li id="menuform:um_lnk121" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 1.2.1</span></a></li>
+                                                </ul></li>
+                                        </ul></li>
+                                    <li id="menuform:um_sm2" role="menuitem"><a href="#" class="ripplelink"><i
+                                            class="material-icons">subject</i><span>Submenu 2</span><span class="ink animate"></span><i
+                                            class="material-icons"></i></a>
+                                    <ul role="menu">
+                                            <li id="menuform:um_sm21" role="menuitem"><a href="#" class="ripplelink"><i
+                                                    class="material-icons">subject</i><span>Submenu 2.1</span><span class="ink animate"></span><i
+                                                    class="material-icons"></i></a>
+                                            <ul role="menu">
+                                                    <li id="menuform:um_lnk211" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 2.1.1</span></a></li>
+                                                    <li id="menuform:um_lnk212" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 2.1.2</span></a></li>
+                                                </ul></li>
+                                            <li id="menuform:um_sm22" role="menuitem"><a href="#" class="ripplelink"><i
+                                                    class="material-icons">subject</i><span>Submenu 2.2</span><span class="ink animate"></span><i
+                                                    class="material-icons"></i></a>
+                                            <ul role="menu">
+                                                    <li id="menuform:um_lnk221" role="menuitem"><a href="#"><i
+                                                            class="material-icons">subject</i><span>Link 2.2.1</span></a></li>
+                                                </ul></li>
+                                        </ul></li>
+                                </ul></li>
+                            <li id="menuform:um_utils" role="menuitem"><a href="/ultima/utils.xhtml"><i class="material-icons">build</i><span>Utils</span></a></li>
+                            <li id="menuform:um_doc" role="menuitem"><a href="/ultima/docs.xhtml"><i class="material-icons">find_in_page</i><span>Documentation</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="nano-pane">
+                        <div class="nano-slider" style="height: 229px; transform: translate(0px, 0px);"></div>
+                    </div>
+                </div>
+            </div>
+            <input name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0" value="-7798678989019298378:-4829412566984188141"
+                autocomplete="off" type="hidden">
+        </form>
+
+        <div class="layout-main">
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-12 ui-lg-6">
+                    <!-- Left Side -->
+                    <div class="card card-w-title">
+                        <h1>InputText</h1>
+                        <div id="j_idt36" class="ui-panelgrid ui-widget ui-panelgrid-blank form-group">
+                            <div id="j_idt36_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-4">
+                                        <span class="md-inputfield"><input id="j_idt38" name="j_idt38"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false" type="text"> <label>Name</label></span>
+                                    </div>
+                                    <div class="ui-panelgrid-cell ui-grid-col-4">
+                                        <span class="md-inputfield"><input id="j_idt41" name="j_idt41"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false" type="text"> <label>Email</label></span>
+                                    </div>
+                                    <div class="ui-panelgrid-cell ui-grid-col-4">
+                                        <span class="md-inputfield"><input id="j_idt44" name="j_idt44"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false" type="text"> <label>Phone</label></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-4">
+                                        <input id="j_idt46" name="j_idt46" placeholder="Disabled Input" disabled="disabled"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-disabled"
+                                            role="textbox" aria-disabled="true" aria-readonly="false" type="text">
+                                    </div>
+                                    <div class="ui-panelgrid-cell ui-grid-col-4">
+                                        <span class="md-inputfield"><input id="j_idt48" name="j_idt48"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false" type="text"> <label>Address</label></span>
+                                    </div>
+                                    <div class="ui-panelgrid-cell ui-grid-col-4">
+                                        <input id="j_idt50" name="j_idt50"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false"
+                                            style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAVVJREFUOBGlUr9LhWAUvf5AZ6eWGt2CDEFEGjMI+id6Q9DY2xoEdWmqKYIe9Cc0NbZFQ1NIq0vx3CycDdTOpXh8+j1s8IMj5xzvvd77eYkmnDiO79UJ+Zy6oaPKAcgl8A4cQ38CAfg18PXnFWma7rRtu4D+1jRtFkVRDk7cwV3XddvAEficTZwb6F1gHzxiA8lX0B6w1zTNBXt8po5AqqIoM+ANeDAMg0chVVVPoV+BR13XU/ZwzqBfgCeMcP5rTXzirp6VYY0kSQ4x5y2wNXwnanSyRMyHLprMYS6AzaE/1PwBFFGkS1yXbNs2eZ5Hpmn26nCs1IEYgQ9QGIYUBLwWRHmeU13XYsj4b3Qch3zfp6qqekmiGO0gyzIqy5Jc1yXLssS8FZfuYPUGBDNSURSiJfHRAlL0GmNyAWmRsF28IP/uATeDv1RIHcA8AZZruu1ZHMOxP66qe9DAZLEcAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                                            type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>TextArea</h1>
+                        <textarea id="j_idt52" name="j_idt52" cols="20" rows="3" placeholder="Your Message" maxlength="2147483647"
+                            class="ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all ui-inputtextarea-resizable"
+                            role="textbox" aria-disabled="false" aria-readonly="false" aria-multiline="true" data-autosize-on="true"
+                            style="overflow: hidden; overflow-wrap: break-word; height: 58px;"></textarea>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>AutoComplete</h1>
+                        <div id="j_idt54" class="ui-panelgrid ui-widget form-group ui-panelgrid-blank">
+                            <div id="j_idt54_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt55" class="ui-outputlabel ui-widget" for="acSimple_input">Simple:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="acSimple" class="ui-autocomplete" style="margin-bottom: 10px;" role="application"><input
+                                            id="acSimple_input" name="acSimple_input"
+                                            class="ui-autocomplete-input ui-inputfield ui-widget ui-state-default ui-corner-all"
+                                            autocomplete="off" aria-labelledby="j_idt55" role="textbox" aria-disabled="false"
+                                            aria-readonly="false" aria-autocomplete="listbox" type="text"><span role="status"
+                                            aria-live="polite" class="ui-autocomplete-status ui-helper-hidden-accessible"></span></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt56" class="ui-outputlabel ui-widget" for="dd_input">DropDown:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="dd" class="ui-autocomplete" style="margin-bottom: 10px;" role="application"><input
+                                            id="dd_input" name="dd_input"
+                                            class="ui-autocomplete-input ui-autocomplete-dd-input ui-inputfield ui-widget ui-state-default ui-corner-left"
+                                            autocomplete="off" aria-labelledby="j_idt56" role="textbox" aria-disabled="false"
+                                            aria-readonly="false" aria-autocomplete="listbox" type="text">
+                                        <button
+                                                class="ui-autocomplete-dropdown ui-button ui-widget ui-state-default ui-corner-right ui-button-icon-only"
+                                                type="button">
+                                                <span class="ui-button-icon-primary ui-icon ui-icon-triangle-1-s"></span><span
+                                                    class="ui-button-text">&nbsp;</span>
+                                            </button>
+                                            <span role="status" aria-live="polite"
+                                            class="ui-autocomplete-status ui-helper-hidden-accessible"></span></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt57" class="ui-outputlabel ui-widget" for="group_input">Group:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="group" class="ui-autocomplete" role="application"><input id="group_input"
+                                            name="group_input"
+                                            class="ui-autocomplete-input ui-inputfield ui-widget ui-state-default ui-corner-all"
+                                            autocomplete="off" aria-labelledby="j_idt57" value="" role="textbox" aria-disabled="false"
+                                            aria-readonly="false" aria-autocomplete="listbox" type="text"><input id="group_hinput"
+                                            name="group_hinput" autocomplete="off" type="hidden"><span role="status"
+                                            aria-live="polite" class="ui-autocomplete-status ui-helper-hidden-accessible"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>SelectCheckBoxMenu</h1>
+                        <div id="j_idt59" class="ui-selectcheckboxmenu ui-widget ui-state-default ui-corner-all">
+                            <div class="ui-helper-hidden-accessible">
+                                <input id="j_idt59_focus" name="j_idt59_focus" readonly="readonly" type="text">
+                            </div>
+                            <div class="ui-helper-hidden">
+                                <input id="j_idt59:0" name="j_idt59" value="1" data-escaped="true" type="checkbox"><label
+                                    for="j_idt59:0">Option 1</label><input id="j_idt59:1" name="j_idt59" value="2" data-escaped="true"
+                                    type="checkbox"><label for="j_idt59:1">Option 2</label><input id="j_idt59:2" name="j_idt59"
+                                    value="3" data-escaped="true" type="checkbox"><label for="j_idt59:2">Option 3</label>
+                            </div>
+                            <span class="ui-selectcheckboxmenu-label-container"><label
+                                class="ui-selectcheckboxmenu-label ui-corner-all">Cities</label></span>
+                            <div class="ui-selectcheckboxmenu-trigger ui-state-default ui-corner-right">
+                                <span class="ui-icon ui-icon-triangle-1-s"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>SelectManyMenu</h1>
+                        <div id="j_idt64" class="ui-selectmanymenu ui-inputfield ui-widget ui-widget-content ui-corner-all"
+                            style="width: 200px;">
+                            <div class="ui-helper-hidden-accessible">
+                                <select id="j_idt64_input" name="j_idt64_input" multiple="multiple" size="2"><option value="1">Option
+                                        1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option></select>
+                            </div>
+                            <div class="ui-selectlistbox-listcontainer" style="height: auto">
+                                <ul class="ui-selectlistbox-list">
+                                    <li class="ui-selectlistbox-item ui-corner-all"><div class="ui-chkbox ui-widget">
+                                            <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                                                <span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span>
+                                            </div>
+                                        </div>Option 1</li>
+                                    <li class="ui-selectlistbox-item ui-corner-all"><div class="ui-chkbox ui-widget">
+                                            <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                                                <span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span>
+                                            </div>
+                                        </div>Option 2</li>
+                                    <li class="ui-selectlistbox-item ui-corner-all"><div class="ui-chkbox ui-widget">
+                                            <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                                                <span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span>
+                                            </div>
+                                        </div>Option 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Rating</h1>
+                        <table cellpadding="5">
+                            <tbody>
+                                <tr>
+                                    <td>Basic:</td>
+                                    <td><div id="j_idt71" class="ui-rating">
+                                            <div class="ui-rating-cancel">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <input id="j_idt71_input" name="j_idt71_input" autocomplete="off" type="hidden">
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Callback:</td>
+                                    <td><div id="j_idt73" class="ui-rating">
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <input id="j_idt73_input" name="j_idt73_input" autocomplete="off" type="hidden">
+                                        </div></td>
+                                </tr>
+                                <tr>
+                                    <td>Disabled</td>
+                                    <td><div id="j_idt75" class="ui-rating ui-state-disabled">
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <div class="ui-rating-star">
+                                                <a></a>
+                                            </div>
+                                            <input id="j_idt75_input" name="j_idt75_input" autocomplete="off" type="hidden">
+                                        </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Calendar</h1>
+                        <span id="inline" class="ui-calendar"><div id="inline_inline" class="hasDatepicker">
+                                <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"
+                                    style="display: block;">
+                                    <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+                                        <a class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Previous"><span
+                                            class="ui-icon ui-icon-circle-triangle-w">Previous</span></a><a
+                                            class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Next"><span
+                                            class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+                                        <div class="ui-datepicker-title">
+                                            <span class="ui-datepicker-month">September</span>&nbsp;<span class="ui-datepicker-year">2016</span>
+                                        </div>
+                                    </div>
+                                    <table class="ui-datepicker-calendar">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="ui-datepicker-week-end"><span title="Sunday">S</span></th>
+                                                <th scope="col"><span title="Monday">M</span></th>
+                                                <th scope="col"><span title="Tuesday">T</span></th>
+                                                <th scope="col"><span title="Wednesday">W </span></th>
+                                                <th scope="col"><span title="Thursday">T</span></th>
+                                                <th scope="col"><span title="Friday">F </span></th>
+                                                <th scope="col" class="ui-datepicker-week-end"><span title="Saturday">S</span></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td
+                                                    class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                                <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">1</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">2</a></td>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">3</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">4</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">5</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">6</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">7</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">8</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">9</a></td>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">10</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">11</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">12</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">13</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">14</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">15</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">16</a></td>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">17</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">18</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">19</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">20</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">21</a></td>
+                                                <td class=" ui-datepicker-days-cell-over  ui-datepicker-current-day ui-datepicker-today"
+                                                    data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default ui-state-highlight ui-state-active" href="#">22</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">23</a></td>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">24</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" ui-datepicker-week-end " data-handler="selectDay" data-event="click"
+                                                    data-month="8" data-year="2016"><a class="ui-state-default" href="#">25</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">26</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">27</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">28</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">29</a></td>
+                                                <td class=" " data-handler="selectDay" data-event="click" data-month="8" data-year="2016"><a
+                                                    class="ui-state-default" href="#">30</a></td>
+                                                <td
+                                                    class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <input id="inline_input" name="inline_input" type="hidden"></span>
+                        <div id="j_idt77" class="ui-panelgrid ui-widget ui-panelgrid-blank grid-pad" style="margin-top: 10px">
+                            <div id="j_idt77_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt78" class="ui-outputlabel ui-widget" for="popup_input">Popup:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="popup" class="ui-calendar"><input id="popup_input" name="popup_input"
+                                            class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                            aria-labelledby="j_idt78" role="textbox" aria-disabled="false" aria-readonly="false" type="text"></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt79" class="ui-outputlabel ui-widget" for="multi_input">Multiple:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="multi" class="ui-calendar"><input id="multi_input" name="multi_input"
+                                            class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                            aria-labelledby="j_idt79" role="textbox" aria-disabled="false" aria-readonly="false" type="text"></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt80" class="ui-outputlabel ui-widget" for="effect_input">Effect:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="effect" class="ui-calendar"><input id="effect_input" name="effect_input"
+                                            class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                            aria-labelledby="j_idt80" role="textbox" aria-disabled="false" aria-readonly="false" type="text"></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt81" class="ui-outputlabel ui-widget" for="datetime_input">Datetime:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="datetime" class="ui-calendar"><input id="datetime_input" name="datetime_input"
+                                            class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                            aria-labelledby="j_idt81" role="textbox" aria-disabled="false" aria-readonly="false" type="text"></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt82" class="ui-outputlabel ui-widget" for="time_input">Time:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="time" class="ui-calendar"><input id="time_input" name="time_input"
+                                            class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                            aria-labelledby="j_idt82" role="textbox" aria-disabled="false" aria-readonly="false" type="text"></span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <label id="j_idt83" class="ui-outputlabel ui-widget" for="button_input">Button:</label>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="button" class="ui-calendar ui-trigger-calendar"><input id="button_input"
+                                            name="button_input" class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                            aria-labelledby="j_idt83" role="textbox" aria-disabled="false" aria-readonly="false" type="text">
+                                        <button type="button"
+                                                class="ui-datepicker-trigger ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only"
+                                                aria-label="Show Calendar" aria-haspopup="true" role="button" aria-disabled="false">
+                                                <span class="ui-button-icon-left ui-icon ui-icon-calendar"></span><span
+                                                    class="ui-button-text">ui-button</span>
+                                            </button></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-lg-6">
+                    <!-- Right Side -->
+                    <div class="card card-w-title">
+                        <h1>Checkboxes</h1>
+                        <div id="j_idt85" class="ui-selectmanycheckbox ui-widget ui-grid ui-grid-responsive">
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-4">
+                                    <div class="ui-chkbox ui-widget">
+                                        <div class="ui-helper-hidden-accessible">
+                                            <input id="j_idt85:0" name="j_idt85" value="Xbox One" type="checkbox">
+                                        </div>
+                                        <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                                            <span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span>
+                                        </div>
+                                    </div>
+                                    <label for="j_idt85:0">Xbox One</label>
+                                </div>
+                                <div class="ui-grid-col-4">
+                                    <div class="ui-chkbox ui-widget">
+                                        <div class="ui-helper-hidden-accessible">
+                                            <input id="j_idt85:1" name="j_idt85" value="PS+" type="checkbox">
+                                        </div>
+                                        <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                                            <span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span>
+                                        </div>
+                                    </div>
+                                    <label for="j_idt85:1">PS4</label>
+                                </div>
+                                <div class="ui-grid-col-4">
+                                    <div class="ui-chkbox ui-widget">
+                                        <div class="ui-helper-hidden-accessible">
+                                            <input id="j_idt85:2" name="j_idt85" value="Wii U" type="checkbox">
+                                        </div>
+                                        <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                                            <span class="ui-chkbox-icon ui-icon ui-icon-blank ui-c"></span>
+                                        </div>
+                                    </div>
+                                    <label for="j_idt85:2">Wii U</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>RadioButtons</h1>
+                        <div id="j_idt90" class="ui-selectoneradio ui-widget ui-grid ui-grid-responsive">
+                            <div class="ui-grid-row">
+                                <div class="ui-grid-col-4">
+                                    <div class="ui-radiobutton ui-widget">
+                                        <div class="ui-helper-hidden-accessible">
+                                            <input id="j_idt90:0" name="j_idt90" value="Xbox One" type="radio">
+                                        </div>
+                                        <div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default">
+                                            <span class="ui-radiobutton-icon ui-icon ui-icon-blank ui-c"></span>
+                                        </div>
+                                    </div>
+                                    <label for="j_idt90:0">Xbox One</label>
+                                </div>
+                                <div class="ui-grid-col-4">
+                                    <div class="ui-radiobutton ui-widget">
+                                        <div class="ui-helper-hidden-accessible">
+                                            <input id="j_idt90:1" name="j_idt90" value="PS+" type="radio">
+                                        </div>
+                                        <div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default">
+                                            <span class="ui-radiobutton-icon ui-icon ui-icon-blank ui-c"></span>
+                                        </div>
+                                    </div>
+                                    <label for="j_idt90:1">PS4</label>
+                                </div>
+                                <div class="ui-grid-col-4">
+                                    <div class="ui-radiobutton ui-widget">
+                                        <div class="ui-helper-hidden-accessible">
+                                            <input id="j_idt90:2" name="j_idt90" value="Wii U" type="radio">
+                                        </div>
+                                        <div class="ui-radiobutton-box ui-widget ui-corner-all ui-state-default">
+                                            <span class="ui-radiobutton-icon ui-icon ui-icon-blank ui-c"></span>
+                                        </div>
+                                    </div>
+                                    <label for="j_idt90:2">Wii U</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Input Switch</h1>
+                        <div id="j_idt95" class="ui-inputswitch ui-widget ui-widget-content ui-corner-all" style="width: 49px;">
+                            <div class="ui-inputswitch-off" style="width: 29px;">
+                                <span style="width: 24px;">off</span>
+                            </div>
+                            <div class="ui-inputswitch-on ui-state-active" style="width: 0px;">
+                                <span style="width: 24px; margin-left: -14px;">on</span>
+                            </div>
+                            <div class="ui-inputswitch-handle ui-state-default " style="width: 23px;"></div>
+                            <div class="ui-helper-hidden-accessible">
+                                <input id="j_idt95_input" name="j_idt95_input" type="checkbox">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>SelectOneMenu</h1>
+                        <div id="j_idt97" class="ui-panelgrid ui-widget form-group ui-panelgrid-blank" style="margin-bottom: 10px">
+                            <div id="j_idt97_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <div id="console" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                            style="margin-bottom: 10px; min-width: 89px;">
+                                            <div class="ui-helper-hidden-accessible">
+                                                <input id="console_focus" name="console_focus" autocomplete="off" role="combobox"
+                                                    aria-haspopup="true" aria-expanded="false" aria-autocomplete="list"
+                                                    aria-owns="console_items" aria-activedescendant="console_0" aria-describedby="console_0"
+                                                    aria-disabled="false" type="text">
+                                            </div>
+                                            <div class="ui-helper-hidden-accessible">
+                                                <select id="console_input" name="console_input" tabindex="-1"><option value="">Select
+                                                        One</option>
+                                                    <option value="Xbox One">Xbox One</option>
+                                                    <option value="PS4">PS4</option>
+                                                    <option value="Wii U">Wii U</option></select>
+                                            </div>
+                                            <label id="console_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">Select
+                                                One</label>
+                                            <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                                <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <div id="car" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                            style="margin-bottom: 10px; min-width: 95px;">
+                                            <div class="ui-helper-hidden-accessible">
+                                                <input id="car_focus" name="car_focus" autocomplete="off" role="combobox"
+                                                    aria-haspopup="true" aria-expanded="false" aria-autocomplete="list"
+                                                    aria-owns="car_items" aria-activedescendant="car_0" aria-describedby="car_0"
+                                                    aria-disabled="false" type="text">
+                                            </div>
+                                            <div class="ui-helper-hidden-accessible">
+                                                <select id="car_input" name="car_input" tabindex="-1"><option value="">Select
+                                                        One</option>
+                                                    <option value="BMW">BMW</option>
+                                                    <option value="Mercedes">Mercedes</option>
+                                                    <option value="Volkswagen">Volkswagen</option>
+                                                    <option value="Chrysler">Chrysler</option>
+                                                    <option value="GM">GM</option>
+                                                    <option value="Ford">Ford</option></select>
+                                            </div>
+                                            <label id="car_label" class="ui-selectonemenu-label ui-inputfield ui-corner-all">Select
+                                                One</label>
+                                            <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                                <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <div id="city" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                            style="min-width: 89px;">
+                                            <div class="ui-helper-hidden-accessible">
+                                                <input id="city_focus" name="city_focus" autocomplete="off" role="combobox"
+                                                    aria-haspopup="true" aria-expanded="false" aria-autocomplete="list"
+                                                    aria-owns="city_items" aria-activedescendant="city_0" aria-describedby="city_0"
+                                                    aria-disabled="false" type="text">
+                                            </div>
+                                            <div class="ui-helper-hidden-accessible">
+                                                <select id="city_input" name="city_input" tabindex="-1"><option value="">Select
+                                                        One</option>
+                                                    <option value="Xbox One">Xbox One</option>
+                                                    <option value="PS4">PS4</option>
+                                                    <option value="Wii U">Wii U</option></select>
+                                            </div>
+                                            <input name="city_editableInput" class="ui-selectonemenu-label ui-inputfield ui-corner-all"
+                                                type="text">
+                                            <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                                <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Keyboard And Password</h1>
+                        <div id="j_idt109" class="ui-panelgrid ui-widget form-group ui-panelgrid-blank" style="margin-bottom: 10px">
+                            <div id="j_idt109_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <input id="j_idt110" name="j_idt110" placeholder="Keyboard"
+                                            class="ui-inputfield ui-keyboard-input ui-widget ui-state-default ui-corner-all hasKeypad"
+                                            role="textbox" aria-disabled="false" aria-readonly="false" type="text">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <input id="j_idt111" name="j_idt111"
+                                            class="ui-inputfield ui-password ui-widget ui-state-default ui-corner-all"
+                                            style="margin-top: 15px; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAVVJREFUOBGlUr9LhWAUvf5AZ6eWGt2CDEFEGjMI+id6Q9DY2xoEdWmqKYIe9Cc0NbZFQ1NIq0vx3CycDdTOpXh8+j1s8IMj5xzvvd77eYkmnDiO79UJ+Zy6oaPKAcgl8A4cQ38CAfg18PXnFWma7rRtu4D+1jRtFkVRDk7cwV3XddvAEficTZwb6F1gHzxiA8lX0B6w1zTNBXt8po5AqqIoM+ANeDAMg0chVVVPoV+BR13XU/ZwzqBfgCeMcP5rTXzirp6VYY0kSQ4x5y2wNXwnanSyRMyHLprMYS6AzaE/1PwBFFGkS1yXbNs2eZ5Hpmn26nCs1IEYgQ9QGIYUBLwWRHmeU13XYsj4b3Qch3zfp6qqekmiGO0gyzIqy5Jc1yXLssS8FZfuYPUGBDNSURSiJfHRAlL0GmNyAWmRsF28IP/uATeDv1RIHcA8AZZruu1ZHMOxP66qe9DAZLEcAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+                                            placeholder="Password" role="textbox" aria-disabled="false" aria-readonly="false"
+                                            type="password">
+                                        <div id="j_idt111_panel"
+                                            class="ui-password-panel ui-widget ui-state-highlight ui-corner-all ui-helper-hidden ui-password-panel-inline">
+                                            <div class="ui-password-meter" style="background-position: 0pt 0pt">&nbsp;</div>
+                                            <div class="ui-password-info">Please enter a password</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>MultiSelectListBox</h1>
+                        <div id="j_idt113" class="ui-multiselectlistbox ui-widget ui-helper-clearfix">
+                            <input id="j_idt113_input" name="j_idt113_input" autocomplete="off" type="hidden">
+                            <div class="ui-multiselectlistbox-listcontainer">
+                                <div class="ui-multiselectlistbox-header ui-widget-header ui-corner-top">Categories</div>
+                                <ul class="ui-multiselectlistbox-list ui-inputfield ui-widget-content ui-corner-bottom">
+                                    <li class="ui-multiselectlistbox-item" data-value=""><span>Group 1</span>
+                                    <ul class="ui-helper-hidden">
+                                            <li class="ui-multiselectlistbox-item" data-value=""><span>Group 1.1</span>
+                                            <ul class="ui-helper-hidden">
+                                                    <li class="ui-multiselectlistbox-item" data-value="Option 1.1.1"><span>Option
+                                                            1.1.1</span></li>
+                                                    <li class="ui-multiselectlistbox-item" data-value="Option 1.1.2"><span>Option
+                                                            1.1.2</span></li>
+                                                </ul></li>
+                                            <li class="ui-multiselectlistbox-item" data-value=""><span>Group 1.2</span>
+                                            <ul class="ui-helper-hidden">
+                                                    <li class="ui-multiselectlistbox-item" data-value="Option 1.2.1"><span>Option
+                                                            1.2.1</span></li>
+                                                    <li class="ui-multiselectlistbox-item" data-value="Option 1.2.2"><span>Option
+                                                            1.2.2</span></li>
+                                                    <li class="ui-multiselectlistbox-item" data-value="Option 1.2.3"><span>Option
+                                                            1.2.3</span></li>
+                                                </ul></li>
+                                        </ul></li>
+                                    <li class="ui-multiselectlistbox-item" data-value=""><span>Group 2</span>
+                                    <ul class="ui-helper-hidden">
+                                            <li class="ui-multiselectlistbox-item" data-value=""><span>Group 2.1</span>
+                                            <ul class="ui-helper-hidden">
+                                                    <li class="ui-multiselectlistbox-item" data-value="Option 2.1.1"><span>Option
+                                                            2.1.1</span></li>
+                                                </ul></li>
+                                        </ul></li>
+                                    <li class="ui-multiselectlistbox-item" data-value=""><span>Group 3</span>
+                                    <ul class="ui-helper-hidden">
+                                            <li class="ui-multiselectlistbox-item" data-value="Option 3.1"><span>Option 3.1</span></li>
+                                            <li class="ui-multiselectlistbox-item" data-value="Option 3.2"><span>Option 3.2</span></li>
+                                            <li class="ui-multiselectlistbox-item" data-value="Option 3.3"><span>Option 3.3</span></li>
+                                            <li class="ui-multiselectlistbox-item" data-value="Option 3.4"><span>Option 3.4</span></li>
+                                        </ul></li>
+                                    <li class="ui-multiselectlistbox-item" data-value=""><span>Group 4</span>
+                                    <ul class="ui-helper-hidden">
+                                            <li class="ui-multiselectlistbox-item" data-value="Option 4.1"><span>Option 4.1</span></li>
+                                        </ul></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>SelectOneListBox</h1>
+                        <div id="j_idt116" class="ui-selectonelistbox ui-inputfield ui-widget ui-widget-content ui-corner-all">
+                            <div class="ui-helper-hidden-accessible">
+                                <select id="j_idt116_input" name="j_idt116_input" size="2"><option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option></select>
+                            </div>
+                            <div class="ui-selectlistbox-listcontainer" style="height: auto">
+                                <ul class="ui-selectlistbox-list">
+                                    <li class="ui-selectlistbox-item ui-corner-all">Option 1</li>
+                                    <li class="ui-selectlistbox-item ui-corner-all">Option 2</li>
+                                    <li class="ui-selectlistbox-item ui-corner-all">Option 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Spinner</h1>
+                        <span id="j_idt121" class="ui-spinner ui-widget ui-corner-all"><input id="j_idt121_input"
+                            name="j_idt121_input" class="ui-spinner-input ui-inputfield ui-state-default ui-corner-all" autocomplete="off"
+                            role="textbox" aria-multiline="false" aria-disabled="false" aria-readonly="false" type="text"><a
+                            class="ui-spinner-button ui-spinner-up ui-corner-tr ui-button ui-widget ui-state-default ui-button-text-only"><span
+                                class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-n ui-c"></span></span></a><a
+                            class="ui-spinner-button ui-spinner-down ui-corner-br ui-button ui-widget ui-state-default ui-button-text-only"><span
+                                class="ui-button-text"><span class="ui-icon ui-icon-triangle-1-s ui-c"></span></span></a></span>
+                    </div>
+
+                    <div class="card card-w-title">
+                        <h1>Slider</h1>
+                        <div id="j_idt123" class="ui-panelgrid ui-widget form-group ui-panelgrid-blank" style="margin-bottom: 50px">
+                            <div id="j_idt123_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <input id="slider" name="slider" placeholder="Horizontal" style="margin-bottom: 10px;"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false" type="text">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <div id="j_idt124" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="j_idt125" class="ui-panelgrid ui-widget form-group ui-panelgrid-blank" style="margin-bottom: 50px">
+                            <div id="j_idt125_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <input id="txt4" name="txt4" placeholder="Vertical" style="margin-bottom: 10px;"
+                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                                            aria-disabled="false" aria-readonly="false" type="text">
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <div id="j_idt126" class="ui-slider ui-slider-vertical ui-widget ui-widget-content ui-corner-all">
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="bottom: 0%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="j_idt127" class="ui-panelgrid ui-widget form-group ui-panelgrid-blank">
+                            <div id="j_idt127_content" class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <span id="displayRange" style="font-size: 16px">Values</span>
+                                    </div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-panelgrid-cell ui-grid-col-12">
+                                        <div id="j_idt128" style="margin-top: 15px"
+                                            class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 20%; width: 60%;"></div>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 20%;"></span><span
+                                                class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 80%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input id="txt6" name="txt6" value="20" type="hidden"><input id="txt7" name="txt7" value="80" type="hidden">
+                    </div>
+                </div>
+                <div class="ui-g-12 ui-g-nopad">
+                    <div class="ui-g-12 ui-lg-6" style="padding-top: 0">
+                        <div class="card card-w-title">
+                            <h1>Buttons</h1>
+                            <form id="j_idt130" name="j_idt130" method="post" action="/ultima/forms.xhtml"
+                                enctype="application/x-www-form-urlencoded">
+                                <input name="j_idt130" value="j_idt130" type="hidden">
+                                <div id="j_idt130:j_idt131" class="ui-panelgrid ui-widget ui-panelgrid-blank lesspad">
+                                    <div id="j_idt130:j_idt131_content"
+                                        class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">SelectBooleanButton:</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <div id="j_idt130:j_idt133" type="button"
+                                                    class="ui-selectbooleanbutton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                    style="width: 50%">
+                                                    <div class="ui-helper-hidden-accessible">
+                                                        <input id="j_idt130:j_idt133_input" name="j_idt130:j_idt133_input" type="checkbox">
+                                                    </div>
+                                                    <span class="ui-button-text ui-c">No</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">SelectOneButton:</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <div id="j_idt130:j_idt135"
+                                                    class="ui-selectonebutton ui-buttonset ui-widget ui-corner-all ui-buttonset-3">
+                                                    <div class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left"
+                                                        tabindex="0">
+                                                        <input id="j_idt130:j_idt135:0" name="j_idt130:j_idt135" value="Xbox One"
+                                                            class="ui-helper-hidden" type="radio"><span class="ui-button-text ui-c">Xbox
+                                                            One</span>
+                                                    </div>
+                                                    <div class="ui-button ui-widget ui-state-default ui-button-text-only" tabindex="0">
+                                                        <input id="j_idt130:j_idt135:1" name="j_idt130:j_idt135" value="PS4"
+                                                            class="ui-helper-hidden" type="radio"><span class="ui-button-text ui-c">PS4</span>
+                                                    </div>
+                                                    <div class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right"
+                                                        tabindex="0">
+                                                        <input id="j_idt130:j_idt135:2" name="j_idt130:j_idt135" value="Wii U"
+                                                            class="ui-helper-hidden" type="radio"><span class="ui-button-text ui-c">Wii
+                                                            U</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">SelectManyButton:</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <div id="j_idt130:j_idt140"
+                                                    class="ui-selectmanybutton ui-buttonset ui-widget ui-corner-all ui-buttonset-3">
+                                                    <div class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-left">
+                                                        <input id="j_idt130:j_idt140:0" name="j_idt130:j_idt140" value="b"
+                                                            class="ui-helper-hidden-accessible" type="checkbox"><span
+                                                            class="ui-button-text ui-c">b</span>
+                                                    </div>
+                                                    <div class="ui-button ui-widget ui-state-default ui-button-text-only">
+                                                        <input id="j_idt130:j_idt140:1" name="j_idt130:j_idt140" value="u"
+                                                            class="ui-helper-hidden-accessible" type="checkbox"><span
+                                                            class="ui-button-text ui-c">u</span>
+                                                    </div>
+                                                    <div class="ui-button ui-widget ui-state-default ui-button-text-only ui-corner-right">
+                                                        <input id="j_idt130:j_idt140:2" name="j_idt130:j_idt140" value="i"
+                                                            class="ui-helper-hidden-accessible" type="checkbox"><span
+                                                            class="ui-button-text ui-c">i</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">Button</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <button id="j_idt130:j_idt145" name="j_idt130:j_idt145" type="button"
+                                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"
+                                                    style="width: auto" onclick="window.open('/ultima/forms.xhtml','_self')" role="button"
+                                                    aria-disabled="false">
+                                                    <span class="ui-button-icon-left ui-icon ui-c ui-icon-star"></span><span
+                                                        class="ui-button-text ui-c">Bookmark</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">Button Icon Only</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <button id="j_idt130:j_idt147" name="j_idt130:j_idt147"
+                                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only"
+                                                    type="button" role="button" aria-disabled="false">
+                                                    <span class="ui-button-icon-left ui-icon ui-c ui-icon-add"></span><span
+                                                        class="ui-button-text ui-c">ui-button</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">CommandButton</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <button id="j_idt130:j_idt149" name="j_idt130:j_idt149"
+                                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"
+                                                    type="button" role="button" aria-disabled="false">
+                                                    <span class="ui-button-icon-left ui-icon ui-c ui-icon-clear"></span><span
+                                                        class="ui-button-text ui-c">With Icon</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">CommandButton</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <button id="j_idt130:j_idt151" name="j_idt130:j_idt151"
+                                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-right"
+                                                    style="width: auto" type="button" role="button" aria-disabled="false">
+                                                    <span class="ui-button-icon-right ui-icon ui-c ui-icon-send"></span><span
+                                                        class="ui-button-text ui-c">With Icon (Right Side)</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">CommandLink</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <a id="j_idt130:j_idt153" href="#" class="ui-commandlink ui-widget"
+                                                    onclick="PrimeFaces.ab({s:&quot;j_idt130:j_idt153&quot;});return false;">commandLink</a>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">Link</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <a href="/ultima/forms.xhtml" class="ui-link ui-widget">Bookmark</a>
+                                            </div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">SplitButton</div>
+                                        </div>
+                                        <div class="ui-grid-row">
+                                            <div class="ui-panelgrid-cell ui-grid-col-12">
+                                                <div id="j_idt130:j_idt157" class="ui-splitbutton ui-buttonset ui-widget">
+                                                    <button id="j_idt130:j_idt157_button" name="j_idt130:j_idt157_button"
+                                                        class="ui-button ui-widget ui-state-default ui-corner-left ui-button-text-icon-left"
+                                                        onclick="PrimeFaces.ab({s:&quot;j_idt130:j_idt157&quot;});return false;"
+                                                        type="submit" role="button" aria-disabled="false">
+                                                        <span class="ui-button-icon-left ui-icon ui-c ui-icon-check"></span><span
+                                                            class="ui-button-text ui-c">Save</span>
+                                                    </button>
+                                                    <button id="j_idt130:j_idt157_menuButton" name="j_idt130:j_idt157_menuButton"
+                                                        type="button"
+                                                        class="ui-splitbutton-menubutton  ui-button ui-widget ui-state-default ui-corner-right ui-button-icon-only"
+                                                        role="button" aria-disabled="false">
+                                                        <span class="ui-button-icon-left ui-icon ui-icon-triangle-1-s"></span><span
+                                                            class="ui-button-text ui-c">ui-button</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <input name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:43"
+                                    value="-7798678989019298378:-4829412566984188141" autocomplete="off" type="hidden">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="ui-g-12 ui-lg-6" style="padding-top: 0">
+                        <div class="card card-w-title">
+                            <h1>Colored Buttons</h1>
+                            <p>Raised and Flat buttons with various color alternatives.</p>
+                            <div class="ui-g">
+                                <div class="ui-g-12 ui-md-6" style="text-align: center">
+                                    <button id="j_idt163" name="j_idt163"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Primary Button</span>
+                                    </button>
+                                    <button id="j_idt164" name="j_idt164"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only secondary"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Secondary Button</span>
+                                    </button>
+                                    <button id="j_idt165" name="j_idt165"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                        style="width: auto; margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Inline Button</span>
+                                    </button>
+                                    <button id="j_idt166" name="j_idt166"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only blue-grey-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Blue-Grey Button</span>
+                                    </button>
+                                    <button id="j_idt167" name="j_idt167"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only cyan-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Cyan Button</span>
+                                    </button>
+                                    <button id="j_idt168" name="j_idt168"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only amber-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Amber Button</span>
+                                    </button>
+                                    <button id="j_idt169" name="j_idt169"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only teal-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Teal Button</span>
+                                    </button>
+                                    <button id="j_idt170" name="j_idt170"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only red-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Red Button</span>
+                                    </button>
+                                    <button id="j_idt171" name="j_idt171"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only orange-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Orange Button</span>
+                                    </button>
+                                    <button id="j_idt172" name="j_idt172"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only green-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Green Button</span>
+                                    </button>
+                                    <button id="j_idt173" name="j_idt173"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only deep-orange-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Deep-Orange Button</span>
+                                    </button>
+                                    <button id="j_idt174" name="j_idt174"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only purple-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Purple Button</span>
+                                    </button>
+                                    <button id="j_idt175" name="j_idt175"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only indigo-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Indigo Button</span>
+                                    </button>
+                                    <button id="j_idt176" name="j_idt176"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only pink-btn"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Pink Button</span>
+                                    </button>
+                                </div>
+
+                                <div class="ui-g-12 ui-md-6" style="text-align: center">
+                                    <button id="j_idt178" name="j_idt178"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Primary Button</span>
+                                    </button>
+                                    <button id="j_idt179" name="j_idt179"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only secondary flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Secondary Button</span>
+                                    </button>
+                                    <button id="j_idt180" name="j_idt180"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only flat"
+                                        style="width: auto; margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Inline Button</span>
+                                    </button>
+                                    <button id="j_idt181" name="j_idt181"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only blue-grey-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Blue-Grey Button</span>
+                                    </button>
+                                    <button id="j_idt182" name="j_idt182"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only cyan-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Cyan Button</span>
+                                    </button>
+                                    <button id="j_idt183" name="j_idt183"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only amber-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Amber Button</span>
+                                    </button>
+                                    <button id="j_idt184" name="j_idt184"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only teal-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Teal Button</span>
+                                    </button>
+                                    <button id="j_idt185" name="j_idt185"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only red-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Red Button</span>
+                                    </button>
+                                    <button id="j_idt186" name="j_idt186"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only orange-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Orange Button</span>
+                                    </button>
+                                    <button id="j_idt187" name="j_idt187"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only green-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Green Button</span>
+                                    </button>
+                                    <button id="j_idt188" name="j_idt188"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only deep-orange-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Deep-Orange Button</span>
+                                    </button>
+                                    <button id="j_idt189" name="j_idt189"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only purple-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Purple Button</span>
+                                    </button>
+                                    <button id="j_idt190" name="j_idt190"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only indigo-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Indigo Button</span>
+                                    </button>
+                                    <button id="j_idt191" name="j_idt191"
+                                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only pink-btn flat"
+                                        style="margin-bottom: 10px;" type="button" role="button" aria-disabled="false">
+                                        <span class="ui-button-text ui-c">Pink Button</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="card clearfix">
+                    <span class="footer-text-left">PrimeFaces ULTIMA</span> <span class="footer-text-right"><span
+                        class="ui-icon ui-icon-copyright"></span> <span>All Rights Reserved</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="j_idt195" style="width: 32px; height: 32px; position: fixed; right: 7px; bottom: 7px">
+        <div id="j_idt195_start" style="display: none">
+            <i class="fa fa-circle-o-notch fa-spin ajax-loader" aria-hidden="true"></i>
+        </div>
+        <div id="j_idt195_complete" style="display: none"></div>
+    </div>
+
+    <div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div>
+    <div id="keypad-div" style="display: none;"></div>
+    <div id="acSimple_panel" class="ui-autocomplete-panel ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"></div>
+    <div id="dd_panel" class="ui-autocomplete-panel ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"></div>
+    <div id="group_panel" class="ui-autocomplete-panel ui-widget-content ui-corner-all ui-helper-hidden ui-shadow"></div>
+    <div id="j_idt59_panel" class="ui-selectcheckboxmenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden">
+        <div class="ui-widget-header ui-corner-all ui-selectcheckboxmenu-header ui-helper-clearfix">
+            <div class="ui-chkbox ui-widget">
+                <div class="ui-helper-hidden-accessible">
+                    <input readonly="readonly" type="checkbox">
+                </div>
+                <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                    <span class="ui-chkbox-icon ui-icon ui-icon-blank"></span>
+                </div>
+            </div>
+            <div class="ui-selectcheckboxmenu-filter-container">
+                <input aria-multiline="false" aria-readonly="false" aria-disabled="false" role="textbox"
+                    class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" type="text"><span
+                    class="ui-icon ui-icon-search"></span>
+            </div>
+            <a class="ui-selectcheckboxmenu-close ui-corner-all" href="#"><span class="ui-icon ui-icon-circle-close"></span></a>
+        </div>
+        <div class="ui-selectcheckboxmenu-items-wrapper">
+            <ul class="ui-selectcheckboxmenu-items ui-selectcheckboxmenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset">
+                <li class="ui-selectcheckboxmenu-item ui-selectcheckboxmenu-list-item ui-corner-all ui-selectcheckboxmenu-unchecked"><div
+                        class="ui-chkbox ui-widget">
+                        <div class="ui-helper-hidden-accessible">
+                            <input readonly="readonly" type="checkbox">
+                        </div>
+                        <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                            <span class="ui-chkbox-icon ui-icon ui-icon-blank"></span>
+                        </div>
+                    </div>
+                    <label>Option 1</label></li>
+                <li class="ui-selectcheckboxmenu-item ui-selectcheckboxmenu-list-item ui-corner-all ui-selectcheckboxmenu-unchecked"><div
+                        class="ui-chkbox ui-widget">
+                        <div class="ui-helper-hidden-accessible">
+                            <input readonly="readonly" type="checkbox">
+                        </div>
+                        <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                            <span class="ui-chkbox-icon ui-icon ui-icon-blank"></span>
+                        </div>
+                    </div>
+                    <label>Option 2</label></li>
+                <li class="ui-selectcheckboxmenu-item ui-selectcheckboxmenu-list-item ui-corner-all ui-selectcheckboxmenu-unchecked"><div
+                        class="ui-chkbox ui-widget">
+                        <div class="ui-helper-hidden-accessible">
+                            <input readonly="readonly" type="checkbox">
+                        </div>
+                        <div class="ui-chkbox-box ui-widget ui-corner-all ui-state-default">
+                            <span class="ui-chkbox-icon ui-icon ui-icon-blank"></span>
+                        </div>
+                    </div>
+                    <label>Option 3</label></li>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-shadow"></div>
+    <div id="console_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow">
+        <div class="ui-selectonemenu-items-wrapper" style="height: auto">
+            <ul id="console_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="console_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="Select One"
+                    tabindex="-1" role="option" id="console_0">Select One</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Xbox One" tabindex="-1" role="option"
+                    id="console_1">Xbox One</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PS4" tabindex="-1" role="option"
+                    id="console_2">PS4</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Wii U" tabindex="-1" role="option"
+                    id="console_3">Wii U</li>
+            </ul>
+        </div>
+    </div>
+    <div id="car_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow">
+        <div class="ui-selectonemenu-items-wrapper" style="height: auto">
+            <ul id="car_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="car_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="Select One"
+                    tabindex="-1" role="option" id="car_0">Select One</li>
+                <li class="ui-selectonemenu-item-group ui-corner-all" data-label="German Cars" tabindex="-1" role="option">German Cars</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="BMW" tabindex="-1" role="option"
+                    id="car_1">BMW</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mercedes" tabindex="-1" role="option"
+                    id="car_2">Mercedes</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Volkswagen" tabindex="-1"
+                    role="option" id="car_3">Volkswagen</li>
+                <li class="ui-selectonemenu-item-group ui-corner-all" data-label="American Cars" tabindex="-1" role="option">American
+                    Cars</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Chrysler" tabindex="-1" role="option"
+                    id="car_4">Chrysler</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GM" tabindex="-1" role="option"
+                    id="car_5">GM</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Ford" tabindex="-1" role="option"
+                    id="car_6">Ford</li>
+            </ul>
+        </div>
+    </div>
+    <div id="city_panel" class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow">
+        <div class="ui-selectonemenu-items-wrapper" style="height: auto">
+            <ul id="city_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="city_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight" data-label="Select One"
+                    tabindex="-1" role="option" id="city_0">Select One</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Xbox One" tabindex="-1" role="option"
+                    id="city_1">Xbox One</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="PS4" tabindex="-1" role="option"
+                    id="city_2">PS4</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Wii U" tabindex="-1" role="option"
+                    id="city_3">Wii U</li>
+            </ul>
+        </div>
+    </div>
+    <div id="j_idt130:j_idt157_menu" class="ui-menu ui-menu-dynamic ui-widget ui-widget-content ui-corner-all ui-helper-clearfix ui-shadow"
+        role="menu">
+        <ul class="ui-menu-list ui-helper-reset">
+            <li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="j_idt130:j_idt158"
+                class="ui-menuitem-link ui-corner-all" href="#"
+                onclick="PrimeFaces.ab({s:&quot;j_idt130:j_idt158&quot;,f:&quot;j_idt130&quot;});return false;"><span
+                    class="ui-menuitem-icon ui-icon ui-icon-cloud-upload"></span><span class="ui-menuitem-text">Update</span></a></li>
+            <li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="j_idt130:j_idt159"
+                class="ui-menuitem-link ui-corner-all" href="#"
+                onclick="PrimeFaces.ab({s:&quot;j_idt130:j_idt159&quot;,f:&quot;j_idt130&quot;});return false;"><span
+                    class="ui-menuitem-icon ui-icon ui-icon-cloud-queue"></span><span class="ui-menuitem-text">Queue</span></a></li>
+            <li class="ui-separator ui-state-default"></li>
+            <li class="ui-menuitem ui-widget ui-corner-all" role="menuitem"><a id="j_idt130:j_idt161"
+                class="ui-menuitem-link ui-corner-all" href="#"><span class="ui-menuitem-icon ui-icon ui-icon-home"></span><span
+                    class="ui-menuitem-text">Homepage</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>

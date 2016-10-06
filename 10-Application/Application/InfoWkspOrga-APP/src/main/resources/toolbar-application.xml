@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbar-application>
+
+	<!-- <toolbarItem name="PERSPECTIVE_CREATE" />
+		<toolbarItem name="PERSPECTIVE_COPY" />
+		<toolbarItem name="PERSPECTIVE_UPDATE_PROPERTIES" />
+
+		<toolbarItem name="PERSPECTIVE_REMOVE" />
+		<separator />
+
+		<toolbarItem name="WORKSPACE_CREATE" />
+		<toolbarItem name="WORKSPACE_COPY" />
+		<toolbarItem name="WORKSPACE_UPDATE_PROPERTIES" />
+		<toolbarItem name="WORKSPACE_DEFINE_TAB_TITLE" />
+
+
+
+		<toolbarItem name="WORKSPACE_REMOVE" />
+		<separator />
+
+		<toolbarItem name="ADD_DIRECTORY_DESK_VIEW" />
+		<toolbarItem name="ADD_HTML_VIEW" />
+		<toolbarItem name="ADD_LINK_VIEW" />
+
+		<toolbarItem name="ADD_QUICK_ACTION_VIEW" />
+		<toolbarItem name="ADD_PROJECT_CONFIGURATION_VIEW" />
+		<separator />
+		<toolbarItem name="ADD_HTML_VIEW" />
+		<toolbarItem name="PREFERENCES_DISPLAY" />
+
+		<toolbarItem name="ADD_WORKSPACE_MAP_VIEW" />
+	-->
+	
+	
+	<toolbarItem name="SEND_SELECTED_FILES_BY_MAIL" />
+	<toolbarItem name="ZIP_SELECTED_FILES" />
+
+  <separator />
+	<toolbarItem name="UNSELECT_NODES_FOR_ALL_DIRECTORIES_DESK_VIEW" />
+	<toolbarItem name="CUT_SELECTED_DIRECTORIES_FILES" />
+	<toolbarItem name="COPY_SELECTED_DIRECTORIES_FILES" />
+	<toolbarItem name="PASTE_SELECTED_DIRECTORIES_FILES" />
+	<separator />
+	<toolbarItem name="DELETE_SELECTED_DIRECTORIES_FILES" />
+
+	<separator />
+	<toolbarItem name="WORKSPACE_NEW" />
+	<toolbarItem name="WORKSPACE_UPDATE" />
+	<toolbarItem name="WORKSPACE_SAVE" />
+
+	<separator />
+	<toolbarItem name="ADD_FILE_EXPLORER_VIEW" />
+	<toolbarItem name="ADD_HTML_VIEW" />
+	<toolbarItem name="ADD_WEB_VIEW" />
+
+	<separator />
+	<toolbarItem name="SHOW_WORKSPACE_LAYOUT" />
+	<toolbarItem name="ABOUT" />
+
+	<separator />
+	<toolbarItem name="EXIT" />
+
+</toolbar-application>

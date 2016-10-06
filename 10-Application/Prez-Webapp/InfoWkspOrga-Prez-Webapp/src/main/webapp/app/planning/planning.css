@@ -1,0 +1,51 @@
+.planning {
+		height : 100%;
+		width : 100%;
+}
+
+/*On enlève les headers inutiles*/
+#capla-planning .panel-header {
+	display: none;
+}
+
+#datagrid-td-group1-1-0 {
+border-width: 0 1px 0px 0;
+}
+
+.datagrid-header-row .datagrid-cell-c1-id  {
+		font-weight: bold;
+}
+
+.datagrid-header-row .datagrid-cell-c1-task {
+		font-weight: bold;
+}
+
+.datagrid-header-row .datagrid-cell-c1-resource {
+		font-weight: bold;
+}
+
+.datagrid-header-row .datagrid-cell-c1-charge {
+		font-weight: bold;
+}
+
+#capla-planning .datagrid-body {
+	overflow-x: auto;
+}
+
+/*On met les mois et les années en gras*/
+#capla-planning .datagrid-htable tbody > :first-child {
+	font-weight: bold;
+}
+
+/*Week-end grisés*/
+td[id$="week-end"] {
+	background-color: #C9C9C9;
+}
+
+/*Case de semaine en orange*/
+td[id$="week-of-year"] {
+	background-color: #F79C09; 
+	font-weight: bold;
+}
+
+/*Double scroll*/

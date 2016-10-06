@@ -1,0 +1,103 @@
+//Generate DRL file is –: 
+package com.sgu.projectmanager.business.rules.authentification;
+//generated from Decision Table
+import com.sgu.projectmanager.business.pivot.authentication.AuthenticateUserIn;
+import com.sgu.projectmanager.business.entity.User;
+import com.sgu.core.framework.pivot.Message;
+import com.sgu.core.framework.drools.rules.validation.ValidationMessagesConstant;
+import com.sgu.core.framework.drools.rules.validation.RuleMessages;
+import com.sgu.core.framework.drools.log.DRLLogger;
+import java.util.Map;
+import com.sgu.core.framework.util.UtilString;
+dialect "mvel";
+
+declare MessageKeysConstant
+    mandatoryMessage : String
+end
+// rule values at C18, header at C13
+rule "Initialize-constant-Object"
+	salience 65518
+	ruleflow-group "Initialization"
+	when
+		not MessageKeysConstant ()
+	then
+		MessageKeysConstant messageKeys = new MessageKeysConstant();
+messageKeys.mandatoryMessage = ValidationMessagesConstant.CONSTRAINT_MANDATORY;
+insert( messageKeys );
+ DRLLogger.debug(drools,"{} Activated", drools.getRule().getName());
+end
+
+// rule values at C25, header at C20
+rule "Login-Mandatory-rule"
+	salience 65511
+	ruleflow-group "Mandatory"
+	when
+		$m : RuleMessages ()
+$messageKeys : MessageKeysConstant ()
+$authenticationIn : AuthenticateUserIn (UtilString.isBlank(userLogin) == true)
+	then
+		$m.addError(new Message($messageKeys.mandatoryMessage, "txtLogin", 
+                                                                           $authenticationIn.fieldNameFieldLabel["txtLogin"], $authenticationIn.userLogin));
+ DRLLogger.debug(drools,"{} Activated", drools.getRule().getName());
+end
+
+// rule values at C26, header at C20
+rule "Password-Mandatory-rule"
+	salience 65510
+	ruleflow-group "Mandatory"
+	when
+		$m : RuleMessages ()
+$messageKeys : MessageKeysConstant ()
+$authenticationIn : AuthenticateUserIn (UtilString.isBlank(password) == true)
+	then
+		$m.addError(new Message($messageKeys.mandatoryMessage, "txtPassword", 
+                                                                           $authenticationIn.fieldNameFieldLabel["txtPassword"], $authenticationIn.password));
+ DRLLogger.debug(drools,"{} Activated", drools.getRule().getName());
+end
+
+// rule values at C27, header at C20
+rule "Language-Mandatory-rule"
+	salience 65509
+	ruleflow-group "Mandatory"
+	when
+		$m : RuleMessages ()
+$messageKeys : MessageKeysConstant ()
+$authenticationIn : AuthenticateUserIn (UtilString.isBlank(language) == true)
+	then
+		$m.addError(new Message($messageKeys.mandatoryMessage, "cbLanguage", 
+                                                                           $authenticationIn.fieldNameFieldLabel["cbLanguage"], $authenticationIn.language));
+ DRLLogger.debug(drools,"{} Activated", drools.getRule().getName());
+end
+
+// rule values at C34, header at C29
+rule "Login-Validity-rule"
+	salience 65502
+	ruleflow-group "Validity"
+	when
+		not User ()
+
+$messageKeys : MessageKeysConstant ()
+$m : RuleMessages ()
+$authenticationIn : AuthenticateUserIn ()
+	then
+		$m.addError(new Message("connexion.error.bad.login", "txtLogin", $authenticationIn.userLogin));
+ DRLLogger.debug(drools,"{} Activated", drools.getRule().getName());
+end
+
+// rule values at C35, header at C29
+rule "Password-Validity-rule"
+	salience 65501
+	ruleflow-group "Validity"
+	when
+		$authenticationIn : AuthenticateUserIn ()
+$user : User()
+$messageKeys : MessageKeysConstant ()
+$m : RuleMessages ()
+
+eval (!($user.password.equals(((AuthenticateUserIn)$authenticationIn).password)))
+	then
+		$m.addError(new Message("connexion.error.bad.password", "txtPassword", "--------------"));
+ DRLLogger.debug(drools,"{} Activated", drools.getRule().getName());
+end
+
+

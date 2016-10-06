@@ -1,0 +1,56 @@
+<%@ page language="java"%>
+<%@ page
+ contentType="application/x-java-jnlp-file"
+ info="Project Manager JNLP"
+%>
+<%@ taglib prefix="c" uri="/WEB-INF/c.tld" %>
+<?xml version="1.0" encoding="utf-8"?>
+
+<%
+ StringBuffer codebaseBuffer = new StringBuffer();
+ codebaseBuffer.append(!request.isSecure() ? "http://" : "https://");
+ codebaseBuffer.append(request.getServerName());
+ if (request.getServerPort() != (!request.isSecure() ? 80 : 443))
+ {
+   codebaseBuffer.append(':');
+   codebaseBuffer.append(request.getServerPort());
+ }
+ codebaseBuffer.append(request.getContextPath());
+ codebaseBuffer.append("/application/");
+%>
+
+<jnlp
+    spec="1.0+"
+    codebase="<%= codebaseBuffer.toString() %>"
+    href="<%= request.getRequestURI() %>">
+
+  <information>
+    <title>$informationTitle</title>
+    <vendor>$informationVendor<vendor/>
+    <homepage>$informationHomepage<homepage/>
+    <description kind="one-line">$informationDescription</description>
+  </information>
+  
+  <security>
+     <all-permissions/>
+  </security>
+  
+  <resources>
+    <j2se version="1.6+"
+     initial-heap-size="512m"
+     max-heap-size="1024m"
+     />
+     
+     $dependencies
+     
+  </resources>
+  
+  <application-desc main-class="$mainClass">
+    <%--
+    <c:forEach items="${parameters}" var="parameter">
+  		<argument>${parameter.name}=${parameter.value}</argument>
+  	</c:forEach>
+  	--%>
+  </application-desc>
+
+</jnlp>

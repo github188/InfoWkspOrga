@@ -1,0 +1,19 @@
+<entity-mappings
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+	version="2.1">
+
+	<!-- Spring Data JPA ships with an entity listener that can be used to trigger capturing auditing information. So first you have to register 
+		the AuditingEntityListener inside your orm.xml to be used for all entities in your persistence contexts: -->
+	<persistence-unit-metadata>
+		<persistence-unit-defaults>
+			<access>FIELD</access>
+			<entity-listeners>
+				<entity-listener class="org.springframework.data.jpa.domain.support.AuditingEntityListener" />
+			</entity-listeners>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<package>com.sgu.infowksporga</package>
+	
+</entity-mappings>

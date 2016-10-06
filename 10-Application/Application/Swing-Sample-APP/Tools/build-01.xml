@@ -1,0 +1,34 @@
+<project name="jnlp" basedir=".">
+
+
+	<target name="copy-application-to-JWS-webapp">
+		<echo message="copy-application-to-JWS-webapp"/>
+
+		<property name="application.JwsWeb.dir" value="InfoWrkspOrga-Prez-Webapp" />
+
+		<delete dir="../../Prez-Webapp/${application.JwsWeb.dir}/src/main/webapp/application" />
+		<copy todir="../../Prez-Webapp/${application.JwsWeb.dir}/src/main/webapp/application" overwrite="true">
+			<fileset dir="target/jnlp">
+				<exclude name="*.jsp" />
+			</fileset>
+		</copy>
+
+		<delete dir="../../Prez-Webapp/${application.JwsWeb.dir}/src/main/webapp/jnlp" />
+		<copy todir="../../Prez-Webapp/${application.JwsWeb.dir}/src/main/webapp/jnlp"  overwrite="true">
+			<fileset dir="target/jnlp">
+				<include name="*.jsp" />
+			</fileset>
+		</copy>
+
+	</target>
+
+
+	<target name="copy-files-env-local">
+		<copy file="./src/main/resources/env-local/jws.properties" todir="./src/main/resources" overwrite="true"/>
+	</target>
+
+	<target name="copy-files-env-prod">
+		<copy file="./src/main/resources/env-prod/jws.properties" todir="./src/main/resources" overwrite="true"/>
+	</target>
+
+</project>

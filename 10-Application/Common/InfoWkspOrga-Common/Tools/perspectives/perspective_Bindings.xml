@@ -1,0 +1,18 @@
+<jxb:bindings version="1.0"
+  xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+  jxb:extensionBindingPrefixes="xjc">
+
+    <jxb:bindings schemaLocation="perspective.xsd" node="/xs:schema">
+        <jxb:schemaBindings>
+           <jxb:package name="com.sgu.infowksporga.business.xml.jaxb.perspective" />
+        </jxb:schemaBindings>
+        <jxb:globalBindings>
+            <xjc:superClass name="com.sgu.infowksporga.business.xml.jaxb.perspective.AbstractXmlPerspectiveTemplateTag" />
+            <xjc:serializable uid="12343"/>
+        </jxb:globalBindings>
+
+    </jxb:bindings>
+
+</jxb:bindings>

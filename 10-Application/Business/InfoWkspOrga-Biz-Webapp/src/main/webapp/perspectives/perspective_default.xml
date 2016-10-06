@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- configurationDate="2015/10/26 21:32:52" -->
+<xmlPerspective id="1" name="perspective.default.name" description="perspective.default.description" owner="admin" order="0"
+	enabled='true' partage="PUBLIC"
+>
+	<!-- This Template is used to initialized main base node just under the Root Node "Classeur" it's checked at webapp startup -->
+
+	<!-- +++++++++ -->
+	<!-- Root Node -->
+	<!-- +++++++++ -->
+	<xmlWorkspace id="1" name="perspective.tree.node.root" tags="init, root" type="ROOT" enabled="false" owner="admin"
+		icon="/icons/perspective.png" order="0" category="Default" partage="PUBLIC" childrenWrkspCreationEnabled="false" 
+	>
+
+		<!-- Directory contains help to configure & use Project Manager -->
+		<xmlWorkspace id="2" name="perspective.tree.node.help" tags="init, help, aide, manual, manuel" type="HELP" 
+			enabled="true" owner="admin" icon="/icons/information.png" order="1" childrenWrkspCreationEnabled="true" category="Default" partage="PUBLIC" />
+
+
+	</xmlWorkspace>
+
+
+</xmlPerspective>
+
+
+

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Capacité Planning (CAPLA)</title>
+<link rel="icon" type="image/png" href="../imgs/app.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta charset="utf-8" />
+
+<style type="text/css">
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.question {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+code {
+    background-color: #eff0f1;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+}
+pre {
+    background-color: #eff0f1;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    font-size: 13px;
+    margin-bottom: 1em;
+    max-height: 600px;
+    overflow: auto;
+    padding: 5px;
+    width: auto;
+}
+.post-text pre > code:first-child, .wmd-preview pre > code:first-child {
+}
+pre {
+}
+li pre {
+    margin: 0.5em 0 1em;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a  href="http://stackoverflow.com/questions/9507606/when-should-i-use-require-and-when-to-use-define"><span class="question">When should I use require() and when to use define()?</span></a>
+<div itemprop="text" class="post-text">
+<p>From the require.js <a href="http://requirejs.org/docs/release/2.0.1/comments/require.js">source code</a> (line 1902):</p>
+
+<pre><code>/**
+ * The function that handles definitions of modules. Differs from
+ * require() in that a string for the module should be the first argument,
+ * and the function to execute after dependencies are loaded should
+ * return a value to define the module corresponding to the first argument's
+ * name.
+ */
+</code></pre>
+
+<p>The <strong><code>define()</code></strong> function  accepts two optional parameters (a string that represent a module ID and an array of required modules) and one required parameter (a factory method).</p>
+
+<p>The return of the factory method <strong>MUST</strong> return the implementation for your module (in the same way that the <a href="http://addyosmani.com/resources/essentialjsdesignpatterns/book/#modulepatternjavascript">Module Pattern</a> does).</p>
+
+<p>The <strong><code>require()</code></strong> function doesn't have to return the implementation of a new module.</p>
+
+<p>Using <strong><code>define()</code></strong> you are asking something like <em>"run the function that I am passing as a parameter and assign whatever returns to the ID that I am passing but, before, check that these dependencies are loaded"</em>.</p>
+
+<p>Using <strong><code>require()</code></strong> you are saying something like <em>"the function that I pass has the following dependencies, check that these dependencies are loaded before running it"</em>.</p>
+
+<p>The <strong><code>require()</code></strong> function is where you use your defined modules, in order to be sure that the modules are defined, but you are not defining new modules there.</p>
+    </div>
+<br/>    
+<p>
+<a  href="http://blog.clever-age.com/fr/2015/11/25/requirejs-et-le-code-javascript-modulaire/"><span class="question">RequireJS et le code JavaScript modulaire</span></a>
+</p>    
+    
+</body>
+
+</html>

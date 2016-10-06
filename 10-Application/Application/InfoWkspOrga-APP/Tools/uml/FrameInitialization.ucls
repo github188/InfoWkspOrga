@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.5" icons="true" always-add-relationships="true" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="com.sgu.projectmanager.jws.ProjectManagerFrame" project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/ProjectManagerFrame.java" binary="false" 
+    corner="TOP_LEFT">    
+    <position height="459" width="267" x="877" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.sgu.projectmanager.jws.MenuManager" project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/MenuManager.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="171" width="301" x="536" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.sgu.projectmanager.jws.facade.AbstractProjectManagerFacade" 
+    project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/facade/AbstractProjectManagerFacade.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="455" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.sgu.projectmanager.jws.facade.external.FrameInitializerFacade" 
+    project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/facade/external/FrameInitializerFacade.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="253" y="512"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.sgu.projectmanager.jws.perspective.DefaultPerspectivePanel" 
+    project="InfoWkspOrga-Jws" 
+    file="/InfoWkspOrga-Jws/src/main/java/com/sgu/projectmanager/jws/perspective/DefaultPerspectivePanel.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="209" x="470" y="257"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="6">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

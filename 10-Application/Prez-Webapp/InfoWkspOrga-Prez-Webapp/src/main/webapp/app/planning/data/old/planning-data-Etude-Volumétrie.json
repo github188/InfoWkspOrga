@@ -1,0 +1,4015 @@
+{
+    "planning-data": {
+        "planning-calendar": {
+            "affectation": {
+                "task": [
+                    {
+                        "day": [
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "0"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "1"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "2"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "3"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "4"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "5"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "6"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "7"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "8"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "9"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "10"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "11"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "12"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "13"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "14"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "15"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "16"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "17"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "18"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "19"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "20"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "21"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "22"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "23"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "24"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "25"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "26"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "27"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "28"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "29"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "30"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "31"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "32"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "33"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "34"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "35"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "36"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "37"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "38"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "39"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "40"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "41"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "42"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "43"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "44"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "45"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "46"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "47"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "48"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "49"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "50"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "51"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "52"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "53"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "54"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "55"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "56"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "57"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "58"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "59"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "60"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "61"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "62"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "63"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "64"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "65"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "66"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "67"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "68"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "69"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "70"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "71"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "72"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "73"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "74"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "75"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "76"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "77"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "78"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "79"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "80"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "81"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "82"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "83"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "84"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "85"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "86"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "87"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "88"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "89"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "90"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "91"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "92"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "93"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "94"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "95"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "96"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "97"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "98"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "99"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "100"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "101"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "102"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "103"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "104"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "105"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "106"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "107"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "108"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "109"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "110"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "111"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "112"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "113"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "114"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "115"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "116"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "117"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "118"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "119"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "120"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "121"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "122"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "123"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "124"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "125"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "126"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "127"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "128"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "129"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "130"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "131"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "132"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "133"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "134"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "135"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "136"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "137"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "138"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "139"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "140"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "141"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "142"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "143"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "144"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "145"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "146"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "147"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "148"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "149"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "150"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "151"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "152"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "153"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "154"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "155"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "156"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "157"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "158"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "159"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "160"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "161"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "162"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "163"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "164"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "165"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "166"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "167"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "168"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "169"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "170"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "171"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "172"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "173"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "174"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "175"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "176"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "177"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "178"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "179"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "180"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "181"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "182"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "183"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "184"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "185"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "186"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "187"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "188"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "189"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "190"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "191"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "192"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "193"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "194"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "195"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "196"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "197"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "198"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "199"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "200"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "201"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "202"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "203"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "204"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "205"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "206"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "207"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "208"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "209"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "210"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "211"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "212"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "213"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "214"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "215"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "216"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "217"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "218"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "219"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "220"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "221"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "222"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "223"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "224"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "225"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "226"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "227"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "228"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "229"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "230"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "231"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "232"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "233"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "234"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "235"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "236"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "237"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "238"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "239"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "240"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "241"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "242"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "243"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "244"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "245"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "246"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "247"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "248"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "249"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "250"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "251"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "252"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "253"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "254"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "255"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "256"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "257"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "258"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "259"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "260"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "261"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "262"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "263"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "264"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "265"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "266"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "267"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "268"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "269"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "270"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "271"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "272"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "273"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "274"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "275"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "276"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "277"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "278"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "279"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "280"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "281"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "282"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "283"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "284"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "285"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "286"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "287"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "288"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "289"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "290"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "291"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "292"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "293"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "294"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "295"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "296"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "297"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "298"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "299"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "300"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "301"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "302"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "303"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "304"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "305"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "306"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "307"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "308"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "309"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "310"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "311"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "312"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "313"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "314"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "315"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "316"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "317"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "318"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "319"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "320"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "321"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "322"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "323"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "324"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "325"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "326"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "327"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "328"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "329"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "330"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "331"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "332"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "333"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "334"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "335"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "336"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "337"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "338"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "339"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "340"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "341"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "342"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "343"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "344"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "345"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "346"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "347"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "348"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "349"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "350"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "351"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "352"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "353"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "354"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "355"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "356"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "357"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "358"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "359"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "360"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "361"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "362"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "363"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "364"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "365"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "366"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "367"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "368"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "369"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "370"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "371"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "372"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "373"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "374"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "375"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "376"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "377"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "378"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "379"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "380"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "381"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "382"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "383"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "384"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "385"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "386"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "387"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "388"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "389"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "390"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "391"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "392"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "393"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "394"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "395"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "396"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "397"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "398"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "399"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "400"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "401"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "402"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "403"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "404"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "405"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "406"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "407"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "408"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "409"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "410"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "411"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "412"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "413"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "414"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "415"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "416"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "417"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "418"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "419"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "420"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "421"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "422"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "423"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "424"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "425"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "426"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "427"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "428"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "429"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "430"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "431"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "432"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "433"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "434"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "435"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "436"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "437"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "438"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "439"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "440"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "441"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "442"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "443"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "444"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "445"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "446"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "447"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "448"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "449"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "450"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "451"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "452"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "453"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "454"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "455"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "456"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "457"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "458"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "459"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "460"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "461"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "462"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "463"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "464"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "465"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "466"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "467"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "468"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "469"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "470"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "471"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "472"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "473"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "474"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "475"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "476"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "477"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "478"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "479"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "480"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "481"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "482"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "483"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "484"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "485"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "486"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "487"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "488"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "489"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "490"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "491"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "492"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "493"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "494"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "495"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "496"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "497"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "498"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "499"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "500"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "501"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "502"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "503"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "504"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "505"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "506"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "507"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "508"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "509"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "510"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "511"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "512"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "513"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "514"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "515"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "516"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "517"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "518"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "519"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "520"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "521"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "522"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "523"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "524"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "525"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "526"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "527"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "528"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "529"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "530"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "531"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "532"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "533"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "534"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "535"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "536"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "537"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "538"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "539"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "540"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "541"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "542"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "543"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "544"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "545"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "546"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "547"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "548"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "549"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "550"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "551"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "552"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "553"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "554"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "555"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "556"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "557"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "558"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "559"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "560"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "561"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "562"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "563"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "564"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "565"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "566"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "567"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "568"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "569"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "570"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "571"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "572"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "573"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "574"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "575"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "576"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "577"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "578"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "579"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "580"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "581"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "582"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "583"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "584"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "585"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "586"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "587"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "588"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "589"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "590"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "591"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "592"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "593"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "594"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "595"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "596"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "597"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "598"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "599"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "600"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "601"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "602"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "603"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "604"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "605"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "606"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "607"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "608"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "609"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "610"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "611"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "612"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "613"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "614"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "615"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "616"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "617"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "618"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "619"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "620"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "621"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "622"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "623"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "624"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "625"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "626"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "627"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "628"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "629"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "630"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "631"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "632"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "633"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "634"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "635"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "636"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "637"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "638"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "639"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "640"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "641"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "642"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "643"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "644"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "645"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "646"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "647"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "648"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "649"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "650"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "651"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "652"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "653"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "654"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "655"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "656"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "657"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "658"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "659"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "660"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "661"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "662"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "663"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "664"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "665"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "666"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "667"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "668"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "669"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "670"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "671"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "672"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "673"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "674"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "675"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "676"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "677"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "678"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "679"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "680"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "681"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "682"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "683"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "684"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "685"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "686"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "687"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "688"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "689"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "690"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "691"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "692"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "693"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "694"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "695"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "696"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "697"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "698"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "699"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "700"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "701"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "702"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "703"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "704"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "705"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "706"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "707"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "708"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "709"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "710"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "711"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "712"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "713"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "714"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "715"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "716"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "717"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "718"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "719"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "720"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "721"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "722"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "723"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "724"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "725"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "726"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "727"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "728"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "729"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "730"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "731"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "732"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "733"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "734"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "735"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "736"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "737"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "738"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "739"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "740"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "741"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "742"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "743"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "744"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "745"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "746"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "747"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "748"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "749"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "750"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "751"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "752"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "753"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "754"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "755"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "756"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "757"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "758"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "759"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "760"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "761"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "762"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "763"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "764"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "765"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "766"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "767"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "768"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "769"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "770"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "771"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "772"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "773"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "774"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "775"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "776"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "777"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "778"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "779"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "780"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "781"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "782"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "783"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "784"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "785"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "786"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "787"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "788"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "789"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "790"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "791"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "792"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "793"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "794"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "795"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "796"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "797"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "798"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "799"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "800"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "801"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "802"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "803"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "804"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "805"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "806"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "807"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "808"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "809"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "810"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "811"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "812"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "813"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "814"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "815"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "816"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "817"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "818"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "819"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "820"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "821"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "822"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "823"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "824"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "825"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "826"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "827"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "828"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "829"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "830"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "831"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "832"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "833"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "834"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "835"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "836"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "837"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "838"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "839"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "840"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "841"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "842"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "843"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "844"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "845"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "846"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "847"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "848"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "849"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "850"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "851"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "852"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "853"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "854"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "855"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "856"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "857"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "858"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "859"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "860"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "861"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "862"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "863"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "864"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "865"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "866"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "867"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "868"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "869"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "870"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "871"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "872"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "873"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "874"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "875"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "876"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "877"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "878"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "879"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "880"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "881"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "882"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "883"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "884"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "885"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "886"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "887"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "888"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "889"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "890"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "891"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "892"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "893"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "894"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "895"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "896"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "897"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "898"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "899"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "900"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "901"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "902"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "903"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "904"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "905"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "906"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "907"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "908"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "909"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "910"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "911"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "912"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "913"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "914"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "915"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "916"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "917"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "918"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "919"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "920"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "921"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "922"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "923"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "924"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "925"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "926"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "927"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "928"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "929"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "930"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "931"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "932"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "933"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "934"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "935"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "936"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "937"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "938"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "939"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "940"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "941"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "942"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "943"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "944"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "945"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "946"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "947"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "948"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "949"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "950"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "951"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "952"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "953"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "954"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "955"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "956"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "957"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "958"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "959"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "960"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "961"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "962"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "963"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "964"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "965"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "966"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "967"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "968"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "969"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "970"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "971"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "972"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "973"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "974"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "975"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "976"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "977"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "978"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "979"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "980"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "981"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "982"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "983"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "984"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "985"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "986"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "987"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "988"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "989"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "990"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "991"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "992"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "993"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "994"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "995"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "996"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "997"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "998"
+                            },
+                            {
+                                "date": "04-01-2016",
+                                "charge-planif": "999"
+                            }
+                        ],
+                        "id": "2"
+                    }
+                ]
+            }
+        }
+    }
+}

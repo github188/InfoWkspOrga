@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xmlPerspective id="1" name="perspective.default.name" icon=""
+                description="perspective.default.description" 
+                owner="admin" partage="PUBLIC" enabled='1'  order="1"   >
+	<!-- This Template is used to initialized main base node just under the Root Node "Classeur" it's checked at webapp startup -->
+
+	<!-- +++++++++ -->
+	<!-- Root Node -->
+	<!-- +++++++++ -->
+	<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" projectId="1" baseFolder="" customer=""
+
+		name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+		icon="" enabled="true" order="12" owner="" partage="" created_by=""
+
+	>
+
+		<xmlWorkspace id="1fdde" masterId="" parentId="" childrenWrkspCreationEnabled="true" projectId="1" baseFolder="" customer=""
+			name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+			icon="" enabled="true" order="12" layout="" owner="" partage="" created_by="" />
+		
+		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+
+			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="" />
+
+	
+	  <xmlWorkspace id="eeed1"  childrenWrkspCreationEnabled="true" 
+
+		name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+		icon="" enabled="true" order="12" layout="" owner="" partage="" created_by=""
+
+	>
+
+		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" projectId="1" baseFolder="" customer=""
+			name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+			icon="" enabled="true" order="12" layout="" owner="" partage="" created_by="" />
+		
+		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+
+			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="">
+			
+			
+			<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+
+			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="" />
+			
+			<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+
+			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="" />
+			
+			</xmlWorkspace>
+
+	</xmlWorkspace>
+	
+	</xmlWorkspace>
+	
+	
+	
+
+</xmlPerspective>

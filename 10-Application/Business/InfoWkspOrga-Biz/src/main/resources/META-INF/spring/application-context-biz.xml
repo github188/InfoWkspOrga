@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+>
+
+	<!--
+		@Configuration
+		@EnableSpringConfigured
+		public class AppConfig {}
+
+		Is the substitute of: <context:spring-configured/>
+	-->
+
+
+	<!-- Process annotations on registered beans like @Autowired... -->
+	<context:annotation-config />
+
+	<!-- Scan for spring annotated components -->
+	<context:component-scan base-package="com.sgu.infowksporga.business.service.rest" />
+
+	<!-- Scan for spring annotated components -->
+	<context:component-scan base-package="com.sgu.core.framework.dao" />
+	<context:component-scan base-package="com.sgu.infowksporga.business.dao.api" />
+	<context:component-scan base-package="com.sgu.infowksporga.business.dao.impl" />
+	<context:component-scan base-package="com.sgu.infowksporga.business.dao.repository" />
+	<context:component-scan base-package="com.sgu.infowksporga.business.entity" />
+
+
+
+	<import resource="classpath:/META-INF/spring/core-context.xml" />
+	<import resource="classpath:/META-INF/spring/crypto-context.xml" />
+
+	<import resource="classpath:/META-INF/spring/datasource-context.xml" />
+	<import resource="classpath:/META-INF/spring/dao-context.xml" />
+
+	<import resource="classpath:/META-INF/spring/jpa-context.xml" />
+
+	<import resource="classpath:/META-INF/spring/business-context.xml" />
+
+
+
+	<!--
+
+		<import resource="classpath*:/META-INF/spring/jpa-auditing-context.xml" />
+
+
+
+		<import resource="classpath*:/META-INF/spring/mail-context.xml" />
+		<import resource="classpath*:/META-INF/spring/ldap-context.xml" />
+
+	-->
+
+
+</beans>

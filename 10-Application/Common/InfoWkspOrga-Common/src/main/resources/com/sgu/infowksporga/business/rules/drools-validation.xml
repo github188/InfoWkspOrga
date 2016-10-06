@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<validation-rules>
+<!-- <validation-rules xmlns="http://www.w3schools.com/drools-validation"
+                       schemaLocation="classpath:com/sgu/core/framework/drools/validation/declaration/xml/drools-validation.xsd">
+  -->
+  
+  <rules name="Authentification-Rules" class="com.sgu.projectmanager.business.pivot.authentication.AuthenticationIn" ksession="ksession-properties"
+    process="process-check-properties">
+    
+    <property name="userLogin" type="String">
+      <constraint name="Mandatory"/>
+    </property>
+    
+    <property name="password" type="String" >
+      <constraint name="Mandatory"/>
+      
+    </property>
+    <property name="language" type="String">
+      <constraint name="Mandatory"/>
+      
+    </property>
+    
+  </rules>
+  
+</validation-rules>

@@ -1,0 +1,621 @@
+version: 1
+
+dn: dc=gfi,dc=fr
+dc: gfi
+description: My wonderful company as much text as you want to place
+ in this line up to 32K continuation data for the line above must
+ have <CR> or <CR><LF> i.e. ENTER works
+ on both Windows and *nix system - new line MUST begin with ONE SPACE
+objectClass: dcObject
+
+#
+# Manager technique du LDAP
+#
+dn: cn=Manager,dc=gfi,dc=fr
+cn: Manager
+sn: Manager
+description: Gestionnaire technique du LDAP, pas une personne physique.
+objectclass: person
+
+#
+# Unites d'organisation contenant les differentes branche d'organisation
+#
+dn: ou=groups,dc=gfi,dc=fr
+ou: groups
+description: Organisation de Gfi.
+objectClass: organizationalUnit
+
+#
+# Branche LDAP contenant les agences physiques, decoupage geographique avec 
+# pour chacune, une responsabel et eventuellement un rattachement seeAlso
+# a des residentialPerson : assistante, etc. de contact du site
+#
+dn: ou=locations,dc=gfi,dc=fr
+ou:locations
+description: Agences de Gfi, decoupage geographique.
+objectclass: organizationalUnit
+
+#
+# Branche LDAP contenant les types outils
+#
+dn: ou=tools,dc=gfi,dc=fr
+ou: tools
+description: Les outils avec les groupes associcees.
+objectclass: organizationalUnit
+
+#
+# Branche LDAP contenant les entites du groupe et contenant les personnes.
+# Une personne est donc rattachee a une seule entreprise du groupe.
+#
+dn: ou=people,dc=gfi,dc=fr
+ou:people
+description: Collaborateurs de Gfi regroupant les differentes entites constituantes.
+objectclass: organizationalUnit
+
+#
+# Declaration des entites du groupe. Chacune a un responsable.
+#
+dn: ou=france,ou=people,dc=gfi,dc=fr
+ou: france
+description: Collaborateurs attaches a la paie d'une unite francaise.
+objectclass: organizationalUnit
+
+dn: ou=bus,ou=france,ou=people,dc=gfi,dc=fr
+ou: bus
+description: Collaborateurs attaches a la paie de l'entite GFI Bus.
+objectclass: organizationalUnit
+
+dn: ou=chronotime,ou=france,ou=people,dc=gfi,dc=fr
+ou: chronotime
+description: Collaborateurs attaches a la paie de l'entite GFI CHRONOTIME SAS.
+objectclass: organizationalUnit
+
+dn: ou=infogen,ou=france,ou=people,dc=gfi,dc=fr
+ou: infogen
+description: Collaborateurs attaches a la paie de l'entite GFI INFOGEN SYSTEMS SAS.
+objectclass: organizationalUnit
+
+dn: ou=progiciels,ou=france,ou=people,dc=gfi,dc=fr
+ou: progiciels
+description: Collaborateurs attaches a la paie de l'entite GFI PROGICIELS SAS.
+objectclass: organizationalUnit
+
+dn: ou=consulting,ou=france,ou=people,dc=gfi,dc=fr
+ou: consulting
+description: Collaborateurs attaches a la paie de l'entite GFI CONSULTING SAS.
+objectclass: organizationalUnit
+
+dn: ou=adelior,ou=france,ou=people,dc=gfi,dc=fr
+ou: adelior
+description: Collaborateurs attaches a la paie de l'entite ADELIOR FRANCE SAS.
+objectclass: organizationalUnit
+
+dn: ou=cognitis,ou=france,ou=people,dc=gfi,dc=fr
+ou: cognitis
+description: Est issue du rachat de Cognitis
+description: Collaborateurs attaches a la paie de l'entite COGNITIS FRANCE.
+objectclass: organizationalUnit
+
+dn: ou=gfi-production,ou=france,ou=people,dc=gfi,dc=fr
+ou: gfi-production
+description: Collaborateurs attaches a la paie de l'entite GFI INFORMATIQUE-PRODUCTION.
+objectclass: organizationalUnit
+
+dn: ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+ou: gfi
+description: Collaborateurs attaches a la paie de l'entite GFI INFORMATIQUE.
+objectclass: organizationalUnit
+
+dn: ou=benelux,ou=people,dc=gfi,dc=fr
+ou: benelux
+description: Collaborateurs attaches a la paie de d'une des entites du Benelux.
+objectclass: organizationalUnit
+
+dn: ou=gfi-benelux,ou=benelux,ou=people,dc=gfi,dc=fr
+ou: gfi-benelux
+description: Collaborateurs attaches a la paie de l'entite GFI BENELUX.
+objectclass: organizationalUnit
+
+dn: ou=gfi-nv,ou=benelux,ou=people,dc=gfi,dc=fr
+ou: gfi-nv
+description: Collaborateurs attaches a la paie de l'entite GFI NV.
+objectclass: organizationalUnit
+
+dn: ou=gfi-psf,ou=benelux,ou=people,dc=gfi,dc=fr
+ou: gfi-psf
+description: Collaborateurs attaches a la paie de l'entite GFI PSF.
+objectclass: organizationalUnit
+
+dn: ou=maroc,ou=people,dc=gfi,dc=fr
+ou: maroc
+description: Collaborateurs attaches a la paie d'une des entites du Maroc.
+objectclass: organizationalUnit
+
+dn: ou=holding-gfi-maroc,ou=maroc,ou=people,dc=gfi,dc=fr
+ou: holding-gfi-maroc
+description: Collaborateurs attaches a la paie de l'entite HOLDING GFI INFORMATIQUE MAROC.
+objectclass: organizationalUnit
+
+dn: ou=gfi-maroc,ou=maroc,ou=people,dc=gfi,dc=fr
+ou: gfi-maroc
+description: Collaborateurs attaches a la paie de l'entite GFI INFORMATIQUE MAROC.
+objectclass: organizationalUnit
+
+dn: ou=gfi-maroc-offshore,ou=maroc,ou=people,dc=gfi,dc=fr
+ou: gfi-maroc-offshore
+description: Collaborateurs attaches a la paie de l'entite GFI MAROC OFFSHORE.
+objectclass: organizationalUnit
+
+dn: ou=suisse,ou=people,dc=gfi,dc=fr
+ou:suisse
+description: Collaborateurs attaches a la paie d'une des entites de Suisse.
+objectclass: organizationalUnit
+
+dn: ou=gfi-international,ou=suisse,ou=people,dc=gfi,dc=fr
+ou:gfi-international
+description: Collaborateurs attaches a la paie de l'entite GFI INTERNATIONAL.
+objectclass: organizationalUnit
+
+dn: ou=espagne,ou=people,dc=gfi,dc=fr
+ou: espagne
+description: Collaborateurs attaches a la paie de l'entite GFI ESPAGNE.
+objectclass: organizationalUnit
+
+dn: ou=gfi-informatica,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: gfi-informatica
+description: Collaborateurs attaches a la paie de l'entite GRUPO Corporativo GFI Informatica.
+objectclass: organizationalUnit
+
+dn: ou=gfi-norte,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: gfi-norte
+description: Collaborateurs attaches a la paie de l'entite Grupo Corporativo GFI Norte.
+objectclass: organizationalUnit
+
+dn: ou=arcitel,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: arcitel
+description: Collaborateurs attaches a la paie de l'entite ARCITEL.
+objectclass: organizationalUnit
+
+dn: ou=ast,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: ast
+description: Collaborateurs attaches a la paie de l'entite AST.
+objectclass: organizationalUnit
+
+dn: ou=gfi-levante,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: gfi-levante
+description: Collaborateurs attaches a la paie de l'entite GFI Levante.
+objectclass: organizationalUnit
+
+dn: ou=gfi-cataluna,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: gfi-cataluna
+description: Collaborateurs attaches a la paie de l'entite GFI Cataluna.
+objectclass: organizationalUnit
+
+dn: ou=savac-consultores,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: savac-consultores
+description: Collaborateurs attaches a la paie de l'entite SAVAC Consultores.
+objectclass: organizationalUnit
+
+dn: ou=instituto-informatico-rioja,ou=espagne,ou=people,dc=gfi,dc=fr
+ou: instituto-informatico-rioja
+description: Collaborateurs attaches a la paie de l'entite INSTITUTO INFORMATICO DE LA RIOJA, S.L..
+objectclass: organizationalUnit
+
+dn: ou=gfi-portugal,ou=people,dc=gfi,dc=fr
+ou: gfi-portugal
+description: Collaborateurs attaches a la paie de l'entite GFI PORTUGAL.
+objectclass: organizationalUnit
+
+#
+# Decoupage organisationnel (area, branche,...) sans responsable
+#
+dn: ou=area,ou=groups,dc=gfi,dc=fr
+ou : area
+description: Area, ou axe geographique, dont l'objectif est de situer la
+ couverture nationale et internationale de nos operations.
+objectclass: organizationalUnit
+
+dn: ou=secteur,ou=groups,dc=gfi,dc=fr
+ou : secteur
+description: Secteur, ou axe metier client, dont l'objectif est 
+ d'accompagner la montee de nos operations dans les chaines de valeur de nos clients.
+objectclass: organizationalUnit
+
+dn: ou=fonction,ou=groups,dc=gfi,dc=fr
+ou : fonction
+description: Fonctions Corporate
+objectclass: organizationalUnit
+
+dn: ou=branche,ou=groups,dc=gfi,dc=fr
+ou: branche
+description: Branche, ou axe metier GFI, dont l'objectif est d'ameliorer notre 
+ delivery et de mieux gerer nos operations.
+objectclass: organizationalUnit
+
+#
+# Meta-Groupe GFI
+#
+dn: cn=Gfi Groupe,ou=groups,dc=gfi,dc=fr
+cn: Gfi Groupe
+description: Groupe listant les groupes organisationnels actuellement
+ rattaches a Gfi. 
+ Permet de gerer les ventes ou les integrations partielles d'organisations, ou les rattachements
+ delayes.
+objectclass: groupOfUniqueNames
+owner: uid=vrouaix,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: cn=Business Solution,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DSI,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+# ou=area,ou=groups,dc=gfi,dc=fr -> il manque les CN concrets
+# ou=secteur,ou=groups,dc=gfi,dc=fr -> il manque les CN concrets
+
+#
+# Business Solution
+#
+dn: cn=Business Solution,ou=groups,dc=gfi,dc=fr
+cn: Business Solution
+description: Business Solution, Est issue du
+  rachat d’une partie des activites de Thales Services.
+objectclass: groupOfUniqueNames
+owner: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+#
+# Branche Production
+#
+dn: cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Production
+description: Production
+description: Branche Production de Gfi.
+objectclass: groupOfUniqueNames
+owner: uid=pmarin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: cn=Hub Maroc,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=Hub Espagne,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+
+dn: cn=Hub Maroc,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub Maroc
+objectclass: groupOfUniqueNames
+owner: uid=kmaache,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=Hub Espagne,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub Espagne
+objectclass: groupOfUniqueNames
+owner: uid=userna,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub France
+objectclass: groupOfUniqueNames
+uniqueMember: uid=pmarin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: cn=Hub Ouest,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=Hub Sud-Ouest,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=Hub Nord,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=Hub IDF,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+
+dn: cn=Hub Sud-Ouest,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub Sud-Ouest
+objectclass: groupOfUniqueNames
+owner: uid=pgenais,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=Hub Ouest,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub Ouest
+objectclass: groupOfUniqueNames
+owner: uid=mevrard,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=Hub Nord,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub Nord
+objectclass: groupOfUniqueNames
+owner: uid=odecocq,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=fdaugan,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=Hub IDF,cn=Hub France,cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+cn: Hub IDF
+objectclass: groupOfUniqueNames
+owner: uid=cbatut,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+#
+# DSI
+#
+dn: cn=DSI,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DSI
+objectclass: groupOfUniqueNames
+owner: uid=mbeilin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mbeilin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: cn=DSI Etude,cn=DSI,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DSI Infrastructure,cn=DSI,ou=fonction,ou=groups,dc=gfi,dc=fr
+
+dn: cn=DSI Etude,cn=DSI,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DSI Etude
+objectclass: groupOfUniqueNames
+owner: uid=bbrennetot,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DSI Infrastructure,cn=DSI,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DSI Infrastructure
+objectclass: groupOfUniqueNames
+owner: uid=phanquet,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+#
+# DIG
+#
+dn: cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG
+objectclass: groupOfUniqueNames
+owner: uid=cchauvin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=cchauvin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: cn=DIG ES,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG Production,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG BFA,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG IES,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG RHA,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG Ouest,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG Sud Ouest,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG TME,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG Software,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG Nord,cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG IDF,cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG RHA,cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG RHA,cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+
+dn: cn=DIG ES,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG ES
+objectclass: groupOfUniqueNames
+owner: uid=nveyrier,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=broken,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG Production,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG Production
+objectclass: groupOfUniqueNames
+owner: uid=jlnollet,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG AS
+objectclass: groupOfUniqueNames
+owner: uid=cchauvin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG BFA,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG BFA
+objectclass: groupOfUniqueNames
+owner: uid=jmorsini,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG IES,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG IES
+objectclass: groupOfUniqueNames
+owner: uid=brenou,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG RHA,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG RHA
+objectclass: groupOfUniqueNames
+owner: uid=gvescovi,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=gvescovi,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=fdoe2,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=jlast3,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=jdoe4,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=jdoe5,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+
+
+dn: cn=DIG Ouest,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG Ouest
+objectclass: groupOfUniqueNames
+owner: uid=mleridant,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG Sud Ouest,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG Sud Ouest
+objectclass: groupOfUniqueNames
+owner: uid=pgenais,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=pgenais,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=jlast3,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=fdoe2,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG TME,cn=DIG AS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG TME
+objectclass: groupOfUniqueNames
+owner: uid=mschmidt-le-roi,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG Software,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG Software
+objectclass: groupOfUniqueNames
+owner: uid=bdemarez,ou=progiciels,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG IS
+objectclass: organizationalRole
+
+dn: cn=DIG Nord,cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG Nord
+objectclass: groupOfUniqueNames
+owner: uid=jfverger,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+dn: cn=DIG IDF,cn=DIG IS,cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+cn : DIG IDF
+objectclass: groupOfUniqueNames
+owner: uid=plelouarn,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+uniqueMember: uid=mMARtin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+
+#
+# Tools
+#
+dn: cn=Jira,ou=tools,dc=gfi,dc=fr
+cn : Jira
+objectclass: groupOfUniqueNames
+uniqueMember: cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+
+dn: cn=VigiReport,ou=tools,dc=gfi,dc=fr
+cn : VigiReport
+objectclass: groupOfUniqueNames
+uniqueMember: cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+uniqueMember: cn=DIG,ou=fonction,ou=groups,dc=gfi,dc=fr
+
+dn: cn=BPR Affect,ou=tools,dc=gfi,dc=fr
+cn : BPR Affect
+objectclass: groupOfUniqueNames
+uniqueMember: cn=Production,ou=branche,ou=groups,dc=gfi,dc=fr
+
+# fdaugan, gfi, france, people, gfi.fr
+dn: uid=fdaugan,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Fabrice Daugan
+sn: Daugan
+givenName: Fabrice
+uid: fdaugan
+employeeNumber: 49852
+departmentNumber: 873868
+preferredLanguage: FR
+title: Consultant
+telephoneNumber: +33 3 28 53 10 92
+mobile: +33 6 03 58 36 25
+mail: fabrice.daugan@gfi.fr
+manager: uid=odecocq,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+secretary: uid=nlepetz,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+objectClass: inetOrgPerson
+userPassword: Azerty01
+
+dn: uid=fdauganA,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Fabrice Daugan
+sn: Daugan
+givenName: Fabrice
+uid: fdauganA
+mail: fabrice.daugan@gfi.fr
+objectClass: inetOrgPerson
+userPassword: Azerty01
+
+dn: uid=fdauganB,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Fabrice Daugan
+sn: Daugan
+givenName: Fabrice
+uid: fdauganB
+mail: fabrice.daugan@gfi.fr
+objectClass: inetOrgPerson
+userPassword: Azerty01
+
+dn: uid=alocquet,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Arnaud Locquet
+sn: Locquet
+givenName: Arnaud
+uid: alocquet
+mail: arnaud.locquet@gfi.fr
+objectClass: inetOrgPerson
+userPassword: Azerty01
+
+dn: uid=hduee,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Hervé Duée
+sn: Duée
+givenName: Hervé
+uid: hduee
+mail: herve.duee@gfi.fr
+objectClass: inetOrgPerson
+userPassword: Azerty01
+
+dn: uid=jdupont,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Jose Dupont
+sn: Dupont
+givenName: Jose
+uid: jdupont
+objectClass: inetOrgPerson
+userPassword: Azerty01
+
+dn: uid=mmartin,ou=gfi,ou=france,ou=people,dc=gfi,dc=fr
+cn: Marc Martin
+sn: Martin
+givenName: Marc
+uid: mmartin
+mail: marc.martin@gfi.fr
+objectClass: inetOrgPerson
+userPassword: complexOne
+
+#
+# Branche LDAP contenant les entites externes .
+# Une personne est donc rattachee a une seule entreprise.
+#
+dn: ou=external,ou=people,dc=gfi,dc=fr
+ou:external
+description: Collaborateurs externes de Gfi.
+objectclass: organizationalUnit
+
+dn: ou=socgen,ou=external,ou=people,dc=gfi,dc=fr
+ou:socgen
+description: Societe Generale
+objectclass: organizationalUnit
+
+dn: ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+ou:ing
+description: ING
+objectclass: organizationalUnit
+
+dn: ou=orange,ou=external,ou=people,dc=gfi,dc=fr
+ou:orange
+description: Orange
+objectclass: organizationalUnit
+
+#
+# Delegation test data
+#
+dn: uid=flast0,ou=socgen,ou=external,ou=people,dc=gfi,dc=fr
+cn: First0 Last0
+sn: Last0
+givenName: First0
+uid: flast0
+mail: first0.last0@socgen.fr
+objectClass: inetOrgPerson
+userPassword: complexOne
+
+dn: uid=flast1,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+cn: First1 Last1
+sn: Last1
+givenName: First1
+uid: flast1
+mail: first1.last1@ing.fr
+objectClass: inetOrgPerson
+userPassword: complexOne
+
+dn: uid=fdoe2,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+cn: First2 Doe2
+sn: Doe2
+givenName: First2
+uid: fdoe2
+mail: first2.doe2@ing.fr
+objectClass: inetOrgPerson
+userPassword: complexOne
+
+dn: uid=jlast3,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+cn: John3 Last3
+sn: Last3
+givenName: John3
+uid: jlast3
+mail: john3.last3@ing.fr
+objectClass: inetOrgPerson
+userPassword: complexOne
+
+dn: uid=jdoe4,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+cn: John4 Doe4
+sn: Doe4
+givenName: John4
+uid: jdoe4
+mail: fohn4.doe4@ing.fr
+objectClass: inetOrgPerson
+
+dn: uid=jdoe5,ou=ing,ou=external,ou=people,dc=gfi,dc=fr
+cn: First5 Last5
+sn: Last5
+givenName: First5
+uid: jdoe5
+objectClass: inetOrgPerson
+userPassword: complexOne

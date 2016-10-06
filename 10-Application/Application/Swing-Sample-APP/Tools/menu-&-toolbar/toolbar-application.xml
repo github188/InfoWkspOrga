@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbar-application>
+
+	<toolbarItem tag-name="PERSPECTIVE_CREATE_TAG" />
+	<toolbarItem tag-name="PERSPECTIVE_COPY_TAG" />
+	<toolbarItem tag-name="PERSPECTIVE_UPDATE_PROPERTIES_TAG" />
+
+	<toolbarItem tag-name="PERSPECTIVE_REMOVE_TAG" />
+	<separator />
+
+	<toolbarItem tag-name="WORKSPACE_CREATE_TAG" />
+	<toolbarItem tag-name="WORKSPACE_COPY_TAG" />
+	<toolbarItem tag-name="WORKSPACE_UPDATE_PROPERTIES_TAG" />
+	<toolbarItem tag-name="WORKSPACE_DEFINE_TAB_TITLE_TAG" />
+	
+	<toolbarItem tag-name="WORKSPACE_SAVE_TAG" />
+	
+	<toolbarItem tag-name="WORKSPACE_REMOVE_TAG" />
+	<separator />
+
+	<toolbarItem tag-name="ADD_DIRECTORY_DESK_VIEW_TAG" />
+	<toolbarItem tag-name="ADD_HTML_VIEW_TAG" />
+	<toolbarItem tag-name="ADD_LINK_VIEW_TAG" />
+	<toolbarItem tag-name="ADD_WORKSPACE_MAP_VIEW_TAG" />
+	<toolbarItem tag-name="ADD_QUICK_ACTION_VIEW_TAG" />
+	<toolbarItem tag-name="ADD_PROJECT_CONFIGURATION_VIEW_TAG" />
+	<separator />
+	
+	<toolbarItem tag-name="PREFERENCES_DISPLAY_TAG" />
+	<toolbarItem tag-name="ABOUT_TAG" />
+	<separator />
+	
+	<toolbarItem tag-name="EXIT_TAG" />
+	
+</toolbar-application>

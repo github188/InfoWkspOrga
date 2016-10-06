@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xmlPreference id="0" owner="admin" partage="PUBLIC" name="preferences.tree.root.text" type="TREE_NODE">
+	<xmlPreference id="1" owner="admin" partage="PUBLIC" name="preferences.tree.generales.text" description="preferences.tree.generales.text.tooltip"
+		type="TREE_NODE" order="1"/>
+
+	<xmlPreference id="2" owner="admin" partage="PUBLIC" name="preferences.tree.connexion.text" description="preferences.tree.connexion.tooltip"
+		type="TREE_NODE"
+	>
+		<xmlPreference id="3" owner="admin" partage="PUBLIC" name="preferences.tree.connexion.user.login.text" description="preferences.tree.connexion.user.login.tooltip"
+			value="??" type="TREE_NODE" localization="LOCAL_PROPERTIES_FILE" constraints="" />
+		<xmlPreference id="4" owner="admin" partage="PUBLIC" name="preferences.tree.connexion.user.password.text" description="preferences.tree.connexion.user.password.tooltip"
+			value="??" type="TREE_NODE" localization="LOCAL_PROPERTIES_FILE" constraints="" />
+		<xmlPreference id="5" category="admin" owner="admin" partage="PUBLIC" name="preferences.tree.connexion.user.language.text" description="preferences.tree.connexion.user.language.tooltip"
+			value="??" type="TREE_NODE" localization="LOCAL_PROPERTIES_FILE" constraints="" enabled="true" updatable="true"/>
+	</xmlPreference>
+
+</xmlPreference>

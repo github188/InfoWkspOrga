@@ -1,0 +1,83 @@
+.body {
+	font-family: verdana, helvetica, arial, sans-serif;
+}
+
+body.layout-compact {
+	line-height: 9px;
+	font-size: 8.5px;
+}
+
+body.layout-compact .ui-widget-content {
+	font-size: 8.5px;
+}
+
+body.layout-compact .ui-datatable thead th {
+	font-size: 11px;
+}
+
+.layout-wrapper .footer {
+	line-height: 18px;
+	font-size: 14px;
+}
+
+body.layout-compact .ui-accordion .ui-accordion-header {
+	padding: 0;
+	border-radius: 2px;
+}
+
+.onglet-a-qualifier {
+	background-image: linear-gradient (#FFFFFF, #F39200);
+}
+
+.tableCompetences {
+	 padding : 0; 
+	 font-size: 11px;
+}
+
+.ui-accordion .ui-accordion-header a {
+	text-shadow: none;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.logo-gfi {
+	background: rgba(0, 0, 0, 0) url("../../../images/customer/GFI.png")
+		no-repeat scroll left top;
+	display: inline-block;
+	height: 16px;
+	margin-left: 70px;
+	margin-top: 20px;
+	width: 16px;
+	margin-top: 20px;
+}
+
+.bu-gfi {
+	display: block;
+	color: #ffffff !important;
+	background: transparent none repeat scroll 0 0;
+	border: 0 none;
+	font-size: 20px;
+	outline: 0 none;
+	margin-top: -10px;
+	margin-left: 40px;
+	vertical-align: baseline;
+	font-weight: normal;
+	line-height: 100%;
+}
+
+.app-title {
+	bottom: 0;
+	color: #ffffff !important;
+	display: inline-block;
+	font-size: 25px;
+	left: 0;
+	line-height: 75px;
+	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
+	overflow: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 310px;
+}

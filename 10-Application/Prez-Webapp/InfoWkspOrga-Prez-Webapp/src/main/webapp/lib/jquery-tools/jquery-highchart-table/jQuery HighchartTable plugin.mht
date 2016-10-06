@@ -1,0 +1,3140 @@
+From: <Saved by Mozilla 5.0 (Windows)>
+Subject: jQuery HighchartTable plugin
+Date: Sat, 28 May 2016 21:30:33 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_B0E0266F.E2501360"
+X-MAF-Information: Produced By MAF V4.0.0
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: text/html;
+	charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://highcharttable.org/#download
+
+<!DOCTYPE html><html lang=3D"en"><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+    <meta charset=3D"utf-8">
+    <title>jQuery HighchartTable plugin</title>
+    <meta name=3D"description" content=3D"jQuery plugin to transform HTML=
+ tables into nice Highcharts graphs">
+    <link rel=3D"stylesheet" href=3D"urn:snapshot-613770B0:http://highchart=
+table.org/css/bootstrap.min.css">
+    <link rel=3D"stylesheet" href=3D"urn:snapshot-858C8DD3:http://highchart=
+table.org/css/main.css">
+    <link rel=3D"stylesheet" href=3D"urn:snapshot-36F016FC:http://highchart=
+table.org/css/prettify.css">
+    <link rel=3D"shortcut icon" href=3D"http://highcharttable.org/images/fa=
+vicon.ico">
+    <script src=3D"urn:snapshot-DC351264:http://www.google-analytics.com/an=
+alytics.js" async=3D""></script><script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+  </head>
+  <body><script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script><script type=3D"text/javascript"><!--
+
+/* Script removed by snapshot save */
+
+--></script><script src=3D"urn:snapshot-6E493026:http://box.anchorfree.net/=
+insert/insert.php?sn=3DHSSHIELD00FR&amp;ch=3DHSSCNL100395&amp;v=3D623161526=
+6&amp;b=3Df&amp;ver=3Dnonus&amp;afver=3D5.4.0" type=3D"text/javascript"></s=
+cript>
+ =20
+    <a href=3D"https://github.com/highchartTable/jquery-highchartTable-plug=
+in" class=3D"contribute"><img src=3D"http://highcharttable.org/images/forkm=
+e.png" alt=3D"Fork me on GitHub"></a>
+
+    <div class=3D"topbar" data-scrollspy=3D"scrollspy">
+      <div class=3D"fill">
+        <div class=3D"container">
+          <a class=3D"brand" href=3D"#">jQuery HighchartTable plugin</a>
+          <ul class=3D"nav">
+            <li class=3D""><a href=3D"#">Home</a></li>
+            <li><a href=3D"#about">About</a></li>
+	    <li><a href=3D"#demo">Demo</a></li>
+            <li><a href=3D"#download">Download</a></li>
+	    <li class=3D"active"><a href=3D"#documentation">Documentation</a></li>
+            <li><a href=3D"#license">License</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class=3D"container">
+
+      <!-- Main hero unit for a primary marketing message or call to action=
+ -->
+      <div class=3D"hero-unit">
+        <h1>jQuery HighchartTable</h1>
+        <p>Ever wanted to convert your HTML data tables into fancy <a href=
+=3D"http://www.highcharts.com/">Highcharts</a> graphs?</p>
+        <p><a class=3D"btn primary large" href=3D"#about">Learn more =C2=BB=
+</a></p>
+      </div>
+
+      <section id=3D"about">
+        <div class=3D"page-header">
+          <h1>About</h1>
+        </div>
+       =20
+        <div class=3D"row">
+          <div class=3D"span16">
+            <h2>Intro</h2>
+             =20
+            <p>We wanted to use <a href=3D"http://www.highcharts.com/">High=
+charts</a> graph library but with a way to convert automatically our HTML=
+ tables containing data into graphs.</p>
+            <p>So we decided to code a jQuery plugin to make this conversio=
+n peacefully. And voila, here we are :)</p>
+            <p><a class=3D"btn large" href=3D"#demo">Wanna see a demo ?</a>=
+</p>
+          </div>
+        </div>
+       =20
+        <div class=3D"row">
+          <div class=3D"span-one-third">
+            <h2>How it works</h2>
+           =20
+            <p>We use HTML5 data-* attributes to specify how the tables are=
+ rendered.</p>
+            <p>Many attributes are available to provide you a way to custom=
+ize the graph.</p>
+            <p><a class=3D"btn" href=3D"#documentation">Full documentation<=
+/a></p>
+          </div>
+         =20
+          <div class=3D"span-one-third">
+            <h2>Compatibility</h2>
+            <img alt=3D"Tested and supported in Chrome, Safari, Internet Ex=
+plorer, and Firefox" src=3D"http://highcharttable.org/images/browsers.png">
+            <p>Browsers compatibility is tied to <a href=3D"http://www.high=
+charts.com/documentation/compatibility">Highcharts browsers compatibility</=
+a>.</p>
+            <p><a href=3D"http://jquery.com/">jQuery</a> &gt;=3D 1.4.3 is=
+ required</p>
+          </div>
+         =20
+          <div class=3D"span-one-third">
+            <h2>Licence</h2>
+           =20
+            <p>We provide our plugin with an MIT licence.</p>
+            <p><a class=3D"btn" href=3D"http://www.opensource.org/licenses/=
+mit-license.php">View MIT licence</a></p>
+           =20
+            <h2>Get the code</h2>
+           =20
+            <p>The plugin is hosted on Github.</p>
+            <p><a class=3D"btn" href=3D"http://github.com/highchartTable/jq=
+uery-highchartTable-plugin">See us on Github</a></p>
+          </div>
+        </div>
+
+       =20
+      </section>
+     =20
+      <section id=3D"demo">
+        <div class=3D"page-header">
+          <h1>Demo</h1>
+        </div>
+       =20
+        <h2>Here are some examples of HTML tables converted into graphs</h2>
+       =20
+        <h3>First example: columns</h3>
+        <div class=3D"row">
+         =20
+          <div class=3D"span-one-third">
+            <table class=3D"highchart" data-graph-container=3D".. .. .highc=
+hart-container" data-graph-type=3D"column">
+              <caption>Column example</caption>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Sales</th>
+                  <th>Benefits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>January</td>
+                  <td>8000</td>
+                  <td>2000</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>12000</td>
+                  <td>3000</td>
+                </tr>
+                <tr>
+                  <td>March</td>
+                  <td>18000</td>
+                  <td>4000</td>
+                </tr>
+                <tr>
+                  <td>April</td>
+                  <td>2000</td>
+                  <td>-1000</td>
+                </tr>
+                <tr>
+                  <td>May</td>
+                  <td>500</td>
+                  <td>-2500</td>
+                </tr>
+              </tbody>
+            </table>
+           =20
+            <button class=3D"btn danger" data-controls-modal=3D"example1-co=
+de" data-backdrop=3D"1">See the code</button>
+          </div>
+         =20
+          <div class=3D"span-two-third">
+            <div class=3D"highchart-container"><div style=3D"position: rela=
+tive; overflow: hidden; width: 600px; height: 400px; text-align: left; font=
+-family: &quot;Lucida Grande&quot;,&quot;Lucida Sans Unicode&quot;,Verdana,=
+Arial,Helvetica,sans-serif; font-size: 12px; left: 0px; top: 0px;" id=3D"hi=
+ghcharts-0" class=3D"highcharts-container"><svg height=3D"400" width=3D"600=
+" version=3D"1.1" xmlns=3D"http://www.w3.org/2000/svg"><defs><clipPath id=
+=3D"highcharts-1"><rect stroke-width=3D"0" height=3D"287" width=3D"552" y=
+=3D"0" x=3D"0" fill=3D"none" ry=3D"0" rx=3D"0"></rect></clipPath></defs><re=
+ct stroke=3D"#4572A7" stroke-width=3D"0" height=3D"400" width=3D"600" y=3D"=
+0" x=3D"0" fill=3D"#FFFFFF" ry=3D"5" rx=3D"5"></rect><text zIndex=3D"1" cla=
+ss=3D"highcharts-title" text-anchor=3D"middle" style=3D"font-family:&quot;L=
+ucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvet=
+ica, sans-serif;font-size:16px;color:#3E576F;fill:#3E576F;" y=3D"25" x=3D"3=
+00"><tspan x=3D"300">Column example</tspan></text><g zIndex=3D"1" class=3D"=
+highcharts-grid"></g><g zIndex=3D"1" class=3D"highcharts-grid"><path zIndex=
+=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 327.5=
+ L 590 327.5"></path><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C=
+0" fill=3D"none" d=3D"M 38 270.5 L 590 270.5"></path><path zIndex=3D"1" str=
+oke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 212.5 L 590 212.=
+5"></path><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"=
+none" d=3D"M 38 155.5 L 590 155.5"></path><path zIndex=3D"1" stroke-width=
+=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 97.5 L 590 97.5"></path><=
+path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"=
+M 38 40.5 L 590 40.5"></path></g><g zIndex=3D"3" class=3D"highcharts-series=
+-group"><g transform=3D"translate(38,40)" visibility=3D"visible" clip-path=
+=3D"url(http://highcharttable.org/#highcharts-1)" class=3D"highcharts-serie=
+s"><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"t=
+rue" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"91" width=
+=3D"42" y=3D"137.5" x=3D"5.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect=
+ transform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D=
+"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"91" width=3D"42"=
+ y=3D"137.5" x=3D"5.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transfo=
+rm=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"tr=
+ue" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"91" width=
+=3D"42" y=3D"137.5" x=3D"5.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect=
+ r=3D"0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"91" width=3D"42"=
+ y=3D"137.5" x=3D"5.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect tran=
+sform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0"=
+ stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"137" width=3D"42" y=
+=3D"91.5" x=3D"115.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transfor=
+m=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"137" width=3D"42" y=3D"91.5=
+" x=3D"115.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"tra=
+nslate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"=
+0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"137" width=3D"42"=
+ y=3D"91.5" x=3D"115.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0=
+" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"137" width=3D"42" y=3D"91=
+.5" x=3D"115.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect transform=
+=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"206" width=3D"42" y=3D"22.5=
+" x=3D"226.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"tra=
+nslate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" stroke=3D"rgb=
+(0, 0, 0)" stroke-width=3D"3" height=3D"206" width=3D"42" y=3D"22.5" x=3D"2=
+26.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1=
+,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"206" width=3D"42" y=3D"22.5=
+" x=3D"226.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0" stroke=
+=3D"#FFFFFF" stroke-width=3D"1" height=3D"206" width=3D"42" y=3D"22.5" x=3D=
+"226.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect transform=3D"transl=
+ate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0=
+, 0, 0)" stroke-width=3D"5" height=3D"22" width=3D"42" y=3D"206.5" x=3D"336=
+.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1=
+)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)"=
+ stroke-width=3D"3" height=3D"22" width=3D"42" y=3D"206.5" x=3D"336.5" fill=
+=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1)" strok=
+e-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0=
+, 0, 0)" stroke-width=3D"1" height=3D"22" width=3D"42" y=3D"206.5" x=3D"336=
+.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0" stroke=3D"#FFFFFF"=
+ stroke-width=3D"1" height=3D"22" width=3D"42" y=3D"206.5" x=3D"336.5" fill=
+=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1)" st=
+roke-opacity=3D"0.05" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" str=
+oke-width=3D"5" height=3D"5" width=3D"42" y=3D"223.5" x=3D"447.5" fill=3D"n=
+one" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1)" stroke-opa=
+city=3D"0.1" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=
+=3D"3" height=3D"5" width=3D"42" y=3D"223.5" x=3D"447.5" fill=3D"none" ry=
+=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1)" stroke-opacity=3D=
+"0.15000000000000002" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" str=
+oke-width=3D"1" height=3D"5" width=3D"42" y=3D"223.5" x=3D"447.5" fill=3D"n=
+one" ry=3D"0" rx=3D"0"></rect><rect r=3D"0" stroke=3D"#FFFFFF" stroke-width=
+=3D"1" height=3D"5" width=3D"42" y=3D"223.5" x=3D"447.5" fill=3D"#4572A7"=
+ ry=3D"0" rx=3D"0"></rect></g><g transform=3D"translate(38,40)" visibility=
+=3D"visible" clip-path=3D"url(http://highcharttable.org/#highcharts-1)" cla=
+ss=3D"highcharts-series"><rect transform=3D"translate(1,1)" stroke-opacity=
+=3D"0.05" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D=
+"5" height=3D"22" width=3D"42" y=3D"206.5" x=3D"60.5" fill=3D"none" ry=3D"0=
+" rx=3D"0"></rect><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.1"=
+ isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"3" heigh=
+t=3D"22" width=3D"42" y=3D"206.5" x=3D"60.5" fill=3D"none" ry=3D"0" rx=3D"0=
+"></rect><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.15000000000=
+000002" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1=
+" height=3D"22" width=3D"42" y=3D"206.5" x=3D"60.5" fill=3D"none" ry=3D"0"=
+ rx=3D"0"></rect><rect r=3D"0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=
+=3D"22" width=3D"42" y=3D"206.5" x=3D"60.5" fill=3D"#AA4643" ry=3D"0" rx=3D=
+"0"></rect><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.05" isSha=
+dow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"3=
+3" width=3D"42" y=3D"195.5" x=3D"171.5" fill=3D"none" ry=3D"0" rx=3D"0"></r=
+ect><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"t=
+rue" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"33" width=
+=3D"42" y=3D"195.5" x=3D"171.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rec=
+t transform=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isSha=
+dow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"3=
+3" width=3D"42" y=3D"195.5" x=3D"171.5" fill=3D"none" ry=3D"0" rx=3D"0"></r=
+ect><rect r=3D"0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"33" width=
+=3D"42" y=3D"195.5" x=3D"171.5" fill=3D"#AA4643" ry=3D"0" rx=3D"0"></rect><=
+rect transform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true"=
+ r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"45" width=3D"=
+42" y=3D"183.5" x=3D"281.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect tr=
+ansform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0"=
+ stroke=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"45" width=3D"42" y=3D=
+"183.5" x=3D"281.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=
+=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true=
+" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"45" width=3D=
+"42" y=3D"183.5" x=3D"281.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect=
+ r=3D"0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"45" width=3D"42"=
+ y=3D"183.5" x=3D"281.5" fill=3D"#AA4643" ry=3D"0" rx=3D"0"></rect><rect tr=
+ansform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0=
+" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"11" width=3D"42" y=
+=3D"229.5" x=3D"391.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transfo=
+rm=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" stro=
+ke=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"11" width=3D"42" y=3D"229.=
+5" x=3D"391.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"tr=
+anslate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D=
+"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"11" width=3D"42"=
+ y=3D"229.5" x=3D"391.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"=
+0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"11" width=3D"42" y=3D"22=
+9.5" x=3D"391.5" fill=3D"#AA4643" ry=3D"0" rx=3D"0"></rect><rect transform=
+=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"28" width=3D"42" y=3D"229.5=
+" x=3D"502.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"tra=
+nslate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" stroke=3D"rgb=
+(0, 0, 0)" stroke-width=3D"3" height=3D"28" width=3D"42" y=3D"229.5" x=3D"5=
+02.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1=
+,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"28" width=3D"42" y=3D"229.5=
+" x=3D"502.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0" stroke=
+=3D"#FFFFFF" stroke-width=3D"1" height=3D"28" width=3D"42" y=3D"229.5" x=3D=
+"502.5" fill=3D"#AA4643" ry=3D"0" rx=3D"0"></rect></g></g><g transform=3D"t=
+ranslate(233,355)" zIndex=3D"7" class=3D"highcharts-legend"><rect visibilit=
+y=3D"visible" stroke=3D"#909090" stroke-width=3D"1" height=3D"29" width=3D"=
+163" y=3D"0.5" x=3D"0.5" fill=3D"none" ry=3D"5" rx=3D"5"></rect><text zInde=
+x=3D"2" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans=
+ Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor=
+:pointer;color:#3E576F;fill:#3E576F;" y=3D"18" x=3D"44"><tspan x=3D"44">Sal=
+es</tspan></text><text zIndex=3D"2" style=3D"font-family:&quot;Lucida Grand=
+e&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-s=
+erif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;" y=3D"18" x=
+=3D"113"><tspan x=3D"113">Benefits</tspan></text><rect r=3D"0" stroke=3D"#F=
+FFFFF" zIndex=3D"3" stroke-width=3D"1" height=3D"12" width=3D"30" y=3D"7.5"=
+ x=3D"9.5" fill=3D"#4572A7" ry=3D"2" rx=3D"2"></rect><rect r=3D"0" stroke=
+=3D"#FFFFFF" zIndex=3D"3" stroke-width=3D"1" height=3D"12" width=3D"30" y=
+=3D"7.5" x=3D"78.5" fill=3D"#AA4643" ry=3D"2" rx=3D"2"></rect></g><g zIndex=
+=3D"7" class=3D"highcharts-axis"><text text-anchor=3D"middle" style=3D"font=
+-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana=
+, Arial, Helvetica, sans-serif;font-size:11px;width:90px;color:#666;line-he=
+ight:14px;fill:#666;" y=3D"341" x=3D"93.2"><tspan x=3D"93.2">January</tspan=
+></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Lucida Gran=
+de&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-=
+serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#666;" y=
+=3D"341" x=3D"203.60000000000002"><tspan x=3D"203.60000000000002">February<=
+/tspan></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Lucid=
+a Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica,=
+ sans-serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#666=
+;" y=3D"341" x=3D"314.00000000000006"><tspan x=3D"314.00000000000006">March=
+</tspan></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Luci=
+da Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica=
+, sans-serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#66=
+6;" y=3D"341" x=3D"424.40000000000003"><tspan x=3D"424.40000000000003">Apri=
+l</tspan></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Luc=
+ida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetic=
+a, sans-serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#6=
+66;" y=3D"341" x=3D"534.8"><tspan x=3D"534.8">May</tspan></text><path strok=
+e-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 148.5 327 L 148.5 332=
+"></path><path stroke-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M=
+ 259.5 327 L 259.5 332"></path><path stroke-width=3D"1" stroke=3D"#C0D0E0"=
+ fill=3D"none" d=3D"M 369.5 327 L 369.5 332"></path><path stroke-width=3D"1=
+" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 480.5 327 L 480.5 332"></path><pa=
+th stroke-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 590.5 327 L=
+ 590.5 332"></path></g><g zIndex=3D"7" class=3D"highcharts-axis"><text text=
+-anchor=3D"end" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucid=
+a Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;=
+width:256px;color:#666;line-height:14px;fill:#666;" y=3D"330.6" x=3D"30"><t=
+span x=3D"30">-5k</tspan></text><text text-anchor=3D"end" style=3D"font-fam=
+ily:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Ar=
+ial, Helvetica, sans-serif;font-size:11px;width:256px;color:#666;line-heigh=
+t:14px;fill:#666;" y=3D"273.20000000000005" x=3D"30"><tspan x=3D"30">0k</ts=
+pan></text><text text-anchor=3D"end" style=3D"font-family:&quot;Lucida Gran=
+de&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-=
+serif;font-size:11px;width:256px;color:#666;line-height:14px;fill:#666;" y=
+=3D"215.79999999999998" x=3D"30"><tspan x=3D"30">5k</tspan></text><text tex=
+t-anchor=3D"end" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Luci=
+da Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px=
+;width:256px;color:#666;line-height:14px;fill:#666;" y=3D"158.3999999999999=
+8" x=3D"30"><tspan x=3D"30">10k</tspan></text><text text-anchor=3D"end" sty=
+le=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot=
+;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:256px;color:#=
+666;line-height:14px;fill:#666;" y=3D"100.99999999999997" x=3D"30"><tspan=
+ x=3D"30">15k</tspan></text><text text-anchor=3D"end" style=3D"font-family:=
+&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial,=
+ Helvetica, sans-serif;font-size:11px;width:256px;color:#666;line-height:14=
+px;fill:#666;" y=3D"43.6" x=3D"30"><tspan x=3D"30">20k</tspan></text></g><g=
+ visibility=3D"hidden" zIndex=3D"8" class=3D"highcharts-tooltip"><rect tran=
+sform=3D"translate(1,1)" stroke-opacity=3D"0.05" stroke=3D"rgb(0, 0, 0)" is=
+Shadow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"5" height=3D"0" width=
+=3D"0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect transfo=
+rm=3D"translate(1,1)" stroke-opacity=3D"0.1" stroke=3D"rgb(0, 0, 0)" isShad=
+ow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"3" height=3D"0" width=3D"=
+0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect transform=
+=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" stroke=3D"rgb(0,=
+ 0, 0)" isShadow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"1" height=
+=3D"0" width=3D"0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><=
+rect fill-opacity=3D"0.85" stroke-width=3D"2" height=3D"0" width=3D"0" y=3D=
+"7" x=3D"7" fill=3D"rgb(255,255,255)" ry=3D"5" rx=3D"5"></rect><text zIndex=
+=3D"1" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Un=
+icode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#33=
+3333;padding:0;white-space:nowrap;fill:#333333;" y=3D"24" x=3D"12"><tspan=
+ x=3D"12"> </tspan></text></g><g transform=3D"translate(38,40)" zIndex=3D"9=
+" class=3D"highcharts-tracker"><rect style=3D"" zIndex=3D"1" visibility=3D"=
+visible" fill-opacity=3D"0.000001" isTracker=3D"1464463796108" stroke-width=
+=3D"0" height=3D"92" width=3D"43" y=3D"137" x=3D"5" fill=3D"rgb(192,192,192=
+)" ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"vis=
+ible" fill-opacity=3D"0.000001" isTracker=3D"1464463796108" stroke-width=3D=
+"0" height=3D"138" width=3D"43" y=3D"91" x=3D"115" fill=3D"rgb(192,192,192)=
+" ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visi=
+ble" fill-opacity=3D"0.000001" isTracker=3D"1464463796108" stroke-width=3D"=
+0" height=3D"207" width=3D"43" y=3D"22" x=3D"226" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796108" stroke-width=3D"0=
+" height=3D"23" width=3D"43" y=3D"206" x=3D"336" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796108" stroke-width=3D"0=
+" height=3D"6" width=3D"43" y=3D"223" x=3D"447" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796110" stroke-width=3D"0=
+" height=3D"23" width=3D"43" y=3D"206" x=3D"60" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796110" stroke-width=3D"0=
+" height=3D"34" width=3D"43" y=3D"195" x=3D"171" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796110" stroke-width=3D"0=
+" height=3D"46" width=3D"43" y=3D"183" x=3D"281" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796110" stroke-width=3D"0=
+" height=3D"12" width=3D"43" y=3D"229" x=3D"391" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visib=
+le" fill-opacity=3D"0.000001" isTracker=3D"1464463796110" stroke-width=3D"0=
+" height=3D"29" width=3D"43" y=3D"229" x=3D"502" fill=3D"rgb(192,192,192)"=
+ ry=3D"0" rx=3D"0"></rect></g></svg></div></div>
+          </div>
+        </div>
+       =20
+        <div class=3D"hide modal fade" id=3D"example1-code">
+          <div class=3D"modal-header">
+            <a href=3D"#" class=3D"close">x</a>
+            <h3>Source code</h3>
+          </div>
+         =20
+          <div class=3D"modal-body">
+            <h4>HTML file</h4>
+<pre class=3D"prettyprint"><span class=3D"tag">&lt;table</span><span class=
+=3D"pln"> </span><span class=3D"atn">class</span><span class=3D"pun">=3D</s=
+pan><span class=3D"atv">"highchart"</span><span class=3D"pln">=20
+  </span><span class=3D"atn">data-graph-container</span><span class=3D"pun"=
+>=3D</span><span class=3D"atv">".. .. .highchart-container"</span><span cla=
+ss=3D"pln">=20
+  </span><span class=3D"atn">data-graph-type</span><span class=3D"pun">=3D<=
+/span><span class=3D"atv">"column"</span><span class=3D"tag">&gt;</span><sp=
+an class=3D"pln">
+  </span><span class=3D"tag">&lt;caption&gt;</span><span class=3D"pln">Colu=
+mn example</span><span class=3D"tag">&lt;/caption&gt;</span><span class=3D"=
+pln">
+  </span><span class=3D"tag">&lt;thead&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Month=
+</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Sales=
+</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Benef=
+its</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;/thead&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;tbody&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">Janua=
+ry</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">8000<=
+/span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">2000<=
+/span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+ =20
+  ...
+ =20
+  </span><span class=3D"tag">&lt;/tbody&gt;</span><span class=3D"pln">
+</span><span class=3D"tag">&lt;/table&gt;</span></pre>
+            <h4>JS file</h4>
+<pre class=3D"prettyprint"><span class=3D"pln">$</span><span class=3D"pun">=
+(</span><span class=3D"pln">document</span><span class=3D"pun">).</span><sp=
+an class=3D"pln">ready</span><span class=3D"pun">(</span><span class=3D"kwd=
+">function</span><span class=3D"pun">()</span><span class=3D"pln"> </span><=
+span class=3D"pun">{</span><span class=3D"pln">
+  $</span><span class=3D"pun">(</span><span class=3D"str">'table.highchart'=
+</span><span class=3D"pun">).</span><span class=3D"pln">highchartTable</spa=
+n><span class=3D"pun">();</span><span class=3D"pln">
+</span><span class=3D"pun">});</span></pre>
+          </div>
+        </div>
+            =20
+         =20
+        <h3>Next example: lines</h3>
+        <div class=3D"row">
+         =20
+          <div class=3D"span-one-third">
+            <table class=3D"highchart" data-graph-container=3D".. .. .highc=
+hart-container" data-graph-type=3D"line">
+              <caption>Line example</caption>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Sales</th>
+                  <th>Benefits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>January</td>
+                  <td>8000</td>
+                  <td>2000</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>12000</td>
+                  <td>3000</td>
+                </tr>
+                <tr>
+                  <td>March</td>
+                  <td>18000</td>
+                  <td>4000</td>
+                </tr>
+                <tr>
+                  <td>April</td>
+                  <td>2000</td>
+                  <td>-1000</td>
+                </tr>
+                <tr>
+                  <td>May</td>
+                  <td>500</td>
+                  <td>-2500</td>
+                </tr>
+              </tbody>
+            </table>
+           =20
+            <button class=3D"btn danger" data-controls-modal=3D"example2-co=
+de" data-backdrop=3D"1">See the code</button>
+          </div>
+         =20
+          <div class=3D"span-two-third">
+            <div class=3D"highchart-container"><div style=3D"position: rela=
+tive; overflow: hidden; width: 600px; height: 400px; text-align: left; font=
+-family: &quot;Lucida Grande&quot;,&quot;Lucida Sans Unicode&quot;,Verdana,=
+Arial,Helvetica,sans-serif; font-size: 12px; left: 0px; top: 0px;" id=3D"hi=
+ghcharts-2" class=3D"highcharts-container"><svg height=3D"400" width=3D"600=
+" version=3D"1.1" xmlns=3D"http://www.w3.org/2000/svg"><defs><clipPath id=
+=3D"highcharts-3"><rect stroke-width=3D"0" height=3D"287" width=3D"552" y=
+=3D"0" x=3D"0" fill=3D"none" ry=3D"0" rx=3D"0"></rect></clipPath></defs><re=
+ct stroke=3D"#4572A7" stroke-width=3D"0" height=3D"400" width=3D"600" y=3D"=
+0" x=3D"0" fill=3D"#FFFFFF" ry=3D"5" rx=3D"5"></rect><text zIndex=3D"1" cla=
+ss=3D"highcharts-title" text-anchor=3D"middle" style=3D"font-family:&quot;L=
+ucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvet=
+ica, sans-serif;font-size:16px;color:#3E576F;fill:#3E576F;" y=3D"25" x=3D"3=
+00"><tspan x=3D"300">Line example</tspan></text><g zIndex=3D"1" class=3D"hi=
+ghcharts-grid"></g><g zIndex=3D"1" class=3D"highcharts-grid"><path zIndex=
+=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 327.5=
+ L 590 327.5"></path><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C=
+0" fill=3D"none" d=3D"M 38 270.5 L 590 270.5"></path><path zIndex=3D"1" str=
+oke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 212.5 L 590 212.=
+5"></path><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"=
+none" d=3D"M 38 155.5 L 590 155.5"></path><path zIndex=3D"1" stroke-width=
+=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 97.5 L 590 97.5"></path><=
+path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"=
+M 38 40.5 L 590 40.5"></path></g><g zIndex=3D"3" class=3D"highcharts-series=
+-group"><g transform=3D"translate(38,40)" visibility=3D"visible" clip-path=
+=3D"url(http://highcharttable.org/#highcharts-3)" class=3D"highcharts-serie=
+s"><path transform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"t=
+rue" stroke-dasharray=3D"none" stroke-width=3D"5" stroke=3D"rgb(0, 0, 0)"=
+ fill=3D"none" d=3D"M 55.2 137.76 L 165.60000000000002 91.84 L 276 22.95999=
+999999998 L 386.40000000000003 206.64 L 496.8 223.86"></path><path transfor=
+m=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" stroke-dashar=
+ray=3D"none" stroke-width=3D"3" stroke=3D"rgb(0, 0, 0)" fill=3D"none" d=3D"=
+M 55.2 137.76 L 165.60000000000002 91.84 L 276 22.95999999999998 L 386.4000=
+0000000003 206.64 L 496.8 223.86"></path><path transform=3D"translate(1,1)"=
+ stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" stroke-dasharray=
+=3D"none" stroke-width=3D"1" stroke=3D"rgb(0, 0, 0)" fill=3D"none" d=3D"M=
+ 55.2 137.76 L 165.60000000000002 91.84 L 276 22.95999999999998 L 386.40000=
+000000003 206.64 L 496.8 223.86"></path><path stroke-dasharray=3D"none" str=
+oke-width=3D"2" stroke=3D"#4572A7" fill=3D"none" d=3D"M 55.2 137.76 L 165.6=
+0000000000002 91.84 L 276 22.95999999999998 L 386.40000000000003 206.64 L=
+ 496.8 223.86"></path></g><g transform=3D"translate(38,40)" visibility=3D"v=
+isible" clip-path=3D"url(http://highcharttable.org/#highcharts-3)" class=3D=
+"highcharts-series"><path transform=3D"translate(1,1)" stroke-opacity=3D"0.=
+05" isShadow=3D"true" stroke-dasharray=3D"none" stroke-width=3D"5" stroke=
+=3D"rgb(0, 0, 0)" fill=3D"none" d=3D"M 55.2 206.64 L 165.60000000000002 195=
+.16 L 276 183.68 L 386.40000000000003 241.07999999999998 L 496.8 258.3"></p=
+ath><path transform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"t=
+rue" stroke-dasharray=3D"none" stroke-width=3D"3" stroke=3D"rgb(0, 0, 0)"=
+ fill=3D"none" d=3D"M 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68=
+ L 386.40000000000003 241.07999999999998 L 496.8 258.3"></path><path transf=
+orm=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"t=
+rue" stroke-dasharray=3D"none" stroke-width=3D"1" stroke=3D"rgb(0, 0, 0)"=
+ fill=3D"none" d=3D"M 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68=
+ L 386.40000000000003 241.07999999999998 L 496.8 258.3"></path><path stroke=
+-dasharray=3D"none" stroke-width=3D"2" stroke=3D"#AA4643" fill=3D"none" d=
+=3D"M 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68 L 386.4000000000=
+0003 241.07999999999998 L 496.8 258.3"></path></g></g><g transform=3D"trans=
+late(233,355)" zIndex=3D"7" class=3D"highcharts-legend"><rect visibility=3D=
+"visible" stroke=3D"#909090" stroke-width=3D"1" height=3D"29" width=3D"163"=
+ y=3D"0.5" x=3D"0.5" fill=3D"none" ry=3D"5" rx=3D"5"></rect><text zIndex=3D=
+"2" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unico=
+de&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:point=
+er;color:#3E576F;fill:#3E576F;" y=3D"18" x=3D"44"><tspan x=3D"44">Sales</ts=
+pan></text><path transform=3D"translate(44,14)" stroke=3D"#4572A7" stroke-d=
+asharray=3D"none" zIndex=3D"2" stroke-width=3D"2" fill=3D"none" d=3D"M -35=
+ 0 L -5 0"></path><text zIndex=3D"2" style=3D"font-family:&quot;Lucida Gran=
+de&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-=
+serif;font-size:12px;cursor:pointer;color:#3E576F;fill:#3E576F;" y=3D"18"=
+ x=3D"113"><tspan x=3D"113">Benefits</tspan></text><path transform=3D"trans=
+late(113,14)" stroke=3D"#AA4643" stroke-dasharray=3D"none" zIndex=3D"2" str=
+oke-width=3D"2" fill=3D"none" d=3D"M -35 0 L -5 0"></path></g><g zIndex=3D"=
+7" class=3D"highcharts-axis"><text text-anchor=3D"middle" style=3D"font-fam=
+ily:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Ar=
+ial, Helvetica, sans-serif;font-size:11px;width:90px;color:#666;line-height=
+:14px;fill:#666;" y=3D"341" x=3D"93.2"><tspan x=3D"93.2">January</tspan></t=
+ext><text text-anchor=3D"middle" style=3D"font-family:&quot;Lucida Grande&q=
+uot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-seri=
+f;font-size:11px;width:90px;color:#666;line-height:14px;fill:#666;" y=3D"34=
+1" x=3D"203.60000000000002"><tspan x=3D"203.60000000000002">February</tspan=
+></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Lucida Gran=
+de&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-=
+serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#666;" y=
+=3D"341" x=3D"314.00000000000006"><tspan x=3D"314.00000000000006">March</ts=
+pan></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Lucida=
+ Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica,=
+ sans-serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#666=
+;" y=3D"341" x=3D"424.40000000000003"><tspan x=3D"424.40000000000003">April=
+</tspan></text><text text-anchor=3D"middle" style=3D"font-family:&quot;Luci=
+da Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica=
+, sans-serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#66=
+6;" y=3D"341" x=3D"534.8"><tspan x=3D"534.8">May</tspan></text><path stroke=
+-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 148.5 327 L 148.5 332"=
+></path><path stroke-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 25=
+9.5 327 L 259.5 332"></path><path stroke-width=3D"1" stroke=3D"#C0D0E0" fil=
+l=3D"none" d=3D"M 369.5 327 L 369.5 332"></path><path stroke-width=3D"1" st=
+roke=3D"#C0D0E0" fill=3D"none" d=3D"M 480.5 327 L 480.5 332"></path><path=
+ stroke-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 590.5 327 L 590=
+.5 332"></path></g><g zIndex=3D"7" class=3D"highcharts-axis"><text text-anc=
+hor=3D"end" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sa=
+ns Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;widt=
+h:256px;color:#666;line-height:14px;fill:#666;" y=3D"330.6" x=3D"30"><tspan=
+ x=3D"30">-5k</tspan></text><text text-anchor=3D"end" style=3D"font-family:=
+&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial,=
+ Helvetica, sans-serif;font-size:11px;width:256px;color:#666;line-height:14=
+px;fill:#666;" y=3D"273.20000000000005" x=3D"30"><tspan x=3D"30">0k</tspan>=
+</text><text text-anchor=3D"end" style=3D"font-family:&quot;Lucida Grande&q=
+uot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-seri=
+f;font-size:11px;width:256px;color:#666;line-height:14px;fill:#666;" y=3D"2=
+15.79999999999998" x=3D"30"><tspan x=3D"30">5k</tspan></text><text text-anc=
+hor=3D"end" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sa=
+ns Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;widt=
+h:256px;color:#666;line-height:14px;fill:#666;" y=3D"158.39999999999998" x=
+=3D"30"><tspan x=3D"30">10k</tspan></text><text text-anchor=3D"end" style=
+=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;,=
+ Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:256px;color:#66=
+6;line-height:14px;fill:#666;" y=3D"100.99999999999997" x=3D"30"><tspan x=
+=3D"30">15k</tspan></text><text text-anchor=3D"end" style=3D"font-family:&q=
+uot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial,=
+ Helvetica, sans-serif;font-size:11px;width:256px;color:#666;line-height:14=
+px;fill:#666;" y=3D"43.6" x=3D"30"><tspan x=3D"30">20k</tspan></text></g><g=
+ visibility=3D"hidden" zIndex=3D"8" class=3D"highcharts-tooltip"><rect tran=
+sform=3D"translate(1,1)" stroke-opacity=3D"0.05" stroke=3D"rgb(0, 0, 0)" is=
+Shadow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"5" height=3D"0" width=
+=3D"0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect transfo=
+rm=3D"translate(1,1)" stroke-opacity=3D"0.1" stroke=3D"rgb(0, 0, 0)" isShad=
+ow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"3" height=3D"0" width=3D"=
+0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect transform=
+=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" stroke=3D"rgb(0,=
+ 0, 0)" isShadow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"1" height=
+=3D"0" width=3D"0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><=
+rect fill-opacity=3D"0.85" stroke-width=3D"2" height=3D"0" width=3D"0" y=3D=
+"7" x=3D"7" fill=3D"rgb(255,255,255)" ry=3D"5" rx=3D"5"></rect><text zIndex=
+=3D"1" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Un=
+icode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#33=
+3333;padding:0;white-space:nowrap;fill:#333333;" y=3D"24" x=3D"12"><tspan=
+ x=3D"12"> </tspan></text></g><g transform=3D"translate(38,40)" zIndex=3D"9=
+" class=3D"highcharts-tracker"><path style=3D"" zIndex=3D"1" visibility=3D"=
+visible" stroke-width=3D"22" stroke=3D"rgb(192,192,192)" stroke-opacity=3D"=
+0.000001" isTracker=3D"true" fill=3D"none" d=3D"M 45.2 137.76 L 55.2 137.76=
+ L 165.60000000000002 91.84 L 276 22.95999999999998 L 386.40000000000003 20=
+6.64 L 496.8 223.86 L 506.8 223.86"></path><path style=3D"" zIndex=3D"1" vi=
+sibility=3D"visible" stroke-width=3D"22" stroke=3D"rgb(192,192,192)" stroke=
+-opacity=3D"0.000001" isTracker=3D"true" fill=3D"none" d=3D"M 45.2 206.64=
+ L 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68 L 386.4000000000000=
+3 241.07999999999998 L 496.8 258.3 L 506.8 258.3"></path></g></svg></div></=
+div>
+          </div>
+         =20
+        </div>
+       =20
+        <div class=3D"hide modal fade" id=3D"example2-code">
+          <div class=3D"modal-header">
+            <a href=3D"#" class=3D"close">x</a>
+            <h3>Source code</h3>
+          </div>
+         =20
+          <div class=3D"modal-body">
+            <h4>HTML file</h4>
+<pre class=3D"prettyprint"><span class=3D"tag">&lt;table</span><span class=
+=3D"pln"> </span><span class=3D"atn">class</span><span class=3D"pun">=3D</s=
+pan><span class=3D"atv">"highchart"</span><span class=3D"pln">=20
+  </span><span class=3D"atn">data-graph-container</span><span class=3D"pun"=
+>=3D</span><span class=3D"atv">".. .. .highchart-container"</span><span cla=
+ss=3D"pln">=20
+  </span><span class=3D"atn">data-graph-type</span><span class=3D"pun">=3D<=
+/span><span class=3D"atv">"line"</span><span class=3D"tag">&gt;</span><span=
+ class=3D"pln">
+  </span><span class=3D"tag">&lt;caption&gt;</span><span class=3D"pln">Colu=
+mn example</span><span class=3D"tag">&lt;/caption&gt;</span><span class=3D"=
+pln">
+  </span><span class=3D"tag">&lt;thead&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Month=
+</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Sales=
+</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Benef=
+its</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;/thead&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;tbody&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">Janua=
+ry</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">8000<=
+/span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">2000<=
+/span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+ =20
+  ...
+ =20
+  </span><span class=3D"tag">&lt;/tbody&gt;</span><span class=3D"pln">
+</span><span class=3D"tag">&lt;/table&gt;</span></pre>
+            <h4>JS file</h4>
+<pre class=3D"prettyprint"><span class=3D"pln">$</span><span class=3D"pun">=
+(</span><span class=3D"pln">document</span><span class=3D"pun">).</span><sp=
+an class=3D"pln">ready</span><span class=3D"pun">(</span><span class=3D"kwd=
+">function</span><span class=3D"pun">()</span><span class=3D"pln"> </span><=
+span class=3D"pun">{</span><span class=3D"pln">
+  $</span><span class=3D"pun">(</span><span class=3D"str">'table.highchart'=
+</span><span class=3D"pun">).</span><span class=3D"pln">highchartTable</spa=
+n><span class=3D"pun">();</span><span class=3D"pln">
+</span><span class=3D"pun">});</span></pre>
+          </div>
+        </div>
+         =20
+        <h3>Next example: mixing render modes</h3>
+        <div class=3D"row">
+         =20
+          <div class=3D"span-one-third">
+            <table class=3D"highchart" data-graph-container=3D".. .. .highc=
+hart-container" data-graph-type=3D"column">
+              <caption>Column + area example</caption>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th>Sales</th>
+                  <th data-graph-type=3D"area">Benefits</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>January</td>
+                  <td>8000</td>
+                  <td>2000</td>
+                </tr>
+                <tr>
+                  <td>February</td>
+                  <td>12000</td>
+                  <td>3000</td>
+                </tr>
+                <tr>
+                  <td>March</td>
+                  <td>18000</td>
+                  <td>4000</td>
+                </tr>
+                <tr>
+                  <td>April</td>
+                  <td>2000</td>
+                  <td>-1000</td>
+                </tr>
+                <tr>
+                  <td>May</td>
+                  <td>500</td>
+                  <td>-2500</td>
+                </tr>
+              </tbody>
+            </table>
+           =20
+            <button class=3D"btn danger" data-controls-modal=3D"example3-co=
+de" data-backdrop=3D"1">See the code</button>
+          </div>
+         =20
+          <div class=3D"span-two-third">
+            <div class=3D"highchart-container"><div style=3D"position: rela=
+tive; overflow: hidden; width: 600px; height: 400px; text-align: left; font=
+-family: &quot;Lucida Grande&quot;,&quot;Lucida Sans Unicode&quot;,Verdana,=
+Arial,Helvetica,sans-serif; font-size: 12px; left: 0px; top: 0px;" id=3D"hi=
+ghcharts-4" class=3D"highcharts-container"><svg height=3D"400" width=3D"600=
+" version=3D"1.1" xmlns=3D"http://www.w3.org/2000/svg"><defs><clipPath id=
+=3D"highcharts-5"><rect stroke-width=3D"0" height=3D"287" width=3D"552" y=
+=3D"0" x=3D"0" fill=3D"none" ry=3D"0" rx=3D"0"></rect></clipPath></defs><re=
+ct stroke=3D"#4572A7" stroke-width=3D"0" height=3D"400" width=3D"600" y=3D"=
+0" x=3D"0" fill=3D"#FFFFFF" ry=3D"5" rx=3D"5"></rect><text zIndex=3D"1" cla=
+ss=3D"highcharts-title" text-anchor=3D"middle" style=3D"font-family:&quot;L=
+ucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvet=
+ica, sans-serif;font-size:16px;color:#3E576F;fill:#3E576F;" y=3D"25" x=3D"3=
+00"><tspan x=3D"300">Column + area example</tspan></text><g zIndex=3D"1" cl=
+ass=3D"highcharts-grid"></g><g zIndex=3D"1" class=3D"highcharts-grid"><path=
+ zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38=
+ 327.5 L 590 327.5"></path><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"=
+#C0C0C0" fill=3D"none" d=3D"M 38 270.5 L 590 270.5"></path><path zIndex=3D"=
+1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 212.5 L 59=
+0 212.5"></path><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fi=
+ll=3D"none" d=3D"M 38 155.5 L 590 155.5"></path><path zIndex=3D"1" stroke-w=
+idth=3D"1" stroke=3D"#C0C0C0" fill=3D"none" d=3D"M 38 97.5 L 590 97.5"></pa=
+th><path zIndex=3D"1" stroke-width=3D"1" stroke=3D"#C0C0C0" fill=3D"none"=
+ d=3D"M 38 40.5 L 590 40.5"></path></g><g zIndex=3D"3" class=3D"highcharts-=
+series-group"><g transform=3D"translate(38,40)" visibility=3D"visible" clip=
+-path=3D"url(http://highcharttable.org/#highcharts-5)" class=3D"highcharts-=
+series"><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=
+=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"91"=
+ width=3D"86" y=3D"137.5" x=3D"11.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect=
+><rect transform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true=
+" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"91" width=3D=
+"86" y=3D"137.5" x=3D"11.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect tr=
+ansform=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=
+=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"91"=
+ width=3D"86" y=3D"137.5" x=3D"11.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect=
+><rect r=3D"0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"91" width=3D=
+"86" y=3D"137.5" x=3D"11.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect=
+ transform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=
+=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"137" width=3D"8=
+6" y=3D"91.5" x=3D"121.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect tran=
+sform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0"=
+ stroke=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"137" width=3D"86" y=
+=3D"91.5" x=3D"121.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transfor=
+m=3D"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"tru=
+e" r=3D"0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"137" width=
+=3D"86" y=3D"91.5" x=3D"121.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect=
+ r=3D"0" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"137" width=3D"86"=
+ y=3D"91.5" x=3D"121.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect tra=
+nsform=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0"=
+ stroke=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"206" width=3D"86" y=
+=3D"22.5" x=3D"231.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transfor=
+m=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"3" height=3D"206" width=3D"86" y=3D"22.5=
+" x=3D"231.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"tra=
+nslate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"=
+0" stroke=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"206" width=3D"86"=
+ y=3D"22.5" x=3D"231.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0=
+" stroke=3D"#FFFFFF" stroke-width=3D"1" height=3D"206" width=3D"86" y=3D"22=
+.5" x=3D"231.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect transform=
+=3D"translate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"5" height=3D"22" width=3D"86" y=3D"206.5=
+" x=3D"342.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"tra=
+nslate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" stroke=3D"rgb=
+(0, 0, 0)" stroke-width=3D"3" height=3D"22" width=3D"86" y=3D"206.5" x=3D"3=
+42.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1=
+,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"0" strok=
+e=3D"rgb(0, 0, 0)" stroke-width=3D"1" height=3D"22" width=3D"86" y=3D"206.5=
+" x=3D"342.5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0" stroke=
+=3D"#FFFFFF" stroke-width=3D"1" height=3D"22" width=3D"86" y=3D"206.5" x=3D=
+"342.5" fill=3D"#4572A7" ry=3D"0" rx=3D"0"></rect><rect transform=3D"transl=
+ate(1,1)" stroke-opacity=3D"0.05" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0=
+, 0, 0)" stroke-width=3D"5" height=3D"5" width=3D"86" y=3D"223.5" x=3D"452.=
+5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1)=
+" stroke-opacity=3D"0.1" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0, 0, 0)"=
+ stroke-width=3D"3" height=3D"5" width=3D"86" y=3D"223.5" x=3D"452.5" fill=
+=3D"none" ry=3D"0" rx=3D"0"></rect><rect transform=3D"translate(1,1)" strok=
+e-opacity=3D"0.15000000000000002" isShadow=3D"true" r=3D"0" stroke=3D"rgb(0=
+, 0, 0)" stroke-width=3D"1" height=3D"5" width=3D"86" y=3D"223.5" x=3D"452.=
+5" fill=3D"none" ry=3D"0" rx=3D"0"></rect><rect r=3D"0" stroke=3D"#FFFFFF"=
+ stroke-width=3D"1" height=3D"5" width=3D"86" y=3D"223.5" x=3D"452.5" fill=
+=3D"#4572A7" ry=3D"0" rx=3D"0"></rect></g><g transform=3D"translate(38,40)"=
+ visibility=3D"visible" clip-path=3D"url(http://highcharttable.org/#highcha=
+rts-5)" class=3D"highcharts-series"><path fill-opacity=3D"0.75" fill=3D"rgb=
+(170,70,67)" d=3D"M 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68 L=
+ 386.40000000000003 241.07999999999998 L 496.8 258.3 L 496.8 229.6 L 55.2=
+ 229.6"></path><path transform=3D"translate(1,1)" stroke-opacity=3D"0.05"=
+ isShadow=3D"true" stroke-dasharray=3D"none" stroke-width=3D"5" stroke=3D"r=
+gb(0, 0, 0)" fill=3D"none" d=3D"M 55.2 206.64 L 165.60000000000002 195.16=
+ L 276 183.68 L 386.40000000000003 241.07999999999998 L 496.8 258.3"></path=
+><path transform=3D"translate(1,1)" stroke-opacity=3D"0.1" isShadow=3D"true=
+" stroke-dasharray=3D"none" stroke-width=3D"3" stroke=3D"rgb(0, 0, 0)" fill=
+=3D"none" d=3D"M 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68 L 386=
+.40000000000003 241.07999999999998 L 496.8 258.3"></path><path transform=3D=
+"translate(1,1)" stroke-opacity=3D"0.15000000000000002" isShadow=3D"true"=
+ stroke-dasharray=3D"none" stroke-width=3D"1" stroke=3D"rgb(0, 0, 0)" fill=
+=3D"none" d=3D"M 55.2 206.64 L 165.60000000000002 195.16 L 276 183.68 L 386=
+.40000000000003 241.07999999999998 L 496.8 258.3"></path><path stroke-dasha=
+rray=3D"none" stroke-width=3D"2" stroke=3D"#AA4643" fill=3D"none" d=3D"M 55=
+.2 206.64 L 165.60000000000002 195.16 L 276 183.68 L 386.40000000000003 241=
+.07999999999998 L 496.8 258.3"></path></g></g><g transform=3D"translate(233=
+,355)" zIndex=3D"7" class=3D"highcharts-legend"><rect visibility=3D"visible=
+" stroke=3D"#909090" stroke-width=3D"1" height=3D"29" width=3D"163" y=3D"0.=
+5" x=3D"0.5" fill=3D"none" ry=3D"5" rx=3D"5"></rect><text zIndex=3D"2" styl=
+e=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;=
+, Verdana, Arial, Helvetica, sans-serif;font-size:12px;cursor:pointer;color=
+:#3E576F;fill:#3E576F;" y=3D"18" x=3D"44"><tspan x=3D"44">Sales</tspan></te=
+xt><text zIndex=3D"2" style=3D"font-family:&quot;Lucida Grande&quot;, &quot=
+;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size=
+:12px;cursor:pointer;color:#3E576F;fill:#3E576F;" y=3D"18" x=3D"113"><tspan=
+ x=3D"113">Benefits</tspan></text><rect r=3D"0" stroke=3D"#FFFFFF" zIndex=
+=3D"3" stroke-width=3D"1" height=3D"12" width=3D"30" y=3D"7.5" x=3D"9.5" fi=
+ll=3D"#4572A7" ry=3D"2" rx=3D"2"></rect><rect r=3D"4" stroke=3D"#FFFFFF" zI=
+ndex=3D"3" stroke-width=3D"0" height=3D"12" width=3D"30" y=3D"7" x=3D"78"=
+ fill=3D"#AA4643" ry=3D"2" rx=3D"2"></rect></g><g zIndex=3D"7" class=3D"hig=
+hcharts-axis"><text text-anchor=3D"middle" style=3D"font-family:&quot;Lucid=
+a Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica,=
+ sans-serif;font-size:11px;width:90px;color:#666;line-height:14px;fill:#666=
+;" y=3D"341" x=3D"93.2"><tspan x=3D"93.2">January</tspan></text><text text-=
+anchor=3D"middle" style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Luc=
+ida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11p=
+x;width:90px;color:#666;line-height:14px;fill:#666;" y=3D"341" x=3D"203.600=
+00000000002"><tspan x=3D"203.60000000000002">February</tspan></text><text=
+ text-anchor=3D"middle" style=3D"font-family:&quot;Lucida Grande&quot;, &qu=
+ot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-si=
+ze:11px;width:90px;color:#666;line-height:14px;fill:#666;" y=3D"341" x=3D"3=
+14.00000000000006"><tspan x=3D"314.00000000000006">March</tspan></text><tex=
+t text-anchor=3D"middle" style=3D"font-family:&quot;Lucida Grande&quot;, &q=
+uot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-s=
+ize:11px;width:90px;color:#666;line-height:14px;fill:#666;" y=3D"341" x=3D"=
+424.40000000000003"><tspan x=3D"424.40000000000003">April</tspan></text><te=
+xt text-anchor=3D"middle" style=3D"font-family:&quot;Lucida Grande&quot;,=
+ &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;fon=
+t-size:11px;width:90px;color:#666;line-height:14px;fill:#666;" y=3D"341" x=
+=3D"534.8"><tspan x=3D"534.8">May</tspan></text><path stroke-width=3D"1" st=
+roke=3D"#C0D0E0" fill=3D"none" d=3D"M 148.5 327 L 148.5 332"></path><path=
+ stroke-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 259.5 327 L 259=
+.5 332"></path><path stroke-width=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=
+=3D"M 369.5 327 L 369.5 332"></path><path stroke-width=3D"1" stroke=3D"#C0D=
+0E0" fill=3D"none" d=3D"M 480.5 327 L 480.5 332"></path><path stroke-width=
+=3D"1" stroke=3D"#C0D0E0" fill=3D"none" d=3D"M 590.5 327 L 590.5 332"></pat=
+h></g><g zIndex=3D"7" class=3D"highcharts-axis"><text text-anchor=3D"end"=
+ style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&=
+quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:256px;col=
+or:#666;line-height:14px;fill:#666;" y=3D"330.6" x=3D"30"><tspan x=3D"30">-=
+5k</tspan></text><text text-anchor=3D"end" style=3D"font-family:&quot;Lucid=
+a Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica,=
+ sans-serif;font-size:11px;width:256px;color:#666;line-height:14px;fill:#66=
+6;" y=3D"273.20000000000005" x=3D"30"><tspan x=3D"30">0k</tspan></text><tex=
+t text-anchor=3D"end" style=3D"font-family:&quot;Lucida Grande&quot;, &quot=
+;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-serif;font-size=
+:11px;width:256px;color:#666;line-height:14px;fill:#666;" y=3D"215.79999999=
+999998" x=3D"30"><tspan x=3D"30">5k</tspan></text><text text-anchor=3D"end"=
+ style=3D"font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&=
+quot;, Verdana, Arial, Helvetica, sans-serif;font-size:11px;width:256px;col=
+or:#666;line-height:14px;fill:#666;" y=3D"158.39999999999998" x=3D"30"><tsp=
+an x=3D"30">10k</tspan></text><text text-anchor=3D"end" style=3D"font-famil=
+y:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Aria=
+l, Helvetica, sans-serif;font-size:11px;width:256px;color:#666;line-height:=
+14px;fill:#666;" y=3D"100.99999999999997" x=3D"30"><tspan x=3D"30">15k</tsp=
+an></text><text text-anchor=3D"end" style=3D"font-family:&quot;Lucida Grand=
+e&quot;, &quot;Lucida Sans Unicode&quot;, Verdana, Arial, Helvetica, sans-s=
+erif;font-size:11px;width:256px;color:#666;line-height:14px;fill:#666;" y=
+=3D"43.6" x=3D"30"><tspan x=3D"30">20k</tspan></text></g><g visibility=3D"h=
+idden" zIndex=3D"8" class=3D"highcharts-tooltip"><rect transform=3D"transla=
+te(1,1)" stroke-opacity=3D"0.05" stroke=3D"rgb(0, 0, 0)" isShadow=3D"true"=
+ fill-opacity=3D"0.85" stroke-width=3D"5" height=3D"0" width=3D"0" y=3D"7"=
+ x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect transform=3D"translat=
+e(1,1)" stroke-opacity=3D"0.1" stroke=3D"rgb(0, 0, 0)" isShadow=3D"true" fi=
+ll-opacity=3D"0.85" stroke-width=3D"3" height=3D"0" width=3D"0" y=3D"7" x=
+=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect transform=3D"translate(=
+1,1)" stroke-opacity=3D"0.15000000000000002" stroke=3D"rgb(0, 0, 0)" isShad=
+ow=3D"true" fill-opacity=3D"0.85" stroke-width=3D"1" height=3D"0" width=3D"=
+0" y=3D"7" x=3D"7" fill=3D"none" ry=3D"5" rx=3D"5"></rect><rect fill-opacit=
+y=3D"0.85" stroke-width=3D"2" height=3D"0" width=3D"0" y=3D"7" x=3D"7" fill=
+=3D"rgb(255,255,255)" ry=3D"5" rx=3D"5"></rect><text zIndex=3D"1" style=3D"=
+font-family:&quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, Ver=
+dana, Arial, Helvetica, sans-serif;font-size:12px;color:#333333;padding:0;w=
+hite-space:nowrap;fill:#333333;" y=3D"24" x=3D"12"><tspan x=3D"12"> </tspan=
+></text></g><g transform=3D"translate(38,40)" zIndex=3D"9" class=3D"highcha=
+rts-tracker"><rect style=3D"" zIndex=3D"1" visibility=3D"visible" fill-opac=
+ity=3D"0.000001" isTracker=3D"1464463796192" stroke-width=3D"0" height=3D"9=
+2" width=3D"87" y=3D"137" x=3D"11" fill=3D"rgb(192,192,192)" ry=3D"0" rx=3D=
+"0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visible" fill-opacit=
+y=3D"0.000001" isTracker=3D"1464463796192" stroke-width=3D"0" height=3D"138=
+" width=3D"87" y=3D"91" x=3D"121" fill=3D"rgb(192,192,192)" ry=3D"0" rx=3D"=
+0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visible" fill-opacity=
+=3D"0.000001" isTracker=3D"1464463796192" stroke-width=3D"0" height=3D"207"=
+ width=3D"87" y=3D"22" x=3D"231" fill=3D"rgb(192,192,192)" ry=3D"0" rx=3D"0=
+"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visible" fill-opacity=
+=3D"0.000001" isTracker=3D"1464463796192" stroke-width=3D"0" height=3D"23"=
+ width=3D"87" y=3D"206" x=3D"342" fill=3D"rgb(192,192,192)" ry=3D"0" rx=3D"=
+0"></rect><rect style=3D"" zIndex=3D"1" visibility=3D"visible" fill-opacity=
+=3D"0.000001" isTracker=3D"1464463796192" stroke-width=3D"0" height=3D"6"=
+ width=3D"87" y=3D"223" x=3D"452" fill=3D"rgb(192,192,192)" ry=3D"0" rx=3D"=
+0"></rect><path style=3D"" zIndex=3D"1" visibility=3D"visible" stroke-width=
+=3D"22" stroke=3D"rgb(192,192,192)" stroke-opacity=3D"0.000001" isTracker=
+=3D"true" fill=3D"none" d=3D"M 45.2 206.64 L 55.2 206.64 L 165.600000000000=
+02 195.16 L 276 183.68 L 386.40000000000003 241.07999999999998 L 496.8 258.=
+3 L 506.8 258.3"></path></g></svg></div></div>
+          </div>
+         =20
+        </div>
+       =20
+        <div class=3D"hide modal fade" id=3D"example3-code">
+          <div class=3D"modal-header">
+            <a href=3D"#" class=3D"close">x</a>
+            <h3>Source code</h3>
+          </div>
+         =20
+          <div class=3D"modal-body">
+            <h4>HTML file</h4>
+<pre class=3D"prettyprint"><span class=3D"tag">&lt;table</span><span class=
+=3D"pln"> </span><span class=3D"atn">class</span><span class=3D"pun">=3D</s=
+pan><span class=3D"atv">"highchart"</span><span class=3D"pln">
+  </span><span class=3D"atn">data-graph-container</span><span class=3D"pun"=
+>=3D</span><span class=3D"atv">".. .. .highchart-container"</span><span cla=
+ss=3D"pln">
+  </span><span class=3D"atn">data-graph-type</span><span class=3D"pun">=3D<=
+/span><span class=3D"atv">"column"</span><span class=3D"tag">&gt;</span><sp=
+an class=3D"pln">
+  </span><span class=3D"tag">&lt;caption&gt;</span><span class=3D"pln">Colu=
+mn example</span><span class=3D"tag">&lt;/caption&gt;</span><span class=3D"=
+pln">
+  </span><span class=3D"tag">&lt;thead&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Month=
+</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">Sales=
+</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;th</span><span class=3D"pln"> </span><=
+span class=3D"atn">data-graph-type</span><span class=3D"pun">=3D</span><spa=
+n class=3D"atv">"area"</span><span class=3D"tag">&gt;</span><span class=3D"=
+pln">Benefits</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pl=
+n">
+    </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;/thead&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;tbody&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">Janua=
+ry</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">8000<=
+/span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">2000<=
+/span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+    </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+ =20
+  ...
+ =20
+  </span><span class=3D"tag">&lt;/tbody&gt;</span><span class=3D"pln">
+</span><span class=3D"tag">&lt;/table&gt;</span></pre>
+            <h4>JS file</h4>
+<pre class=3D"prettyprint"><span class=3D"pln">$</span><span class=3D"pun">=
+(</span><span class=3D"pln">document</span><span class=3D"pun">).</span><sp=
+an class=3D"pln">ready</span><span class=3D"pun">(</span><span class=3D"kwd=
+">function</span><span class=3D"pun">()</span><span class=3D"pln"> </span><=
+span class=3D"pun">{</span><span class=3D"pln">
+  $</span><span class=3D"pun">(</span><span class=3D"str">'table.highchart'=
+</span><span class=3D"pun">).</span><span class=3D"pln">highchartTable</spa=
+n><span class=3D"pun">();</span><span class=3D"pln">
+</span><span class=3D"pun">});</span></pre>
+          </div>
+        </div>
+       =20
+      </section>
+
+      <section id=3D"download">
+        <div class=3D"page-header">
+          <h1>Download</h1>
+	</div>
+
+	<a class=3D"btn large" href=3D"http://code.highcharttable.org/2.0.0/jquery=
+.highchartTable.js">Latest version (2.0.0)</a>
+	<a class=3D"btn large" href=3D"http://code.highcharttable.org/2.0.0/jquery=
+.highchartTable-min.js">Latest version (2.0.0) - minified)</a>
+
+      </section>
+
+
+      <section id=3D"documentation">
+        <div class=3D"page-header">
+          <h1>Documentation</h1>
+        </div>
+
+        <ol>
+          <li><a href=3D"#doc-usage">Usage</a></li>
+          <li><a href=3D"#doc-graph">Graph</a></li>
+          <li><a href=3D"#doc-graph-legend">Legend</a></li>
+          <li><a href=3D"#doc-series">Series</a></li>
+          <li><a href=3D"#doc-lines">Lines</a></li>
+          <li><a href=3D"#doc-axis">Axes</a></li>
+          <li><a href=3D"#doc-points">Points</a></li>
+          <li><a href=3D"#doc-verticallines">Vertical lines</a></li>
+          <li><a href=3D"#doc-pie">Pie charts specific options</a></li>
+          <li><a href=3D"#doc-javascript">Dynamic options in javascript</a>=
+</li>
+          <li><a href=3D"#doc-changes">Changes</a></li>
+        </ol>
+
+
+        <section id=3D"doc-usage">
+
+          <div class=3D"page-header">
+            <h2>1. Usage</h2>
+          </div>
+
+          <p>
+          The HighchartTable plugin takes data and attributes from a table=
+ and parses them to simply create an Hightcharts chart.
+          </p>
+
+          <p>
+          The plugin does not contains <a href=3D"http://www.highcharts.com=
+/">Highcharts</a> or <a href=3D"http://jquery.com/">jQuery</a>,
+           so first of all, you must include them your page.
+          </p>
+
+          <pre class=3D"prettyprint"><span class=3D"tag">&lt;script</span><=
+span class=3D"pln"> </span><span class=3D"atn">src</span><span class=3D"pun=
+">=3D</span><span class=3D"atv">"jquery.min.js"</span><span class=3D"pln">=
+ </span><span class=3D"atn">type</span><span class=3D"pun">=3D</span><span=
+ class=3D"atv">"text/javascript"</span><span class=3D"tag">&gt;&lt;/script&=
+gt;</span><span class=3D"pln">
+</span><span class=3D"tag">&lt;script</span><span class=3D"pln"> </span><sp=
+an class=3D"atn">src</span><span class=3D"pun">=3D</span><span class=3D"atv=
+">"highcharts.js"</span><span class=3D"pln"> </span><span class=3D"atn">typ=
+e</span><span class=3D"pun">=3D</span><span class=3D"atv">"text/javascript"=
+</span><span class=3D"tag">&gt;&lt;/script&gt;</span><span class=3D"pln">
+</span><span class=3D"tag">&lt;script</span><span class=3D"pln"> </span><sp=
+an class=3D"atn">src</span><span class=3D"pun">=3D</span><span class=3D"atv=
+">"jquery.highchartTable.js"</span><span class=3D"pln"> </span><span class=
+=3D"atn">type</span><span class=3D"pun">=3D</span><span class=3D"atv">"text=
+/javascript"</span><span class=3D"tag">&gt;&lt;/script&gt;</span></pre>
+
+          <p>Then you have to set some attributes to the table, like the gr=
+aph type or where to render the graph.</p>
+
+          <p>
+            The series names are defined in the <code>&lt;thead&gt;</code>,=
+ their values are defined in the <code>&lt;tbody&gt;</code>.<br>
+            The first <code>&lt;td&gt;</code> of a <code>&lt;tr&gt;</code>=
+ contains the Xaxis value. The other ones contain the values for each serie=
+s in that x value.
+          </p>
+
+<pre class=3D"prettyprint"><span class=3D"tag">&lt;table</span><span class=
+=3D"pln"> </span><span class=3D"atn">class</span><span class=3D"pun">=3D</s=
+pan><span class=3D"atv">"highchart"</span><span class=3D"pln"> </span><span=
+ class=3D"atn">data-graph-container-before</span><span class=3D"pun">=3D</s=
+pan><span class=3D"atv">"1"</span><span class=3D"pln"> </span><span class=
+=3D"atn">data-graph-type</span><span class=3D"pun">=3D</span><span class=3D=
+"atv">"column"</span><span class=3D"tag">&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;thead&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+          </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">M=
+onth</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+          </span><span class=3D"tag">&lt;th&gt;</span><span class=3D"pln">S=
+ales</span><span class=3D"tag">&lt;/th&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+   </span><span class=3D"tag">&lt;/thead&gt;</span><span class=3D"pln">
+   </span><span class=3D"tag">&lt;tbody&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+          </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">J=
+anuary</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+          </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">8=
+000</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;tr&gt;</span><span class=3D"pln">
+          </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">F=
+ebruary</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+          </span><span class=3D"tag">&lt;td&gt;</span><span class=3D"pln">1=
+2000</span><span class=3D"tag">&lt;/td&gt;</span><span class=3D"pln">
+      </span><span class=3D"tag">&lt;/tr&gt;</span><span class=3D"pln">
+  </span><span class=3D"tag">&lt;/tbody&gt;</span><span class=3D"pln">
+</span><span class=3D"tag">&lt;/table&gt;</span></pre>
+
+          Then, simply call highchartTable on a selector that selects the=
+ prepared table. Like this :
+
+<pre class=3D"prettyprint"><span class=3D"pln">$</span><span class=3D"pun">=
+(</span><span class=3D"pln">document</span><span class=3D"pun">).</span><sp=
+an class=3D"pln">ready</span><span class=3D"pun">(</span><span class=3D"kwd=
+">function</span><span class=3D"pun">()</span><span class=3D"pln"> </span><=
+span class=3D"pun">{</span><span class=3D"pln">
+  $</span><span class=3D"pun">(</span><span class=3D"str">'table.highchart'=
+</span><span class=3D"pun">).</span><span class=3D"pln">highchartTable</spa=
+n><span class=3D"pun">();</span><span class=3D"pln">
+</span><span class=3D"pun">});</span></pre>
+
+          This will display a column graph before the table of class highch=
+art according to the values defined in its tbody.
+        </section>
+
+
+        <section id=3D"doc-graph">
+
+          <div class=3D"page-header">
+            <h2>2. Graph</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- type -->
+             =20
+
+              <!-- title -->
+             =20
+
+              <!-- subtitle -->
+             =20
+
+              <!-- Container -->
+             =20
+
+              <!-- Height -->
+             =20
+
+              <!-- margin-top -->
+             =20
+
+              <!-- margin right -->
+             =20
+
+              <!-- margin bottom -->
+             =20
+
+              <!-- margin left -->
+             =20
+
+              <!-- Reversed graph -->
+             =20
+
+              <!-- Opacity -->
+             =20
+
+
+              <!-- Datalabels formatter -->
+             =20
+
+
+            <tr>
+                <td></td>
+                <td>caption</td>
+                <td>
+                  The chart's main title is defined via the table caption.
+                  <pre class=3D"prettyprint"><span class=3D"tag">&lt;table&=
+gt;&lt;caption&gt;</span><span class=3D"pln">this is a title</span><span cl=
+ass=3D"tag">&lt;/caption&gt;&lt;/table&gt;</span></pre>
+                </td>
+                <td>Any string</td>
+                  <td><a href=3D"#" data-fiddle=3D"GF2ZP">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-area-=
+fillOpacity</strong></td>
+                <td>table</td>
+                <td>Works only on area graphs.</td>
+                <td>Decimal from 0 to 1</td>
+                <td>
+                    <a href=3D"#" data-fiddle=3D"LQauf">Example</a>
+                </td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;">
+                  <strong>data-graph-container-before</strong><br>
+                  <strong>data-graph-container</strong></td>
+                <td>table</td>
+                <td>
+                  There are two ways to define where the graph must be rend=
+ered.<br>
+                  If you want a graph before the table you can use "data-gr=
+aph-container-before" <br>
+                  otherwise use "data-graph-container" and use a CSS select=
+or to choose where to display the graph.
+                </td>
+                <td>
+                  For data-graph-container-before : 1<br>
+                  For data-graph-container : a CSS selector
+                </td>
+                <td>
+                  <a href=3D"#" data-fiddle=3D"Hun4t">Example with data-gra=
+ph-container-before</a><br>
+                  <a href=3D"#" data-fiddle=3D"WBn8q">Example with data-gra=
+ph-container</a>
+                </td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-datal=
+abels-formatter</strong></td>
+                <td>table</td>
+                <td>Callback to format the datalabels displayed on the char=
+t.</td>
+                <td>Name of the function to call</td>
+                <td><a href=3D"#" data-fiddle=3D"KhZmK">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-heigh=
+t</strong></td>
+                <td>table</td>
+                <td>Graph height.</td>
+                <td>Height in px</td>
+                <td><a href=3D"#" data-fiddle=3D"8mjRQ">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-inverted</strong></td>
+                <td>table</td>
+                <td>Inverts the graph axes.</td>
+                <td>1</td>
+                <td><a href=3D"#" data-fiddle=3D"qnN4N">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-margi=
+n-bottom</strong></td>
+                <td>table</td>
+                <td>Graph bottom margin.</td>
+                <td>Margin in px</td>
+                <td><a href=3D"#" data-fiddle=3D"nGZjP">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-margin-left</strong></td>
+                <td>table</td>
+                <td>Graph left margin.</td>
+                <td>Margin in px</td>
+                <td><a href=3D"#" data-fiddle=3D"JX7LW">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-margin-right</strong></td>
+                <td>table</td>
+                <td>Graph right margin.</td>
+                <td>Margin in px</td>
+                <td><a href=3D"#" data-fiddle=3D"TLz8k">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-margin-top</strong></td>
+                <td>table</td>
+                <td>Graph top margin.</td>
+                <td>Margin in px</td>
+                <td><a href=3D"#" data-fiddle=3D"J7Uh9">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-subtitle-text</strong></td>
+                <td>table</td>
+                <td>Graph subtitle.</td>
+                <td>Any string</td>
+                <td><a href=3D"#" data-fiddle=3D"j9emF">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-type</strong></td>
+                <td>table</td>
+                <td>The data-graph-type attribute is required.</td>
+                <td>
+                  <ul>
+                    <li>column</li>
+                    <li>line</li>
+                    <li>area</li>
+                    <li>spline</li>
+                    <li>pie</li>
+                  </ul>
+                </td>
+                <td style=3D"white-space: nowrap;">
+                  <ul>
+                    <li><a href=3D"#" data-fiddle=3D"XGP83">Example column<=
+/a></li>
+                    <li><a href=3D"#" data-fiddle=3D"3UXdW">Example line</a=
+></li>
+                    <li><a href=3D"#" data-fiddle=3D"VpVyb">Example area</a=
+></li>
+                    <li><a href=3D"#" data-fiddle=3D"Tt6wt">Example spline<=
+/a></li>
+                    <li><a href=3D"#" data-fiddle=3D"yMHeG">Example pie</a>=
+</li>
+                  </ul>
+                </td>
+              </tr></tbody>
+          </table>
+
+        </section>
+
+        <section id=3D"doc-graph-legend">
+
+          <div class=3D"page-header">
+            <h2>3. Legend</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- Disable -->
+             =20
+
+              <!-- layout -->
+             =20
+
+              <!-- width -->
+             =20
+
+              <!-- x -->
+             =20
+
+              <!-- x -->
+             =20
+
+            <tr>
+                <td><strong>data-graph-legend-disabled</strong></td>
+                <td>table</td>
+                <td>Disable the legend.</td>
+                <td>1</td>
+                <td><a href=3D"#" data-fiddle=3D"LGQz3">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-legend-layout</strong></td>
+                <td>table</td>
+                <td></td>
+                <td>vertical/hortizontal (default : horizontal)</td>
+                <td>
+                  <a href=3D"#" data-fiddle=3D"WQ6c9">Horizontal example </=
+a><br>
+                  <a href=3D"#" data-fiddle=3D"6tUXf">Vertical example </a>
+                </td>
+              </tr><tr>
+                <td><strong>data-graph-legend-width</strong></td>
+                <td>table</td>
+                <td></td>
+                <td>width in px</td>
+                <td><a href=3D"#" data-fiddle=3D"DY2xx">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-legend-x</strong></td>
+                <td>table</td>
+                <td>Legend x offset</td>
+                <td>offset in px</td>
+                <td><a href=3D"#" data-fiddle=3D"7zGwS">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-legend-y</strong></td>
+                <td>table</td>
+                <td>Legend y offset</td>
+                <td>offset in px</td>
+                <td><a href=3D"#" data-fiddle=3D"Uvw97">Example</a></td>
+              </tr></tbody>
+          </table>
+
+        </section>
+
+        <section id=3D"doc-series">
+
+          <div class=3D"page-header">
+            <h2>4. Series</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            <!-- colors -->
+           =20
+
+            <!-- hidden -->
+           =20
+
+            <!-- data-graph-skip -->
+           =20
+
+            <!-- dashed series -->
+           =20
+
+            <!-- graph-stack-group -->
+	   =20
+
+
+            <tr>
+              <td><strong>data-graph-color-1</strong></td>
+              <td>table</td>
+              <td>From data-graph-color-1 to data-graph-color-9. Where the=
+ number is the serie index (starting from 1).</td>
+              <td>hexadecimal color</td>
+              <td><a href=3D"#" data-fiddle=3D"Ddcuy">Example</a></td>
+            </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-dash-st=
+yle</strong></td>
+              <td>th</td>
+              <td></td>
+              <td>
+                <ul>
+                  <li>dash</li>
+                  <li>dot</li>
+                  <li>longdash</li>
+                  <li>shortdash</li>
+                  <li>shortdot</li>
+                  <li>shortdashdot</li>
+                  <li>shortdashdotdot</li>
+                </ul>
+
+              </td>
+              <td><a href=3D"#" data-fiddle=3D"DwQUD">Example</a></td>
+      	    </tr><tr>
+              <td><strong>data-graph-hidden</strong></td>
+              <td>th</td>
+              <td>Hide the serie by default. It could be displayed by click=
+ing on the legend.</td>
+              <td>1</td>
+              <td><a href=3D"#" data-fiddle=3D"eqj3E">Example</a></td>
+            </tr><tr>
+              <td><strong>data-graph-skip</strong></td>
+              <td>th</td>
+              <td>Ignores the serie.</td>
+              <td>1</td>
+              <td><a href=3D"#" data-fiddle=3D"8Nmn7">Example</a></td>
+            </tr><tr>
+              <td><strong>graph-stack-group</strong></td>
+	      <td>th</td>
+	      <td>Allows to display series on the same column by setting the same=
+ data-graph-stack-group value for those series.</td>
+	      <td>Any string</td>
+              <td><a href=3D"#" data-fiddle=3D"FGRpM">Example</a></td>
+	    </tr></tbody>
+          </table>
+        </section>
+
+        <section id=3D"doc-lines">
+
+          <div class=3D"page-header">
+            <h2>5. Lines</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- width -->
+             =20
+
+              <!-- width -->
+             =20
+
+            <tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-line-=
+shadow</strong></td>
+                <td>table</td>
+                <td>Area graphs has a shadow under the line. To disable it=
+ set the value of the data-graph-line-shadow attribute to 0.</td>
+                <td>0</td>
+                <td><a href=3D"#" data-fiddle=3D"nqRx2">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-line-=
+width</strong></td>
+                <td>table</td>
+                <td></td>
+                <td>width in px</td>
+                <td><a href=3D"#" data-fiddle=3D"WkaRH">Example</a></td>
+              </tr></tbody>
+          </table>
+        </section>
+
+        <section id=3D"doc-axis">
+
+          <div class=3D"page-header">
+            <h2>6. Axes</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            <!-- xacis title -->
+            =20
+
+            <!-- xaxis rotation -->
+            =20
+
+            <!-- start on tick -->
+            =20
+
+            <!-- end on tick -->
+            =20
+
+            <!-- data-graph-yaxis-X-formatter-callback -->
+            =20
+
+            <!-- graph-xaxis-min -->
+            =20
+
+            <!-- graph-xaxis-max -->
+           =20
+
+            <!-- graph-xaxis-labels-enabled -->
+           =20
+
+            <!-- graph-xaxis-labels-font-size -->
+           =20
+
+            <!-- data-graph-yaxis-2-opposite -->
+           =20
+
+            <!-- data-graph-yaxis-X-reversed -->
+           =20
+
+            <!-- data-graph-xaxis-type -->
+           =20
+
+            <!-- data-graph-yaxis-X-stacklabels-enabled -->
+           =20
+
+            <tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-=
+end-on-tick</strong></td>
+               <td>table</td>
+               <td>Remove margin between the line and the graph end.</td>
+               <td>1</td>
+               <td><a href=3D"#" data-fiddle=3D"AT5BL">Example</a></td>
+             </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-l=
+abels-enabled</strong></td>
+              <td>table</td>
+              <td>Allows to specify if the labels on the X-axis must be ena=
+bled and displayed (default) or disabled.</td>
+              <td>0 / 1</td>
+              <td><a href=3D"#" data-fiddle=3D"EwCgk">Example</a></td>
+            </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-l=
+abels-font-size</strong></td>
+              <td>table</td>
+              <td>Allows to specify the font size that should be used for=
+ labels on the X-Axis.</td>
+              <td>Valid CSS size</td>
+              <td>
+                <a href=3D"#" data-fiddle=3D"Ftj5n">65%</a>
+                <br><a href=3D"#" data-fiddle=3D"bJxXL">1.5em</a>
+              </td>
+            </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-m=
+ax</strong></td>
+              <td>table</td>
+              <td>Highcharts detects the maximum values of the X axis, but=
+ sometimes it is usefull to force this value.</td>
+              <td>Decimal</td>
+              <td><a href=3D"#" data-fiddle=3D"LrUD9">Example</a></td>
+            </tr><tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-=
+min</strong></td>
+               <td>table</td>
+               <td>Highcharts detects the minimum values of the X axis, but=
+ sometimes it is usefull to force this value.</td>
+               <td>Decimal</td>
+               <td><a href=3D"#" data-fiddle=3D"dxeJG">Example</a></td>
+             </tr><tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-=
+rotation</strong></td>
+               <td>table</td>
+               <td>Default : 0</td>
+               <td>Degres</td>
+               <td><a href=3D"#" data-fiddle=3D"zZrW6">Example</a></td>
+             </tr><tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-=
+start-on-tick</strong></td>
+               <td>table</td>
+               <td>Remove margin between the line and Y axis.</td>
+               <td>1</td>
+               <td><a href=3D"#" data-fiddle=3D"3GUZw">Example</a></td>
+             </tr><tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-=
+title-text</strong></td>
+               <td>table</td>
+               <td></td>
+               <td>Any string</td>
+               <td><a href=3D"#" data-fiddle=3D"QY83u">Example</a></td>
+             </tr><tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-xaxis-=
+type</strong></td>
+               <td>table</td>
+               <td>Supports only one type : datetime, which displays irregu=
+lar time data</td>
+               <td>datetime</td>
+               <td><a href=3D"#" data-fiddle=3D"JDFb4">Example</a></td>
+	    </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-yaxis-2=
+-opposite</strong></td>
+              <td>table</td>
+              <td>Move the second Yaxis to the right. You must use data-gra=
+ph-yaxis to define which serie is on the second axis.</td>
+              <td>1</td>
+              <td><a href=3D"#" data-fiddle=3D"F2L5t">Example</a></td>
+            </tr><tr>
+               <td style=3D"white-space: nowrap;"><strong>data-graph-yaxis-=
+X-formatter-callback</strong></td>
+               <td>table</td>
+               <td>Callback to format the YAxis values. Where x is the numb=
+er of the axis (generaly data-graph-yaxis-1-formatter-callback)</td>
+               <td>Name of the function to call</td>
+               <td><a href=3D"#" data-fiddle=3D"mWyjg">Example</a></td>
+             </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-yaxis-X=
+-reversed</strong></td>
+              <td>table</td>
+              <td>Higher values are closer to the xAxis.</td>
+              <td>1</td>
+              <td><a href=3D"#" data-fiddle=3D"sHccn">Example</a></td>
+            </tr><tr>
+              <td style=3D"white-space: nowrap;"><strong>data-graph-yaxis-X=
+-stacklabels-enabled </strong></td>
+              <td>table</td>
+              <td>Displays total on columns when they are stacked with the=
+ data-graph-stack-group attribute.</td>
+              <td>1</td>
+              <td><a href=3D"#" data-fiddle=3D"XnJaf">Example</a></td>
+            </tr></tbody>
+          </table>
+        </section>
+
+
+        <section id=3D"doc-points">
+
+          <div class=3D"page-header">
+            <h2>7. Points</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- enable labels -->
+             =20
+
+              <!-- label alignment -->
+             =20
+
+              <!-- callback -->
+             =20
+
+              <!-- graph-datalabels-color -->
+             =20
+
+            <tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-datal=
+abels-align</strong></td>
+                <td>table</td>
+                <td>Defines where to put the label according to the point=
+ position.</td>
+                <td>
+                  <ul>
+                    <li>right</li>
+                    <li>center</li>
+                    <li>left</li>
+                  </ul>
+
+                </td>
+                <td><a href=3D"#" data-fiddle=3D"Ykazy">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-datalabels-color</strong></td>
+                <td>table<br>th</td>
+                <td>Change the datalabel color. <br>Could be defined for al=
+l the chart on the table tag or just for one serie on the th tag. The th ta=
+g value overrides the table tag value.</td>
+                <td>Any string</td>
+                <td><a href=3D"#" data-fiddle=3D"MGs7x">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-datal=
+abels-enabled</strong></td>
+                <td>table<br>th</td>
+                <td>Displays values on each point of the graph. <br>Could=
+ be defined for all the chart on the table tag or just for one serie on the=
+ th tag. The th tag value overrides the table tag value.</td>
+                <td>1 or 0</td>
+                <td><a href=3D"#" data-fiddle=3D"vJjqW">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-point=
+-callback</strong></td>
+                <td>table</td>
+                <td></td>
+                <td>Name of the function to call, the first parameter is an=
+ <a href=3D"http://www.highcharts.com/ref/#point-object">Highcharts Point=
+ object</a></td>
+                <td><a href=3D"#" data-fiddle=3D"gQmac">Example</a></td>
+              </tr></tbody>
+          </table>
+        </section>
+
+
+        <section id=3D"doc-verticallines">
+
+          <div class=3D"page-header">
+            <h2>8. Vertical Lines</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- data-graph-vline-x -->
+             =20
+
+              <!-- data-graph-vline-height -->
+             =20
+
+              <!-- data-graph-vline-name -->
+             =20
+
+            <tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-vline=
+-height</strong></td>
+                <td>th</td>
+                <td>Arbitrary draws a vertical line in the graph. Must be=
+ used with the data-graph-vline-x attribute.</td>
+                <td>decimal</td>
+                <td><a href=3D"#" data-fiddle=3D"j92rH">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-vline=
+-name</strong></td>
+                <td>th</td>
+                <td>Value displayed on the vertical line tooltip.</td>
+                <td>decimal</td>
+                <td><a href=3D"#" data-fiddle=3D"CvBfF">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-vline=
+-x</strong></td>
+                <td>th</td>
+                <td>Arbitrary draws a vertical line in the graph. Must be=
+ used with the data-graph-vline-height attribute.</td>
+                <td>decimal</td>
+                <td><a href=3D"#" data-fiddle=3D"AZtGU">Example</a></td>
+              </tr></tbody>
+          </table>
+        </section>
+
+        <section id=3D"doc-pie">
+
+          <div class=3D"page-header">
+            <h2>9. Pie charts specific options</h2>
+          </div>
+
+          <table class=3D"zebra-striped">
+            <thead>
+              <tr>
+                <th class=3D"header headerSortDown">Attribute</th>
+                <th class=3D"header">Scope</th>
+                <th class=3D"header">Informations</th>
+                <th class=3D"header">Allowed values</th>
+                <th class=3D"header">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <!-- data-graph-item-highlight -->
+             =20
+
+
+              <!-- data-graph-item-color -->
+             =20
+
+              <!-- data-graph-name -->
+             =20
+
+            <tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-item-=
+color</strong></td>
+                <td>td</td>
+                <td></td>
+                <td>hexadecimal color</td>
+                <td><a href=3D"#" data-fiddle=3D"AqNY3">Example</a></td>
+              </tr><tr>
+                <td style=3D"white-space: nowrap;"><strong>data-graph-item-=
+highlight</strong></td>
+                <td>td</td>
+                <td>Moves the serie outside the chart to be more visible.</=
+td>
+                <td>1</td>
+                <td><a href=3D"#" data-fiddle=3D"p3jm9">Example</a></td>
+              </tr><tr>
+                <td><strong>data-graph-name</strong></td>
+                <td>th</td>
+                <td>Sector's name in a pie chart</td>
+                <td>Any string</td>
+                <td><a href=3D"#" data-fiddle=3D"rPJ9k">Example</a></td>
+              </tr></tbody>
+          </table>
+        </section>
+
+        <section id=3D"doc-javascript">
+
+          <div class=3D"page-header">
+            <h2>10. Dynamic options in javascript</h2>
+          </div>
+
+          <p>
+            Just before the graph is rendered, an event is triggered, which=
+ allows you to change the Highchart chart options.
+          </p>
+
+          <p>
+            For example, let's say that you want to define the colors of yo=
+ur data series according to the graph container. Instead of doing this on=
+ server-side on every chart you have,
+            you will do this on the client side using the <strong>highchart=
+Table.beforeRender</strong> jQuery custom event.<br>
+            The second parameter contains the objet that will be passed to=
+ the Highcharts.Chart function. That's the one you must modify in order to=
+ change the colors of the graph.<br>
+            The documentation about this object is available in the <a href=
+=3D"http://www.highcharts.com/ref/">Highcharts doc</a>.
+          </p>
+
+          <pre class=3D"prettyprint"><span class=3D"pln">$</span><span clas=
+s=3D"pun">(</span><span class=3D"str">'table.highchart'</span><span class=
+=3D"pun">)</span><span class=3D"pln">
+  </span><span class=3D"pun">.</span><span class=3D"pln">bind</span><span=
+ class=3D"pun">(</span><span class=3D"str">'highchartTable.beforeRender'</s=
+pan><span class=3D"pun">,</span><span class=3D"pln"> </span><span class=3D"=
+kwd">function</span><span class=3D"pun">(</span><span class=3D"kwd">event</=
+span><span class=3D"pun">,</span><span class=3D"pln"> highChartConfig</span=
+><span class=3D"pun">)</span><span class=3D"pln"> </span><span class=3D"pun=
+">{</span><span class=3D"pln">
+    highChartConfig</span><span class=3D"pun">.</span><span class=3D"pln">c=
+olors </span><span class=3D"pun">=3D</span><span class=3D"pln"> </span><spa=
+n class=3D"pun">[</span><span class=3D"str">'#104C4C'</span><span class=3D"=
+pun">,</span><span class=3D"pln"> </span><span class=3D"str">'#88CCCC'</spa=
+n><span class=3D"pun">,</span><span class=3D"pln"> </span><span class=3D"st=
+r">'#228E8E'</span><span class=3D"pun">,</span><span class=3D"pln"> </span>=
+<span class=3D"str">'#CCFFFF'</span><span class=3D"pun">,</span><span class=
+=3D"pln"> </span><span class=3D"str">'#00CCCC'</span><span class=3D"pun">,<=
+/span><span class=3D"pln"> </span><span class=3D"str">'#3399CC'</span><span=
+ class=3D"pun">];</span><span class=3D"pln">
+  </span><span class=3D"pun">})</span><span class=3D"pln">
+  </span><span class=3D"pun">.</span><span class=3D"pln">highchartTable</sp=
+an><span class=3D"pun">();</span><span class=3D"pln">
+          </span></pre>
+
+
+
+        </section>
+
+        <section id=3D"doc-changes">
+
+          <div class=3D"page-header">
+            <h2>11. Changes</h2>
+          </div>
+
+	  <p>
+            In issue <a href=3D"https://github.com/highchartTable/jquery-hi=
+ghchartTable-plugin/issues/8">8</a> we removed the default value for the gr=
+aph-yaxis-X-title-text attribute. If you were using it, here is an example=
+ of how you can get the default value back :
+	  </p>
+
+          <pre class=3D"prettyprint"><span class=3D"pln">  $</span><span cl=
+ass=3D"pun">(</span><span class=3D"str">'table.highchart'</span><span class=
+=3D"pun">)</span><span class=3D"pln">
+  </span><span class=3D"pun">.</span><span class=3D"pln">bind</span><span=
+ class=3D"pun">(</span><span class=3D"str">'highchartTable.beforeRender'</s=
+pan><span class=3D"pun">,</span><span class=3D"pln"> </span><span class=3D"=
+kwd">function</span><span class=3D"pun">(</span><span class=3D"kwd">event</=
+span><span class=3D"pun">,</span><span class=3D"pln"> highChartConfig</span=
+><span class=3D"pun">)</span><span class=3D"pln"> </span><span class=3D"pun=
+">{</span><span class=3D"pln">
+    $</span><span class=3D"pun">.</span><span class=3D"pln">each</span><spa=
+n class=3D"pun">(</span><span class=3D"pln">highChartConfig</span><span cla=
+ss=3D"pun">.</span><span class=3D"pln">yAxis</span><span class=3D"pun">,</s=
+pan><span class=3D"pln"> </span><span class=3D"kwd">function</span><span cl=
+ass=3D"pln"> </span><span class=3D"pun">(</span><span class=3D"pln">index</=
+span><span class=3D"pun">,</span><span class=3D"pln"> value</span><span cla=
+ss=3D"pun">)</span><span class=3D"pln">   </span><span class=3D"pun">{</spa=
+n><span class=3D"pln">
+      value</span><span class=3D"pun">.</span><span class=3D"pln">title</sp=
+an><span class=3D"pun">.</span><span class=3D"pln">text </span><span class=
+=3D"pun">=3D</span><span class=3D"pln"> value</span><span class=3D"pun">.</=
+span><span class=3D"pln">title</span><span class=3D"pun">.</span><span clas=
+s=3D"pln">text </span><span class=3D"pun">||</span><span class=3D"pln"> </s=
+pan><span class=3D"str">'Valeur'</span><span class=3D"pun">;</span><span cl=
+ass=3D"pln">
+    </span><span class=3D"pun">});</span><span class=3D"pln">
+  </span><span class=3D"pun">});</span><span class=3D"pln">
+          </span></pre>
+
+
+        </section>
+
+
+
+      </section>
+
+
+
+      <section id=3D"license">
+        <div class=3D"page-header">
+          <h1>License</h1>
+	</div>
+
+          <div class=3D"page-header">
+            <h2>HighchartsTable</h2>
+          </div>
+
+	  <p>
+	  	The highchartsTable plugin is under <a href=3D"https://github.com/highc=
+hartTable/jquery-highchartTable-plugin/blob/master/LICENCE">MIT license</a>.
+	  </p>
+
+          <div class=3D"page-header">
+		  <h2>Highcharts</h2>
+
+		  <p>In order to use HighchartsTable, you need to include the Highcharts=
+ Javascript library in your page which have a different license than highar=
+tsTable.</p>
+
+		  <p>Highcharts is licensed for free for any personal or non-profit proje=
+cts under the Creative Commons Attribution-NonCommercial 3.0 License.</p>
+
+		  <p>For commercial, corporate or government use a license is required,=
+ which can be purchased on the highcharts.com site. See the <a href=3D"http=
+://shop.highsoft.com/highcharts.html">license and pricing details</a> direc=
+tly on the Highcharts site for more details.</p>
+          </div>
+
+      </section>
+
+
+
+      <footer>
+      </footer>
+
+    </div> <!-- /container -->
+   =20
+    <script src=3D"urn:snapshot-8234CDDB:http://highcharttable.org/js/jquer=
+y.min.js"></script>=20
+    <script src=3D"urn:snapshot-2F0D6EEB:http://highcharttable.org/js/prett=
+ify.js"></script>
+    <script><!--
+
+/* Script removed by snapshot save */
+
+--></script>
+    <script src=3D"urn:snapshot-7A04170F:http://highcharttable.org/js/boots=
+trap-scrollspy.js"></script>
+    <script src=3D"urn:snapshot-F07F641D:http://highcharttable.org/js/boots=
+trap-modal.js"></script>
+    <script src=3D"urn:snapshot-BD2A7757:http://highcharttable.org/js/highc=
+harts.js"></script>=20
+    <script src=3D"urn:snapshot-53C828F1:http://code.highcharttable.org/mas=
+ter/jquery.highchartTable-min.js"></script>
+    <script src=3D"urn:snapshot-57A084E9:http://highcharttable.org/js/jquer=
+y.tablesorter.min.js"></script>
+    <script src=3D"urn:snapshot-F84EB33B:http://highcharttable.org/js/main.=
+js"></script>
+ =20
+
+</body></html>
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://highcharttable.org/images/forkme.png
+
+iVBORw0KGgoAAAANSUhEUgAAAJUAAACVCAYAAABRorhPAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAHhFJREFUeNrsXWl0k+eVvjJggo03vGJLsrFlbHZsYzYD6SxdSH90uiVk
+zmlCogCdniadpCUzc0oyLZCek5CkJcmPAFEJSc+EzHSZ/pjQNk2aNIUkgDFgy7uNF9nG+44BL5r3
+3u979S2WV8myLL/3nA/Ju4QePfd573vf5xqcTie4C4PB4Lor3wbJ9xfI9xdExSY/m5AQf3BlugVa
+29qhtLQc/CWSk82wYf1aaGtvh4sX88u72hsfununv519aVC+hnTXMLtG5MspX+Ac6z9IxJhhmCao
++LUwKsZ8KDw8/KnczTnQ19sPJaVl0Nvb5xdPbsmSJbBh3Rro7OqC0rKKiv6elkfu3rnVqgKWHmAC
+WF6IIE9/QWdb3fN9/f3Hq6trICYmGjIy0v3myQ0MDMCN2jpIZ0z6hXt3pCeaLGcWBYfEsy8tZlew
+fC3CN4d8cRbmbyCD/AYzCKjMDFMZVP/hnKkWyVdwZLTp35aEhH4/O2s9dHf3QEVlNQwODvrFk4yP
+j4OMlRaWCjvAbi+u7OtueWzw7kAL+9Jd+RqUbwVj+QhUoHrXBqku/u5WA+tgSkry97KzN0I7ewEv
+5xcwtrjtF080NDQUNudmQ19fP0uFZdWN9VWPMmBhKrwjgDW76c+pukb0V1d7/S9u1NSc+Piv52F4
+eBjMJqPfPNFbt25B9Y1aiIuLgVWZGalLI+LeWBS8JE5OhYv5G0OkQt8ylVqsu02B8rU4Itr4ZGxM
+3D5ihv5+uHbdzsR7r1884UWLFkFO1gbo6umBysqqqs62BnUqvCMYa3aZil/D8uVanne3O17p6Gi3
+2YtLaQWWtiLZb54w6rz6hgbIZBpr+9YtafGJKzhjBQvG8i1TTcRWC3WMRSklYpnxiZDQpdZNOVlM
+y/RBeUWl32is6GVRkJG5EtqxvlZWjuJ9n2Cs2Ssp6DWVnqn4i3G3u8Px6q3+PpvD0QApKWbIYmkH
+048/RHtHJ5SUlFGRNC9vm8WYnG4TjOV7UDndpED+7lUDalD1br+DwKqurra9/+e/wMjQMKT6USrE
+0gdjKVgaEgorUlJQvJ8SwPJt+nNXt+LXgrHKDKpU+HhiUqI1d1MO9DCRXHD1ut9U3hcvXgw5ORvZ
+4+ol8d56s1aI91lIf9NirKbGJhvWroIMQWDyo3LDnTt3oKGhCSypKZCTnZUWHWcS4t3HTOUxY4VH
+RDDGksoNpSXldOsPEbY0FNasWQUdnV1QJsS7T5nKY8bq6+213aipg4S4OFi9OhN89wbXV0O00dvX
+D7iHmW5JhV078yxJZosQ7z5mKo8Za0lIqDV743roZhqrvKKKqvAzAyTpxunugeu2OPF5L09IgIwM
+C7S0tEKRtFcoGMuXoMKfV70zpwwss9ls3bQpCzpZysm/chX6+295F1AaMLmFlQpcynMOCVkCmKJx
+MVFeUVHd5Ki2CmDNfPpTA2vaqbCurs72t/OfMZYaAZPROEOAcipU5XSqX3K63L3qWKStrauHxMTl
+sGb16tSwyHhRbvAlU6l+ZtqMtSw6xrolN4eJ9j4oLCrxcK/QCU6nOvUpwNnzwDdh7ZrVcOjZI/xV
+p4fpjq14uSFrwzro6sYUXVHV3dEkyg2+YCpvMFZ3V6ettLwcwsKWgiVthdcA5eSAYrd77v8mHD38
+DAHr6OFDClmNwVa83FDvaCCNtXPH9rREY5oQ775kKm8wFu4V5mRvgB6mZRgx0Is63ZQnPTbpEw8w
+ID135Fn6Sn29g+pkZ9/9NWOso/JzNaiYa3TExsZQox/2iRWXlArx7ium8gZj0V5hQyOxVW5uFqWf
+qa/1nABOZdWnBtSPn/kpfO3rD0BRUTFjrG/BgX2P6NjK/Wve2tpGLTxJSYmQt22r2Cv0Nag8BdaN
+6hu2Dz78GIaHhiEl2TQlltKAiz0ENaDOX/gMzp79Ne35PbR3P5w79yfGVr8ZE0j66O/vp06L8Ihw
+SLekib1CX6Y/b6XChIQEay6Kd5YKC64VTiDeVVrKKfEOaagjz2hS3jtn/wcOPXNYehgGOemxhziZ
+FMgDOy1yc7JYiu6FisrKqrbmeiHefcFU3mCslpYW29WrhbBw4QJInjRjKas8Dih1yntwz7chb/vW
+0ew0iRTIgxr9mHjHFL05d1NabIJZ7BX6kqm8wVhLw8KsSiGycowCqcJUa9esgt/95r9kQB2mlIef
+x7SFgMI0+CDTUxhn//s30NPdq2Ir6SEa3JQX9BEeHgZrV6+C9o4O0eg3G6DyBFiR0abHV6SmWtev
+Ww1tbe1w8VI+FUvHW/ntuf8b7EUPhxMnfynxj/w4tzNQvfbKSxDBAIZB+uqR/WAvKhkNLG3h3S3I
+oqOXAdbXevv64HphUbWjtmLeV959CipvlBt4IbKsvEL3t/UVdNCUFJwyg7315ikC1AvHfk466+iR
+/yTmeuIHB13FT4Ost9QgMowBLnw6iYkJdIi2rbWdrRAL5z1j+RxUngLLaDJac3OyaRM6P/+qrm1G
+BywZTCCD68ybJyn9ocZCwY7x0Yd/gAjGaNm5OxRuMrgT7GNX3TGWLLkHsBcfOx3KyyuqmhtvzFvx
+HjQbf9QT8e6od9g+/fwSjIyMsNVckh6u4CIZ3eoO73E9JWksgOcYS+HZxPfO/YmAt2btKqa7wlzb
+OvQwVQ9VXYHXx+3bd6CuvoF+38b169Iio5fPW/EeNFt/2BNg3Wxqsl29VgTLWdrZunkTbe2MDyyJ
+dTDd4b7ffbu/RIDClSBqqheOvcwAtRreOn2SLondRghQqMve/OXrJMjHAxY+ndraOvjT+x8Q4NMt
+lrT5ugkdNJt/3BNg9fZ026oqb8AyPGq10jIBY0n3HkfdxOJVJtQRUFhi+M7Dj1H96m1Za61FcLE0
+iSs7ZK0zp19nDLeFiqiTCWSsmrp6SE9Pg3t37bAkmubfXuGsaCpvaixs9KO9wp5eMgW5e/fuuAXR
+CAaWr3zli9DDGOq9c3+klPf2m2+4xDsy0468bfDQ3n0k6hFkrj1ClYCfqOQQHx/LwJ5Oq1V7ccm8
+Eu9+ASpPgZWSkkLA6ujogkv5V1QHVvXCXelYkFaDEishoEi8vyOJd/z47TNvSIA6i4A6zB5N0JRA
+hYE971Iv/i0oKS1FU5B5UW4I8pcH4kkqrKmpsf3l4/MwNDSkMwUZnQa5cI+MiIDXXnlRAZQs3vWA
+wq8Z6Xc6YbJ7hDz6bw1A1Y1aiI2NhsyMjHmzV+g3TOUNxoqLi5P2Cvv74Pp1O6XE8UoNWLfC6x1X
+xT2MUiECihdGEWR4+/AjB8BuL5mwqc9dBAcHAzJpNzX6VQa8KYjfgcoTYEXFmB83mUzWzMyVcqtK
+0cTFUbmGhVoKUyECCgU83mKpAe9jTQwBVcSuURX3SQLLmJQIm3I20vGvy/lXqpobawIWWH4JKm9U
+3nM3ZVF3Q3llFdxiaWgiYL16/Bjs3v0lqTWGgejA/kfhC39/H9Q7HKpaF6h0lQKmyYIrKioSVq3K
+gI72DvRGDVjx7reg8hRYqWlpVu5OfOliPgwODblfFcrPAVeF2LT3+kkb/P63Z+nzX/vGHlWVXQ0i
+gw4/hikBC327cFO8sMgekHuFQf6MeE/Ee3VVlWIKkpoyqo6lXr0hdlF/nTh1mgl9E6U+rLwb1ABR
+gRBPMVPvOz+ZM0G1XR2oq4qLy8i3K1BNQfwaVJ4Cq6+3x8bdie/dlTeq8q5KXpr9viJ7MZz7w5+l
+lGfQyjIU9lgQxYMTvDTBddlkgIXVduzF+usnF8iHdMOGdZa45ckBtaXj1+nPW6kwMSnJyt2Ji4tL
+9U9g1GFTkzEJ6uodmu8hhlq7irZxcEWIWz7vvPtrOHnytG4DenLdoxjJZhNkbVwHrW0d8PnFSwGz
+KvR7pvIGYzU2NNjyr1yD+LhYKkZiUVJTyjJoJDcxicGgSX4sJSqAwh4tTGNP/+hfpe0bVVFVYayJ
+X2c8rPr+Bx/BMNN7aakr0gIlFc4ZUHkjFbrcidkKTIMqfZFUlRIlQK1mKU+pvD9/7GXa4sH4Llsl
+egIsFOzVN9AURNorDARTkDmT/ryVCu9ZEmLl7sRVOEBAsypUrwyl+5gKsTWZAwpLDijUsepOwpv9
+HqziI3sde/H4GKlw/FUhPp2EhDjaK8T62lw3BZmToPIUWOZksxVPw+Be4eUrBao6ll5nSau7/fv2
+UrrDxj5Kg3JHw/cff4pWiQX5F+jrrka/aQALA01BNm+SdgTKyiqqGx1zc69wIczRwP84GVjq/0Du
+RTQ05pIeTUHY7e2B21Z0J0YmKiuv1Fcc2LsNf7F0B0sNCLS8vK3w6nF5v/DQTykF5uVtox85f+FT
+CYz8ZxFYTnrb0u+ZzFsUN8JxtbqOpdsFCxam9vb1nertauaMNVHwpn36f5lNYAXBHA5Pj39xd+Lt
+27dAWFiYDlW64gMDybq1a5QN6HeRtdbAa6+8TN/z+gkbdaLiiefdu7+olBvc1LnGY32p0e9D+vOZ
+mRmWudhBOmfTnzdS4bLYZEqFmStXQktrK1y9VqgtSrlpm8E6VWGhXZMGf3zoJ/RdTx98ynVKB/cM
+H37ku9Km9hTaZXgkJS4H7tt1peDqnPLHmtNM5SljdbTW0hH7jz85DyGhIbTKu+eexRq20rbNABVG
+zWajClA/JT313NGf0Me4zfP4Ez+k37X7K1+cMlvxaGhsgvPnP6ejaMYk45yqvC+EAAlPNBaAEd2J
+rVkb1tLJmkuXr8gdpJJAUvSV9NuxjnXy1C/pqBh2hf7lw3MudnrwgW/DC/U/p485a4FaW8n3J8NY
+uG85aB+E3NxsWBYVabGXlNhUe4V+q7ECIv15a1UYGRlp5e7E5RrxPpZFkVR+qKq4Tm0yh5jW4i3I
+yF7/9I0HpUKqpsI+tc6GoKAgMBoTYRVbVLS0tGEq9PtyQxAEWHgi3ru6umzcnXjnjm2qvUKDRrtz
+Mw9+ohkBtE5u7EM3GWSsF178BW3laAqhOktIp/LP2HQzMgJ1dQ746OPzdLaQLRYs/u7dEHCg8hRY
+N2/etBUUoCnIQretyerOBg4sLHriiZzf/+5dMDG9hS0z75JFEWi6GJyg7WyYSneDa4AAA/ymnOy0
+mHj/HSAQcOnPW6kwLDzcZQqCdax+10lo936iKMpxZUhVdTeBB1l5V+n5Tz+D0RvPkzxMERbG/k4m
+DWzy1wECAQ0qT4CFrckrUldY8cQNbp2gKYiaANVbOYrscmqq8hjY944bz3tklxkMOvL1zBGlm3SK
+wIqNiQbsxUe/Ln80BQnI9OeNVNjZVvdqVaXU6IcvMe7LLVgQpHnxNRvQBpA7G7Sb0RxQyFBYasC9
+Q/wY22j4KWhNs98kUiG28Fy7VgiLWIpONpv9rtwQ8KDyVGOhByl3J8ZDpktDQ7XiXdc24/JvkFMe
+BxQeTv2/c3/EFmLpa9u2EICwmj/V6js+HaxjoacEli2ysjZaliel+o3Gmheg8hRYOEDgwqcXacyJ
+1hTEXduMcsOPeuHJZ6xpYSp9+uCT9Ln33vsjeZHiCR6+rTO6g3T84KYgJmMirF+31m9MQRbCPArP
+CqT0Ilq3bM6BqMhIKLSrBwjoiqTyv1hqwLhv95fJxQ9NQaTj9S/DgQNW2LNH0lkH9j1Kv+PcH97X
+bkIjyMbRWHyv8ObNZhogkG5JTysdHpn1TeiAF+reFO98r3D1qkxoa2uDy/lX9f8bo7wbsJddLdKR
+tbD8wA1CsNPhwH4rge3v/vGr4GDM47ZQCppPjQLa8uXxwH27cK9wNo/Yz0tQeVpuwEY/xZ24WjVA
+wE3lnV24+bx921YZQI8qjjN7HyO/UfwcpsWH9x6A859+7vYI2KiP3IArLjYGVjLt1942uwME5o2m
+8qbGuj1wy6a4E2erBgho9RXhlk7nlMDJU6fhvvu+7AIUCncEFDIUfg6DH7ZwndDRlC2co6vxumjB
+U9nct2vL5llrTV4I8zg80Vg1QK3EVjRDwwECSqOfq8NPYXxq2gM6eYMb1idO4cEJBFQECXWT3I5M
+2zoyDak7T7XExB+uwbVRrWYr7HmvqqqBNasyYOXK9FSm606pGMsnGmvepj9vpcK4+HgrdydGdz9F
+vOsKpBr/UexgCKPDFC7/KyyGuqvE522lVSMKfWQ4EvNqS6PR+ZDCZQqCvl0VlVUdrQ6fHf+a10zl
+DcbCLoJrhUVWdCdekWKG64V2VYGUg0leHcovPP6R/UycjwcoTIuvHD8mDxJQAkGF399D4B27nQZb
+dxyORgJWTPSytMv5C99QmYLMKGMJpvISY+EAAZU78RimIKoClHyggvrfQSuS1CzWLfdsYXMgriIR
+ZPgzL8ond1wAVlXx1REZGQGrMzOgo7PTZ6YgAlReAhYfIECmIEwwf04DBIY15Qb34FLV0tEohDHU
+mdMnXJvP33/iR+Q8wx/QGdnuKCd316TSIMayqChaUKA9uC9MQebt6s/bq8Ku9noyBVHciVN1b0xl
+ZejWw0EOPJiKoEHRjitEEu8KucG5c+/DsWPHVatEgIlaaLq6u8FeXAr3LLmHLSqSZ3yvUDDVDKTC
+JKOR/LHw0MOVK1cpJeqLpGMNEci/9Amx1UMP75eOfelAqeIlOHrkWSp2vvjiK5NiLCx90ONieqyy
+smrGjNcEU81AHavB4bDxVhmTyd2wcW0nKb+DK70IeZWnBpTU6+5UMZaTbLhxUhiOn9Mz1lidDtLo
+3ka2oEiGjRvWp0XFJM3IXqEA1QwBq7Gh0VZQcA0S4uOYnsnRmoJoKk9KMizCoUsuECk+DthRKm1O
+S2yGHQ5/u/AZtSzjgHHF0kh5qE6n+mErgXuF5Ns1PAKpM2QKIkA1g8Dq7e21udyJMzPcEpb6A0xl
+WARFdnvrzEnauqEWZfYxLy3gJvRbZ05Rn9aJEzaZ0Zw6ryxVncwNa+HKFE9Cr0y3wBfu3en1AQJC
+U/lAY/EBAlgewGHjGlMQjW+DdP/gD5+g/UAe3JL7QQYo7HTA34P7hv/8wP2uVeKPnz2s9SbVb0rr
+p4KxT8TFxUJmRjq04gABL5qCCKbyAWMN3Oq31dc3MGZIg23bNpM1o1u2koFw7KXjkJO7UwKLPART
+A6iHH4Md27cRa/GeLfQs5TN1sDNiDc7ScZsOFTJobm6hTgv07dqcu8lrjCVA5SNg1dbW2j7+5AIM
+DQ9Dsll7SsegYRSDnAp7SS9h4XOPDlD19fU0tIkHAosfAzt6+Fkqkr56/AWarzMqHepS4cDAALh8
+uzK9M0BApD8fp8KY2Fgrdye+dt0u7xWOPQAT9/3+97fvyClvH9TX1bsmUqC1UVGRnYxC8Pj9c0eV
+yWCaaasuFhy75IDDxpUUXVnV2d447XKDAJWPgYWNfuoBAoopyNjA2nP/t6DQboeiQjsJ+DyW+hBQ
+3BgEA70cOKAQfHaWOvm4FPb35GkVMjOOUcdKSlpOU+ylAQIF0x6EKUA1S4yFAwSkvcJeEu+uIU1O
+55gje/GQBLbKoNHadx56zAVGDigS9QxoNBaFPZJIaq05RatHdKCxF5dMWCCNxlF3DPAd7bhXOL1G
+P6GpZklj4Skdh6MBUlOSITtrI6UfLtb1Hu98Vcdn7eDJ6R2y2Zqaocjc9uBTlBojaCzKKZeQV3Dq
+HPdMBR5StdtL6W/k5W2zGJPTpyzeBVPNMmOFR0RY1zHd1NnVpXP00/djSWDACjqevsEzhE//6EkS
+8VzAY3AvUhTzqLXcT7Mf35abTEFYKsTaGnaTFkzRFESAyg+AtXz5citW3XFPruDqdTpqPx6w8Hb/
+/keoAMprVkWFxfQ925ne+tVbssmtS1+VuFqb3Xc2uE+FuFeYk7MRemlAZ1VV683aSWkskf78IBWi
+KUh+wVViCL0piGGMeYVoAILaSmEhaXvn359+0vXTuDLE1SIevHCqq+6gpEFt1V1LEGQK4miEtNQU
+nGSfFh03OVMQwVR+xFhoCsLdiUtLK6j/aaKVoYQVJzX2qb2xXpC93t8+YyOhjhZHyrzCqU0Dw31L
+9O1Cq8jSSZiCCKbyI8bq7+ujWToJCQn0ImrwqTsFrVgZYXdnuAZQqK8kQL3h6s1CjaWdo+PUeWaN
+fSgaW3eqqmvIxsjNAIFg1ZuE3jQCVH4ELDQFkRr9JHdi7HtfsGDBhMAKD4/QaCjc3kHXZBTqWM9C
+kOHXsFVGMgZRUuERPOx6/zdB0wnoBl44YJx8u9jjMZtM6sr7Yh24For056ep0Gw2W7k7Mc7VUfyx
+1AJeO6/QaEqiAik/nHr+/KcMUPvoe7DsgBV3ZK2vfX0PdUSglwMZiNiLYe/ef4Hu3h6YyM4I9y1p
+QKfUi1/V1OByTb4jv0HuClD5MbDi4xPolE57ewdqGf3//Kgj9px9PvrgPdJRWTnbiaE4oPhKEYU9
+7iViOUKy5j4gW3NPXG7Ap2M2m2D9Osm36/OLlyt7Om/iqrCZM644ouWDVOiJKcjg0KBVdiceZQqC
+R8CcTm4OYnBNm8CTztyvAQNZi2stXBFiwZQDClePeFJa3ys/Holgo19T003I3riepeiVlrIyeKOn
+s/nRwbu3mkVJYQ6I9+6uLhs6JYeFL6Vj9jreUJUbXO0CZBGJ5QYEkztAcbBhYBfpdALPFdYy8OIc
+xV078yyJxrTTwYtDYpFxRfqbI6kQ9wqxi6CnZ3xTEHWB9MybJ6jLgRdHeRcDggstul1uM//wVdeM
+w6kMwcSIjY0hQ7i2tg4oKSmr6O9p/Y5If3MmFcoDBLLW0wHRS5cLZGCNHiBgoMFLBnjiBwdJvJOG
+UgEKxTv3zkImw4Irgmo6gboKzdck366IdHtx6a9E+ptDqbC6utr2wYd/pUOqyckmTRp0N/IEG/0Q
+UGiwxlPe88d+QSu/CAZMZCoMzWjfsRd+YwauTLHTAg1H0i1pFsFUc1C8V1ZWW9GdGNuAFVOQsRmL
+5jyDZGqL4MJBAjz1of6SplJM3z0ID8/i6N6mm82wKXuj6KeaixoL7biNRqNr2LhiCjKxxlIbftA0
+1ZeOg8tLa4p6yl2YWboVoJrD4l1tClJRUUktyu6BpcycwC5SZCgU6lxHTdXHfcLnJEA1d4HFTUGw
+EImWjFpTkNGb0LyPRjEd0m4qe8pSAlQBVm5Ad2K01S4rr9BMpnDrNONGlU92qtdkQqz+AmBViK3J
+tfX1dK5w187tqiP27gYIaC8DJyeDwSuAAhBOegG1KhweGraiO7HRmAQlpeXa+oDBOQ5kvDv0QYAq
+wIA1cPs27RWGh4ej7bWqNdl3U29F+guwVNjb02NDd2I6apWRPjv6UAj1wBTvLlOQHulc4eDgoGAq
+EZ6bgqA78UpLKmzbmqs1BZnhEJoqgDVWDWB/eZ8V3YnRFKS0rEKASoR3xHtpWRCZgsTERKtMQUT6
+E8DyIBV2dLTbuDtx6opkIdRFeE+8Y+WduxNXVFSTN5VgKhFeGN0ruRNnbVxHM5gFU4nwCmPhSej1
+a9dAR1cXlGtMQQRTCcaaJmNhgZS7E9+7K8+NHbcAlQDWNIDV1Nhou3T5Cv2wyWwSJQURnpcbcJYO
+YrKvr5/KDaEhIVBaWuZm5IlgKsFYUzYF6bW53IlXZQihLsJ74h2HjasHCAxpxsoJphKM5cGwcTxM
+gYa1ISHT3ysUmkpoLAoEVh27vT1w24ruxGaTyY0piACVANY09wqHhkdo2Piy6CgoLCye8l6hSH8i
+FboxBem0lZaVwdLQUEgbZQoihLoQ756agijuxOSZIJhKhMd7hSp3YggODhZMJcI7jBUZGWnl7sRl
+k9grFEJdiPdJifeq6hqqvMfHx+kGCIj0J1LhNFNhS3OzjbsTJ0+wVyjSn0iFUzQFCbdyd2I8Yq+Y
+ggimEozlgXivrXPQbED0ucLRJ4KpRHjKWMHyucLH0J24q6eHGv3Q+EwwlQhPGOv4wED/Ke5OvHPH
+NiqUitWfiOmuCvH7RrrbHT/H26GhoQPoToyGtaWyKYgAlYipAsspM9kwA9ZLBjAM375953uyOzEU
+2UtE+hMx7VRI6bCrvf5YX2/Pa9ydGPveBVOJmCpjcaYakTV5UHtLzfPDIyPDTTebf4DuxIKpRHjC
+WC7m6mqr+9md2wMvOxoaPC8phEclzrF1tHZm3qjnagCNp7jLrdftrGGDm88FRnS03Biv3MAnu6vv
+U0TFJv+Hx6ASEdDhDlhqIPGP1d/rFJpKxLjZUAaLmnlGVJ83yB8bBKhEeAosp469NBpAgErEVIHl
+VLOSO0EpQCViqsACHbicgqlEeAos0IFL/zUBKhEegUu/ShSgEjEzIBMVdRFeDwEqEV4Pg+jcFCGY
+SoQAlQgBKhEiBKhE+F/8vwADAJj2WoQSWcV+AAAAAElFTkSuQmCC
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://highcharttable.org/images/browsers.png
+
+iVBORw0KGgoAAAANSUhEUgAAARgAAAA0CAYAAABRlyd1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJ
+bWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdp
+bj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6
+eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0
+MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJo
+dHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlw
+dGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEu
+MC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVz
+b3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1N
+Ok9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGODdGMTE3NDA3MjA2ODExODcxRjk2Njc5NDgw
+MTM3QiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxMTU3NTk1Q0Q2QTUxMUUwQTg0NkU4MTdD
+M0Q4MUUyOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxMTU3NTk1QkQ2QTUxMUUwQTg0NkU4
+MTdDM0Q4MUUyOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgTWFjaW50
+b3NoIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RkI3RjEx
+NzQwNzIwNjgxMTg3MUY5NjY3OTQ4MDEzN0IiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjg3
+RjExNzQwNzIwNjgxMTg3MUY5NjY3OTQ4MDEzN0IiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRm
+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
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-613770B0:http://highcharttable.org/css/bootstrap.min.css
+
+/* Effective stylesheet produced by snapshot save */
+html, body { margin: 0px; padding: 0px; }
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite=
+, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt,=
+ var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table,=
+ caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; bord=
+er: 0px none; font-weight: normal; font-style: normal; font-size: 100%; lin=
+e-height: 1; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0px; }
+ol, ul { list-style: outside none none; }
+q::before, q::after, blockquote::before, blockquote::after { content: "";=
+ }
+html { overflow-y: scroll; font-size: 100%; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0px none; }
+article, aside, details, figcaption, figure, footer, header, hgroup, nav,=
+ section { display: block; }
+audio:not([controls]) { display: none; }
+img { border: 0px none; }
+button, input, select, textarea { font-size: 100%; margin: 0px; vertical-al=
+ign: baseline; }
+button, input { line-height: normal; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0px none; paddi=
+ng: 0px; }
+button, input[type=3D"button"], input[type=3D"reset"], input[type=3D"submit=
+"] { cursor: pointer; }
+body { background-color: rgb(255, 255, 255); margin: 0px; font-family: "Hel=
+vetica Neue",Helvetica,Arial,sans-serif; font-size: 13px; font-weight: norm=
+al; line-height: 18px; color: rgb(64, 64, 64); }
+.container { width: 940px; margin-left: auto; margin-right: auto; }
+.container::before, .container::after { display: table; content: ""; }
+.container::after { clear: both; }
+.container-fluid::before, .container-fluid::after { display: table; content=
+: ""; }
+.container-fluid::after { clear: both; }
+a { color: rgb(0, 105, 214); text-decoration: none; line-height: inherit;=
+ font-weight: inherit; }
+a:hover { color: rgb(0, 67, 138); text-decoration: underline; }
+.hide { display: none; }
+.row { margin-left: -20px; }
+.row::before, .row::after { display: table; content: ""; }
+.row::after { clear: both; }
+.row > [class*=3D"span"] { display: inline; float: left; margin-left: 20px;=
+ }
+.span16 { width: 940px; }
+.span-one-third { width: 300px; }
+p { font-size: 13px; font-weight: normal; line-height: 18px; margin-bottom:=
+ 9px; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; color: rgb(64, 64, 64); }
+h1 { margin-bottom: 18px; font-size: 30px; line-height: 36px; }
+h2 { font-size: 24px; line-height: 36px; }
+h3, h4, h5, h6 { line-height: 36px; }
+h3 { font-size: 18px; }
+h4 { font-size: 16px; }
+ul, ol { margin: 0px 0px 18px 25px; }
+ul { list-style: outside none disc; }
+ol { list-style: outside none decimal; }
+li { line-height: 18px; color: rgb(128, 128, 128); }
+strong { font-style: inherit; font-weight: bold; }
+blockquote small::before { content: "=E2=80=94=C2=A0"; }
+code, pre { padding: 0px 3px 2px; font-family: Monaco,Andale Mono,Courier=
+ New,monospace; font-size: 12px; border-radius: 3px; }
+code { background-color: rgb(254, 233, 204); color: rgba(0, 0, 0, 0.75); pa=
+dding: 1px 3px; }
+pre { background-color: rgb(245, 245, 245); display: block; padding: 8.5px;=
+ margin: 0px 0px 18px; line-height: 18px; font-size: 12px; border: 1px soli=
+d rgba(0, 0, 0, 0.15); border-radius: 3px; white-space: pre-wrap; word-wrap=
+: break-word; }
+form .clearfix::before, form .clearfix::after { display: table; content: ""=
+; }
+form .clearfix::after { clear: both; }
+:-moz-placeholder { color: rgb(191, 191, 191); }
+table { width: 100%; margin-bottom: 18px; padding: 0px; font-size: 13px; bo=
+rder-collapse: collapse; }
+table th, table td { padding: 10px 10px 9px; line-height: 18px; text-align:=
+ left; }
+table th { padding-top: 9px; font-weight: bold; vertical-align: middle; }
+table td { vertical-align: top; border-top: 1px solid rgb(221, 221, 221);=
+ }
+.zebra-striped tbody tr:nth-child(2n+1) td, .zebra-striped tbody tr:nth-chi=
+ld(2n+1) th { background-color: rgb(249, 249, 249); }
+.zebra-striped tbody tr:hover td, .zebra-striped tbody tr:hover th { backgr=
+ound-color: rgb(245, 245, 245); }
+table .header { cursor: pointer; }
+table .header::after { content: ""; float: right; margin-top: 7px; border-w=
+idth: 0px 4px 4px; border-style: solid; border-color: rgb(0, 0, 0) transpar=
+ent; visibility: hidden; }
+table .headerSortUp, table .headerSortDown { background-color: rgba(141, 19=
+2, 219, 0.25); text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75); }
+table .header:hover::after { visibility: visible; }
+table .headerSortDown::after, table .headerSortDown:hover::after { visibili=
+ty: visible; opacity: 0.6; }
+table .headerSortUp::after { border-width: 4px 4px medium; border-style: so=
+lid solid none; border-color: rgb(0, 0, 0) transparent -moz-use-text-color;=
+ visibility: visible; box-shadow: none; opacity: 0.6; }
+.topbar { height: 40px; position: fixed; top: 0px; left: 0px; right: 0px;=
+ z-index: 10000; overflow: visible; }
+.topbar a { color: rgb(191, 191, 191); text-shadow: 0px -1px 0px rgba(0, 0,=
+ 0, 0.25); }
+.topbar h3 a:hover, .topbar .brand:hover, .topbar ul .active > a { backgrou=
+nd-color: rgba(255, 255, 255, 0.05); color: rgb(255, 255, 255); text-decora=
+tion: none; }
+.topbar h3 a, .topbar .brand { float: left; display: block; padding: 8px 20=
+px 12px; margin-left: -20px; color: rgb(255, 255, 255); font-size: 20px; fo=
+nt-weight: 200; line-height: 1; }
+.topbar-inner, .topbar .fill { background-color: rgb(34, 34, 34); backgroun=
+d-repeat: repeat-x; background-image: -moz-linear-gradient(center top , rgb=
+(51, 51, 51), rgb(34, 34, 34)); box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25)=
+, 0px -1px 0px rgba(0, 0, 0, 0.1) inset; }
+.topbar div > ul, .nav { display: block; float: left; margin: 0px 10px 0px=
+ 0px; position: relative; left: 0px; }
+.topbar div > ul > li, .nav > li { display: block; float: left; }
+.topbar div > ul a, .nav a { display: block; float: none; padding: 10px 10p=
+x 11px; line-height: 19px; text-decoration: none; }
+.topbar div > ul a:hover, .nav a:hover { color: rgb(255, 255, 255); text-de=
+coration: none; }
+.topbar div > ul .active > a, .nav .active > a { background-color: rgba(0,=
+ 0, 0, 0.5); }
+a.menu::after, .dropdown-toggle::after { width: 0px; height: 0px; display:=
+ inline-block; content: "&darr;"; text-indent: -99999px; vertical-align: to=
+p; margin-top: 8px; margin-left: 4px; border-left: 4px solid transparent;=
+ border-right: 4px solid transparent; border-top: 4px solid rgb(255, 255,=
+ 255); opacity: 0.5; }
+.tabs::before, .pills::before, .tabs::after, .pills::after { display: table=
+; content: ""; }
+.tabs::after, .pills::after { clear: both; }
+.tabs a.menu::after, .tabs .dropdown-toggle::after { border-top-color: rgb(=
+153, 153, 153); margin-top: 15px; margin-left: 5px; }
+.tabs li.open a.menu::after, .tabs .dropdown.open .dropdown-toggle::after=
+ { border-top-color: rgb(85, 85, 85); }
+.hero-unit { background-color: rgb(245, 245, 245); margin-bottom: 30px; pad=
+ding: 60px; border-radius: 6px; }
+.hero-unit h1 { margin-bottom: 0px; font-size: 60px; line-height: 1; letter=
+-spacing: -1px; }
+.hero-unit p { font-size: 18px; font-weight: 200; line-height: 27px; }
+footer { margin-top: 17px; padding-top: 17px; border-top: 1px solid rgb(238=
+, 238, 238); }
+.page-header { margin-bottom: 17px; border-bottom: 1px solid rgb(221, 221,=
+ 221); box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.5); }
+.page-header h1 { margin-bottom: 8px; }
+.btn.danger, .alert-message.danger, .btn.danger:hover, .alert-message.dange=
+r:hover, .btn.error, .alert-message.error, .btn.error:hover, .alert-message=
+.error:hover, .btn.success, .alert-message.success, .btn.success:hover, .al=
+ert-message.success:hover, .btn.info, .alert-message.info, .btn.info:hover,=
+ .alert-message.info:hover { color: rgb(255, 255, 255); }
+.btn.danger, .alert-message.danger, .btn.error, .alert-message.error { back=
+ground-color: rgb(196, 60, 53); background-repeat: repeat-x; background-ima=
+ge: -moz-linear-gradient(center top , rgb(238, 95, 91), rgb(196, 60, 53));=
+ text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25); border-color: rgba(0, 0, 0,=
+ 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); }
+.btn { cursor: pointer; display: inline-block; background-color: rgb(230,=
+ 230, 230); background-repeat: no-repeat; background-image: linear-gradient=
+(rgb(255, 255, 255), rgb(255, 255, 255) 25%, rgb(230, 230, 230)); padding:=
+ 5px 14px 6px; text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75); color:=
+ rgb(51, 51, 51); font-size: 13px; line-height: normal; border-width: 1px;=
+ border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204)=
+ rgb(187, 187, 187); -moz-border-top-colors: none; -moz-border-right-colors=
+: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; bor=
+der-image: none; border-radius: 4px; box-shadow: 0px 1px 0px rgba(255, 255,=
+ 255, 0.2) inset, 0px 1px 2px rgba(0, 0, 0, 0.05); transition: all 0.1s lin=
+ear 0s; }
+.btn:hover { background-position: 0px -15px; color: rgb(51, 51, 51); text-d=
+ecoration: none; }
+.btn:focus { outline: 1px dotted rgb(102, 102, 102); }
+.btn.primary { color: rgb(255, 255, 255); background-color: rgb(0, 100, 205=
+); background-repeat: repeat-x; background-image: -moz-linear-gradient(cent=
+er top , rgb(4, 156, 219), rgb(0, 100, 205)); text-shadow: 0px -1px 0px rgb=
+a(0, 0, 0, 0.25); border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(=
+0, 0, 0, 0.25); }
+.btn.active, .btn:active { box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25) inse=
+t, 0px 1px 2px rgba(0, 0, 0, 0.05); }
+.btn.large { font-size: 15px; line-height: normal; padding: 9px 14px; borde=
+r-radius: 6px; }
+:root .alert-message, :root .btn {  }
+button.btn::-moz-focus-inner, input.btn[type=3D"submit"]::-moz-focus-inner=
+ { padding: 0px; border: 0px none; }
+.close { float: right; color: rgb(0, 0, 0); font-size: 20px; font-weight:=
+ bold; line-height: 13.5px; text-shadow: 0px 1px 0px rgb(255, 255, 255); op=
+acity: 0.25; }
+.close:hover { color: rgb(0, 0, 0); text-decoration: none; opacity: 0.4; }
+.modal { position: fixed; top: 50%; left: 50%; z-index: 11000; width: 560px=
+; margin: -250px 0px 0px -280px; background-color: rgb(255, 255, 255); bord=
+er: 1px solid rgba(0, 0, 0, 0.3); border-radius: 6px; box-shadow: 0px 3px=
+ 7px rgba(0, 0, 0, 0.3); background-clip: padding-box; }
+.modal .close { margin-top: 7px; }
+.modal.fade { transition: opacity 0.3s linear 0s, top 0.3s ease-out 0s; top=
+: -25%; }
+.modal-header { border-bottom: 1px solid rgb(238, 238, 238); padding: 5px=
+ 15px; }
+.modal-body { padding: 15px; }
+.modal-footer::before, .modal-footer::after { display: table; content: ""; }
+.modal-footer::after { clear: both; }
+.fade { transition: opacity 0.15s linear 0s; opacity: 0; }
+.media-grid::before, .media-grid::after { display: table; content: ""; }
+.media-grid::after { clear: both; }
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-858C8DD3:http://highcharttable.org/css/main.css
+
+/* Effective stylesheet produced by snapshot save */
+section { padding-top: 60px; }
+.hero-unit { background: rgb(221, 221, 221) url("http://highcharttable.org/=
+images/logo.png") no-repeat scroll 40px center; padding: 50px 50px 50px 200=
+px; margin: 60px 0px 0px; }
+.hero-unit h1 { margin-bottom: 10px; font-size: 54px; text-shadow: 2px 2px=
+ 2px rgba(0, 0, 0, 0.5); }
+.contribute { position: absolute; top: 40px; right: 0px; border: medium non=
+e; }
+section section { padding-top: 10px; }
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://highcharttable.org/images/logo.png
+
+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
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-36F016FC:http://highcharttable.org/css/prettify.css
+
+/* Effective stylesheet produced by snapshot save */
+.pln { color: rgb(0, 0, 0); }
+@media screen {
+  .str { color: rgb(0, 136, 0); }
+  .kwd { color: rgb(0, 0, 136); }
+  .pun, .opn, .clo { color: rgb(102, 102, 0); }
+  .tag { color: rgb(0, 0, 136); }
+  .atn { color: rgb(102, 0, 102); }
+  .atv { color: rgb(0, 136, 0); }
+}
+@media print, projection {
+  .str { color: rgb(0, 102, 0); }
+  .kwd { color: rgb(0, 0, 102); font-weight: bold; }
+  .pun, .opn, .clo { color: rgb(68, 68, 0); }
+  .tag { color: rgb(0, 0, 102); font-weight: bold; }
+  .atn { color: rgb(68, 0, 68); }
+  .atv { color: rgb(0, 102, 0); }
+}
+pre.prettyprint { padding: 2px; border: 1px solid rgb(136, 136, 136); }
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: image/x-icon
+Content-Transfer-Encoding: base64
+Content-Location: http://highcharttable.org/images/favicon.ico
+
+AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEA
+AAAAAAD7+/sAxLORAExk7wCzgj4AAM+aAE6p9QDrsl8AkJKUAHyF1gCVlJAA+/v6ANvb2wDlqkYA
+wsLCAF1w+AAzlmkA0tfUAMOykQCXkpMA7e3sANbW1gDIoVUA1NnWAD1W7QDEuJ8A2NjYAOu+cwAv
+kvcAv7+/ANra2gAlomEA5K1RAMKSVwAxMeYAsJ5zAAu4fABMWtAAgKGSANy4YgChcSwA/fntANzc
+3ADgx6IAEA/YAO7u7gDOolEAr6+uANfKrwDP2dMAN9CyAOHMsgDl5eQACtSfAP3y2ADFtpkAyKJW
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKQgACikpKSkpKTQEIikpKSkzEywp
+KSkpKSkeBh8pKSkpHS8wKSkpKSkpFxotKSkpKSkpKSMLKSkLIykpKSkpKSkpKSkpNjcVGCkpKSkp
+KSkpKSkpKREyKBEpKSkpKSkpKSkpKSkBKjUBKSkpKSkpKSkpKSkPGSkpKSUpKSkpKSkpEgkHECkp
+KSkWHA0pKSkpKTEODCkpKSkpKRsFLikpKSkpAiYpKSkpKSknAyApKSkpKSQpKSkpKSkpKyEUKSkp
+KSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKSkpKQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-DC351264:http://www.google-analytics.com/analytics.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: text/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-6E493026:http://box.anchorfree.net/insert/insert.php?sn=HSSHIELD00FR&ch=HSSCNL100395&v=6231615266&b=f&ver=nonus&afver=5.4.0
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-8234CDDB:http://highcharttable.org/js/jquery.min.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-2F0D6EEB:http://highcharttable.org/js/prettify.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-7A04170F:http://highcharttable.org/js/bootstrap-scrollspy.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-F07F641D:http://highcharttable.org/js/bootstrap-modal.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-BD2A7757:http://highcharttable.org/js/highcharts.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-53C828F1:http://code.highcharttable.org/master/jquery.highchartTable-min.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-57A084E9:http://highcharttable.org/js/jquery.tablesorter.min.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360
+Content-Type: application/x-javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: urn:snapshot-F84EB33B:http://highcharttable.org/js/main.js
+
+/* Script removed by snapshot save */
+
+------=_NextPart_000_0000_B0E0266F.E2501360--

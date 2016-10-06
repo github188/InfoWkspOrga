@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+>
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sgu.project</groupId>
+		<artifactId>main-project-pom</artifactId>
+		<version>3.0.0</version>
+		<!-- projectmanager.version -->
+		<relativePath>../../../pom.xml</relativePath>
+	</parent>
+
+	<groupId>com.sgu.infowksporga</groupId>
+	<artifactId>infowksporga-app</artifactId>
+	<version>1.0.0</version>
+	<name>Information Workspace Organizer Application (JavaFX)</name>
+	<description>This application allow to access Information Workspace Organizer Application</description>
+	<organization>
+		<name>SGU</name>
+		<url>http://www.sgu.fr</url>
+	</organization>
+	
+	
+	<properties>
+		<jide.version>3.5.12</jide.version> <!-- prev 3.3.4 -->
+		<rsyntaxtextarea.version>2.5.1</rsyntaxtextarea.version>
+		<rsyntaxtextarea.autocomplete.version>2.0.0</rsyntaxtextarea.autocomplete.version>
+		<infonode.version>1.6.1</infonode.version>
+		<mig.layout.version>4.2</mig.layout.version>
+		<l2fprod.version>6.9.1</l2fprod.version>
+		<vsfFileChooser.version>0.2.3</vsfFileChooser.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.sgu.framework</groupId>
+			<artifactId>fwk-javafx</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sgu.infowksporga</groupId>
+			<artifactId>common</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sgu.framework</groupId>
+			<artifactId>apt-core</artifactId>
+			<version>3.0.0</version>
+		</dependency>
+		
+	</dependencies>	
+		
+	<build>
+		<plugins>
+			<!--
+
+				<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>webstart-maven-plugin</artifactId>
+				<version>${webstart-maven-plugin.version}</version>
+				<executions>
+				<execution>
+				<phase>package</phase>
+				<goals>
+				<goal>jnlp-single</goal> use jnlp, jnlp-inline or jnlp-single as appropriate
+				</goals>
+				</execution>
+				</executions>
+				<configuration>
+				<jnlp>
+				<inputTemplate>src/main/jnlp/resources/template.vm</inputTemplate>
+				<mainClass>com.sgu.infowksporga.jws.InfoWkspOrgaFrame</mainClass>
+				<outputFile>application-jnlp.jsp</outputFile>
+				</jnlp>
+
+				<sign>
+
+				<keystore>InfoWkspOrgaFrame</keystore>
+				<keypass>password</keypass>
+				<storepass>password</storepass>
+				<alias>sgu_project_manager</alias>
+				<validity>${signing.validity}</validity>
+				<dnameCn>${signing.dname.cn}</dnameCn>
+				<dnameOu>${signing.dname.ou}</dnameOu>
+				<dnameO>${signing.dname.o}</dnameO>
+				<dnameL>${signing.dname.l}</dnameL>
+				<dnameSt>${signing.dname.st}</dnameSt>
+				<dnameC>${signing.dname.c}</dnameC>
+
+				<verify>true</verify>
+				<keystoreConfig>
+				<delete>false</delete>
+				<gen>true</gen>
+				</keystoreConfig>
+				</sign>
+
+				<verbose>${signing.verbose}</verbose>
+				</configuration>
+				</plugin>
+
+
+				<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>${maven-antrun-plugin.version}</version>
+				<executions>
+				<execution>
+				<id>01</id>
+				<phase>generate-resources</phase>
+				<configuration>
+				<tasks>
+				<echo message="copy-files-${env-liv}" />
+				<ant antfile="build.xml" target="copy-files-${env-liv}" />
+				</tasks>
+				</configuration>
+				<goals>
+				<goal>run</goal>
+				</goals>
+				</execution>
+
+				<execution>
+				<id>02</id>
+				<phase>install</phase>
+				<configuration>
+				<target>
+				<ant antfile="build.xml" target="copy-application-to-JWS-webapp" />
+				<ant antfile="build.xml" target="copy-files-env-local" />
+				</target>
+				</configuration>
+				<goals>
+				<goal>run</goal>
+				</goals>
+				</execution>
+				</executions>
+				</plugin>
+			-->
+
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-antrun-plugin</artifactId>
+										<versionRange>[1.7,)</versionRange>
+										<goals>
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	
+</project>

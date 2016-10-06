@@ -1,0 +1,4 @@
+.digital-clock {
+    -fx-text-fill: blue;
+    -fx-padding: 4px 2px 3px 5px;
+}

@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.sgu.project</groupId>
+    <artifactId>main-project-pom</artifactId>
+    <version>1.0.0</version>
+    <!-- projectmanager.version -->
+    <relativePath>../00-parent/pom.xml</relativePath>
+  </parent>
+  
+  <groupId>com.sgu.projectmanager</groupId>
+  <artifactId>projectmanager-parent</artifactId>
+  <packaging>pom</packaging>
+  <name>SGU Project Manager Parent POM</name>
+  <description>This pom is used to build SGU Project Manager</description>
+  
+  
+  <profiles>
+    <profile>
+      <id>build-app-swing</id>
+      <modules>
+        <module>Common/Project-Manager-Common</module>
+        <module>Common/Project-Manager-Drools</module>
+        
+        <module>Business/Project-Manager-Biz</module>
+        
+        <module>Biz-Webapp/Project-Manager-Biz-SharedLib</module>
+        <module>Biz-Webapp/Project-Manager-Biz-Webapp</module>
+        
+        <module>Swing-Client/Project-Manager-Swing-Jws</module>
+        
+        <module>Prez-Webapp/Project-Manager-Prez-SharedLib</module>
+        <module>Prez-Webapp/Project-Manager-Prez-Webapp</module>
+      </modules>
+    </profile>
+    
+    <profile>
+      <id>build-app-swt</id>
+      <modules>
+        <module>Common/Project-Manager-Common</module>
+        <module>Common/Project-Manager-Drools</module>
+        
+        <module>Business/Project-Manager-Biz</module>
+        
+        <module>Biz-Webapp/Project-Manager-Biz-SharedLib</module>
+        <module>Biz-Webapp/Project-Manager-Biz-Webapp</module>
+        
+        <module>SWT-Client/Project-Manager-Swing-Jws</module>
+        
+        <module>Prez-Webapp/Project-Manager-Prez-SharedLib</module>
+        <module>Prez-Webapp/Project-Manager-Prez-Webapp</module>
+      </modules>
+    </profile>
+  </profiles>
+  
+</project>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Contient l'ensemble des requetes SQL utilisee
+	par le DAO implemententant l'interface IWorkspaceDao.
+-->
+<sql-root>
+
+	<query name="CREATE_WORKSPACE">
+  <![CDATA[
+     INSERT INTO workspace (CODE, VISIBILITY, TYPE, PROJECT_CODE, LAYOUT, ACCESS, USERCRE, DATCRE, USERMAJ, DATMAJ)
+                    VALUES (?,    ?,          ?,    ?,            ?,      ?,      ?,      ?,       ?,      ?      )
+  ]]>
+	</query>
+
+	<query name="DELETE_WORKSPACE_WHITHOUT_CODE_PROJECT">
+  <![CDATA[
+     DELETE FROM workspace
+            WHERE CODE = ? AND VISIBILITY = ? AND TYPE = ? AND PROJECT_CODE is NULL
+  ]]>
+	</query>
+
+	<query name="DELETE_WORKSPACE_WHITH_CODE_PROJECT">
+  <![CDATA[
+     DELETE FROM workspace
+            WHERE CODE = ? AND VISIBILITY = ? AND TYPE = ? AND PROJECT_CODE = ?
+  ]]>
+	</query>
+
+	<query name="DELETE_WORKSPACES_WHITH_CODE_PROJECT">
+  <![CDATA[
+     DELETE FROM workspace
+            WHERE VISIBILITY = ? AND TYPE = ? AND PROJECT_CODE = ?
+  ]]>
+	</query>
+
+
+	<query name="UPDATE_WORKSPACE_WHITHOUT_CODE_PROJECT">
+  <![CDATA[
+     UPDATE workspace set USERMAJ = ?, DATMAJ = ?, LAYOUT = ?, ACCESS = ?
+            WHERE CODE = ? AND VISIBILITY = ?  AND TYPE = ?
+  ]]>
+	</query>
+
+	<query name="UPDATE_WORKSPACE_WHITH_CODE_PROJECT">
+  <![CDATA[
+     UPDATE workspace set USERMAJ = ?, DATMAJ = ?, LAYOUT = ?, ACCESS = ?
+            WHERE CODE = ?  AND VISIBILITY = ? AND TYPE = ? AND PROJECT_CODE = ?
+  ]]>
+	</query>
+
+	<query name="UPDATE_WORKSPACES_VISIBILITY_FOR_CODE_PROJECT">
+  <![CDATA[
+     UPDATE workspace set VISIBILITY = ?
+            WHERE  VISIBILITY = ? AND PROJECT_CODE = ?
+  ]]>
+	</query>
+
+
+</sql-root>

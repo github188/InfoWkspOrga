@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>SNCF - CDS-SP - Centralisation et priorisation des demandes</title>
+<link rel="icon" type="image/png" href="images/customer/SNCF.png" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#3F51B5">
+<meta charset="utf-8" />
+
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/css/primefaces-ultima-indigo.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/fa/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/css/components.css">
+
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/jquery/jquery.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/js/components.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/jquery/jquery-ui-plugins.js"></script>
+
+
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/css/nanoscroller.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/css/animate.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/css/ripple.css">
+<link type="text/css" rel="stylesheet" href="../lib/prime-ui/layout/ultima/css/layout-indigo.css">
+
+
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/js/nanoscroller.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/js/ripple.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/js/swipe.js"></script>
+
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/js/core.js"></script>
+<script type="text/javascript" src="../lib/prime-ui/layout/ultima/js/layout.js"></script>
+
+
+
+<link rel="stylesheet" type="text/css" href="sncf/cds-sp/pilotConsole.css">
+
+
+
+
+<script src="../lib/utilApp.js">
+	
+</script>
+
+
+
+
+<!--  script data-main="sncf/cds-sp/main" src="../lib/requirejs/require.js">
+	//main.js est chargé automatiquement grâce à l'attribut data-main dans la balise script de require.js
+</script>
+ -->
+
+
+</head>
+
+<body class="main-body layout-compact">
+
+	<div class="layout-wrapper menu-layout-static">
+
+		<div class="topbar clearfix">
+			<div class="topbar-left">
+				<div class="logo">
+
+					<span class="logo-gfi"><span class="bu-gfi">CDSSP</span> </span>
+
+
+				</div>
+			</div>
+
+			<div class="topbar-right">
+				<a id="menu-button" href="#"> <i></i>
+				</a> <a id="topbar-menu-button" href="#"> <i class="material-icons">menu</i>
+				</a>
+
+				<div class="app-title">Gestion des Demandes</div>
+
+				<ul class="topbar-items fadeInDown animated">
+
+					<li><a href="#"> <i class="topbar-icon material-icons animated swing">settings</i> <span class=""></span> <span
+							class="topbar-item-name">Configuration</span>
+					</a>
+						<ul class="ultima-menu animated">
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">menu</i><span>Static Menu</span></a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">exit_to_app</i><span>Overlay Menu</span> </a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">border_horizontal</i><span>Horizontal
+										Menu</span></a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">contacts</i><span>Inline Profile</span> </a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">person_pin</i><span>Top Profile</span> </a></li>
+						</ul></li>
+
+
+					<li><a href="#"> <i class="topbar-icon material-icons animated swing"></i> <span class="topbar-badge animated rubberBand">5</span>
+							<span class="topbar-item-name">Messages</span>
+					</a>
+						<ul class="ultima-menu animated">
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">alarm</i> <span>ARS - 5612</span> </a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">help</i> <span>MAIA - 2312</span> </a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">feedback</i> <span>ARS - 9612</span></a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">lock</i> <span>CARS - 6362</span> </a></li>
+							<li role="menuitem"><a href="#" class="topbar-message"><i class="material-icons">phone</i> <span>01 25 26 32 12</span> </a></li>
+						</ul></li>
+
+
+					<li><a href="#"> <i class="topbar-icon material-icons"></i> <span class="topbar-badge animated rubberBand">4</span> <span
+							class="topbar-item-name">Demandes à qualifier</span>
+					</a></li>
+
+				</ul>
+
+
+			</div>
+		</div>
+		<form id="menuform" name="menuform" method="post" action="/ultima/dashboard.xhtml" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="menuform" value="menuform" />
+
+			<div class="layout-menu ">
+				<div class="nano">
+					<div class="nano-content menu-scroll-content">
+						<div class="profile">
+							<div class="profile-image"></div>
+							<a id="profile-options" href="#"> <span class="profile-name">Sébastien Guisse</span> <i class="material-icons"></i>
+							</a>
+						</div>
+
+						<ul id="profile-menu" class="ultima-menu">
+							<li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">person</i> <span>Profile</span>
+							</a></li>
+							<li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">security</i> <span>Privacy</span>
+							</a></li>
+							<li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">settings_application</i> <span>Settings</span>
+							</a></li>
+							<li role="menuitem"><a href="#" class="ripplelink"> <i class="material-icons">power_settings_new</i> <span>Logout</span>
+							</a></li>
+						</ul>
+						<ul id="menuform:main_menu" class="ultima-menu clearfix">
+							<li id="menuform:um_dashboard" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons"></i><span>Dashboard</span></a></li>
+
+							<li id="menuform:um_so_planning" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">map</i><span>So
+										Planning</span></a></li>
+
+							<li id="menuform:um_skills" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">lightbulb_outline</i><span>Compétences</span></a></li>
+
+							<li id="menuform:um_matrics" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">grid_on</i><span>Matrice</span></a></li>
+
+							<li id="menuform:um_utils" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">build</i><span>Utils</span></a></li>
+
+							<li id="menuform:um_reports" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">description</i><span>Reports</span><span
+									class="ink animate"></span><i class="material-icons">&#xE313;</i></a>
+								<ul role="menu">
+									<li id="menuform:um_reports_01" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">assessment</i><span>Report
+												01</span></a></li>
+									<li id="menuform:um_reports_02" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">input</i><span>Report
+												02</span></a></li>
+									<li id="menuform:um_reports_03" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">grid_on</i><span>Report
+												03</span></a></li>
+								</ul></li>
+
+							<li id="menuform:um_doc" role="menuitem"><a href="#" class="ripplelink"><i class="material-icons">find_in_page</i><span>Documentation</span></a></li>
+						</ul>
+
+						<script id="menuform:main_menu_s" type="text/javascript">
+							PrimeFaces.cw("Ultima", "me", {
+	              id : "menuform:main_menu"
+              });
+						</script>
+
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+		<div class="layout-main">
+			<div class="ui-g dashboard">
+
+
+				<div class="ui-g-12 ui-md-6 ui-lg-3">
+					<div class="ui-g card colorbox colorbox-1">
+						<div class="ui-g-4">
+							<i class="material-icons">check_circle</i>
+						</div>
+						<div class="ui-g-8">
+							<span class="colorbox-name">En attente de Clôture</span> <span class="colorbox-count">23</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-6 ui-lg-3">
+					<div class="ui-g card colorbox colorbox-2">
+						<div class="ui-g-4">
+							<i class="material-icons">shopping_card</i>
+						</div>
+						<div class="ui-g-8">
+							<span class="colorbox-name">En cours</span> <span class="colorbox-count">30</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-6 ui-lg-3">
+					<div class="ui-g card colorbox colorbox-3">
+						<div class="ui-g-4">
+							<i class="material-icons">assignment_late</i>
+						</div>
+						<div class="ui-g-8">
+							<span class="colorbox-name">Priorité 1</span> <span class="colorbox-count">5</span>
+						</div>
+					</div>
+				</div>
+				<div class="ui-g-12 ui-md-6 ui-lg-3">
+					<div class="ui-g card colorbox colorbox-4">
+						<div class="ui-g-4" style="background: #e51616 none repeat scroll 0 0">
+							<i class="material-icons">alarm_on</i>
+						</div>
+						<div class="ui-g-8" style="background: #ff6666 none repeat scroll 0 0">
+							<span class="colorbox-name">Hors Délai</span> <span class="colorbox-count">2</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer">
+				<div class="card clearfix">
+					<span class="footer-text-left">GFI Informatique</span> <span class="footer-text-right"><span class="ui-icon ui-icon-copyright"></span>
+						<span>All Rights Reserved</span></span>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+</body>
+
+
+
+
+
+</html>

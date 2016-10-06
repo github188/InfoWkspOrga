@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ******************************************* -->
+<!-- To convert this XML to JSON : -->
+<!-- http://www.utilities-online.info/xmltojson/ -->
+<!-- ******************************************* -->
+
+<planning-data>
+
+  <planning-wbs>
+      <total>200</total>
+      <!-- "row" attribute is used to order rowss as they are displayed on screen -->
+      <rows id="0" name="Projet CAPLA" type="recap" charge="" jalon="" resource="ango-xuan-coi"  row="0"/>
+      <rows id="1" name="Pilotage" type="recap" charge="" jalon="" resource="cdelrue" _parentId="0" row="1"/>
+      <rows id="2" name="Suivi" type="" charge="" jalon="" resource="mnezzari" _parentId="1" row="2"/>
+      <rows id="3" name="Réunion" type="" charge="" jalon="" resource="mnezzari" _parentId="1" row="3"/>
+      <rows id="4" name="Conception" type="recap" charge="" jalon="" resource="fdaugan" _parentId="0" row="4"/>
+      <rows id="5" name="Cpt. Fonctionnelle" type="" charge="" jalon="" resource="sguisse" _parentId="4" row="5"/>
+      <rows id="6" name="Cpt. Technique" type="" charge="" jalon="" resource="hsouala" _parentId="4" row="6"/>
+      <rows id="7" name="Developpement" type="recap" charge="" jalon="" resource="hsouala" _parentId="0" row="7"/>
+      <rows id="8" name="Lot 1" type="" charge="" jalon="" resource="cdelrue" _parentId="7" row="8"/>
+      <rows id="9" name="Lot 2" type="" charge="" jalon="" resource="pcieslar" _parentId="7" row="9"/>
+      <rows id="10" name="Tests" type="recap" charge="" jalon="" resource="pcieslar" _parentId="0" row="10"/>
+      <rows id="11" name="Intégration" type="" charge="" jalon="" resource="mmoiroux" _parentId="10" row="11"/>
+      <rows id="12" name="Livraison" type="" charge="" jalon="" resource="mmoiroux" _parentId="10" row="12"/>
+      <rows id="13" name="Recette" type="recap" charge="" jalon="" resource="mnezzari" _parentId="0" row="13"/>
+      <rows id="14" name="Retours client" type="" charge="" jalon="" resource="mnezzari" _parentId="13" row="14"/>
+      <rows id="15" name="Evolutions" type="" charge="" jalon="" resource="sguisse" _parentId="13" row="15"/>
+      <rows id="16" name="Garantie" type="recap" charge="" jalon="" resource="sguisse" _parentId="0" row="16"/>
+      <rows id="17" name="Retours client" type="recap" charge="" jalon="" resource="sguisse" _parentId="16" row="17"/>
+      <rows id="18" name="Evolutions" type="" charge="" jalon="" resource="sguisse" _parentId="17" row="18"/>
+
+      <rows id="19" name="Task N° 19" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="20" name="Task N° 20" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="21" name="Task N° 21" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="22" name="Task N° 22" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="23" name="Task N° 23" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="24" name="Task N° 24" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="25" name="Task N° 25" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="26" name="Task N° 26" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="27" name="Task N° 27" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="28" name="Task N° 28" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="29" name="Task N° 29" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="30" name="Task N° 30" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="31" name="Task N° 31" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="32" name="Task N° 32" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="33" name="Task N° 33" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="34" name="Task N° 34" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="35" name="Task N° 35" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="36" name="Task N° 36" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="37" name="Task N° 37" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="38" name="Task N° 38" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="39" name="Task N° 39" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="40" name="Task N° 40" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="41" name="Task N° 41" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="42" name="Task N° 42" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="43" name="Task N° 43" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="44" name="Task N° 44" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="45" name="Task N° 45" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="46" name="Task N° 46" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="47" name="Task N° 47" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="48" name="Task N° 48" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="49" name="Task N° 49" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="50" name="Task N° 50" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="51" name="Task N° 51" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="52" name="Task N° 52" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="53" name="Task N° 53" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="54" name="Task N° 54" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="55" name="Task N° 55" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="56" name="Task N° 56" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="57" name="Task N° 57" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="58" name="Task N° 58" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="59" name="Task N° 59" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="60" name="Task N° 60" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="61" name="Task N° 61" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="62" name="Task N° 62" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="63" name="Task N° 63" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="64" name="Task N° 64" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="65" name="Task N° 65" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="66" name="Task N° 66" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="67" name="Task N° 67" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="68" name="Task N° 68" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="69" name="Task N° 69" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="70" name="Task N° 70" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="71" name="Task N° 71" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="72" name="Task N° 72" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="73" name="Task N° 73" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="74" name="Task N° 74" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="75" name="Task N° 75" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="76" name="Task N° 76" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="77" name="Task N° 77" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="78" name="Task N° 78" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="79" name="Task N° 79" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="80" name="Task N° 80" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="81" name="Task N° 81" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="82" name="Task N° 82" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="83" name="Task N° 83" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="84" name="Task N° 84" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="85" name="Task N° 85" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="86" name="Task N° 86" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="87" name="Task N° 87" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="88" name="Task N° 88" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="89" name="Task N° 89" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="90" name="Task N° 90" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="91" name="Task N° 91" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="92" name="Task N° 92" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="93" name="Task N° 93" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="94" name="Task N° 94" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="95" name="Task N° 95" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="96" name="Task N° 96" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="97" name="Task N° 97" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="98" name="Task N° 98" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="99" name="Task N° 99" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="100" name="Task N° 100" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="101" name="Task N° 101" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="102" name="Task N° 102" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="103" name="Task N° 103" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="104" name="Task N° 104" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="105" name="Task N° 105" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="106" name="Task N° 106" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="107" name="Task N° 107" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="108" name="Task N° 108" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="109" name="Task N° 109" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="110" name="Task N° 110" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="111" name="Task N° 111" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="112" name="Task N° 112" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="113" name="Task N° 113" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="114" name="Task N° 114" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="115" name="Task N° 115" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="116" name="Task N° 116" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="117" name="Task N° 117" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="118" name="Task N° 118" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="119" name="Task N° 119" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="120" name="Task N° 120" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="121" name="Task N° 121" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="122" name="Task N° 122" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="123" name="Task N° 123" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="124" name="Task N° 124" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="125" name="Task N° 125" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="126" name="Task N° 126" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="127" name="Task N° 127" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="128" name="Task N° 128" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="129" name="Task N° 129" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="130" name="Task N° 130" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="131" name="Task N° 131" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="132" name="Task N° 132" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="133" name="Task N° 133" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="134" name="Task N° 134" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="135" name="Task N° 135" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="136" name="Task N° 136" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="137" name="Task N° 137" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="138" name="Task N° 138" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="139" name="Task N° 139" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="140" name="Task N° 140" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="141" name="Task N° 141" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="142" name="Task N° 142" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="143" name="Task N° 143" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="144" name="Task N° 144" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="145" name="Task N° 145" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="146" name="Task N° 146" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="147" name="Task N° 147" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="148" name="Task N° 148" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="149" name="Task N° 149" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="150" name="Task N° 150" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="151" name="Task N° 151" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="152" name="Task N° 152" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="153" name="Task N° 153" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="154" name="Task N° 154" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="155" name="Task N° 155" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="156" name="Task N° 156" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="157" name="Task N° 157" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="158" name="Task N° 158" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="159" name="Task N° 159" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="160" name="Task N° 160" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="161" name="Task N° 161" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="162" name="Task N° 162" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="163" name="Task N° 163" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="164" name="Task N° 164" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="165" name="Task N° 165" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="166" name="Task N° 166" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="167" name="Task N° 167" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="168" name="Task N° 168" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="169" name="Task N° 169" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="170" name="Task N° 170" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="171" name="Task N° 171" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="172" name="Task N° 172" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="173" name="Task N° 173" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="174" name="Task N° 174" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="175" name="Task N° 175" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="176" name="Task N° 176" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="177" name="Task N° 177" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="178" name="Task N° 178" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="179" name="Task N° 179" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="180" name="Task N° 180" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="181" name="Task N° 181" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="182" name="Task N° 182" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="183" name="Task N° 183" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="184" name="Task N° 184" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="185" name="Task N° 185" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="186" name="Task N° 186" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="187" name="Task N° 187" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="188" name="Task N° 188" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="189" name="Task N° 189" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="190" name="Task N° 190" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="191" name="Task N° 191" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="192" name="Task N° 192" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="193" name="Task N° 193" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="194" name="Task N° 194" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="195" name="Task N° 195" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="196" name="Task N° 196" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="197" name="Task N° 197" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="198" name="Task N° 198" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="199" name="Task N° 199" type="" charge="" jalon="" resource=""  row="" />
+      <rows id="200" name="Task N° 200" type="" charge="" jalon="" resource=""  row="" />
+
+  </planning-wbs>
+
+  <!-- ******************************************* -->
+  <!-- To convert this XML to JSON : -->
+  <!-- http://www.utilities-online.info/xmltojson/ -->
+  <!-- ******************************************* -->
+
+  <planning-calendar>
+    <affectation>
+      <task id="2">
+        <day date="04/01/2016" charge-planif="0,75" background-color="#950000" />
+        <day date="05/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="06/01/2016" charge-planif="1" background-color="#950000" />
+      </task>
+      <task id="3">
+        <day date="04/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="05/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="06/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="07/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="08/07/2016" charge-planif="1" background-color="#950000" />
+      </task>
+      <task id="4">
+        <day date="04/02/2017" charge-planif="1" background-color="#950000" />
+        <day date="05/03/2017" charge-planif="1" background-color="#950000" />
+        <day date="06/04/2017" charge-planif="1" background-color="#950000" />
+        <day date="07/05/2017" charge-planif="1" background-color="#950000" />
+        <day date="08/06/2017" charge-planif="1" background-color="#950000" />
+      </task>
+    </affectation>
+  </planning-calendar>
+
+</planning-data>   

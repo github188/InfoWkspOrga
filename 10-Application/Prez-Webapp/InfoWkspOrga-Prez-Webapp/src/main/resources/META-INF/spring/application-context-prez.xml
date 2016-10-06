@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:remote="http://www.sgu.fr/schema/remote"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.sgu.fr/schema/remote http://www.sgu.fr/schema/remote/sgu-spring-remote.xsd ">
+
+  <!-- Define the remote access service to get Spring config informations
+       accessed from JWS application
+    -->
+    
+  <bean id="GetRemoteSpringObjectService" class="com.sgu.infowksporga.spring.tool.GetRemoteSpringObjectService"/>
+    
+  <bean name="/IGetRemoteSpringObjectService"
+    class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
+    <property name="service" ref="GetRemoteSpringObjectService" />
+    <property name="serviceInterface" value="com.sgu.core.framework.spring.service.remote.IGetRemoteSpringObjectService" />
+  </bean>
+
+
+  <!-- This Spring context contain all needed bean used by JWS application
+       to initialize the application
+
+       These beans are accessed from remote service 'SpringObjectFinderService'
+       -->
+
+  <bean name="propertyPlaceholder"
+    class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="properties" ref="prez.properties" />
+  </bean>
+  
+  <bean id="prez.properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+    <property name="locations">
+      <list>
+        <value>classpath:META-INF/spring/presentation.properties</value>
+				<value>classpath:spring/server-localization.properties</value>
+			</list>
+    </property>
+  </bean>
+  
+  <!-- 
+  
+  Other examples for remote call
+  
+  <bean id="Application.Name" class="java.lang.String">
+    <constructor-arg index="0" value="${application.name}" />
+  </bean>
+
+  <bean id="Application.Version" class="java.lang.String">
+    <constructor-arg index="0" value="${application.version}" />
+  </bean>
+  
+  <bean id="Application.LookAndFeel.file"
+    class="com.sgu.core.framework.util.Properties">
+    <constructor-arg index="0" value="/lookAndFeel-Style.properties" />
+  </bean>
+
+  <bean id="Application.menu.file"
+    class="com.sgu.core.framework.util.ClasspathFileWithContent">
+    <constructor-arg index="0" value="menu-application.xml" />
+  </bean>
+  
+  -->
+  
+
+</beans>

@@ -1,0 +1,134 @@
+{
+    "planning-data": {
+        "planning-wbs": {
+            "total": "4",
+            "rows": [
+                {
+                    "id": "1",
+                    "name": "Projet CAPLA",
+                    "type": "recap",
+                    "charge": "",
+                    "jalon": "",
+                    "resource": "ango-xuan-coi",
+                    "row": "1"
+                },
+                {
+                    "id": "2",
+                    "name": "Pilotage",
+                    "type": "recap",
+                    "charge": "",
+                    "jalon": "",
+                    "resource": "cdelrue",
+                    "_parent": "1",
+                    "row": "2"
+                },
+                {
+                    "id": "3",
+                    "name": "Suivi",
+                    "type": "",
+                    "charge": "",
+                    "jalon": "",
+                    "resource": "mnezzari",
+                    "_parent": "2",
+                    "row": "3"
+                },
+                {
+                    "id": "4",
+                    "name": "Réunion",
+                    "type": "",
+                    "charge": "",
+                    "jalon": "",
+                    "resource": "mmoiroux",
+                    "_parent": "2",
+                    "row": "4"
+                }
+            ]
+        },
+        "planning-calendar": {
+            "affectation": {
+                "task": [
+                    {
+                        "day": [
+                            {
+                                "date": "04/01/2016",
+                                "charge-planif": "0,75",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "05/01/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "06/01/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            }
+                        ],
+                        "id": "2"
+                    },
+                    {
+                        "day": [
+                            {
+                                "date": "04/01/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "05/01/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "06/01/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "07/01/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "08/07/2016",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            }
+                        ],
+                        "id": "3"
+                    },
+                    {
+                        "day": [
+                            {
+                                "date": "04/02/2017",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "05/03/2017",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "06/04/2017",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "07/05/2017",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            },
+                            {
+                                "date": "08/06/2017",
+                                "charge-planif": "1",
+                                "background-color": "#950000"
+                            }
+                        ],
+                        "id": "4"
+                    }
+                ]
+            }
+        }
+    }
+}

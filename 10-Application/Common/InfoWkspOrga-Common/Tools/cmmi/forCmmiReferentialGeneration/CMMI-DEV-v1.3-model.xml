@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cmmi for="Development" version="1.3" code="CMMI-DEV-V1.3">
+    <category name="Product Eng.">
+    <process staged="ML2/3" code="REQM">
+      <label>
+        <en>Requirements Management</en>
+        <fr>Gestion des Exigences</fr>
+      </label>
+
+      <description>
+        <en>The purpose of Requirements Management is to manage the requirements of the project’s products and product components and to
+          identify inconsistencies between those requirements and the project’s plans and work products.
+        </en>
+        <fr>L’intention du domaine de processus « Gestion des exigences » est de gérer les exigences des produits et composants de produits
+          du projet et d’identifier les incohérences entre ces exigences et les et produits d’activité du projet.
+        </fr>
+      </description>
+
+      <goal code="SG1">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+      
+      <goal code="SG2">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+
+    </process>
+
+    <process staged="ML2/3" code="PPQA">
+      <label>
+        <en>Requirements Management</en>
+        <fr>Gestion des Exigences</fr>
+      </label>
+
+      <description>
+        <en>The purpose of Requirements Management is to manage the requirements of the project’s products and product components and to
+          identify inconsistencies between those requirements and the project’s plans and work products.
+        </en>
+        <fr>L’intention du domaine de processus « Gestion des exigences » est de gérer les exigences des produits et composants de produits
+          du projet et d’identifier les incohérences entre ces exigences et les et produits d’activité du projet.
+        </fr>
+      </description>
+
+      <goal code="SG1">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+      
+      <goal code="SG2">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+
+    </process>
+
+  </category>
+  <category name="Product Eng.">
+    <process staged="ML2/3" code="REQM">
+      <label>
+        <en>Requirements Management</en>
+        <fr>Gestion des Exigences</fr>
+      </label>
+
+      <description>
+        <en>The purpose of Requirements Management is to manage the requirements of the project’s products and product components and to
+          identify inconsistencies between those requirements and the project’s plans and work products.
+        </en>
+        <fr>L’intention du domaine de processus « Gestion des exigences » est de gérer les exigences des produits et composants de produits
+          du projet et d’identifier les incohérences entre ces exigences et les et produits d’activité du projet.
+        </fr>
+      </description>
+
+      <goal code="SG1">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+      
+      <goal code="SG2">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+
+    </process>
+
+    <process staged="ML2/3" code="PPQA">
+      <label>
+        <en>Requirements Management</en>
+        <fr>Gestion des Exigences</fr>
+      </label>
+
+      <description>
+        <en>The purpose of Requirements Management is to manage the requirements of the project’s products and product components and to
+          identify inconsistencies between those requirements and the project’s plans and work products.
+        </en>
+        <fr>L’intention du domaine de processus « Gestion des exigences » est de gérer les exigences des produits et composants de produits
+          du projet et d’identifier les incohérences entre ces exigences et les et produits d’activité du projet.
+        </fr>
+      </description>
+
+      <goal code="SG1">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+      
+      <goal code="SG2">
+        <label>
+          <en>Manage Requirements</en>
+          <fr>Gérer des Exigences</fr>
+        </label>
+
+        <description>
+          <en>Requirements are managed and inconsistencies with project plans and work products are identified.</en>
+          <fr>Les exigences sont gérées et les incohérences entre les exigences d’une part et les plans du projet et les produits d'activité
+            d’autre part sont identifiées.
+          </fr>
+        </description>
+
+        <practice code="SP1.1">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+        
+        <practice code="SP1.2">
+          <label>
+            <en>Develop an understanding with the requirements providers on the meaning of the requirements.</en>
+            <fr>Développer une compréhension commune des exigences et de leur signification avec ceux qui les ont fournies.</fr>
+          </label>
+
+          <description>
+            <en>Evidence of activities to achieve an understanding between the requirements providers and the developers, e.g., meeting
+              minutes, list of requirements issues…
+              Criteria for evaluation and acceptance of requirements
+              An agreed-to set of requirements
+            </en>
+            <fr>Preuve d'activités effectuées avec l'émetteur des exigences dans le but d'assurer une compréhension de celles-ci (compte
+              rendus de réunion, listes des besoins de clarification des exigences, etc.…)
+              Critère pour l'évaluation et l'acceptation des
+              exigences
+              Liste des exigences comprises et acceptées par les deux parties
+            </fr>
+          </description>
+
+          <indirectQuestion>
+            <en>How and when does the project's team validate its understanding of customer's requirements at the beginning of the project
+              and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Comment et quand l'équipe de projet valide-t-elle sa compréhension des exigences client au début du projet mais aussi chaque
+              fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </indirectQuestion>
+
+          <directQuestion>
+            <en>Is there any activity or mechanism for the project's team to validate its understanding of customer's requirements at the
+              beginning of the project and each time the customer submits a change request to his requirements?
+            </en>
+            <fr>Existe-t-il une activité ou un mécanisme pour que l'équipe de projet valide sa compréhension des exigences client au début
+              du projet mais aussi chaque fois que le client soumet une demande de modification à ses exigences?
+            </fr>
+          </directQuestion>
+
+
+        </practice>
+
+      </goal>
+
+    </process>
+
+  </category>
+
+
+</cmmi>
+
+

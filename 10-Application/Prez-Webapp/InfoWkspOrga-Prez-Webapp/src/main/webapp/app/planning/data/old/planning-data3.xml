@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ******************************************* -->
+<!-- To convert this XML to JSON : -->
+<!-- http://www.utilities-online.info/xmltojson/ -->
+<!-- ******************************************* -->
+
+<planning-data>
+
+  <planning-wbs>
+      <total>4</total>
+      <!-- "row" attribute is used to order tasks as they are displayed on screen -->
+      <rows id="1" name="Projet CAPLA" type="recap" charge="" jalon="" resource="ango-xuan-coi"  row="1"/>
+      <rows id="2" name="Pilotage" type="recap" charge="" jalon="" resource="cdelrue" parent="1" row="2"/>
+      <rows id="3" name="Suivi" type="" charge="" jalon="" resource="mnezzari" parent="2" row="3"/>
+      <rows id="4" name="Réunion" type="" charge="" jalon="" resource="mmoiroux" parent="2" row="4"/>
+      
+  </planning-wbs>
+
+  <!-- ******************************************* -->
+  <!-- To convert this XML to JSON : -->
+  <!-- http://www.utilities-online.info/xmltojson/ -->
+  <!-- ******************************************* -->
+
+  <planning-calendar>
+    <affectation>
+      <task id="2">
+        <day date="04/01/2016" charge-planif="0,75" background-color="#950000" />
+        <day date="05/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="06/01/2016" charge-planif="1" background-color="#950000" />
+      </task>
+      <task id="3">
+        <day date="04/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="05/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="06/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="07/01/2016" charge-planif="1" background-color="#950000" />
+        <day date="08/07/2016" charge-planif="1" background-color="#950000" />
+      </task>
+      <task id="4">
+        <day date="04/02/2017" charge-planif="1" background-color="#950000" />
+        <day date="05/03/2017" charge-planif="1" background-color="#950000" />
+        <day date="06/04/2017" charge-planif="1" background-color="#950000" />
+        <day date="07/05/2017" charge-planif="1" background-color="#950000" />
+        <day date="08/06/2017" charge-planif="1" background-color="#950000" />
+      </task>
+    </affectation>
+  </planning-calendar>
+
+</planning-data>   

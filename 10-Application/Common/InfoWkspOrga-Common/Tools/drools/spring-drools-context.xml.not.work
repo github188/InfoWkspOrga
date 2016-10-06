@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:kie="http://drools.org/schema/kie-spring"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                           http://drools.org/schema/kie-spring http://drools.org/schema/kie-spring.xsd">
+
+	<!--
+		Activates various annotations to be detected in bean classes: Spring's
+		@Required and @Autowired, as well as JSR 250's @PostConstruct,
+		@PreDestroy and @Resource (if available) and JPA's @PersistenceContext
+		and @PersistenceUnit (if available).
+		-->
+
+	
+<!-- 
+  
+Kbase Attributes
+Attribute name			Default value		Admitted values							Meaning
+name								none						any													The name with which retrieve this KieBase from the KieContainer. 
+																																This is the only mandatory attribute.
+includes						none						any comma separated list		A comma separated list of other KieBases contained in this kmodule. 
+																																The artifacts of all these KieBases will be also included in this one.
+packages						all							any comma separated list		By default all the Drools artifacts under the resources folder, 
+																																at any level, are included into the KieBase. This attribute allows to limit 
+																																the artifacts that will be 
+																																compiled in this KieBase to only the ones belonging to the list of packages.
+default							false						true, false									Defines if this KieBase is the default one for this module, 
+																																so it can be created from the KieContainer without passing any name to it. 
+																																There can be at most one default KieBase in each module.
+equalsBehavior			identity				identity, equality					Defines the behavior of Drools when a new fact is inserted into the Working Memory. 
+																																With identity it always create a new FactHandle unless the same object isn't already present in the Working Memory, 
+																																while with equality only if the newly inserted object is not equal (according to its equal method) 
+																																to an already existing fact.
+eventProcessingMode	cloud						cloud, stream	 							When compiled in cloud mode the KieBase treats events as normal facts, 
+																																while in stream mode allow temporal reasoning on them.
+declarativeAgenda		disabled				disabled, enabled						Defines if the Declarative Agenda is enabled or not.
+
+
+
+KSession Attributes
+Attribute name			Default value		Admitted values							Meaning
+name								none						any													The name with which retrieve this KieSession from the KieContainer. 
+																																This is the only mandatory attribute.
+type								stateful				stateful, stateless					A stateful session allows to iteratively work with the Working Memory, 
+																																while a stateless one is a one-off execution of a Working Memory with a provided data set.
+default							false						true, false									Defines if this KieSession is the default one for this module, 
+																																so it can be created from the KieContainer without passing any name to it. 
+																																In each module there can be at most one default KieSession for each type.
+clockType						realtime				realtime, pseudo						Defines if events timestamps are determined by the system clock or by a psuedo clock 
+																																controlled by the application. This clock is specially useful for unit testing temporal rules.
+beliefSystem				simple					simple, jtms, defeasible		Defines the type of belief system used by the KieSession.
+
+listeners-ref				none						bean reference							Specifies the reference to the event listeners group
+-->
+	
+
+  <!-- Use only for debugging rules : BEGIN -->
+	<bean id="listener-agenda" class="com.sgu.core.framework.drools.eventlistener.debug.DebugAgendaEventListener" />
+	<bean id="listener-rule-runtime" class="com.sgu.core.framework.drools.eventlistener.debug.DebugRuleRuntimeEventListener" />
+	<bean id="listener-process" class="com.sgu.core.framework.drools.eventlistener.debug.DebugProcessEventListener" />
+
+  <!-- The above mentioned child elements can be declared in any order. 
+       Only one declaration of each type is allowed in a group.
+   -->
+	<kie:eventListeners id="listeners-debug-group">
+		<kie:agendaEventListener ref="listener-agenda" />
+		<kie:ruleRuntimeEventListener ref="listener-rule-runtime" />
+		<kie:processEventListener ref="listener-process" />
+	</kie:eventListeners>
+	
+	<!-- Use only for debugging rules : END -->
+
+
+  <!-- Use to add automatic fault to the error messages list -->
+	<bean id="tracker-fault-process" class="com.sgu.core.framework.drools.eventlistener.fault.TrackingFaultEventListener" />
+	
+	<!-- Use to know if a particular process is already started -->
+	<bean id="tracker-all-process" class="com.sgu.core.framework.drools.eventlistener.tracking.TrackingProcessEventListener">
+		<constructor-arg index="0" ref="ksession-authentification" />
+	</bean>
+
+	<!-- 
+	<bean id="workitem-transfert-Found" class="com.sgu.core.framework.drools.workitem.TransfertFundHandler" scope="prototype">
+		<constructor-arg index="0"  ref="ksession-banking" />
+	</bean>
+	 -->
+	
+  <!-- ***************** -->
+  <!-- Module definition -->
+  <!-- ***************** -->
+	<kie:kmodule id="kmodule-project-manager-common">
+
+		<kie:kbase name="kbase-project-manager-COMMON" 
+		  packages="com.sgu.projectmanager.business.rules.authentification"   
+		  eventProcessingMode="cloud" 
+		  equalsBehavior="equality"
+			declarativeAgenda="disabled">
+
+			<kie:ksession name="ksession-authentification" type="stateful" default="false" 
+			              clockType="realtime" listeners-ref="listeners-debug-group">
+
+				<kie:listeners>
+					<kie:processEventListener ref="tracker-all-process" />
+					<kie:processEventListener ref="tracker-fault-process" />
+				</kie:listeners>
+				
+			</kie:ksession>
+			
+		</kie:kbase>
+		
+	</kie:kmodule>
+	
+  <!-- Without the org.kie.spring.KModuleBeanFactoryPostProcessor bean definition, 
+       the kie-spring integration will not work. -->
+	<bean id="kiePostProcessor" class="org.kie.spring.KModuleBeanFactoryPostProcessor" />
+
+
+</beans>
