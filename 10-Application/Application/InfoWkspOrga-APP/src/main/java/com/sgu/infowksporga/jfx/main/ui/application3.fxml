@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sgu.core.framework.gui.jfx.control.GToolBar?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.controlsfx.control.StatusBar?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.main.ui.ApplicationViewFxml">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <GToolBar fx:id="pnlToolBar">
+               <children>
+                  <Button fx:id="btnExit" mnemonicParsing="false" onAction="#exitApplicationAction" text="Exit" />
+               </children>
+            </GToolBar>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.823327615780446" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL" BorderPane.alignment="CENTER">
+        <items>
+            <TitledPane fx:id="notificationBar" animated="false" text="Notifications">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <TabPane tabClosingPolicy="UNAVAILABLE" tabMaxHeight="3000.0" tabMaxWidth="3000.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                          <tabs>
+                            <Tab text="Validation result (3)">
+                              <content>
+                                <AnchorPane>
+                                       <children>
+                                          <ScrollPane AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                                             <content>
+                                                <ListView maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab text="Chat (2)">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="7.0" prefWidth="591.0" />
+                              </content>
+                            </Tab>
+                              <Tab text="\@Mail(5)">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <BorderPane fx:id="pnlApplication">
+               <left>
+                  <Accordion minWidth="200.0" BorderPane.alignment="CENTER">
+                    <panes>
+                      <TitledPane fx:id="acnPerspectives" animated="true" expanded="true" text="Perspectives">
+                        <content>
+                          <AnchorPane fx:id="pnlPerspectives" />
+                        </content>
+                      </TitledPane>
+                      <TitledPane fx:id="acnWorkspaceMap" animated="true" text="Workspace Map">
+                        <content>
+                          <AnchorPane fx:id="pnlWorkspaceMap" />
+                        </content> 
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </left>
+               <center>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                      <Tab text="Untitled Tab 1">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                      <Tab text="Untitled Tab 2">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </center>
+               
+                              </BorderPane>
+        </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <StatusBar fx:id="pnlStatusBar" prefHeight="0.0" prefWidth="423.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

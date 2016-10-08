@@ -1,20 +1,24 @@
 package com.sgu.infowksporga.jfx.main;
 
 import java.net.URL;
+import java.util.Optional;
 
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
 import com.sgu.apt.annotation.i18n.I18nProperty;
 import com.sgu.core.framework.exception.TechnicalException;
-import com.sgu.core.framework.gui.jfx.screen.AbstractApplication;
+import com.sgu.core.framework.gui.jfx.screen.AGApplication;
 import com.sgu.core.framework.gui.jfx.util.UtilGUI;
+import com.sgu.core.framework.gui.jfx.util.UtilGUIMessage;
 import com.sgu.core.framework.resources.EnvironmentEnum;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.main.ApplicationPreloader.MessageProgressNotification;
 import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
+import javafx.application.Platform;
 import javafx.scene.Scene;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import lombok.extern.slf4j.Slf4j;
@@ -31,7 +35,7 @@ properties = { // label create
               @I18nProperty(key = "application.name.short", value = "Info-Wksp-Orga"), // Force /n 
               @I18nProperty(key = "application.version", value = "1.0.0"), // Force /n
 })
-public final class Application extends AbstractApplication<StackPane> {
+public final class Application extends AGApplication<StackPane> {
 
   /**
    * Application launcher.
@@ -63,6 +67,8 @@ public final class Application extends AbstractApplication<StackPane> {
 
   })
   public void init() throws Exception {
+    // Store the main application in session
+    GUISessionProxy.getGuiSession().setApplication(this);
 
     try {
       double progress = 0.10d;
@@ -81,12 +87,10 @@ public final class Application extends AbstractApplication<StackPane> {
         throw new TechnicalException(I18nHelperApp.getMessage("application.preload.jvm.property.ko"));
       }
       GUISessionProxy.setEnvironment(environment);
-
-      // Store the main application in session
-      GUISessionProxy.setApplication(this);
       progress += 0.10;
       notifyPreloader(new MessageProgressNotification(progress, "application.preload.gui.session.set.app"));
 
+      // Initialize other services
       ApplicationInitializer.initializeLogback();
       progress += 0.10;
       notifyPreloader(new MessageProgressNotification(progress, "application.preload.logbak.init.ok"));
@@ -141,6 +145,29 @@ public final class Application extends AbstractApplication<StackPane> {
     stage.setFullScreen(false);
     stage.getIcons().add(UtilGUI.getImage("/icons/app/application-ico.png"));
     buildApplicationTitle(stage);
+
+    stage.setOnCloseRequest(e -> {
+      actionExitApplication();
+      e.consume();
+    });
+  }
+
+  /**
+   * Request quit.
+   */
+  @I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-prez",
+  properties = { // label create
+                @I18nProperty(key = "application.action.confirm.exit.header", value = "Exit Application"), // Force /n
+                @I18nProperty(key = "application.action.confirm.exit.body", value = "Are you sure you want to exit?"), // Force /n 
+
+  })
+  public void actionExitApplication() {
+    final Optional<ButtonType> result = UtilGUIMessage.showConfirmMessage("application.action.confirm.exit.header", "application.action.confirm.exit.body");
+
+    if (result.isPresent() && result.get() == ButtonType.OK) {
+      Platform.exit();
+      System.exit(0);
+    }
   }
 
   /**

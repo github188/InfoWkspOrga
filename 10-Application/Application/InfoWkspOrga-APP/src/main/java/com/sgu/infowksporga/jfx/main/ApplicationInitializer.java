@@ -72,9 +72,8 @@ public final class ApplicationInitializer {
 
     final ReloadableResourceBundleMessageSource rrbms = new ReloadableResourceBundleMessageSource();
     rrbms.setResourceLoader(new DefaultResourceLoader(I18nHelperFwk.class.getClassLoader()));
-    rrbms.setBasenames("i18n/fwk-core", "i18n/fwk-core-field-format", "i18n/fwk-core-validation", "i18n/javafx_framework_message",
-                       "i18n/infowksporga_message", "i18n/application-prez", "i18n/application-biz", "i18n/application-common",
-                       "spring/server-localization");
+    rrbms.setBasenames("i18n/fwk-core", "i18n/fwk-core-field-format", "i18n/fwk-core-validation", "i18n/javafx_framework_message", "i18n/infowksporga_message",
+                       "i18n/application-prez", "i18n/application-biz", "i18n/application-common", "spring/server-localization");
     i18nService.setResourceBundleMessageSource(rrbms);
 
     i18nHelper.setI18nService(i18nService);
@@ -129,8 +128,8 @@ public final class ApplicationInitializer {
    * Store all the carrousel images in session
    */
   public static void initializeCarrouselImages() {
-    IGetRemoteSpringObjectService prezService = (IGetRemoteSpringObjectService) SpringBeanHelper.getImplementationByInterface(IGetRemoteSpringObjectService.class);
-    List<ImageIcon> carrouselImages = prezService.getCarrouselImages();
+    final IGetRemoteSpringObjectService prezService = SpringBeanHelper.getImplementationByInterface(IGetRemoteSpringObjectService.class);
+    final List<ImageIcon> carrouselImages = prezService.getCarrouselImages();
     GUISessionProxy.setCarrouselImages(carrouselImages);
   }
 
@@ -266,8 +265,7 @@ public final class ApplicationInitializer {
 
     final String appVersion = getApplicationVersion();
 
-    final String userApplicationHome = System.getProperty("user.home") + "/Application Data/" + getApplicationNameShort() + "/"
-                                       + appVersion;
+    final String userApplicationHome = System.getProperty("user.home") + "/Application Data/" + getApplicationNameShort() + "/" + appVersion;
 
     log.debug("La localisation du fichier de preferences utilisateur : '{}'", userApplicationHome);
 
@@ -302,8 +300,7 @@ public final class ApplicationInitializer {
         final Properties defaultUserSettings = new Properties();
 
         defaultUserSettings.load(new FileInputStream(userConfigFileLocation));
-        defaultUserSettings.setProperty(UserPreferencesConstant.USER_LANGUAGE_SETTING,
-                                        I18nHelperApp.getI18nHelper().getUserLocale().getLanguage());
+        defaultUserSettings.setProperty(UserPreferencesConstant.USER_LANGUAGE_SETTING, I18nHelperApp.getI18nHelper().getUserLocale().getLanguage());
 
         defaultUserSettings.store(new FileOutputStream(userConfigFileLocation), null);
       } catch (final FileNotFoundException e) {
@@ -342,7 +339,7 @@ public final class ApplicationInitializer {
 
   /**
    * Description : get Application Name method <br>
-   * 
+   *
    * @return The application name of the application
    */
   public static String getApplicationName() {
@@ -362,7 +359,7 @@ public final class ApplicationInitializer {
 
   /**
    * Description : get Application Version method <br>
-   * 
+   *
    * @return The application version of the application
    */
   public static String getApplicationVersion() {

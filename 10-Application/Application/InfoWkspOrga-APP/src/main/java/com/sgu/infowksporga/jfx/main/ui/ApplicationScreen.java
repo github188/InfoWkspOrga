@@ -1,13 +1,13 @@
 package com.sgu.infowksporga.jfx.main.ui;
 
-import com.sgu.core.framework.gui.jfx.screen.AbstractScreen;
+import com.sgu.core.framework.gui.jfx.screen.AGScreen;
 
 import javafx.scene.Scene;
 
 /**
  * The Class ApplicationScreen.
  */
-public class ApplicationScreen extends AbstractScreen<Scene, ApplicationModel, ApplicationViewFxml, ApplicationController> {
+public class ApplicationScreen extends AGScreen<Scene, ApplicationModel, ApplicationViewFxml, ApplicationController> {
 
   /**
    * The Constructor.

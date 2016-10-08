@@ -56,28 +56,27 @@
 		</VBox>
 	</top>
 	<center>
-		<SplitPane fx:id="spnApplication" dividerPositions="0.23601398601398602" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+		<SplitPane fx:id="pnlSplitPane" dividerPositions="0.5923694779116466" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
 			orientation="VERTICAL" BorderPane.alignment="CENTER"
 		>
 			<items>
-				<TitledPane fx:id="ttlPnlNotifications" animated="false" minHeight="0.0" text="Notifications">
+				<TitledPane fx:id="pnlNotification" animated="false" text="Notifications">
 					<content>
-						<AnchorPane minHeight="0.0">
+						<AnchorPane>
 							<children>
-								<TabPane fx:id="tabPnlNotifications" layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-									tabClosingPolicy="UNAVAILABLE" tabMaxHeight="3000.0" tabMaxWidth="3000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+								<TabPane fx:id="pnlTabNotifications" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="3000.0" tabMaxWidth="3000.0"
+									AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0"
 								>
 									<tabs>
 										<Tab fx:id="tabValidationResult" text="Validation result (3)">
 											<content>
 												<AnchorPane>
 													<children>
-														<ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
-															AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
+														<ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="200.0" AnchorPane.bottomAnchor="0.0"
+															AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
 														>
 															<content>
-																<ListView fx:id="lstValidationResult" />
+																<ListView fx:id="lstValidationResult" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
 															</content>
 														</ScrollPane>
 													</children>
@@ -89,7 +88,7 @@
 												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="7.0" prefWidth="591.0" />
 											</content>
 										</Tab>
-										<Tab fx:id="tabMail" text="\@Mail (5)">
+										<Tab fx:id="tabMail" text="\@Mail(5)">
 											<content>
 												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
 											</content>
@@ -100,37 +99,25 @@
 						</AnchorPane>
 					</content>
 				</TitledPane>
-				<BorderPane fx:id="pnlApplication" minHeight="0.0">
+				<BorderPane fx:id="pnlApplication">
+					<left>
+						<Accordion fx:id="acdPerspective" minWidth="200.0" BorderPane.alignment="CENTER">
+							<panes>
+								<TitledPane fx:id="tlpPerspective" animated="true" expanded="true" text="Perspective">
+									<content>
+										<AnchorPane fx:id="pnlPerspective" />
+									</content>
+								</TitledPane>
+								<TitledPane fx:id="tlpWorkspaceMap" animated="true" text="Workspace Map">
+									<content>
+										<AnchorPane fx:id="pnlWorkspaceMapView" />
+									</content>
+								</TitledPane>
+							</panes>
+						</Accordion>
+					</left>
 					<center>
-						<SplitPane fx:id="spnWorkspace" dividerPositions="0.19882468168462292" BorderPane.alignment="CENTER">
-							<items>
-								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-									<children>
-										<Accordion fx:id="acdPerspective" minWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-											AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
-										>
-											<panes>
-												<TitledPane fx:id="ttlPnlPerspective" animated="true" expanded="true" maxHeight="1.7976931348623157E308" text="Perspective">
-													<content>
-														<AnchorPane fx:id="pnlPerspective" />
-													</content>
-												</TitledPane>
-												<TitledPane fx:id="ttlPnlWorkspaceMap" animated="true" maxHeight="1.7976931348623157E308" text="Workspace Map">
-													<content>
-														<AnchorPane fx:id="pnlWorkspaceMapView" />
-													</content>
-												</TitledPane>
-											</panes>
-										</Accordion>
-									</children>
-								</AnchorPane>
-								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-									<children>
-										<BorderPane fx:id="pnlWorkspace" />
-									</children>
-								</AnchorPane>
-							</items>
-						</SplitPane>
+						<BorderPane fx:id="pnlWorkspace" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
 					</center>
 
 				</BorderPane>

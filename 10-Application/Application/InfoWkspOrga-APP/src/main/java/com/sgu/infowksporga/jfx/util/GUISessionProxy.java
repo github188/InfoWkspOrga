@@ -8,7 +8,6 @@ import javax.swing.ImageIcon;
 
 import com.sgu.core.framework.gui.jfx.util.GUISession;
 import com.sgu.core.framework.resources.EnvironmentEnum;
-import com.sgu.infowksporga.jfx.main.Application;
 
 /**
  * Description : GUISessionProxy class<br>.
@@ -21,11 +20,6 @@ public class GUISessionProxy {
    * Define by -Denvironement=Development;Production;...
    */
   public static final String ENVIRONMENT = "ENVIRONMENT";
-
-  /**
-   * Store the reference to the application screen
-   */
-  public static final String APPLICATION_SCREEN = "APPLICATION_SCREEN";
 
   /** The Constant CURRENT_WORKSPACE. */
   public static final String CURRENT_WORKSPACE = "CURRENT_WORKSPACE";
@@ -94,24 +88,6 @@ public class GUISessionProxy {
    */
   public static void setCarrouselImages(final List<ImageIcon> carrouselImages) {
     getGuiSession().setSessionAttribute(CARROUSEL_IMAGES, carrouselImages);
-  }
-
-  /**
-   * Gets the info wrksp orga frame.
-   *
-   * @return the info wrksp orga frame
-   */
-  public static Application getApplication() {
-    return (Application) getGuiSession().getSessionAttribute(APPLICATION_SCREEN);
-  }
-
-  /**
-   * Sets the info wrksp orga frame.
-   *
-   * @param infoWrkspOrgaFrame the info wrksp orga frame
-   */
-  public static void setApplication(final Application application) {
-    getGuiSession().setSessionAttribute(APPLICATION_SCREEN, application);
   }
 
   /**
