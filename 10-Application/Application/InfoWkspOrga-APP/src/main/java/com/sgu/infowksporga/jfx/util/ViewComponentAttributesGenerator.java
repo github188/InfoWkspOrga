@@ -22,7 +22,7 @@ public class ViewComponentAttributesGenerator {
    * @param args the args
    */
   public static void main(final String[] args) {
-    final String fxmlFile = "G:/Projects/400-InfoWkspOrga/10-Application/Application/InfoWkspOrga-APP/src/main/java/com/sgu/infowksporga/jfx/main/ui/application.fxml";
+    final String fxmlFile = "G:/Projects/400-InfoWkspOrga/10-Application/Application/InfoWkspOrga-APP/src/main/java/com/sgu/infowksporga/jfx/perspective/perspective.fxml";
 
     try {
       final BufferedReader br = new BufferedReader(new FileReader(fxmlFile));

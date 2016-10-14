@@ -18,13 +18,20 @@ import javax.xml.bind.Unmarshaller;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.DefaultResourceLoader;
 
+import com.sgu.apt.annotation.AnnotationConfig;
+import com.sgu.apt.annotation.i18n.I18n;
+import com.sgu.apt.annotation.i18n.I18nProperty;
 import com.sgu.core.framework.exception.TechnicalException;
 import com.sgu.core.framework.gui.jfx.i18n.I18nHelperJavaFX;
 import com.sgu.core.framework.gui.jfx.util.GUISession;
+import com.sgu.core.framework.gui.jfx.util.UserPreferencesConstant;
+import com.sgu.core.framework.gui.jfx.util.UtilApplication;
+import com.sgu.core.framework.gui.jfx.util.UtilGUIMessage;
 import com.sgu.core.framework.i18n.I18nHelper;
 import com.sgu.core.framework.i18n.I18nHelperFwk;
 import com.sgu.core.framework.i18n.LocalI18nService;
 import com.sgu.core.framework.io.DirectoryFile;
+import com.sgu.core.framework.pivot.UserInfo;
 import com.sgu.core.framework.spring.ReloadableResourceBundleMessageSource;
 import com.sgu.core.framework.spring.loader.SpringBeanHelper;
 import com.sgu.core.framework.spring.service.remote.IGetRemoteSpringObjectService;
@@ -36,8 +43,6 @@ import com.sgu.infowksporga.business.xml.jaxb.menu.MenuApplication;
 import com.sgu.infowksporga.business.xml.jaxb.toolbar.ToolbarApplication;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
-import com.sgu.infowksporga.jfx.util.UserPreferencesConstant;
-import com.sgu.infowksporga.jfx.util.UtilApplication;
 
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.joran.JoranConfigurator;
@@ -55,6 +60,14 @@ public final class ApplicationInitializer {
    */
   private ApplicationInitializer() {
     // Utility Class
+  }
+
+  /**
+   * Authenticate user.
+   */
+  public static void authenticateUser() {
+    final UserInfo userInfo = new UserInfo("sguisse");
+    GUISessionProxy.getGuiSession().setCurrentUser(userInfo);
   }
 
   /**
@@ -95,7 +108,7 @@ public final class ApplicationInitializer {
       final Unmarshaller unmarshaller = jc.createUnmarshaller();
       final InputStream is = UtilIO.getClasspathFileInputStream("toolbar-application.xml");
       final ToolbarApplication configuration = (ToolbarApplication) unmarshaller.unmarshal(is);
-      MenuManager.toolbarApplication = configuration;
+      //ActionManager.toolbarApplication = configuration;
     } catch (final JAXBException e) {
       log.error(e.getMessage(), e);
       throw new TechnicalException("infowrksporga.error.menu.configuration.bad.xml", e);
@@ -115,7 +128,7 @@ public final class ApplicationInitializer {
       final Unmarshaller unmarshaller = jc.createUnmarshaller();
       final InputStream is = UtilIO.getClasspathFileInputStream("menu-application.xml");
       final MenuApplication configuration = (MenuApplication) unmarshaller.unmarshal(is);
-      MenuManager.menuApplication = configuration;
+      //ActionManager.menuApplication = configuration;
     } catch (final JAXBException e) {
       log.error(e.getMessage(), e);
       throw new TechnicalException("infowrksporga.error.toolbar.configuration.bad.xml", e);
@@ -144,6 +157,22 @@ public final class ApplicationInitializer {
   /**
    * Description : verifyAllRemoteConnexionAreAvailable method <br>
    */
+
+  @I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-prez",
+  properties = { // label create
+                @I18nProperty(key = "message.error.control.prez.server.title", value = "Contrôle du serveur de Présentation"), // Force /n
+                @I18nProperty(key = "message.error.control.prez.server.body",
+                value = "Le serveur de 'Présentation' est inaccessible\n{0}\nVeuillez contacter l'administrateur \n"
+                        + "en joignant la copie du texte contenue dans le bloc détail\n" + "Merci."), // Force /n
+                @I18nProperty(key = "message.error.control.biz.server.title", value = "Contrôle du serveur Métier"), // Force /n
+                @I18nProperty(key = "message.error.control.biz.server.body",
+                value = "Le serveur de 'Métier' est inaccessible\n{0}\nVeuillez contacter l'administrateur \n"
+                        + "en joignant la copie du texte contenue dans le bloc détail\n" + "Merci."), // Force /n
+                @I18nProperty(key = "message.error.control.bdd.server.title", value = "Contrôle du serveur de Base de Données"), // Force /n
+                @I18nProperty(key = "message.error.control.bdd.server.body",
+                value = "Le serveur de 'Base de Données' est inaccessible\n{0}\nVeuillez contacter l'administrateur \n"
+                        + "en joignant la copie du texte contenue dans le bloc détail\n" + "Merci."), // Force /n
+  })
   public static void verifyAllRemoteConnexionAreAvailable() {
     // Verify Prez server is accessible
     final String prezStrUrl = SpringBeanHelper.getImplementationByName("prez.available.url.test", String.class);
@@ -157,10 +186,7 @@ public final class ApplicationInitializer {
       }
     } catch (final Exception e) {
       log.error(e.getMessage(), e);
-      /*
-       * UtilDlgMessage.error("Le serveur de 'présentation' est inaccessible\n" + prezStrUrl + "\nVeuillez contacter l'administrateur \n"
-       * + "en joignant la copie du texte contenue dans le bloc détail\n" + "Merci.", e, 500);
-       */
+      UtilGUIMessage.showErrorWithDetails("message.error.control.prez.server.title", I18nHelperApp.getMessage("message.error.control.prez.server.body", prezStrUrl), e);
       System.exit(0);
     }
 
@@ -176,10 +202,7 @@ public final class ApplicationInitializer {
       }
     } catch (final Exception e) {
       log.error(e.getMessage(), e);
-      /*
-       * UtilDlgMessage.error("Le serveur 'business' est inaccessible\n" + bizStrUrl + "\nVeuillez contacter l'administrateur \n"
-       * + "en joignant la copie du texte contenue dans le bloc détail\n" + "Merci.", e, 500);
-       */
+      UtilGUIMessage.showErrorWithDetails("message.error.control.biz.server.title", I18nHelperApp.getMessage("message.error.control.biz.server.body", bizStrUrl), e);
       System.exit(0);
     }
 
@@ -187,17 +210,14 @@ public final class ApplicationInitializer {
     try {
       //databaseAccessibleVerifierBo.checkDatabaseIsAvailable();
     } catch (final TechnicalException e1) {
-      log.error(e1.getMessage(), e1);
+      log.warn(e1.getMessage(), e1);
 
       try { // try a second time
         UtilDate.delay(5000);
         //databaseAccessibleVerifierBo.checkDatabaseIsAvailable();
       } catch (final TechnicalException e2) {
         log.error(e2.getMessage(), e2);
-        /*
-         * UtilDlgMessage.error("Le serveur de 'base de données' est inaccessible\n" + "Veuillez contacter l'administrateur \n"
-         * + "en joignant la copie du texte contenue dans le bloc détail\n" + "Merci.", e2);
-         */
+        UtilGUIMessage.showErrorWithDetails("message.error.control.bdd.server.title", I18nHelperApp.getMessage("message.error.control.bdd.server.body"), e2);
         System.exit(0);
       }
 
@@ -217,11 +237,6 @@ public final class ApplicationInitializer {
   public static void initializeApplicationLanguage() {
     Locale locale = null;
 
-    // Look in JVM Parameters first
-    /*
-     * String strLocale = ConfigurationService.getInstance().getParameter(ConfigurationService.LOCALE); if (strLocale != null) {
-     * locale = new Locale(strLocale); }
-     */
     String strLocale = null;
 
     // Look in user settings file if exists

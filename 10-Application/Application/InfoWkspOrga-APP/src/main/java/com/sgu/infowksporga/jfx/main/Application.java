@@ -1,7 +1,6 @@
 package com.sgu.infowksporga.jfx.main;
 
 import java.net.URL;
-import java.util.Optional;
 
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
@@ -9,18 +8,17 @@ import com.sgu.apt.annotation.i18n.I18nProperty;
 import com.sgu.core.framework.exception.TechnicalException;
 import com.sgu.core.framework.gui.jfx.screen.AGApplication;
 import com.sgu.core.framework.gui.jfx.util.UtilGUI;
-import com.sgu.core.framework.gui.jfx.util.UtilGUIMessage;
 import com.sgu.core.framework.resources.EnvironmentEnum;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.main.ApplicationPreloader.MessageProgressNotification;
+import com.sgu.infowksporga.jfx.main.action.ExitAction;
 import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
-import javafx.application.Platform;
 import javafx.scene.Scene;
-import javafx.scene.control.ButtonType;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -35,7 +33,12 @@ properties = { // label create
               @I18nProperty(key = "application.name.short", value = "Info-Wksp-Orga"), // Force /n 
               @I18nProperty(key = "application.version", value = "1.0.0"), // Force /n
 })
+//@PomVersion(value = "1.0.0", update = "true")
+@Getter
 public final class Application extends AGApplication<StackPane> {
+
+  /** The application screen. */
+  private ApplicationScreen applicationScreen;
 
   /**
    * Application launcher.
@@ -131,6 +134,9 @@ public final class Application extends AGApplication<StackPane> {
       progress = 1.0;
       notifyPreloader(new MessageProgressNotification(1.0, "application.preload.end"));  // Starting
 
+      // Finish by user authentification
+      ApplicationInitializer.authenticateUser();
+
     } catch (final Exception e) {
       log.error(e.getMessage(), e);
       throw new TechnicalException(e);
@@ -147,27 +153,11 @@ public final class Application extends AGApplication<StackPane> {
     buildApplicationTitle(stage);
 
     stage.setOnCloseRequest(e -> {
-      actionExitApplication();
+      // Get the Action associated with the Exit Button
+      final ExitAction action = (ExitAction) getActionManager().getActions().get(applicationScreen.getView().getBtnExit());
+      action.handle(null);
       e.consume();
     });
-  }
-
-  /**
-   * Request quit.
-   */
-  @I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-prez",
-  properties = { // label create
-                @I18nProperty(key = "application.action.confirm.exit.header", value = "Exit Application"), // Force /n
-                @I18nProperty(key = "application.action.confirm.exit.body", value = "Are you sure you want to exit?"), // Force /n 
-
-  })
-  public void actionExitApplication() {
-    final Optional<ButtonType> result = UtilGUIMessage.showConfirmMessage("application.action.confirm.exit.header", "application.action.confirm.exit.body");
-
-    if (result.isPresent() && result.get() == ButtonType.OK) {
-      Platform.exit();
-      System.exit(0);
-    }
   }
 
   /**
@@ -187,8 +177,16 @@ public final class Application extends AGApplication<StackPane> {
   protected void customizeScene(final Scene scene) {
     addCSS(scene, "/com/sgu/infowksporga/jfx/main/ui/application.css");
 
-    final ApplicationScreen screen = new ApplicationScreen(scene);
-    screen.view();
+    applicationScreen = new ApplicationScreen();
+    applicationScreen.initMVC();
+
+    do {
+      // Check the return of FXML screen build is finished before call MVC builder
+      if (applicationScreen.view().isViewInitialized()) {
+        scene.setRoot(applicationScreen.getViewRoot());
+      }
+    } while (applicationScreen.view().isViewInitialized() == false);
+
   }
 
   /**

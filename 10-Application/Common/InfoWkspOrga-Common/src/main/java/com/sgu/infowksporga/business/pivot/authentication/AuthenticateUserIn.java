@@ -37,7 +37,7 @@ public class AuthenticateUserIn extends AbstractIn {
    */
   public AuthenticateUserIn(final String userLogin, final String password, final String language) {
     super();
-    this.userLogin = userLogin;
+    this.setUserLogin(userLogin);
     this.password = password;
     this.language = language;
 
@@ -50,5 +50,4 @@ public class AuthenticateUserIn extends AbstractIn {
     super();
   }
 
-  
 }

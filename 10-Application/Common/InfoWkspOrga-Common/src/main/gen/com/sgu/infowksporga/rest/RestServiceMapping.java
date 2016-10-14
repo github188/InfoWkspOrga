@@ -1,6 +1,7 @@
 package com.sgu.infowksporga.rest;
 
-import com.sgu.apt.annotation.AnnotationConfig;
+import com.sgu.core.framework.util.Properties;
+import com.sgu.core.framework.util.UtilString;
 
 /**
  * Description : RestServiceMapping class<br>
@@ -8,8 +9,21 @@ import com.sgu.apt.annotation.AnnotationConfig;
  */
 public class RestServiceMapping {
 
+  private static final Properties properties;
+
   /** The base uri. */
-  public static final String BASE_BUSINESS_SERVICE_URI = AnnotationConfig.REST_BASE_BUSINESS_SERVICE_URI;
+  public static String BASE_BUSINESS_SERVICE_URI;
+
+  static {
+    properties = new Properties("/spring/server-localization.properties");
+    BASE_BUSINESS_SERVICE_URI = properties.getProperty("biz.url.rest.service");
+    final String[] result = UtilString.getListOfStringBetween(BASE_BUSINESS_SERVICE_URI, "{", "}");
+    BASE_BUSINESS_SERVICE_URI = UtilString.replace(BASE_BUSINESS_SERVICE_URI, result[0], properties.getProperty(result[0]));
+    BASE_BUSINESS_SERVICE_URI = UtilString.replace(BASE_BUSINESS_SERVICE_URI, result[1], properties.getProperty(result[1]));
+    BASE_BUSINESS_SERVICE_URI = UtilString.replace(BASE_BUSINESS_SERVICE_URI, "${", "");
+    BASE_BUSINESS_SERVICE_URI = UtilString.replace(BASE_BUSINESS_SERVICE_URI, "}", "");
+  }
+
 
   /*---------------------------------------------------------------------------------------------------------------------------------------
    * Controller and Services URI List
@@ -19,6 +33,9 @@ public class RestServiceMapping {
   public static final String FIND_SERVICE_URI = "/find";
 
   public static final String FIND_STRUCTURE_SERVICE_URI = "/find/structure";
+
+  public static final String APPLICATION_CONTROLLER_URI = "/application";
+  public static final String INITIALIZATION_SERVICE_URI = "/initialization";
 
   public static final String PREFERENCES_CONTROLLER_URI = "/preferences";
   public static final String PREFERENCE_CONTROLLER_URI = "/preference";
@@ -40,6 +57,7 @@ public class RestServiceMapping {
    */
   public static final String URL_SERVICE_FIND_PERSPECTIVE = BASE_BUSINESS_SERVICE_URI + PERSPECTIVE_CONTROLLER_URI + FIND_SERVICE_URI;
   public static final String URL_SERVICE_FIND_PERSPECTIVE_STRUCTURE = BASE_BUSINESS_SERVICE_URI + PERSPECTIVE_CONTROLLER_URI + FIND_STRUCTURE_SERVICE_URI;
+  public static final String URL_SERVICE_FIND_DATA_TO_INIT_APPLICATION = BASE_BUSINESS_SERVICE_URI + APPLICATION_CONTROLLER_URI + INITIALIZATION_SERVICE_URI;
   public static final String URL_SERVICE_FIND_PREFERENCES = BASE_BUSINESS_SERVICE_URI + PREFERENCES_CONTROLLER_URI + FIND_SERVICE_URI;
   public static final String URL_SERVICE_LOAD_PREFERENCES_STRUCTURE = BASE_BUSINESS_SERVICE_URI + PREFERENCE_CONTROLLER_URI + LOAD_XML_STRUCTURE_SERVICE_URI;
   public static final String URL_SERVICE_SAVE_WORKSPACE = BASE_BUSINESS_SERVICE_URI + WORKSPACE_CONTROLLER_URI + SAVE_SERVICE_URI;

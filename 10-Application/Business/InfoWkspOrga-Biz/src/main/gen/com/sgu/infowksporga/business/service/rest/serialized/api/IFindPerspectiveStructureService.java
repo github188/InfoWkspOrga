@@ -1,6 +1,7 @@
 package com.sgu.infowksporga.business.service.rest.serialized.api;
 
 
+import com.sgu.infowksporga.business.service.rest.serialized.api.ISerializedBusinessService;
 
 /**
  * Interface IFindPerspectiveStructureService

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sgu.core.framework.gui.jfx.control.GButton?>
+<?import com.sgu.core.framework.gui.jfx.control.GCheckBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GComboBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GLabel?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GAnchorPane?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GGridPane?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GHBox?>
+<?import com.sgu.core.framework.gui.jfx.control.tree.GTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GGridPane fx:id="grdPnlPerspective" hgap="3.0" prefWidth="374.0" vgap="3.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.perspective.PerspectiveViewFxml">
+   <columnConstraints>
+      <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="160.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="155.0" minWidth="155.0" prefWidth="155.0" />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="444.99999237060547" minHeight="10.0" prefHeight="439.99999237060547" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <GLabel fx:id="lblFilter" maxWidth="45.0" minWidth="45.0" prefHeight="20.0" prefWidth="45.0" text="  Filter :" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <GComboBox fx:id="cbbFilterOnWorkspaces" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" promptText="Workspaces" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" />
+      <GHBox prefHeight="30.0" prefWidth="399.0" spacing="5.0" GridPane.columnSpan="3" GridPane.rowIndex="2">
+         <children>
+            <GButton fx:id="btnCollapseWorkspaceTree" mnemonicParsing="false" text="btnCollapseAll" />
+            <GButton fx:id="btnExpandWorkspaceTree" mnemonicParsing="false" text="btnExpandAll" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GHBox>
+      <GAnchorPane GridPane.columnSpan="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+         <children>
+            <GTreeView fx:id="treeWorkspaces" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </GAnchorPane>
+      <GLabel fx:id="lblSelect" maxWidth="45.0" minWidth="45.0" prefHeight="20.0" prefWidth="45.0" text="Select :" GridPane.halignment="RIGHT">
+         <padding>
+            <Insets left="3.0" />
+         </padding>
+      </GLabel>
+      <GComboBox fx:id="cbbPerspective" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" promptText="Perspective" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" />
+      <GButton fx:id="btnRefreshPerspective" mnemonicParsing="false" text="Refresh" GridPane.columnIndex="2" GridPane.halignment="LEFT" />
+      <GHBox alignment="CENTER_LEFT" fillHeight="false" minWidth="99.0" prefHeight="33.0" prefWidth="99.0" spacing="10.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <children>
+            <GButton fx:id="btnClearWorkspaceFilter" mnemonicParsing="false" text="clear" />
+            <GCheckBox fx:id="chkbWorkspaceFilterOnlyOnLeaf" alignment="CENTER" mnemonicParsing="false" text="Sur les feuilles" />
+         </children>
+      </GHBox>
+   </children>
+</GGridPane>

@@ -3,44 +3,40 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.sgu.project</groupId>
-    <artifactId>main-project-pom</artifactId>
-    <version>3.0.0</version>
-    <!-- projectmanager.version -->
-    
+		<groupId>com.sgu.infowksporga</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
 
 	<groupId>com.sgu.infowksporga</groupId>
 	<artifactId>business-webapp</artifactId>
-	<version>1.0.0</version>
 	<packaging>war</packaging>
 	<name>Information Workspace Organizer Business Webapp</name>
 	<description>This pom is used to build Information Workspace Organizer Webapp Business project</description>
 
 
 	<build>
-		<finalName>info-wrksp-orga-biz</finalName>
+		<finalName>info-wksp-orga-biz</finalName>
 	</build>
 
-	<dependencies>
+	<dependencies> 
 
     <dependency>
 		  <groupId>com.sgu.framework</groupId>
 		  <artifactId>fwk-core</artifactId>
-		  <version>3.0.0</version>
+		  <version>${fwk-core.version}</version>
 		</dependency>
-		
 		
 		<dependency>
 			<groupId>com.sgu.infowksporga</groupId>
 			<artifactId>business</artifactId>
-			<version>1.0.0</version>
+			<version>${project.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>com.sgu.infowksporga</groupId>
 			<artifactId>common</artifactId>
-			<version>1.0.0</version>
+			<version>${project.version}</version>
 		</dependency>
 		
 		<dependency>

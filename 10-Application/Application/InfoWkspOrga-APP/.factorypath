@@ -140,6 +140,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jbpm/jbpm-human-task-jpa/6.4.0.Final/jbpm-human-task-jpa-6.4.0.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/jbpm/jbpm-workitems/6.4.0.Final/jbpm-workitems-6.4.0.Final.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/guigarage/flatter/0.7/flatter-0.7.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/dockfx/DockFX/0.1.1/DockFX-0.1.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/aquafx-project/aquafx/0.2/aquafx-0.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/guigarage/stylemanager/0.1b2/stylemanager-0.1b2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/controlsfx/controlsfx/8.40.12/controlsfx-8.40.12.jar" enabled="true" runInBatchMode="false"/>

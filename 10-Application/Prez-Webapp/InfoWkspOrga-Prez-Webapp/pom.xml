@@ -4,17 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.sgu.project</groupId>
-		<artifactId>main-project-pom</artifactId>
-		<version>3.0.0</version>
-		<!-- projectmanager.version -->
-
+		<groupId>com.sgu.infowksporga</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
 
 	<groupId>com.sgu.infowksporga</groupId>
 	<artifactId>presentation-webapp</artifactId>
-	<version>1.0.0</version>
-	<packaging>war</packaging>
+	<packaging>war</packaging> 
 	<name>Information Workspace Organizer Webapp (Presentation)</name>
 	<description>This pom is used to build Information Workspace Organizer Webapp Presentation project</description>
 
@@ -25,7 +22,7 @@
 
 
 	<build>
-		<finalName>info-wrksp-orga-prez</finalName>
+		<finalName>info-wksp-orga-prez</finalName>
 
 		<plugins>
 
@@ -43,7 +40,7 @@
 					<scanIntervalSeconds>2</scanIntervalSeconds>
 					<jettyXml>${project.basedir}/src/main/webapp/WEB-INF/jetty/jetty-config.xml</jettyXml>
 					<webApp>
-						<contextPath>/info-wrksp-orga-prez</contextPath>
+						<contextPath>/info-wksp-orga-prez</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
@@ -56,13 +53,13 @@
 		<dependency>
 			<groupId>com.sgu.framework</groupId>
 			<artifactId>fwk-core</artifactId>
-			<version>3.0.0</version>
+			<version>${fwk-core.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sgu.infowksporga</groupId>
 			<artifactId>common</artifactId>
-			<version>1.0.0</version>
+			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>

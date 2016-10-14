@@ -27,7 +27,7 @@
 
 
   <logger name="com.sgu.core" additivity="false">
-		<level value="WARN" />
+		<level value="DEBUG" />
 		<appender-ref ref="console" />
 	</logger>
 	
@@ -47,7 +47,7 @@
 	</logger>
 	
 	<logger name="org.apache.http" additivity="false">
-    <level value="WARN" />
+    <level value="INFO" />
     <appender-ref ref="console" />
   </logger>
 

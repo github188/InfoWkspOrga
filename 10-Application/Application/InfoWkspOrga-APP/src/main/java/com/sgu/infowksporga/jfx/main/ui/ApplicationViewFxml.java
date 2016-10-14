@@ -6,25 +6,19 @@ import java.util.ResourceBundle;
 import org.controlsfx.control.CheckComboBox;
 import org.controlsfx.control.IndexedCheckModel;
 
-import com.sgu.apt.annotation.AnnotationConfig;
-import com.sgu.apt.annotation.i18n.I18n;
-import com.sgu.apt.annotation.i18n.I18nProperty;
 import com.sgu.core.framework.gui.jfx.control.DigitalClock;
-import com.sgu.core.framework.gui.jfx.control.GDockPane;
-import com.sgu.core.framework.gui.jfx.control.GStatusBar;
-import com.sgu.core.framework.gui.jfx.control.GToolBar;
+import com.sgu.core.framework.gui.jfx.control.hdrbtm.GStatusBar;
+import com.sgu.core.framework.gui.jfx.control.hdrbtm.GToolBar;
+import com.sgu.core.framework.gui.jfx.control.pane.GBorderPane;
+import com.sgu.core.framework.gui.jfx.control.pane.dock.GDockPane;
 import com.sgu.core.framework.gui.jfx.screen.AGView;
-import com.sgu.core.framework.i18n.util.I18NConstant;
-import com.sgu.infowksporga.jfx.util.UtilControl;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Orientation;
-import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -62,7 +56,7 @@ import lombok.extern.slf4j.Slf4j;
  * @return the digital clock
  */
 @Getter
-public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, ApplicationController> implements Initializable {
+public class ApplicationViewFxml extends AGView<ApplicationModel, ApplicationController> implements Initializable {
 
   /** The cb show hide item notifications. */
   public static final String CB_SHOW_HIDE_ITEM_NOTIFICATIONS = "Notifications";
@@ -85,6 +79,18 @@ public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, Applica
   private Button btnExit;
 
   @FXML
+  private Button btnAddWebView;
+
+  @FXML
+  private Button btnSaveWorkspace;
+
+  @FXML
+  private Button btnCreateWorkspace;
+
+  @FXML
+  private Button btnEditWorkspace;
+
+  @FXML
   private ToggleButton tgBtnPerspectiveVisible;
 
   @FXML
@@ -92,6 +98,12 @@ public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, Applica
 
   @FXML
   private SplitPane spnWorkspace;
+
+  @FXML
+  private AnchorPane ancPnlPerspective;
+
+  @FXML
+  private AnchorPane ancPnlWorkspace;
 
   @FXML
   private TitledPane ttlPnlNotifications;
@@ -118,13 +130,13 @@ public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, Applica
   private TitledPane ttlPnlPerspective;
 
   @FXML
+  private GBorderPane brdPnlPerspective;
+
+  @FXML
   private TitledPane ttlPnlWorkspaceMap;
 
   @FXML
-  private AnchorPane pnlPerspective;
-
-  @FXML
-  private AnchorPane pnlWorkspaceMapView;
+  private AnchorPane ancPnlWorkspaceMapView;
 
   @FXML
   private BorderPane pnlWorkspace;
@@ -139,7 +151,7 @@ public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, Applica
   private CheckComboBox<String> cbShowHide;
 
   /*------------------------------------------------------*/
-  // ==> Controls not in FXML file
+  // ==> Controls not defined in FXML file
   /*------------------------------------------------------*/
 
   /** The digital clock. */
@@ -165,18 +177,40 @@ public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, Applica
     pnlStatusBar.getRightItems().add(digitalClock);
     pnlStatusBar.setProgress(0);
 
-    // Deploy Perspective Accordion panel
-    Platform.runLater(() -> {
-      ttlPnlPerspective.setExpanded(true);
-    });
+    /*------------------------------------------------------------------*/
+    // Reorder Toolbar button
+    /*------------------------------------------------------------------*/
+    // Move btnAddWebView to the left of the toolbar
+    pnlToolBar.getChildren().remove(btnAddWebView);
+    pnlToolBar.addLeftItems(btnAddWebView);
 
-    // Move tgBtnPerspectiveVisible to the right of the toolbar
+    pnlToolBar.addLeftItems(new Separator(Orientation.VERTICAL));
+
+    // Move btnSaveWorkspace to the left of the toolbar
+    pnlToolBar.getChildren().remove(btnSaveWorkspace);
+    pnlToolBar.addLeftItems(btnSaveWorkspace);
+
+    // Move btnEditWorkspace to the left of the toolbar
+    pnlToolBar.getChildren().remove(btnEditWorkspace);
+    pnlToolBar.addLeftItems(btnEditWorkspace);
+
+    // Move btnCreateWorkspace to the left of the toolbar
+    pnlToolBar.getChildren().remove(btnCreateWorkspace);
+    pnlToolBar.addLeftItems(btnCreateWorkspace);
+
+    // Move tgBtnPerspectiveVisible to the left of the toolbar
     pnlToolBar.getChildren().remove(tgBtnPerspectiveVisible);
     pnlToolBar.addLeftItems(new Separator(Orientation.VERTICAL));
     pnlToolBar.addLeftItems(tgBtnPerspectiveVisible);
 
     // Add Default Dockable Workspace
-    controller().createNewWorkspace();
+    controller().createNewEmptyWorkspace();
+
+    // Deploy Perspective Accordion panel
+    Platform.runLater(() -> {
+      ttlPnlPerspective.setExpanded(true);
+    });
+
   }
 
   /** {@inheritDoc} */
@@ -200,49 +234,6 @@ public class ApplicationViewFxml extends AGView<Scene, ApplicationModel, Applica
   @Override
   public void initialize(final URL location, final ResourceBundle resources) {
     super.initialize(location, resources);
-
-    updateBtnExitFromProperties();
-
-  }
-
-  /**
-   * Initialize from properties btn exit.
-   */
-  @I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-prez",
-  properties = { // label create
-                @I18nProperty(key = "application.action.button.exit" + I18NConstant.TEXT, value = ""), // Force /n
-                @I18nProperty(key = "application.action.button.exit" + I18NConstant.TOOLTIP_TEXT, value = "Fermer l'application"), // Force /n 
-                @I18nProperty(key = "application.action.button.exit" + I18NConstant.ICON, value = "/icons/exit.png"), // Force /n
-                @I18nProperty(key = "application.action.button.exit" + I18NConstant.SHORTCUT, value = "Control+X"), // Force /n
-                @I18nProperty(key = "application.action.button.exit" + I18NConstant.NAME, value = "btnExit"), // Force /n
-  })
-  private void updateBtnExitFromProperties() {
-    UtilControl.applyBundleConfigToButton("application.action.button.exit", btnExit);
-  }
-
-  /**
-   * Exit application action.
-   *
-   * @param event the event
-   */
-  @FXML
-  public void exitApplicationAction(final ActionEvent event) {
-    controller().processExitApplication();
-  }
-
-  /**
-   * Display or hide application menu.
-   *
-   * @param event the event
-   */
-  @FXML
-  public void displayOrHideAcdPerspective(final ActionEvent event) {
-    if (tgBtnPerspectiveVisible.isSelected() == false) {
-      pnlApplication.setLeft(null);
-    }
-    else {
-      pnlApplication.setLeft(acdPerspective);
-    }
   }
 
 }

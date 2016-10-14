@@ -4,20 +4,17 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.sgu.project</groupId>
-		<artifactId>main-project-pom</artifactId>
-		<version>3.0.0</version>
-		<!-- projectmanager.version -->
-
+		<groupId>com.sgu.infowksporga</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.0</version>
 	</parent>
 
 	<groupId>com.sgu.infowksporga</groupId>
 	<artifactId>common</artifactId>
-	<version>1.0.0</version>
 	<packaging>jar</packaging>
 	<name>Information Workspace Organizer Common library (prez and Biz)</name>
 	<description>This pom is used to build Information Workspace Organizer Common project</description>
-
+ 
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<resources>
@@ -58,13 +55,13 @@
 		<dependency>
 			<groupId>com.sgu.framework</groupId>
 			<artifactId>fwk-core</artifactId>
-			<version>3.0.0</version>
+			<version>${fwk-core.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sgu.framework</groupId>
 			<artifactId>apt-core</artifactId>
-			<version>3.0.0</version>
+			<version>${apt-core.version}</version>
 		</dependency>
 		
 	</dependencies>

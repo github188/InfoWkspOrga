@@ -8,6 +8,7 @@ import javax.swing.ImageIcon;
 
 import com.sgu.core.framework.gui.jfx.util.GUISession;
 import com.sgu.core.framework.resources.EnvironmentEnum;
+import com.sgu.infowksporga.jfx.main.Application;
 
 /**
  * Description : GUISessionProxy class<br>.
@@ -69,6 +70,15 @@ public class GUISessionProxy {
    */
   public static GUISession getGuiSession() {
     return guiSession;
+  }
+
+  /**
+   * Gets the current application.
+   *
+   * @return the current application
+   */
+  public static Application getCurrentApplication() {
+    return (Application) guiSession.getApplication();
   }
 
   /**

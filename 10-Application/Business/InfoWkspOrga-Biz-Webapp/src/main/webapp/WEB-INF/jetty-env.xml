@@ -17,10 +17,10 @@
 
   <New id="APP-DS-RSC" class="org.eclipse.jetty.plus.jndi.Resource">
     <Arg></Arg>
-    <Arg>jdbc/infowksporga-DS</Arg>
+    <Arg>jdbc/info-wksp-orga-DS</Arg>
     <Arg>
           <New id="Application-DataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlConnectionPoolDataSource">
-             <Set name="url">jdbc:mysql://localhost:3306/infowksporgar</Set>
+             <Set name="url">jdbc:mysql://localhost:3306/info_wksp_orga</Set>
              <Set name="user">root</Set>
              <Set name="password">Jnspqm.1</Set>
           </New>
