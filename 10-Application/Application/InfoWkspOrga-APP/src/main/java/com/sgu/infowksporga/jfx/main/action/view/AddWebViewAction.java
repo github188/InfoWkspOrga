@@ -47,7 +47,7 @@ public class AddWebViewAction extends AViewAddAction {
   @Override
   @I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-prez",
   properties = { // label create
-                @I18nProperty(key = "application.web.view.default.text", value = "Nouvelle vue Web"), // Force /n
+                @I18nProperty(key = "application.web.view.default.text", value = "Vue par défaut (Quand le workspace sélectionné n'est encore définit)"), // Force /n
                 @I18nProperty(key = "application.web.view.default.url", value = "https://www.google.fr"), // Force /n
                 @I18nProperty(key = "application.web.view.default.icon", value = "/icons/web.png"), // Force /n
   })
@@ -55,10 +55,11 @@ public class AddWebViewAction extends AViewAddAction {
     final WebViewModel model = new WebViewModel();
     model.addParameter(WebViewModel.VIEW_TITLE, "application.web.view.default.text");
     model.addParameter(WebViewModel.VIEW_ICON, "application.web.view.default.icon");
-    model.addParameter(WebViewModel.VIEW_SCREEN_CLASS, WebViewScreen.class.getName());
+    model.addParameter(WebViewModel.VIEW_SCREEN_BEAN, WebViewScreen.class.getName());
     model.addParameter(WebViewModel.WEB_VIEW_URL, "application.web.view.default.url");
 
-    addView(model);
+    addDefaultView(model);
+
   }
 
 }

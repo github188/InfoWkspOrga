@@ -29,12 +29,13 @@ public class WebViewModel extends ADockableViewModel<WebViewFxml, WebViewControl
    * @return the url
    */
   public String getUrl() {
-    return I18nHelperApp.getMessage(getViewParameters().get(WEB_VIEW_URL));
+    return I18nHelperApp.getMessage(getParameters().get(WEB_VIEW_URL));
   }
 
   /**
    * Fill ui.
    */
+  @Override
   public void fillUI() {
     view().getWebEngine().load(getUrl());
   }

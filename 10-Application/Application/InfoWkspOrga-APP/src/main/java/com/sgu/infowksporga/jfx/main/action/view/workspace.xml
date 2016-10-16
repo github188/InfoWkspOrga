@@ -1,0 +1,44 @@
+<x-dock>
+    <x-sibling>
+        <x-dock-view bean="com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode" dock-pos="RIGHT" height="94.0" width="229.0">
+            <x-model key="VIEW_SCREEN_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen"/>
+            <x-model key="WEB_VIEW_URL" value="application.web.view.default.url"/>
+            <x-model key="VIEW_ICON" value="application.web.view.default.icon"/>
+            <x-model key="VIEW_TITLE" value="01"/>
+            <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
+        </x-dock-view>
+        <x-dock-view bean="com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode" dock-pos="CENTER" height="94.0" width="229.0">
+            <x-model key="VIEW_SCREEN_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen"/>
+            <x-model key="WEB_VIEW_URL" value="application.web.view.default.url"/>
+            <x-model key="VIEW_ICON" value="application.web.view.default.icon"/>
+            <x-model key="VIEW_TITLE" value="03"/>
+            <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
+        </x-dock-view>
+        <x-dock-view bean="com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode" dock-pos="BOTTOM" height="89.0" width="229.0">
+            <x-model key="VIEW_SCREEN_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen"/>
+            <x-model key="WEB_VIEW_URL" value="application.web.view.default.url"/>
+            <x-model key="VIEW_ICON" value="application.web.view.default.icon"/>
+            <x-model key="VIEW_TITLE" value="02"/>
+            <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
+        </x-dock-view>
+    </x-sibling>
+    <x-sibling>
+        <x-dock-view bean="com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode" dock-pos="RIGHT" height="218.0" width="344.0">
+            <x-model key="VIEW_SCREEN_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen"/>
+            <x-model key="WEB_VIEW_URL" value="application.web.view.default.url"/>
+            <x-model key="VIEW_ICON" value="application.web.view.default.icon"/>
+            <x-model key="VIEW_TITLE" value="05"/>
+            <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
+        </x-dock-view>
+    </x-sibling>
+    <x-sibling>
+        <x-dock-view bean="com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode" dock-pos="BOTTOM" height="136.0" width="579.0">
+            <x-model key="VIEW_SCREEN_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen"/>
+            <x-model key="WEB_VIEW_URL" value="application.web.view.default.url"/>
+            <x-model key="VIEW_ICON" value="application.web.view.default.icon"/>
+            <x-model key="VIEW_TITLE" value="04"/>
+            <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
+        </x-dock-view>
+    </x-sibling>
+    <x-sibling/>
+</x-dock>

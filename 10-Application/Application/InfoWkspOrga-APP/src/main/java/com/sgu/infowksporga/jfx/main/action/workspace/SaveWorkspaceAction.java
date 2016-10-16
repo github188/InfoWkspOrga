@@ -1,7 +1,5 @@
 package com.sgu.infowksporga.jfx.main.action.workspace;
 
-import java.util.List;
-
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
 import com.sgu.apt.annotation.i18n.I18nProperty;
@@ -15,7 +13,6 @@ import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
 import javafx.event.ActionEvent;
-import javafx.scene.Node;
 import javafx.scene.control.Control;
 import lombok.extern.slf4j.Slf4j;
 
@@ -54,13 +51,9 @@ public class SaveWorkspaceAction extends AppBaseAction<ActionEvent> {
   @Override
   public void handle(final ActionEvent event) {
     final GDockPane dockPane = GUISessionProxy.getCurrentApplication().getApplicationScreen().getView().getDockPane();
-
-    final List<Node> root = dockPane.getChildren();
-    XDock xDock = new XDock();
-    UtilDockFX.serializeDockFxStructureRecursively(root, xDock, 0);
+    final XDock xDock = UtilDockFX.serializeDockFxStructure(dockPane);
 
     log.debug(UtilXml.jaxbObjectToXml(xDock, XDock.class));
-
   }
 
 }

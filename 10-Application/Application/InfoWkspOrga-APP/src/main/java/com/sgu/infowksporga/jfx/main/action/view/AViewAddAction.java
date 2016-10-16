@@ -8,6 +8,7 @@ import com.sgu.core.framework.gui.jfx.control.pane.dock.GDockPane;
 import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewModel;
 import com.sgu.core.framework.i18n.I18nHelper;
 import com.sgu.core.framework.util.UtilDockFX;
+import com.sgu.core.framework.util.UtilIO;
 import com.sgu.infowksporga.jfx.action.AppBaseAction;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
@@ -38,14 +39,32 @@ public class AViewAddAction extends AppBaseAction<ActionEvent> {
    *
    * @param model the model
    */
-  protected void addView(ADockableViewModel model) {
+  protected void addDefaultView(final ADockableViewModel model) {
     try {
       final GDockNode dockNode = UtilDockFX.buildDockableViewNodeFromModel(model);
       final GDockPane dockPane = GUISessionProxy.getCurrentApplication().getApplicationScreen().getView().getDockPane();
       dockNode.dock(dockPane, DockPos.RIGHT);
-    } catch (Exception e) {
+    } catch (final Exception e) {
       throw new TechnicalException(e);
     }
+  }
+
+  /**
+   * Adds the view.
+   * Use for dev testing
+   *
+   * @param model the model
+   */
+  protected void addDefaultView2(final ADockableViewModel model) {
+    try {
+      final String xmlStructure = UtilIO.readFile("G:\\Projects\\400-InfoWkspOrga\\10-Application\\Application\\InfoWkspOrga-APP\\src\\main\\java\\com\\sgu\\infowksporga\\jfx\\main\\action\\view\\workspace.xml");
+      final GDockPane dockPaneFromXml = UtilDockFX.deSerializeDockFxStructure(xmlStructure);
+      GUISessionProxy.getCurrentApplication().getApplicationScreen().getView().getPnlWorkspace().setCenter(dockPaneFromXml);
+      GUISessionProxy.getCurrentApplication().getApplicationScreen().getView().setDockPane(dockPaneFromXml);
+    } catch (final Exception e) {
+      throw new TechnicalException(e);
+    }
+
   }
 
 }

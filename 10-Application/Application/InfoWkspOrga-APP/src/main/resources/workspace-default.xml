@@ -1,0 +1,12 @@
+<x-dock>
+    <x-sibling>
+        <x-dock-view bean="com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode" dock-pos="RIGHT" height="94.0" width="229.0">
+            <x-model key="VIEW_SCREEN_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen"/>
+            <x-model key="WEB_VIEW_URL" value="application.web.view.default.url"/>
+            <x-model key="VIEW_ICON" value="application.web.view.default.icon"/>
+            <x-model key="VIEW_TITLE" value="application.web.view.default.text"/>
+            <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
+        </x-dock-view>
+    </x-sibling>
+    <x-sibling/>
+</x-dock>
