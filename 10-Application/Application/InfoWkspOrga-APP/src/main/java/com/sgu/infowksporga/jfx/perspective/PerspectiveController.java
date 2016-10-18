@@ -66,7 +66,7 @@ public final class PerspectiveController extends AGController<PerspectiveModel, 
    */
   public void callFindDataToInitApplicationFacade() {
     final FindDataToInitApplicationFacade facade = SpringBeanHelper.getImplementationByInterface(FindDataToInitApplicationFacade.class);
-    final PerspectiveScreen perspectiveScreen = GUISessionProxy.getCurrentApplication().getApplicationScreen().getPerspectiveScreen();
+    final PerspectiveScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
     GUISessionProxy.getGuiSession().getServiceDelegate().execute(facade, perspectiveScreen);
   }
 

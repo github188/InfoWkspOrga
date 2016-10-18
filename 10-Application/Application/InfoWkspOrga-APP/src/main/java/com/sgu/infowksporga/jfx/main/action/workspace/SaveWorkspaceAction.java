@@ -3,14 +3,13 @@ package com.sgu.infowksporga.jfx.main.action.workspace;
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
 import com.sgu.apt.annotation.i18n.I18nProperty;
-import com.sgu.core.framework.gui.jfx.control.pane.dock.GDockPane;
-import com.sgu.core.framework.gui.jfx.control.pane.dock.serialization.XDock;
 import com.sgu.core.framework.i18n.util.I18NConstant;
-import com.sgu.core.framework.util.UtilDockFX;
-import com.sgu.core.framework.util.UtilXml;
+import com.sgu.core.framework.spring.loader.SpringBeanHelper;
 import com.sgu.infowksporga.jfx.action.AppBaseAction;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
+import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
+import com.sgu.infowksporga.jfx.y_service.remote.workspace.SaveWorkspaceLayoutFacade;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Control;
@@ -44,16 +43,22 @@ public class SaveWorkspaceAction extends AppBaseAction<ActionEvent> {
   public SaveWorkspaceAction(final Control control) {
     super(control, ACTION_BUNDLE_KEY, I18nHelperApp.getI18nHelper());
     // Add action to Application action manager
-    GUISessionProxy.getCurrentApplication().getActionManager().addEntry(control, this);
+    GUISessionProxy.getApplication().getActionManager().addEntry(control, this);
   }
 
   /** {@inheritDoc} */
   @Override
   public void handle(final ActionEvent event) {
-    final GDockPane dockPane = GUISessionProxy.getCurrentApplication().getApplicationScreen().getView().getDockPane();
-    final XDock xDock = UtilDockFX.serializeDockFxStructure(dockPane);
+    callSaveWorkspaceLayoutFacade();
+  }
 
-    log.debug(UtilXml.jaxbObjectToXml(xDock, XDock.class));
+  /**
+   * Call save workspace layout facade.
+   */
+  public void callSaveWorkspaceLayoutFacade() {
+    final SaveWorkspaceLayoutFacade facade = SpringBeanHelper.getImplementationByInterface(SaveWorkspaceLayoutFacade.class);
+    final ApplicationScreen applicationScreen = GUISessionProxy.getApplication().getApplicationScreen();
+    GUISessionProxy.getGuiSession().getServiceDelegate().execute(facade, applicationScreen);
   }
 
 }

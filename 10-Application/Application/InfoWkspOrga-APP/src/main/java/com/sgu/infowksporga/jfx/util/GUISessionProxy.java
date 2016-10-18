@@ -9,6 +9,9 @@ import javax.swing.ImageIcon;
 import com.sgu.core.framework.gui.jfx.util.GUISession;
 import com.sgu.core.framework.resources.EnvironmentEnum;
 import com.sgu.infowksporga.jfx.main.Application;
+import com.sgu.infowksporga.jfx.perspective.PerspectiveScreen;
+import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
+import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 
 /**
  * Description : GUISessionProxy class<br>.
@@ -21,20 +24,6 @@ public class GUISessionProxy {
    * Define by -Denvironement=Development;Production;...
    */
   public static final String ENVIRONMENT = "ENVIRONMENT";
-
-  /** The Constant CURRENT_WORKSPACE. */
-  public static final String CURRENT_WORKSPACE = "CURRENT_WORKSPACE";
-
-  /**
-   * The Constant CURRENT_PERSPECTIVE.
-   * Where we display Workspace organization
-   */
-  public static final String CURRENT_PERSPECTIVE = "CURRENT_PERSPECTIVE";
-
-  /**
-   * The Constant CURRENT_VIEW.
-   */
-  public static final String CURRENT_VIEW = "CURRENT_VIEW";
 
   /**
    * The Constant CURRENT_VIEW.
@@ -77,7 +66,7 @@ public class GUISessionProxy {
    *
    * @return the current application
    */
-  public static Application getCurrentApplication() {
+  public static Application getApplication() {
     return (Application) guiSession.getApplication();
   }
 
@@ -105,8 +94,10 @@ public class GUISessionProxy {
    *
    * @return The current workspace of the application
    */
-  public static Object getCurrentWorkspace() {
-    return null;//getInfoWrkspOrgaFrame().getWrkspSelected();
+  public static WorkspaceItemVo getCurrentWorkspace() {
+    final PerspectiveTreeItem item = (PerspectiveTreeItem) getApplication().getApplicationScreen().getPerspectiveScreen().view().getTreeWorkspaces().getSelectionModel()
+                                                                           .getSelectedItem();
+    return item.getWorkspaceItemVo();
   }
 
   /**
@@ -115,16 +106,7 @@ public class GUISessionProxy {
    * @return the current view
    */
   public static Object getCurrentView() {
-    return guiSession.getSessionAttribute(CURRENT_VIEW);
-  }
-
-  /**
-   * Sets the current view.
-   *
-   * @param view the current view
-   */
-  public static void setCurrentView(final Object view) {
-    guiSession.setSessionAttribute(CURRENT_VIEW, view);
+    return null;//guiSession.getSessionAttribute(CURRENT_VIEW);
   }
 
   /**
@@ -173,8 +155,8 @@ public class GUISessionProxy {
    *
    * @return the current perspective
    */
-  public static Object getCurrentPerspective() {
-    return null;
+  public static PerspectiveScreen getPerspectiveScreen() {
+    return getApplication().getApplicationScreen().getPerspectiveScreen();
   }
 
   /**

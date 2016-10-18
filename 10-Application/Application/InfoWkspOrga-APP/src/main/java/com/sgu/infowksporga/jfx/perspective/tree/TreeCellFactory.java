@@ -31,7 +31,7 @@ public class TreeCellFactory extends TreeCell<AbstractItemVo> {
   public void updateItem(final AbstractItemVo item, final boolean empty) {
     super.updateItem(item, empty);
 
-    final PerspectiveScreen perspectiveScreen = GUISessionProxy.getCurrentApplication().getApplicationScreen().getPerspectiveScreen();
+    final PerspectiveScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
     final CbbPerspectiveItem cbbPerspectiveItem = (CbbPerspectiveItem) perspectiveScreen.view().getCbbPerspective().getSelectionModel().getSelectedItem();
 
     //Re-init values
@@ -43,11 +43,12 @@ public class TreeCellFactory extends TreeCell<AbstractItemVo> {
     if (item != null && cbbPerspectiveItem != null) {
 
       final WorkspaceItemVo userVoObject = (WorkspaceItemVo) item;
+      final Workspace workspace = userVoObject.getWorkspaceDto().getWorkspace();
 
-      setText(I18nHelperApp.getMessage(userVoObject.getWorkspace().getName()));
-      setStyle(getTitleStyle(userVoObject.getWorkspace()));
+      setText(I18nHelperApp.getMessage(workspace.getName()));
+      setStyle(getTitleStyle(workspace));
 
-      if (userVoObject.getWorkspace().getType() == WorkspaceTypeEnum.ROOT) {
+      if (workspace.getType() == WorkspaceTypeEnum.ROOT) {
         setText("Perspective - " + I18nHelperApp.getMessage(cbbPerspectiveItem.getPerspective().getName()));
 
         if (UtilString.isNotBlank((String) perspectiveScreen.view().getCbbFilterOnWorkspaces().getSelectionModel().getSelectedItem())) {
@@ -63,7 +64,7 @@ public class TreeCellFactory extends TreeCell<AbstractItemVo> {
 
       }
 
-      final String icon = userVoObject.getWorkspace().getIcon();
+      final String icon = workspace.getIcon();
       setGraphic(UtilGUI.getImageView(icon));
 
       final String description = getItemDescription(userVoObject);
@@ -82,12 +83,15 @@ public class TreeCellFactory extends TreeCell<AbstractItemVo> {
    * @return the node description
    */
   private String getItemDescription(final WorkspaceItemVo userItem) {
-    if (UtilString.isNotBlank(userItem.getWorkspace().getDescription())) {
-      final String description = userItem.getWorkspace().getDescription().replace("${User}", GUISessionProxy.getGuiSession().getCurrentUser().getLogin());
+
+    final Workspace workspace = userItem.getWorkspaceDto().getWorkspace();
+
+    if (UtilString.isNotBlank(workspace.getDescription())) {
+      final String description = workspace.getDescription().replace("${User}", GUISessionProxy.getGuiSession().getCurrentUser().getLogin());
       return I18nHelperApp.getMessage(description);
     }
 
-    return I18nHelperApp.getNullMessage(userItem.getWorkspace().getName() + I18NConstant.TOOLTIP_TEXT);
+    return I18nHelperApp.getNullMessage(workspace.getName() + I18NConstant.TOOLTIP_TEXT);
   }
 
   /**

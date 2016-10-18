@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
 import com.sgu.infowksporga.business.comparator.WorkspaceComparatorOnOrder;
+import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Perspective;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveOut;
@@ -91,7 +92,7 @@ public class PerspectiveModel extends AGModel<PerspectiveViewFxml, PerspectiveCo
   private PerspectiveTreeItem buildPerspectiveTree(final List<Workspace> workspaces) {
     int treeNodeIdentifier = 0;
     // build the root Node
-    final PerspectiveTreeItem rootItem = new PerspectiveTreeItem(treeNodeIdentifier++, workspaces.get(0));
+    final PerspectiveTreeItem rootItem = new PerspectiveTreeItem(treeNodeIdentifier++, new WorkspaceDto(workspaces.get(0)));
     final Map<String, PerspectiveTreeItem> parentWkspById = new HashMap<>(workspaces.size());
     parentWkspById.put(rootItem.getWorkspace().getId(), rootItem);
 
@@ -99,7 +100,7 @@ public class PerspectiveModel extends AGModel<PerspectiveViewFxml, PerspectiveCo
     PerspectiveTreeItem parentWorkspaceTreeItem = rootItem;
     for (int i = 1; i < workspaces.size(); i++) {
       final Workspace workspace = workspaces.get(i);
-      final PerspectiveTreeItem childNode = new PerspectiveTreeItem(treeNodeIdentifier++, workspaces.get(i));
+      final PerspectiveTreeItem childNode = new PerspectiveTreeItem(treeNodeIdentifier++, new WorkspaceDto(workspaces.get(i)));
       parentWkspById.put(childNode.getWorkspace().getId(), childNode);
 
       if (workspace.getParent() != null) {

@@ -20,8 +20,6 @@ import com.sgu.infowksporga.business.dao.repository.PerspectiveWorkspacesReposit
 import com.sgu.infowksporga.business.dao.repository.ViewAttributeRepository;
 import com.sgu.infowksporga.business.dao.repository.ViewRepository;
 import com.sgu.infowksporga.business.dao.repository.WorkspaceRepository;
-import com.sgu.infowksporga.business.service.rest.serialized.api.AbstractSerializedService;
-import com.sgu.infowksporga.business.service.rest.serialized.api.ISaveWorkspaceService;
 import com.sgu.infowksporga.business.dto.PerspectiveWorkspaceOrderDto;
 import com.sgu.infowksporga.business.entity.PerspectiveWorkspaces;
 import com.sgu.infowksporga.business.entity.View;
@@ -29,6 +27,8 @@ import com.sgu.infowksporga.business.entity.ViewAttribute;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceIn;
 import com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceOut;
+import com.sgu.infowksporga.business.service.rest.serialized.api.AbstractSerializedService;
+import com.sgu.infowksporga.business.service.rest.serialized.api.ISaveWorkspaceService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -53,16 +53,14 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
   private ViewAttributeRepository repositoryViewAttribute;
 
   //---------------------------------------------------------------------------------------------------------------------------------------
-  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER,
-  interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api", interfaceName = "ISaveWorkspaceService",
-  pivotIn = "com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceIn",
+  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER, interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api",
+  interfaceName = "ISaveWorkspaceService", pivotIn = "com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceIn",
   pivotOut = "com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceOut")
 
   @Rest(requestControllerUri = "/workspace", requestServiceUri = "/save", controllerPackage = "com.sgu.infowksporga.web.rest.controller",
   controllerName = "SaveWorkspaceController", method = "RequestMethod.POST",
   produces = "{ GMediaType.APPLICATION_JSON_VALUE, GMediaType.APPLICATION_JAVA_SERIALIZED_OBJECT_VALUE, GMediaType.APPLICATION_XML_VALUE }",
-  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER,
-  restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
+  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER, restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
 
   //---------------------------------------------------------------------------------------------------------------------------------------
   @Override
@@ -83,10 +81,10 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
       workspace.setCreationInfo(in.getUserLogin(), saveDate);
       workspace = repositoryWorkspace.save(workspace);
 
-      PerspectiveWorkspaces pw = new PerspectiveWorkspaces();
+      final PerspectiveWorkspaces pw = new PerspectiveWorkspaces();
       pw.setPerspectiveId(in.getPerspectiveWorkspaceOrderDto().getPerspectiveId());
       pw.setWorkspaceId(workspace.getId());
-      int newWorkspaceOrder = in.getPerspectiveWorkspaceOrderDto().getNewWorkspaceIdOrder().get("");
+      final int newWorkspaceOrder = in.getPerspectiveWorkspaceOrderDto().getNewWorkspaceIdOrder().get("");
       pw.setWorkspaceOrder(newWorkspaceOrder);
       pw.setCreationInfo(in.getUserLogin(), saveDate);
       repositoryPerspectiveWorkspaces.save(pw);
@@ -103,7 +101,7 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
       //-------------------------------------------------------------------------------------------
       // Delete all views (with attributes) not in the workspace views list (them deleted by user)
       removeAllViewsNotReferencedByWorkspace(workspace);
-      //--------------------------------------------------------------------------------------------      
+      //--------------------------------------------------------------------------------------------
     }
 
     /*---------------------------------------------------*/
@@ -111,9 +109,9 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
     /*---------------------------------------------------*/
     reIndexPerspectiveWorkspacesOrder(in, saveDate, workspace);
 
-    /*---------------------------------------------*/
+    /*-------------------------------------------------*/
     /* Views management */
-    /*---------------------------------------------*/
+    /*-------------------------------------------------*/
     manageViewsAndAttributes(in, saveDate, workspace);
 
     return out;
@@ -126,8 +124,8 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
    * @param saveDate the save date
    * @param workspace the workspace
    */
-  private void manageViewsAndAttributes(final SaveWorkspaceIn in, final Date saveDate, Workspace workspace) {
-    List<View> views = workspace.getViews();
+  private void manageViewsAndAttributes(final SaveWorkspaceIn in, final Date saveDate, final Workspace workspace) {
+    final List<View> views = workspace.getViews();
     for (View view : views) {
 
       if (view.getId() == null) {
@@ -146,7 +144,7 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
       /*---------------------------------------------*/
       /* View ATTRIBUTES management */
       /*---------------------------------------------*/
-      Set<ViewAttribute> viewAttributes = view.getAttributes();
+      final Set<ViewAttribute> viewAttributes = view.getAttributes();
       for (ViewAttribute viewAttribute : viewAttributes) {
         if (viewAttribute.getId() == null) {
           log.debug("viewAttribute Creation");
@@ -172,16 +170,16 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
    * @param saveDate the save date
    * @param workspace the workspace
    */
-  private void reIndexPerspectiveWorkspacesOrder(final SaveWorkspaceIn in, final Date saveDate, Workspace workspace) {
+  private void reIndexPerspectiveWorkspacesOrder(final SaveWorkspaceIn in, final Date saveDate, final Workspace workspace) {
     if (in.getPerspectiveWorkspaceOrderDto() != null) {
-      Map<String, PerspectiveWorkspaces> currentPerspectiveWorkspacesLst = findAllCurrentPerspectiveWorkspacesLink(in);
+      final Map<String, PerspectiveWorkspaces> currentPerspectiveWorkspacesLst = findAllCurrentPerspectiveWorkspacesLink(in);
 
-      PerspectiveWorkspaceOrderDto orderDto = in.getPerspectiveWorkspaceOrderDto();
-      Set<String> keys = orderDto.getNewWorkspaceIdOrder().keySet();
+      final PerspectiveWorkspaceOrderDto orderDto = in.getPerspectiveWorkspaceOrderDto();
+      final Set<String> keys = orderDto.getNewWorkspaceIdOrder().keySet();
 
-      for (String workspaceId : keys) {
-        Integer oldOrder = orderDto.getOldWorkspaceIdOrder().get(workspaceId);
-        Integer newOrder = orderDto.getNewWorkspaceIdOrder().get(workspaceId);
+      for (final String workspaceId : keys) {
+        final Integer oldOrder = orderDto.getOldWorkspaceIdOrder().get(workspaceId);
+        final Integer newOrder = orderDto.getNewWorkspaceIdOrder().get(workspaceId);
         log.debug("odlOrder'{}' --> newOrder '{}'", oldOrder, newOrder);
 
         if (newOrder != oldOrder) {
@@ -210,11 +208,10 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
    * @return the map< string, perspective workspaces>
    */
   private Map<String, PerspectiveWorkspaces> findAllCurrentPerspectiveWorkspacesLink(final SaveWorkspaceIn in) {
-    Map<String, PerspectiveWorkspaces> currentPerspectiveWorkspacesLst = new HashMap<String, PerspectiveWorkspaces>(10);
+    final Map<String, PerspectiveWorkspaces> currentPerspectiveWorkspacesLst = new HashMap<String, PerspectiveWorkspaces>(10);
 
-    List<PerspectiveWorkspaces> pwLst = repositoryPerspectiveWorkspaces.findAllBy("perspectiveId",
-                                                                                  in.getPerspectiveWorkspaceOrderDto().getPerspectiveId());
-    for (PerspectiveWorkspaces perspectiveWorkspaces : pwLst) {
+    final List<PerspectiveWorkspaces> pwLst = repositoryPerspectiveWorkspaces.findAllBy("perspectiveId", in.getPerspectiveWorkspaceOrderDto().getPerspectiveId());
+    for (final PerspectiveWorkspaces perspectiveWorkspaces : pwLst) {
       currentPerspectiveWorkspacesLst.put(perspectiveWorkspaces.getWorkspaceId(), perspectiveWorkspaces);
     }
 
@@ -226,10 +223,10 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
    *
    * @param workspace the workspace
    */
-  private void removeAllViewsNotReferencedByWorkspace(Workspace workspace) {
-    List<Integer> viewsIdToKeep = new ArrayList<Integer>();
+  private void removeAllViewsNotReferencedByWorkspace(final Workspace workspace) {
+    final List<Integer> viewsIdToKeep = new ArrayList<Integer>();
 
-    for (View view : workspace.getViews()) {
+    for (final View view : workspace.getViews()) {
       if (view.getId() != null) {
         viewsIdToKeep.add(view.getId());
       }
@@ -246,7 +243,7 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
     if (viewsIdToDelete != null && viewsIdToDelete.size() > 0) {
       // First remove all attributes for all views to evict reference problem
       repositoryViewAttribute.removeViewsAttributes(viewsIdToDelete);
-      // Now remove all not needed Views 
+      // Now remove all not needed Views
       repositoryView.removeViews(viewsIdToDelete);
     }
   }

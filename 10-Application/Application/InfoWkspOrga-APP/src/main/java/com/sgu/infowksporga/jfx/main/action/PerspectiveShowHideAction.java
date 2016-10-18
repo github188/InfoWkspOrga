@@ -41,14 +41,14 @@ public final class PerspectiveShowHideAction extends AppBaseAction<ActionEvent> 
   public PerspectiveShowHideAction(final Control control) {
     super(control, ACTION_BUNDLE_KEY, I18nHelperApp.getI18nHelper());
     // Add action to Application action manager
-    GUISessionProxy.getCurrentApplication().getActionManager().addEntry(control, this);
+    GUISessionProxy.getApplication().getActionManager().addEntry(control, this);
   }
 
   /** {@inheritDoc} */
   @Override
   public void handle(final ActionEvent event) {
     if (event.isConsumed() == false) {
-      final ApplicationViewFxml view = GUISessionProxy.getCurrentApplication().getApplicationScreen().getView();
+      final ApplicationViewFxml view = GUISessionProxy.getApplication().getApplicationScreen().getView();
 
       if (view.getTgBtnPerspectiveVisible().isSelected() == false) {
         // We have to save the real reference to be able to remove and restore Perspective view

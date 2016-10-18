@@ -90,6 +90,20 @@ public class ViewAttribute extends AbstractDescribedAuditedEntity<Integer> {
   public ViewAttribute() {
   }
 
+  /**
+   * The Constructor.
+   *
+   * @param id the id
+   * @param viewId the view id
+   * @param value the value
+   */
+  public ViewAttribute(final Integer id, final Integer viewId, final String value) {
+    super();
+    this.id = id;
+    this.viewId = viewId;
+    this.value = value;
+  }
+
   /** {@inheritDoc} */
   @Override
   public Integer getId() {
@@ -103,25 +117,25 @@ public class ViewAttribute extends AbstractDescribedAuditedEntity<Integer> {
   }
 
   @Override
-  public String toString() {
-    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("viewId", viewId).add("value", value)
-                      .toString();
-  }
-
-  @Override
   public int hashCode() {
     return Objects.hashCode(super.hashCode(), id);
   }
 
   @Override
-  public boolean equals(Object object) {
+  public boolean equals(final Object object) {
     if (object instanceof ViewAttribute) {
-      if (!super.equals(object))
+      if (!super.equals(object)) {
         return false;
-      ViewAttribute that = (ViewAttribute) object;
+      }
+      final ViewAttribute that = (ViewAttribute) object;
       return Objects.equal(this.id, that.id);
     }
     return false;
+  }
+
+  @Override
+  public String toString() {
+    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("viewId", viewId).add("value", value).toString();
   }
 
 }

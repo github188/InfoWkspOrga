@@ -40,5 +40,12 @@
             <x-model key="VIEW_MODEL_BEAN" value="com.sgu.infowksporga.jfx.view.web.ui.WebViewModel"/>
         </x-dock-view>
     </x-sibling>
-    <x-sibling/>
+    <x-split-pane divider-positions="100.50;200.36;654.56">
+       <x-split-pane divider-positions="100.50;200.36;654.56"/>
+       <x-split-pane divider-positions="100.50;200.36;654.56"/>
+       <x-split-pane divider-positions="100.50;200.36;654.56">
+         <x-split-pane divider-positions="100.50;200.36;654.56"/>
+         <x-split-pane divider-positions="100.50;200.36;654.56"/>
+       </x-split-pane>
+    </x-split-pane>
 </x-dock>

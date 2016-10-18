@@ -34,7 +34,7 @@ public abstract class AViewConfigurationAction extends AppBaseAction<ActionEvent
   public AViewConfigurationAction(final Control control) {
     super(control, ACTION_BUNDLE_KEY, I18nHelperApp.getI18nHelper());
     // Add action to Application action manager
-    GUISessionProxy.getCurrentApplication().getActionManager().addEntry(control, this);
+    GUISessionProxy.getApplication().getActionManager().addEntry(control, this);
   }
 
   /** {@inheritDoc} */

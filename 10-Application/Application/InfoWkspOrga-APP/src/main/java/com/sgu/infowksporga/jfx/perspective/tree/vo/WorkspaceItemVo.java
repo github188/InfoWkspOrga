@@ -1,14 +1,17 @@
 package com.sgu.infowksporga.jfx.perspective.tree.vo;
 
-import com.sgu.infowksporga.business.entity.Workspace;
+import com.sgu.infowksporga.business.dto.WorkspaceDto;
+
+import lombok.Getter;
 
 /**
- * The Class WorkspaceNodeVo.
+ * The Class WorkspaceItemVo.
  */
+@Getter
 public class WorkspaceItemVo extends AbstractItemVo {
 
   /** The workspace. */
-  private Workspace workspace;
+  private WorkspaceDto workspaceDto;
 
   /**
    * The Constructor.
@@ -16,18 +19,15 @@ public class WorkspaceItemVo extends AbstractItemVo {
    * @param treeNodeIdentifier the tree node identifier
    * @param workspace the workspace
    */
-  public WorkspaceItemVo(final long treeNodeIdentifier, final Workspace workspace) {
+  public WorkspaceItemVo(final long treeNodeIdentifier, final WorkspaceDto workspaceDto) {
     this.treeNodeIdentifier = treeNodeIdentifier;
-    this.workspace = workspace;
+    this.workspaceDto = workspaceDto;
   }
 
+  /** {@inheritDoc} */
   @Override
   public String getName() {
-    return workspace.getName();
-  }
-
-  public Workspace getWorkspace() {
-    return workspace;
+    return workspaceDto.getWorkspace().getName();
   }
 
   /**
@@ -35,7 +35,7 @@ public class WorkspaceItemVo extends AbstractItemVo {
    */
   @Override
   public String toString() {
-    return workspace.getName();
+    return getName();
   }
 
 }

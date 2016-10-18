@@ -23,7 +23,10 @@ public class SaveWorkspaceIn extends AbstractIn {
    */
   private WorkspaceDto workspaceDto;
 
-  /** The perspective workspace order dto. */
+  /**
+   * The perspective workspace order dto.
+   * Used when we create a new Workspace
+   */
   private PerspectiveWorkspaceOrderDto perspectiveWorkspaceOrderDto;
 
   /**
@@ -38,7 +41,7 @@ public class SaveWorkspaceIn extends AbstractIn {
    *
    * @param workspaceDto the workspace dto
    */
-  public SaveWorkspaceIn(WorkspaceDto workspaceDto) {
+  public SaveWorkspaceIn(final WorkspaceDto workspaceDto) {
     this.workspaceDto = workspaceDto;
   }
 

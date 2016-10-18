@@ -3,6 +3,7 @@ package com.sgu.infowksporga.jfx.perspective.tree;
 import org.springframework.data.domain.Persistable;
 
 import com.sgu.core.framework.util.Util;
+import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.AbstractItemVo;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.StringItemVo;
@@ -28,7 +29,7 @@ public class PerspectiveTreeItem extends TreeItem<AbstractItemVo> implements Com
    * @param treeNodeIdentifier the tree node identifier
    * @param userObject the user object
    */
-  public PerspectiveTreeItem(final long treeNodeIdentifier, final Workspace workspace) {
+  public PerspectiveTreeItem(final long treeNodeIdentifier, final WorkspaceDto workspace) {
     super(null);
     setWorkspace(new WorkspaceItemVo(treeNodeIdentifier, workspace));
   }
@@ -57,7 +58,7 @@ public class PerspectiveTreeItem extends TreeItem<AbstractItemVo> implements Com
    * @return the workspace
    */
   public Workspace getWorkspace() {
-    return ((WorkspaceItemVo) getValue()).getWorkspace();
+    return getWorkspaceItemVo().getWorkspaceDto().getWorkspace();
   }
 
   /**

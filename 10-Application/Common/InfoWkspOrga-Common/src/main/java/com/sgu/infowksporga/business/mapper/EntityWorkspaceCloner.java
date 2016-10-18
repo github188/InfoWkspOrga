@@ -33,9 +33,10 @@ public class EntityWorkspaceCloner extends AbstractEntityCloner<Workspace> {
    * @param this the this
    * @return the perspective
    */
-  public com.sgu.infowksporga.business.entity.Workspace cloneWithoutProxy(Workspace source) {
+  @Override
+  public com.sgu.infowksporga.business.entity.Workspace cloneWithoutProxy(final Workspace source) {
 
-    Workspace clone = new Workspace();
+    final Workspace clone = new Workspace();
 
     // Clone des données communes
     super.cloneCommonFields(source, clone);
@@ -59,6 +60,8 @@ public class EntityWorkspaceCloner extends AbstractEntityCloner<Workspace> {
     clone.setLayout(source.getLayout());
     clone.setOwner(source.getOwner());
     clone.setPartage(source.getPartage());
+    clone.setHeight(source.getHeight());
+    clone.setWidth(source.getWidth());
 
     // Manage classes potentially proxified by hibernate
     if (source.getParent() != null) {
@@ -69,7 +72,7 @@ public class EntityWorkspaceCloner extends AbstractEntityCloner<Workspace> {
       clone.setMaster(new Workspace(source.getMaster().getId()));
     }
 
-    if (source.getViews() != null & (source.getViews() instanceof PersistentCollection)) {
+    if (source.getViews() != null & source.getViews() instanceof PersistentCollection) {
       clone.setViews((List<View>) UtilHibernate.unproxyPersistentCollection((PersistentCollection) source.getViews()));
     }
 

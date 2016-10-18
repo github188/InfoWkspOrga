@@ -1,9 +1,7 @@
 package com.sgu.infowksporga.business.dto;
 
 import java.io.Serializable;
-import java.util.List;
 
-import com.sgu.infowksporga.business.entity.View;
 import com.sgu.infowksporga.business.entity.Workspace;
 
 import lombok.Getter;
@@ -30,44 +28,29 @@ public class WorkspaceDto extends AbstractDto implements Serializable {
    * The Constructor.
    */
   public WorkspaceDto() {
+    this(new Workspace());
+  }
+
+  /**
+   * The Constructor.
+   *
+   * @param workspace the workspace
+   */
+  public WorkspaceDto(final Workspace workspace) {
+    this(workspace, null);
+
+  }
+
+  /**
+   * The Constructor.
+   *
+   * @param workspace the workspace
+   * @param workspaceMaster the workspace master
+   */
+  public WorkspaceDto(final Workspace workspace, final Workspace workspaceMaster) {
     super();
-    workspace = new Workspace();
-  }
-
-  /**
-   * Gets the preferred workspaces views dto.
-   *
-   * @return the preferred workspaces views dto
-   */
-  public WorkspacesViewsDto buildWorkspacesViewsDtoExtract() {
-    return buildWorkspacesViewsDto();
-  }
-
-  /**
-   * Builds the preferred workspaces views dto.
-   *
-   * @return the preferred workspaces views dto
-   */
-  private WorkspacesViewsDto buildWorkspacesViewsDto() {
-    WorkspacesViewsDto viewsDto = new WorkspacesViewsDto();
-
-    List<View> views = workspace.getViews();
-    if (views != null) {
-      for (View view : views) {
-        viewsDto.addView(view);
-      }
-    }
-
-    if (workspaceMaster != null) {
-      List<View> masterViews = workspaceMaster.getViews();
-      if (masterViews != null) {
-        for (View view : masterViews) {
-          viewsDto.addMasterView(view);
-        }
-      }
-    }
-
-    return viewsDto;
+    this.workspace = workspace;
+    this.workspaceMaster = workspaceMaster;
   }
 
 }

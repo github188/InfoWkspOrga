@@ -10,13 +10,13 @@ import com.sgu.apt.annotation.interfaces.GenerateInterface;
 import com.sgu.apt.annotation.rest.Rest;
 import com.sgu.core.framework.exception.TechnicalException;
 import com.sgu.infowksporga.business.dao.api.IWorkspaceDao;
-import com.sgu.infowksporga.business.service.rest.serialized.api.AbstractSerializedService;
-import com.sgu.infowksporga.business.service.rest.serialized.api.IFindWorkspaceService;
 import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.mapper.EntityWorkspaceCloner;
 import com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceIn;
 import com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceOut;
+import com.sgu.infowksporga.business.service.rest.serialized.api.AbstractSerializedService;
+import com.sgu.infowksporga.business.service.rest.serialized.api.IFindWorkspaceService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,26 +32,24 @@ public class FindWorkspaceService extends AbstractSerializedService implements I
   private IWorkspaceDao dao;
 
   //---------------------------------------------------------------------------------------------------------------------------------------
-  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER,
-  interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api", interfaceName = "IFindWorkspaceService",
-  pivotIn = "com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceIn",
+  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER, interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api",
+  interfaceName = "IFindWorkspaceService", pivotIn = "com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceIn",
   pivotOut = "com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceOut")
 
-  @Rest(requestControllerUri = "/workspace", requestServiceUri = "/find/views",
-  controllerPackage = "com.sgu.infowksporga.web.rest.controller", controllerName = "FindWorkspaceController", method = "RequestMethod.POST",
+  @Rest(requestControllerUri = "/workspace", requestServiceUri = "/find/views", controllerPackage = "com.sgu.infowksporga.web.rest.controller",
+  controllerName = "FindWorkspaceController", method = "RequestMethod.POST",
   produces = "{ GMediaType.APPLICATION_JSON_VALUE, GMediaType.APPLICATION_JAVA_SERIALIZED_OBJECT_VALUE, GMediaType.APPLICATION_XML_VALUE }",
-  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER,
-  restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
+  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER, restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
 
   //---------------------------------------------------------------------------------------------------------------------------------------
   @Override
   public FindWorkspaceOut executeService(final FindWorkspaceIn in) {
     final FindWorkspaceOut out = new FindWorkspaceOut();
 
-    Workspace workspace = dao.findWorkspaceWithViewsAndAttr(in.getWorkspaceId());
+    final Workspace workspace = dao.findWorkspaceWithViewsAndAttr(in.getWorkspaceId());
 
     if (workspace == null) {
-      out.setWorkspaceViews(null);
+      out.setWorkspaceDto(null);
       return out;
     }
 
@@ -62,8 +60,7 @@ public class FindWorkspaceService extends AbstractSerializedService implements I
     if (workspace.getMaster() != null) {
       workspaceMaster = dao.findWorkspaceWithViewsAndAttr(workspace.getMaster().getId());
       if (workspaceMaster == null) {
-        throw new TechnicalException("Workspace id '" + workspace.getId() + "' has a master not found with id '"
-                                     + workspace.getMaster().getId() + "'");
+        throw new TechnicalException("Workspace id '" + workspace.getId() + "' has a master not found with id '" + workspace.getMaster().getId() + "'");
       }
     }
 
@@ -73,7 +70,7 @@ public class FindWorkspaceService extends AbstractSerializedService implements I
     if (workspaceMaster != null) {
       workspaceDto.setWorkspaceMaster(EntityWorkspaceCloner.instance.cloneWithoutProxy(workspaceMaster));
     }
-    out.setWorkspaceViews(workspaceDto);
+    out.setWorkspaceDto(workspaceDto);
 
     return out;
   }

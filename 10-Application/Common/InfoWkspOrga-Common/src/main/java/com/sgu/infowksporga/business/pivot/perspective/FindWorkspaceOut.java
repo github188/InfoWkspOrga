@@ -20,7 +20,7 @@ public class FindWorkspaceOut extends AbstractOut {
   /**
    * Attribute
    */
-  private WorkspaceDto workspaceViews;
+  private WorkspaceDto workspaceDto;
 
   /**
    * Constructor<br>

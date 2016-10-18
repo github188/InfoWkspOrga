@@ -24,8 +24,11 @@ import org.hibernate.validator.constraints.NotBlank;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
+import com.sgu.core.framework.dao.jpa.converter.BooleanByteConverter;
 import com.sgu.core.framework.dao.jpa.entity.AbstractDescribedAuditedEntity;
+import com.sgu.infowksporga.business.entity.converter.DockPosEnumConverter;
 import com.sgu.infowksporga.business.entity.converter.PartageEnumConverter;
+import com.sgu.infowksporga.business.entity.enumeration.DockPosEnum;
 import com.sgu.infowksporga.business.entity.enumeration.PartageEnum;
 
 import lombok.Getter;
@@ -51,10 +54,46 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
   private String workspaceId;
 
   /**
-   * Identifies the View Type (Package with .class name)',
+   * Identifies the Model Type (Package with .class name)',
    */
-  @Column(name = "java_type", nullable = false, length = 300)
-  private String javaType;
+  @Column(name = "model_bean", nullable = false, length = 300)
+  private String modelBean;
+
+  /**
+   * Identifies the Screen Type (Package with .class name)',
+   */
+  @Column(name = "screen_bean", nullable = false, length = 300)
+  private String screenBean;
+
+  /**
+   * Identifies the Dock View Type (Package with .class name)',
+   */
+  @Column(name = "dock_node_bean", nullable = false, length = 300)
+  private String dockNodeBean;
+
+  @Column(name = "dock_pos", nullable = false, length = 300)
+  @Enumerated(EnumType.STRING)
+  @Convert(converter = DockPosEnumConverter.class)
+  private DockPosEnum dockPos = DockPosEnum.RIGHT;
+
+  @Column(nullable = false)
+  @Convert(converter = BooleanByteConverter.class)
+  private boolean nextSibling;
+
+  @Column(name = "order", nullable = false)
+  private Integer order;
+
+  @NotNull
+  private Double height;
+
+  @NotNull
+  private Double width;
+
+  @Column(name = "name_color", nullable = true, length = 20)
+  private String nameColor;
+
+  @Column(name = "name_bg_color", nullable = true, length = 20)
+  private String nameBgColor;
 
   /**
    * Identifies the View Type (Package with .class name)',
@@ -115,9 +154,9 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
    * @return the attributes as map
    */
   public Map<String, ViewAttribute> getAttributesAsMap() {
-    Map<String, ViewAttribute> mapAttributes = new HashMap<String, ViewAttribute>(2);
+    final Map<String, ViewAttribute> mapAttributes = new HashMap<String, ViewAttribute>(2);
 
-    for (ViewAttribute viewAttribute : attributes) {
+    for (final ViewAttribute viewAttribute : attributes) {
       mapAttributes.put(viewAttribute.getName(), viewAttribute);
     }
 
@@ -129,8 +168,21 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
    *
    * @param attribute the attribute
    */
-  public void addAttribute(ViewAttribute attribute) {
+  public void addAttribute(final ViewAttribute attribute) {
     attributes.add(attribute);
+  }
+
+  /**
+   * Adds the attribute.
+   *
+   * @param id the id
+   * @param viewId the view id
+   * @param value the value
+   */
+  public void addAttribute(final Integer id, final Integer viewId, final String name, final String value) {
+    final ViewAttribute attribute = new ViewAttribute(id, viewId, value);
+    attribute.setName(name);
+    addAttribute(attribute);
   }
 
   /**
@@ -138,16 +190,8 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
    *
    * @param mapAttributes the attributes
    */
-  public void setAttributes(Map<String, ViewAttribute> mapAttributes) {
+  public void setAttributes(final Map<String, ViewAttribute> mapAttributes) {
     attributes = new HashSet<ViewAttribute>(mapAttributes.values());
-  }
-
-  /** {@inheritDoc} */
-  @Override
-  public String toString() {
-    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("workspaceId", workspaceId)
-                      .add("javaType", javaType).add("category", category).add("tags", tags).add("cmmiPractices", cmmiPractices)
-                      .add("owner", owner).add("partage", partage).add("attributes", attributes).toString();
   }
 
   @Override
@@ -156,14 +200,23 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
   }
 
   @Override
-  public boolean equals(Object object) {
+  public boolean equals(final Object object) {
     if (object instanceof View) {
-      if (!super.equals(object))
+      if (!super.equals(object)) {
         return false;
-      View that = (View) object;
+      }
+      final View that = (View) object;
       return Objects.equal(this.id, that.id);
     }
     return false;
+  }
+
+  @Override
+  public String toString() {
+    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("workspaceId", workspaceId).add("modelBean", modelBean)
+                      .add("screenBean", screenBean).add("dockNodeBean", dockNodeBean).add("dockPos", dockPos).add("nextSibling", nextSibling).add("order", order)
+                      .add("height", height).add("width", width).add("nameColor", nameColor).add("nameBgColor", nameBgColor).add("icon", icon).add("category", category)
+                      .add("tags", tags).add("cmmiPractices", cmmiPractices).add("owner", owner).add("partage", partage).add("attributes", attributes).toString();
   }
 
 }

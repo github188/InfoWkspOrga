@@ -41,13 +41,13 @@ public class EditWorkspaceAction extends AppBaseAction<ActionEvent> {
   public EditWorkspaceAction(final Control control) {
     super(control, ACTION_BUNDLE_KEY, I18nHelperApp.getI18nHelper());
     // Add action to Application action manager
-    GUISessionProxy.getCurrentApplication().getActionManager().addEntry(control, this);
+    GUISessionProxy.getApplication().getActionManager().addEntry(control, this);
   }
 
   /** {@inheritDoc} */
   @Override
   public void handle(final ActionEvent event) {
-    final GDockPane dockPane = GUISessionProxy.getCurrentApplication().getApplicationScreen().getView().getDockPane();
+    final GDockPane dockPane = GUISessionProxy.getApplication().getApplicationScreen().getView().getDockPane();
 
     UtilGUIMessage.showNotYetImplementedDlg();
 

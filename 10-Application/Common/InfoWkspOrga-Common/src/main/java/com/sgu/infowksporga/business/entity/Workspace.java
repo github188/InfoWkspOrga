@@ -61,11 +61,11 @@ import lombok.Setter;
 //-----------------------------------------------------------------------
 @NamedQueries({
 @NamedQuery(name = Workspace.FIND_WORKSPACE_WITH_VIEWS_AND_ATTR, query =
-" SELECT w  FROM  "  + 
-"     Workspace w   "  + 
-/*"     JOIN FETCH View v   "  + 
-"       ON w.id = v.workspaceId   "  + 
-"     JOIN FETCH ViewAttribute a   "  + 
+" SELECT w  FROM  "  +
+"     Workspace w   "  +
+/*"     JOIN FETCH View v   "  +
+"       ON w.id = v.workspaceId   "  +
+"     JOIN FETCH ViewAttribute a   "  +
 "       ON a.viewId = v.id   "  + */
 "  WHERE w.id = :workspaceId   ")
 
@@ -74,11 +74,11 @@ import lombok.Setter;
 //-----------------------------------------------------------------------
 // Entity Graphs
 //-----------------------------------------------------------------------
-/* This defines an Entity Graph with name workspace-Views-ViewAttributes and specifies that the relationship views should be loaded. 
+/* This defines an Entity Graph with name workspace-Views-ViewAttributes and specifies that the relationship views should be loaded.
  * Additionally, it also specifies that the relationship views should load the attributes.
- * 
- * Note that we don’t specify the id attribute in the Entity Graph. 
- * This is because primary keys are always fetched regardless of what’s being specified. 
+ *
+ * Note that we don’t specify the id attribute in the Entity Graph.
+ * This is because primary keys are always fetched regardless of what’s being specified.
  * This is also true for version attributes.
  */
 @NamedEntityGraphs({
@@ -148,6 +148,12 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
 
   @Column(length = 100)
   private String customer;
+
+  @NotNull
+  private Double height;
+
+  @NotNull
+  private Double width;
 
   /**
    * code de regroupement d''une même famille de workspaces
@@ -234,7 +240,7 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
   /**
    * The Constructor.
    */
-  public Workspace(String id) {
+  public Workspace(final String id) {
     this();
     this.id = id;
   }
@@ -243,7 +249,7 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
    * Gets the master.
    *
    * @return the master
-   * 
+   *
    *         <pre>
    *         public Workspace getMaster() {
    *           return master;
@@ -280,7 +286,7 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
    * @return the workspace
    */
   public Workspace cloneWithoutProxy() {
-    Workspace result = EntityWorkspaceCloner.instance.cloneWithoutProxy(this);
+    final Workspace result = EntityWorkspaceCloner.instance.cloneWithoutProxy(this);
     return result;
   }
 
@@ -295,11 +301,12 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
   }
 
   @Override
-  public boolean equals(Object object) {
+  public boolean equals(final Object object) {
     if (object instanceof Workspace) {
-      if (!super.equals(object))
+      if (!super.equals(object)) {
         return false;
-      Workspace that = (Workspace) object;
+      }
+      final Workspace that = (Workspace) object;
       return Objects.equal(this.id, that.id);
     }
     return false;

@@ -109,10 +109,15 @@ public final class ApplicationController extends AGController<ApplicationModel, 
   }
 
   /**
-   * Creates the new workspace.
+   * Display new empty workspace.
    */
-  public void createNewEmptyWorkspace() {
-    final GDockPane dockPane = new GDockPane();
+  public void displayNewEmptyWorkspace() {
+    GDockPane dockPane = view().getDockPane();
+    if (view().getDockPane() != null) {
+      dockPane = null;
+    }
+
+    dockPane = new GDockPane();
     view().setDockPane(dockPane);
 
     view().getPnlWorkspace().setCenter(dockPane);

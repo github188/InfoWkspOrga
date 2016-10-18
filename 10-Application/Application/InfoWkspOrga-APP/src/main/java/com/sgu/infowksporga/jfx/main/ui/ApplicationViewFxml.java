@@ -204,7 +204,7 @@ public class ApplicationViewFxml extends AGView<ApplicationModel, ApplicationCon
     pnlToolBar.addLeftItems(tgBtnPerspectiveVisible);
 
     // Add Default Dockable Workspace
-    controller().createNewEmptyWorkspace();
+    controller().displayNewEmptyWorkspace();
 
     // Deploy Perspective Accordion panel
     Platform.runLater(() -> {
