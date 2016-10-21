@@ -22,7 +22,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.CheckComboBox?>
 
-<BorderPane prefHeight="900" prefWidth="1600" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.main.ui.ApplicationViewFxml">
+<BorderPane prefHeight="900" prefWidth="1600" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.main.mvc.ApplicationViewFxml">
 	<top>
 		<VBox fx:id="vboxTop" BorderPane.alignment="CENTER">
 			<children>

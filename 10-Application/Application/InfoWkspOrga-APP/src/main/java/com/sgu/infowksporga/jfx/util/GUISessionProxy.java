@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 import com.sgu.core.framework.gui.jfx.util.GUISession;
 import com.sgu.core.framework.resources.EnvironmentEnum;
 import com.sgu.infowksporga.jfx.main.Application;
-import com.sgu.infowksporga.jfx.perspective.PerspectiveScreen;
+import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 
@@ -155,7 +155,7 @@ public class GUISessionProxy {
    *
    * @return the current perspective
    */
-  public static PerspectiveScreen getPerspectiveScreen() {
+  public static PerspectivePanelScreen getPerspectiveScreen() {
     return getApplication().getApplicationScreen().getPerspectiveScreen();
   }
 

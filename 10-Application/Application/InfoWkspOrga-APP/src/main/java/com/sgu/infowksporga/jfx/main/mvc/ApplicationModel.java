@@ -1,4 +1,4 @@
-package com.sgu.infowksporga.jfx.main.ui;
+package com.sgu.infowksporga.jfx.main.mvc;
 
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
 

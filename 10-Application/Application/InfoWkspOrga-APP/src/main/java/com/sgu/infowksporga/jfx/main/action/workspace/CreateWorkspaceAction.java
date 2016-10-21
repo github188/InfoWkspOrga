@@ -3,15 +3,16 @@ package com.sgu.infowksporga.jfx.main.action.workspace;
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
 import com.sgu.apt.annotation.i18n.I18nProperty;
-import com.sgu.core.framework.gui.jfx.control.pane.dock.GDockPane;
-import com.sgu.core.framework.gui.jfx.util.UtilGUIMessage;
+import com.sgu.core.framework.gui.jfx.screen.IDisplayMode;
 import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.infowksporga.jfx.action.AppBaseAction;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
+import com.sgu.infowksporga.jfx.workspace.dlg.mvc.WorkspaceDlgScreen;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Control;
+import javafx.scene.control.Dialog;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -48,10 +49,14 @@ public class CreateWorkspaceAction extends AppBaseAction<ActionEvent> {
   /** {@inheritDoc} */
   @Override
   public void handle(final ActionEvent event) {
-    final GDockPane dockPane = GUISessionProxy.getApplication().getApplicationScreen().getView().getDockPane();
+    WorkspaceDlgScreen screen = new WorkspaceDlgScreen();
+    Dialog<String> dialog = screen.buildDialogBox(IDisplayMode.MODE_CONSULT);
+    dialog.setResizable(true);
+    Object result = dialog.showAndWait();
+    result.toString();
 
-    UtilGUIMessage.showNotYetImplementedDlg();
-
+    // Destroy de la boite de dialog
+    dialog.close();
   }
 
 }

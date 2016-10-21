@@ -1,7 +1,7 @@
-package com.sgu.infowksporga.jfx.main.ui;
+package com.sgu.infowksporga.jfx.main.mvc;
 
 import com.sgu.core.framework.gui.jfx.screen.AGScreen;
-import com.sgu.infowksporga.jfx.perspective.PerspectiveScreen;
+import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ApplicationScreen extends AGScreen<ApplicationModel, ApplicationViewFxml, ApplicationController> {
 
   /** The perspective screen. */
-  private PerspectiveScreen perspectiveScreen;
+  private PerspectivePanelScreen perspectiveScreen;
 
   /**
    * The Constructor.
@@ -33,7 +33,7 @@ public class ApplicationScreen extends AGScreen<ApplicationModel, ApplicationVie
   public void initMVC() {
     super.initMVC();
 
-    perspectiveScreen = new PerspectiveScreen();
+    perspectiveScreen = new PerspectivePanelScreen();
     perspectiveScreen.initMVC();
 
     view().getBrdPnlPerspective().setCenter(perspectiveScreen.getViewRoot());

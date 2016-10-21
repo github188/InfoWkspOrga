@@ -27,7 +27,7 @@ import com.sgu.infowksporga.business.entity.enumeration.DockPosEnum;
 import com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceIn;
 import com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceOut;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
-import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
+import com.sgu.infowksporga.jfx.main.mvc.ApplicationScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.view.ui.AApplicationViewModel;

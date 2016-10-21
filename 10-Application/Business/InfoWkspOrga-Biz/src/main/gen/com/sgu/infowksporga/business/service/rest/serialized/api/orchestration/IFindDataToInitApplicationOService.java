@@ -1,4 +1,4 @@
-package com.sgu.infowksporga.business.service.rest.serialized.orchestration.api;
+package com.sgu.infowksporga.business.service.rest.serialized.api.orchestration;
 
 
 import com.sgu.infowksporga.business.service.rest.serialized.api.ISerializedBusinessService;

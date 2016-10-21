@@ -28,7 +28,7 @@ import com.sgu.core.framework.util.UtilXml;
 import com.sgu.infowksporga.business.entity.View;
 import com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceIn;
 import com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceOut;
-import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
+import com.sgu.infowksporga.jfx.main.mvc.ApplicationScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.util.UtilView;

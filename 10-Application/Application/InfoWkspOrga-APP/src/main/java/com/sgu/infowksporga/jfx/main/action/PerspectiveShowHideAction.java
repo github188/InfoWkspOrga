@@ -6,7 +6,7 @@ import com.sgu.apt.annotation.i18n.I18nProperty;
 import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.infowksporga.jfx.action.AppBaseAction;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
-import com.sgu.infowksporga.jfx.main.ui.ApplicationViewFxml;
+import com.sgu.infowksporga.jfx.main.mvc.ApplicationViewFxml;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
 import javafx.event.ActionEvent;

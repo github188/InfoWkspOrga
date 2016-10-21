@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sgu.core.framework.gui.jfx.control.GComboBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GLabel?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GGridPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TitledPane fx:id="ttlPnlReferences" text="References" xmlns="http://javafx.com/javafx/8.0.60" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.ReferencePanelFxml">
+   <content>
+      <AnchorPane fx:id="achPnlReferences">
+         <children>
+            <GGridPane fx:id="grdPnlReferences" hgap="5.0" prefHeight="79.0" prefWidth="602.0" vgap="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="160.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="160.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  
+                  <GLabel fx:id="lblParent" text="Parent :" GridPane.columnIndex="0" />
+                  <GLabel fx:id="lblMaster" text="Master :" GridPane.columnIndex="2" />
+                  
+                  <GLabel fx:id="lblType" alignment="CENTER_RIGHT" text="Type :" GridPane.rowIndex="1" />
+                  <GComboBox fx:id="cbbMaster" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" />
+                  <GLabel fx:id="lblProject" alignment="CENTER_RIGHT" text="Project :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <GComboBox fx:id="cbbParent" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" />
+                  <GComboBox fx:id="cbbType" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <GComboBox fx:id="cbbProject" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+               </children>
+            </GGridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

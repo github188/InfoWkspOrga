@@ -6,8 +6,8 @@ import com.sgu.core.framework.util.UtilString;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.entity.enumeration.WorkspaceTypeEnum;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
-import com.sgu.infowksporga.jfx.perspective.PerspectiveScreen;
 import com.sgu.infowksporga.jfx.perspective.cb.CbbPerspectiveItem;
+import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.AbstractItemVo;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
@@ -31,7 +31,7 @@ public class TreeCellFactory extends TreeCell<AbstractItemVo> {
   public void updateItem(final AbstractItemVo item, final boolean empty) {
     super.updateItem(item, empty);
 
-    final PerspectiveScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
+    final PerspectivePanelScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
     final CbbPerspectiveItem cbbPerspectiveItem = (CbbPerspectiveItem) perspectiveScreen.view().getCbbPerspective().getSelectionModel().getSelectedItem();
 
     //Re-init values

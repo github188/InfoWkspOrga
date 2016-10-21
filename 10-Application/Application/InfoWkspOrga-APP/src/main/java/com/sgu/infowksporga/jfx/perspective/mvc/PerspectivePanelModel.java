@@ -1,4 +1,4 @@
-package com.sgu.infowksporga.jfx.perspective;
+package com.sgu.infowksporga.jfx.perspective.mvc;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Setter
 @Getter
-public class PerspectiveModel extends AGModel<PerspectiveViewFxml, PerspectiveController> {
+public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, PerspectivePanelController> {
 
   /** The Constant comparator. */
   private static final WorkspaceComparatorOnOrder comparator = new WorkspaceComparatorOnOrder();
@@ -33,7 +33,7 @@ public class PerspectiveModel extends AGModel<PerspectiveViewFxml, PerspectiveCo
   /**
    * The Constructor.
    */
-  public PerspectiveModel() {
+  public PerspectivePanelModel() {
     super();
   }
 

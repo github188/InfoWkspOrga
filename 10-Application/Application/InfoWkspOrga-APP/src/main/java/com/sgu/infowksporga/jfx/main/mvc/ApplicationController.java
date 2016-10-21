@@ -1,4 +1,4 @@
-package com.sgu.infowksporga.jfx.main.ui;
+package com.sgu.infowksporga.jfx.main.mvc;
 
 import java.util.List;
 
@@ -9,6 +9,8 @@ import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.infowksporga.jfx.main.action.ExitAction;
 import com.sgu.infowksporga.jfx.main.action.PerspectiveShowHideAction;
 import com.sgu.infowksporga.jfx.main.action.view.AddWebViewAction;
+import com.sgu.infowksporga.jfx.main.action.workspace.CreateWorkspaceAction;
+import com.sgu.infowksporga.jfx.main.action.workspace.EditWorkspaceAction;
 import com.sgu.infowksporga.jfx.main.action.workspace.SaveWorkspaceAction;
 
 import javafx.collections.ListChangeListener;
@@ -48,9 +50,20 @@ public final class ApplicationController extends AGController<ApplicationModel, 
     new PerspectiveShowHideAction(view().getTgBtnPerspectiveVisible());
     view().getTgBtnPerspectiveVisible().setText("");
 
+    //------------------------------------------
     /* Workspace Views addon */
+    //------------------------------------------
     new AddWebViewAction(view().getBtnAddWebView());
     view().getBtnAddWebView().setText("");
+
+    //------------------------------------------
+    /* Workspace Characteristics management */
+    //------------------------------------------
+    new CreateWorkspaceAction(view().getBtnCreateWorkspace());
+    view().getBtnCreateWorkspace().setText("");
+
+    new EditWorkspaceAction(view().getBtnEditWorkspace());
+    view().getBtnEditWorkspace().setText("");
 
     new SaveWorkspaceAction(view().getBtnSaveWorkspace());
     view().getBtnSaveWorkspace().setText("");

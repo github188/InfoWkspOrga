@@ -16,7 +16,7 @@ import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveStructureO
 import com.sgu.infowksporga.business.service.rest.serialized.FindPerspectiveService;
 import com.sgu.infowksporga.business.service.rest.serialized.FindPerspectiveStructureService;
 import com.sgu.infowksporga.business.service.rest.serialized.api.AbstractSerializedService;
-import com.sgu.infowksporga.business.service.rest.serialized.orchestration.api.IFindDataToInitApplicationOService;
+import com.sgu.infowksporga.business.service.rest.serialized.api.orchestration.IFindDataToInitApplicationOService;
 
 @Service
 @Transactional
@@ -37,12 +37,12 @@ public class FindDataToInitApplicationOService extends AbstractSerializedService
   //---------------------------------------------------------------------------------------------------------------------------------------
   @Override
   @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER,
-  interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.orchestration.api", interfaceName = "IFindDataToInitApplicationOService",
+  interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api.orchestration", interfaceName = "IFindDataToInitApplicationOService",
   pivotIn = "com.sgu.infowksporga.business.pivot.orchestration.FindDataToInitApplicationIn",
   pivotOut = "com.sgu.infowksporga.business.pivot.orchestration.FindDataToInitApplicationOut")
 
   @Rest(requestControllerUri = "/application", requestServiceUri = "/initialization", controllerPackage = "com.sgu.infowksporga.web.rest.controller",
-  controllerName = "FindDataToInitApplicationController", method = "RequestMethod.POST",
+  controllerName = "FindDataToInitApplicationController", method = "RequestMethod.POST", interfaceServiceName = "orchestration.IFindDataToInitApplicationOService",
   produces = "{ GMediaType.APPLICATION_JSON_VALUE, GMediaType.APPLICATION_JAVA_SERIALIZED_OBJECT_VALUE, GMediaType.APPLICATION_XML_VALUE }",
   controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER, restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
 

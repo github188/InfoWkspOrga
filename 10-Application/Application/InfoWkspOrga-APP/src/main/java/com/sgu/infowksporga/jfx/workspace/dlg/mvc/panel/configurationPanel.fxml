@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sgu.core.framework.gui.jfx.control.GCheckBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GComboBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GLabel?>
+<?import com.sgu.core.framework.gui.jfx.control.GTextField?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GGridPane?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GHBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TitledPane fx:id="ttlPnlWorkspaceConfig" text="Configuration" xmlns="http://javafx.com/javafx/8.0.60" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.ConfigurationPanelFxml">
+   <content>
+      <AnchorPane fx:id="ancPnlWorkspaceConfig">
+         <children>
+            <GGridPane fx:id="grdPnlWorkspaceConfig" hgap="5.0" prefHeight="79.0" prefWidth="602.0" vgap="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="160.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="160.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <GHBox alignment="CENTER" spacing="20.0" GridPane.columnSpan="4">
+                     <children>
+                        <GCheckBox fx:id="chkEnable" text="Enable" />
+                        <GCheckBox fx:id="chkChildrenAllowed" text="Children allowed" />
+                     </children>
+                  </GHBox>
+                  <GLabel fx:id="lblBaseFolder" text="Base Folder:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <GTextField fx:id="txtBaseFolder" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                  
+                  <GLabel fx:id="lblCategory" text="Category :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <GTextField fx:id="txtCategory" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <GLabel fx:id="lblTags" text="Tags :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <GTextField fx:id="txtTags" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  
+                  <GLabel fx:id="lblCbbPartage" alignment="CENTER_RIGHT" text="Partage :" GridPane.rowIndex="3" />
+                  <GComboBox fx:id="cbbPartage" editable="true" maxWidth="1.7976931348623157E308" promptText="Private/Public ?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <GLabel fx:id="lblCustomer" text="Customer :" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <GTextField fx:id="txtCustomer" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+               </children>
+            </GGridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

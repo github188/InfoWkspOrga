@@ -1,4 +1,4 @@
-package com.sgu.infowksporga.jfx.perspective;
+package com.sgu.infowksporga.jfx.perspective.mvc;
 
 import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.spring.loader.SpringBeanHelper;
@@ -21,12 +21,12 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Setter
 @Getter
-public final class PerspectiveController extends AGController<PerspectiveModel, PerspectiveViewFxml> {
+public final class PerspectivePanelController extends AGController<PerspectivePanelModel, PerspectivePanelViewFxml> {
 
   /**
    * The Constructor.
    */
-  public PerspectiveController() {
+  public PerspectivePanelController() {
     super();
   }
 
@@ -66,7 +66,7 @@ public final class PerspectiveController extends AGController<PerspectiveModel, 
    */
   public void callFindDataToInitApplicationFacade() {
     final FindDataToInitApplicationFacade facade = SpringBeanHelper.getImplementationByInterface(FindDataToInitApplicationFacade.class);
-    final PerspectiveScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
+    final PerspectivePanelScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
     GUISessionProxy.getGuiSession().getServiceDelegate().execute(facade, perspectiveScreen);
   }
 

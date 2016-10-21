@@ -1,16 +1,16 @@
-package com.sgu.infowksporga.jfx.perspective;
+package com.sgu.infowksporga.jfx.perspective.mvc;
 
 import com.sgu.core.framework.gui.jfx.screen.AGScreen;
 
 /**
  * The Class PerspectiveScreen.
  */
-public class PerspectiveScreen extends AGScreen<PerspectiveModel, PerspectiveViewFxml, PerspectiveController> {
+public class PerspectivePanelScreen extends AGScreen<PerspectivePanelModel, PerspectivePanelViewFxml, PerspectivePanelController> {
 
   /**
    * The Constructor.
    */
-  public PerspectiveScreen() {
+  public PerspectivePanelScreen() {
     super();
   }
 

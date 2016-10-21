@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sgu.core.framework.gui.jfx.control.GCheckBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GLabel?>
+<?import com.sgu.core.framework.gui.jfx.control.GTextField?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GGridPane?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GHBox?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TitledPane fx:id="ttlPnlStyle" text="Style"  xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1"
+     fx:controller="com.sgu.infowksporga.jfx.component.StylePanelFxml">
+   <content>
+      <AnchorPane fx:id="ancPnlStyle">
+         <children>
+            <GGridPane fx:id="grdPnlStyle" hgap="5.0" prefHeight="79.0" prefWidth="602.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="143.0" minWidth="78.0" prefWidth="110.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="364.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="NEVER" maxWidth="70.0" minWidth="22.0" prefWidth="22.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <GHBox alignment="CENTER_LEFT" spacing="20.0" GridPane.columnIndex="1" GridPane.columnSpan="2">
+                     <children>
+                        <GCheckBox fx:id="chkBold" text="Bold" />
+                        <GCheckBox fx:id="chkItalic" text="Italic" />
+                        <GCheckBox fx:id="chkStrike" text="Strike" />
+                        <GCheckBox fx:id="chkUnderline" text="Underline" />
+                     </children>
+                  </GHBox>
+                  <GLabel fx:id="lblTextColor" text="Text Color :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                  <GTextField fx:id="txtStyleRenderer" alignment="CENTER" editable="false" maxWidth="1.7976931348623157E308" text="Rendu du text avec les styles sélectionnés" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  
+                  <GLabel fx:id="lblIcon" text="Icon :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <GTextField fx:id="txtIcon" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                  <GLabel fx:id="lblIconRenderer" text="Test" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <GLabel fx:id="lblTextStyle" text="Text Style :" />
+                  <ColorPicker fx:id="cpkTextColor" maxWidth="110.0" minWidth="110.0" prefHeight="25.0" prefWidth="110.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GGridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

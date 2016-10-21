@@ -1,4 +1,4 @@
-package com.sgu.infowksporga.jfx.perspective;
+package com.sgu.infowksporga.jfx.perspective.mvc;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,11 +21,10 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * The Class PerspectiveViewFxml.
  */
-
 @Slf4j
 @Setter
 @Getter
-public class PerspectiveViewFxml extends AGView<PerspectiveModel, PerspectiveController> implements Initializable {
+public class PerspectivePanelViewFxml extends AGView<PerspectivePanelModel, PerspectivePanelController> implements Initializable {
 
   /** The cb show hide item notifications. */
   public static final String CB_SHOW_HIDE_ITEM_NOTIFICATIONS = "Notifications";
@@ -84,7 +83,7 @@ public class PerspectiveViewFxml extends AGView<PerspectiveModel, PerspectiveCon
   /**
    * The Constructor.
    */
-  public PerspectiveViewFxml() {
+  public PerspectivePanelViewFxml() {
     super();
   }
 

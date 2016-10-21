@@ -11,7 +11,7 @@ import com.sgu.infowksporga.business.pivot.orchestration.FindDataToInitApplicati
 import com.sgu.infowksporga.business.pivot.orchestration.FindDataToInitApplicationOut;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveIn;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveStructureIn;
-import com.sgu.infowksporga.jfx.perspective.PerspectiveScreen;
+import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 import com.sgu.infowksporga.rest.RestServiceMapping;
 
 import javafx.scene.control.ProgressBar;
@@ -20,7 +20,7 @@ import javafx.scene.control.ProgressBar;
  * The Class FindDataToInitApplicationFacade.
  */
 @Service
-public class FindDataToInitApplicationFacade extends AbstractBusinessFacade<FindDataToInitApplicationOut, PerspectiveScreen> {
+public class FindDataToInitApplicationFacade extends AbstractBusinessFacade<FindDataToInitApplicationOut, PerspectivePanelScreen> {
 
   /**
    * The Constructor.
@@ -31,7 +31,7 @@ public class FindDataToInitApplicationFacade extends AbstractBusinessFacade<Find
 
   /** {@inheritDoc} */
   @Override
-  public FindDataToInitApplicationOut execute(final PerspectiveScreen screen) throws TechnicalException, BusinessException {
+  public FindDataToInitApplicationOut execute(final PerspectivePanelScreen screen) throws TechnicalException, BusinessException {
 
     FindDataToInitApplicationOut out = null;
 
@@ -57,7 +57,7 @@ public class FindDataToInitApplicationFacade extends AbstractBusinessFacade<Find
 
   /** {@inheritDoc} */
   @Override
-  public void refreshScreen(final FindDataToInitApplicationOut output, final PerspectiveScreen screen, final StringBuilder reportMessages, final ProgressBar monitor) {
+  public void refreshScreen(final FindDataToInitApplicationOut output, final PerspectivePanelScreen screen, final StringBuilder reportMessages, final ProgressBar monitor) {
     screen.model().fillUI(output.getFindPerspectiveOut());
     screen.model().fillUI(output.getFindPerspectiveStructureOut());
   }

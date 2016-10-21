@@ -7,7 +7,7 @@ import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.core.framework.spring.loader.SpringBeanHelper;
 import com.sgu.infowksporga.jfx.action.AppBaseAction;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
-import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
+import com.sgu.infowksporga.jfx.main.mvc.ApplicationScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.y_service.remote.workspace.SaveWorkspaceLayoutFacade;
 

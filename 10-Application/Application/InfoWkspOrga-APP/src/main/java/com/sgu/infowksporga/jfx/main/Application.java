@@ -12,7 +12,7 @@ import com.sgu.core.framework.resources.EnvironmentEnum;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.main.ApplicationPreloader.MessageProgressNotification;
 import com.sgu.infowksporga.jfx.main.action.ExitAction;
-import com.sgu.infowksporga.jfx.main.ui.ApplicationScreen;
+import com.sgu.infowksporga.jfx.main.mvc.ApplicationScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
 import javafx.scene.Scene;
@@ -175,7 +175,7 @@ public final class Application extends AGApplication<StackPane> {
    */
   @Override
   protected void customizeScene(final Scene scene) {
-    addCSS(scene, "/com/sgu/infowksporga/jfx/main/ui/application.css");
+    addCSS(scene, "/com/sgu/infowksporga/jfx/main/mvc/application.css");
 
     applicationScreen = new ApplicationScreen();
     applicationScreen.initMVC();
