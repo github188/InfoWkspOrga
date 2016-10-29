@@ -4,12 +4,10 @@ import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
 import com.sgu.apt.annotation.i18n.I18nProperty;
 import com.sgu.core.framework.i18n.util.I18NConstant;
-import com.sgu.core.framework.spring.loader.SpringBeanHelper;
 import com.sgu.infowksporga.jfx.action.AppBaseAction;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
-import com.sgu.infowksporga.jfx.main.mvc.ApplicationScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
-import com.sgu.infowksporga.jfx.y_service.remote.workspace.SaveWorkspaceLayoutFacade;
+import com.sgu.infowksporga.jfx.y_service.ServiceFacadeFactory;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Control;
@@ -49,16 +47,7 @@ public class SaveWorkspaceAction extends AppBaseAction<ActionEvent> {
   /** {@inheritDoc} */
   @Override
   public void handle(final ActionEvent event) {
-    callSaveWorkspaceLayoutFacade();
-  }
-
-  /**
-   * Call save workspace layout facade.
-   */
-  public void callSaveWorkspaceLayoutFacade() {
-    final SaveWorkspaceLayoutFacade facade = SpringBeanHelper.getImplementationByInterface(SaveWorkspaceLayoutFacade.class);
-    final ApplicationScreen applicationScreen = GUISessionProxy.getApplication().getApplicationScreen();
-    GUISessionProxy.getGuiSession().getServiceDelegate().execute(facade, applicationScreen);
+    ServiceFacadeFactory.callWorkspaceLayoutSaveService(GUISessionProxy.getApplication().getApplicationScreen());
   }
 
 }

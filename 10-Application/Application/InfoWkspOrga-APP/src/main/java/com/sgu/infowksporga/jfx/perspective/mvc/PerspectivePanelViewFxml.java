@@ -7,10 +7,13 @@ import com.sgu.core.framework.gui.jfx.control.GButton;
 import com.sgu.core.framework.gui.jfx.control.GCheckBox;
 import com.sgu.core.framework.gui.jfx.control.GComboBox;
 import com.sgu.core.framework.gui.jfx.control.GLabel;
+import com.sgu.core.framework.gui.jfx.control.list.DefaultListCellFactory;
+import com.sgu.core.framework.gui.jfx.control.list.DefaultTreeCellFactory;
 import com.sgu.core.framework.gui.jfx.control.pane.GGridPane;
 import com.sgu.core.framework.gui.jfx.control.tree.GTreeView;
 import com.sgu.core.framework.gui.jfx.screen.AGView;
-import com.sgu.infowksporga.jfx.perspective.tree.TreeCellFactory;
+import com.sgu.infowksporga.jfx.perspective.cbb.CbbPerspectiveItemVo;
+import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -92,7 +95,11 @@ public class PerspectivePanelViewFxml extends AGView<PerspectivePanelModel, Pers
   public void createUI() {
     super.createUI();
 
-    treeWorkspaces.setCellFactory(p -> new TreeCellFactory());
+    treeWorkspaces.setCellFactory(p -> new DefaultTreeCellFactory<WorkspaceItemVo>());
+
+    cbbPerspective.setCellFactory(c -> new DefaultListCellFactory<CbbPerspectiveItemVo>());
+    // The button cell is used to render what is shown in the ComboBox 'button' area.
+    cbbPerspective.setButtonCell(new DefaultListCellFactory<CbbPerspectiveItemVo>());
 
   }
 

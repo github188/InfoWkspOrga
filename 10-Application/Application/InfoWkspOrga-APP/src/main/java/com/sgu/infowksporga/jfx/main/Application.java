@@ -23,6 +23,8 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * The class <strong>Application Information Workspace Organizer</strong>.
+ * Info :
+ * Platform.runLater(() -> username.requestFocus());
  *
  * @author
  */
@@ -65,6 +67,7 @@ public final class Application extends AGApplication<StackPane> {
                 @I18nProperty(key = "application.preload.user.local.settings.ok", value = "Initialisation du fichier pour les prefs utilisateurs --> OK"), // Force /n 
                 @I18nProperty(key = "application.preload.user.language.ok", value = "Chargement de la langue préférée de l'utilisateur --> OK"), // Force /n
                 @I18nProperty(key = "application.preload.exception.handler.ok", value = "Chargement des gestionnaires d'exception --> OK"), // Force /n
+                @I18nProperty(key = "application.preload.init.preferences.ok", value = "Chargement des préférences --> OK"), // Force /n
                 @I18nProperty(key = "application.preload.jvm.property.ko",
                 value = "Environment property is not define in JVM argument : -Denvironment=Dev or -Denvironment=production --> KO"), // Force /n
 
@@ -114,6 +117,10 @@ public final class Application extends AGApplication<StackPane> {
       progress += 0.10;
       notifyPreloader(new MessageProgressNotification(progress, "application.preload.user.app.home.ok"));
 
+      ApplicationInitializer.initializePreferences();
+      progress += 0.0;
+      notifyPreloader(new MessageProgressNotification(progress, "application.preload.init.preferences.ok"));
+
       ApplicationInitializer.initializeUserPreferenceDirectoryAndFiles();
       progress += 0.10;
       notifyPreloader(new MessageProgressNotification(progress, "application.preload.user.pref.init.ok"));
@@ -149,6 +156,7 @@ public final class Application extends AGApplication<StackPane> {
   @Override
   protected void customizeStage(final Stage stage) {
     stage.setFullScreen(false);
+    //Application.setUserAgentStylesheet(Application.STYLESHEET_CASPIAN);
     stage.getIcons().add(UtilGUI.getImage("/icons/app/application-ico.png"));
     buildApplicationTitle(stage);
 

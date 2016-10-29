@@ -24,30 +24,38 @@ import lombok.extern.slf4j.Slf4j;
 
 /**
  * The Class HorodatePanelFxml.
- * 
+ *
  * @see {ViewComponentAttributesGenerator}
  */
 @Slf4j
 @Setter
 @Getter
 @I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-prez",
-properties = { // label create
+properties = { // Force /n
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.TEXT, value = "Horodatage"), // Force /n
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.STYLE_CSS, value = "-fx-text-fill: #11468E"), // Force /n
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.ICON, value = "/icons/clock.png"), // Force /n
+              //----------
               @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "createdDate" + I18NConstant.TEXT, value = "Créé le"), // Force /n
               @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "createdDate" + I18NConstant.TOOLTIP_TEXT, value = "Date et heure de création\""), // Force /n
-              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "updatedDate" + I18NConstant.TEXT, value = "Modifié le"), // Force /n
-              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "updatedDate" + I18NConstant.TOOLTIP_TEXT, value = "Date et heure de derniére modification"), // Force /n
+              //----------
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "lastModifiedDate" + I18NConstant.TEXT, value = "Modifié le"), // Force /n
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "lastModifiedDate" + I18NConstant.TOOLTIP_TEXT, value = "Date et heure de derniére modification"), // Force /n
+              //----------
               @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "createdBy" + I18NConstant.TEXT, value = "par"), // Force /n
               @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "createdBy" + I18NConstant.TOOLTIP_TEXT, value = "Personne qui a fait la création"), // Force /n
-              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "updatedBy" + I18NConstant.TEXT, value = "par"), // Force /n
-              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "updatedBy" + I18NConstant.TOOLTIP_TEXT, value = "Dernière personne à avoir fait une mofication"), // Force /n
+              //----------
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "lastModifiedBy" + I18NConstant.TEXT, value = "par"), // Force /n
+              @I18nProperty(key = HorodatePanelFxml.PROPERTIES_PREFIX + "lastModifiedBy" + I18NConstant.TOOLTIP_TEXT,
+              value = "Dernière personne à avoir fait une mofication"), // Force /n
 })
 public class HorodatePanelFxml extends AGView<AGModel, AGController> implements Initializable {
 
   /** The Constant PROPERTIES_PREFIX. */
-  public static final String PROPERTIES_PREFIX = "horodate.panel.";
+  public static final String PROPERTIES_PREFIX = "panel.horodate.";
 
   //---------------------------------
-  //Horodate Panel components 
+  //Horodate Panel components
   //---------------------------------
 
   @FXML
@@ -63,7 +71,7 @@ public class HorodatePanelFxml extends AGView<AGModel, AGController> implements 
   private Label lblCreatedDate;
 
   @FXML
-  private Label lblUpdatedDate;
+  private Label lblLastModifiedDate;
 
   @FXML
   private Label lblCreatedDateValue;
@@ -72,16 +80,16 @@ public class HorodatePanelFxml extends AGView<AGModel, AGController> implements 
   private Label lblCreatedBy;
 
   @FXML
-  private Label lblUpdatedBy;
+  private Label lblLastModifiedBy;
 
   @FXML
-  private Label lblUpdatedDateValue;
+  private Label lblLastModifiedDateValue;
 
   @FXML
   private Label lblCreatedByValue;
 
   @FXML
-  private Label lblUpdatedByValue;
+  private Label lblLastModifiedByValue;
 
   /*------------------------------------------------------*/
   // ==> Controls not defined in FXML file
@@ -112,10 +120,13 @@ public class HorodatePanelFxml extends AGView<AGModel, AGController> implements 
   public void initialize(final URL location, final ResourceBundle resources) {
     super.initialize(location, resources);
 
-    UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "createdDate", lblCreatedDate);
-    UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "updatedDate", lblUpdatedDate);
+    UtilControl.applyBundleConfigToLabeledControl(PROPERTIES_PREFIX + "title", ttlPnlHistory);
+
     UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "createdBy", lblCreatedBy);
-    UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "updatedBy", lblUpdatedBy);
+    UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "createdDate", lblCreatedDate);
+
+    UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "lastModifiedBy", lblLastModifiedBy);
+    UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "lastModifiedDate", lblLastModifiedDate);
 
   }
 

@@ -66,7 +66,7 @@ public final class ApplicationInitializer {
    * Authenticate user.
    */
   public static void authenticateUser() {
-    final UserInfo userInfo = new UserInfo("sguisse");
+    final UserInfo userInfo = new UserInfo("sguisse", "Guisse", "Sébastien", "sebastien.guisse@gfi.fr", "fr_FR", "fr_FR");
     GUISessionProxy.getGuiSession().setCurrentUser(userInfo);
   }
 
@@ -91,6 +91,7 @@ public final class ApplicationInitializer {
 
     i18nHelper.setI18nService(i18nService);
 
+    // We the same helper for all projects
     I18nHelperFwk.init(i18nHelper);
     I18nHelperJavaFX.init(i18nHelper);
     I18nHelperApp.init(i18nHelper);
@@ -380,6 +381,22 @@ public final class ApplicationInitializer {
   public static String getApplicationVersion() {
     final String appVersion = I18nHelperApp.getMessage("application.version");
     return appVersion;
+  }
+
+  /**
+   * TODO Initialize preferences from database
+   */
+  public static void initializePreferences() {
+
+    GUISessionProxy.getGuiSession().getPreferences().put("proxy.ip", "???");
+    GUISessionProxy.getGuiSession().getPreferences().put("proxy.port", "???");
+    GUISessionProxy.getGuiSession().getPreferences().put("proxy.user", "???");
+    GUISessionProxy.getGuiSession().getPreferences().put("proxy.pwd", "???");
+    GUISessionProxy.getGuiSession().getPreferences().put("screen.start.width", new Integer(1024));
+    GUISessionProxy.getGuiSession().getPreferences().put("screen.start.height", new Integer(768));
+    GUISessionProxy.getGuiSession().getPreferences().put("last.selected.folder.path", "G:/Download");
+    GUISessionProxy.getGuiSession().getPreferences().put("last.selected.file.path", "G:/Download/file.txt");
+
   }
 
 }

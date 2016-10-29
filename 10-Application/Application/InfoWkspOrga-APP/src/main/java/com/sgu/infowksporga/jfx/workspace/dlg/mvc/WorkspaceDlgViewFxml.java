@@ -13,9 +13,11 @@ import com.sgu.infowksporga.jfx.component.HorodatePanelFxml;
 import com.sgu.infowksporga.jfx.component.IdentityCardPanelFxml;
 import com.sgu.infowksporga.jfx.component.StylePanelFxml;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
+import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.ConfigurationPanelFxml;
 import com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.ReferencePanelFxml;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -29,7 +31,6 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * The Class WorkspacePanelViewFxml.
  */
-
 @Slf4j
 @Setter
 @Getter
@@ -70,10 +71,10 @@ public class WorkspaceDlgViewFxml extends AGView<WorkspaceDlgModel, WorkspaceDlg
   private static final String dialogBaseTitle = I18nHelperApp.getMessage(WorkspaceDlgScreen.WORKSPACE_DLG_TITLE_KEY);
 
   /** The Constant VALIDATE_ACTION_BUNDLE_KEY. */
-  private static final String VALIDATE_ACTION_BUNDLE_KEY = "workspace.dialog.properties.action.validate";
+  private static final String VALIDATE_ACTION_BUNDLE_KEY = "dialog.workspace.action.validate";
 
   /** The Constant CANCEL_ACTION_BUNDLE_KEY. */
-  private static final String CANCEL_ACTION_BUNDLE_KEY = "workspace.dialog.properties.action.cancel";
+  private static final String CANCEL_ACTION_BUNDLE_KEY = "dialog.workspace.action.cancel";
 
   /**
    * The Constructor.
@@ -99,7 +100,7 @@ public class WorkspaceDlgViewFxml extends AGView<WorkspaceDlgModel, WorkspaceDlg
                 @I18nProperty(key = VALIDATE_ACTION_BUNDLE_KEY + I18NConstant.TEXT, value = "Validate"), // Force /n
                 @I18nProperty(key = VALIDATE_ACTION_BUNDLE_KEY + I18NConstant.TOOLTIP_TEXT, value = "Valide l'action de l'utilisateur en base de données."), // Force /n
                 @I18nProperty(key = VALIDATE_ACTION_BUNDLE_KEY + I18NConstant.ICON, value = "/icons/save_database.png"), // Force /n
-                @I18nProperty(key = VALIDATE_ACTION_BUNDLE_KEY + I18NConstant.NAME, value = "ACTION_WORKSPACE_VALIDATE"), // Force /n
+                @I18nProperty(key = VALIDATE_ACTION_BUNDLE_KEY + I18NConstant.NAME, value = "ACTION_WORKSPACE_PROPERTIES_VALIDATE"), // Force /n
                 //-----------------------------------
                 @I18nProperty(key = CANCEL_ACTION_BUNDLE_KEY + I18NConstant.TEXT, value = "Cancel"), // Force /n
                 @I18nProperty(key = CANCEL_ACTION_BUNDLE_KEY + I18NConstant.TOOLTIP_TEXT, value = "Annule les modifications apportées aux propriétés du workspace."), // Force /n
@@ -149,54 +150,109 @@ public class WorkspaceDlgViewFxml extends AGView<WorkspaceDlgModel, WorkspaceDlg
   /**
    * Apply display mode consult.
    */
-  protected void applyDisplayModeConsult() {
+  @Override
+  public void applyDisplayModeConsult() {
     getButtonValidate().setVisible(false);
     UtilControl.applyBundleConfigToButton(I18NConstant.ACTION_CLOSE, getButtonCancel());
+    applyDisplayModeToDialogTitle(I18NConstant.MODE_DISPLAY_CONSULTATION);
 
-    String dialogModeDisplay = I18nHelperApp.getMessage(I18NConstant.MODE_DISPLAY_CONSULTATION);
-    screen().getDialog().setTitle(dialogBaseTitle + dialogModeDisplay);
+    pnlIdentityCardController.applyDisplayModeConsult();
+    pnlConfigurationController.applyDisplayModeConsult();
+    pnlHorodateController.applyDisplayModeConsult();
+    pnlReferenceController.applyDisplayModeConsult();
+    pnlStyleController.applyDisplayModeConsult();
+
+    Platform.runLater(() -> {
+      // build Model
+      model().mapWorkspaceToModel(GUISessionProxy.getCurrentWorkspace().getWorkspace());
+    });
+
   }
 
   /**
    * Apply display mode delete.
    */
-  protected void applyDisplayModeDelete() {
+  @Override
+  public void applyDisplayModeDelete() {
     UtilControl.applyBundleConfigToButton(I18NConstant.ACTION_DELETION, getButtonValidate());
+    applyDisplayModeToDialogTitle(I18NConstant.MODE_DISPLAY_DELETION);
 
-    String dialogModeDisplay = I18nHelperApp.getMessage(I18NConstant.MODE_DISPLAY_DELETION);
-    screen().getDialog().setTitle(dialogBaseTitle + dialogModeDisplay);
+    pnlIdentityCardController.applyDisplayModeDelete();
+    pnlConfigurationController.applyDisplayModeDelete();
+    pnlHorodateController.applyDisplayModeDelete();
+    pnlReferenceController.applyDisplayModeDelete();
+    pnlStyleController.applyDisplayModeDelete();
 
+    Platform.runLater(() -> {
+      // build Model
+      model().mapWorkspaceToModel(GUISessionProxy.getCurrentWorkspace().getWorkspace());
+    });
   }
 
   /**
    * Apply display mode update.
    */
-  protected void applyDisplayModeUpdate() {
+  @Override
+  public void applyDisplayModeUpdate() {
     UtilControl.applyBundleConfigToButton(I18NConstant.ACTION_UPDATE, getButtonValidate());
+    applyDisplayModeToDialogTitle(I18NConstant.MODE_DISPLAY_UPDATE);
 
-    String dialogModeDisplay = I18nHelperApp.getMessage(I18NConstant.MODE_DISPLAY_UPDATE);
-    screen().getDialog().setTitle(dialogBaseTitle + dialogModeDisplay);
+    pnlIdentityCardController.applyDisplayModeUpdate();
+    pnlConfigurationController.applyDisplayModeUpdate();
+    pnlHorodateController.applyDisplayModeUpdate();
+    pnlReferenceController.applyDisplayModeUpdate();
+    pnlStyleController.applyDisplayModeUpdate();
+
+    Platform.runLater(() -> {
+      // build Model
+      model().mapWorkspaceToModel(GUISessionProxy.getCurrentWorkspace().getWorkspace());
+    });
 
   }
 
   /**
    * Apply display mode copy.
    */
-  protected void applyDisplayModeCopy() {
+  @Override
+  public void applyDisplayModeCopy() {
     UtilControl.applyBundleConfigToButton(I18NConstant.ACTION_DUPLICATE, getButtonValidate());
+    applyDisplayModeToDialogTitle(I18NConstant.MODE_DISPLAY_DUPLICATE);
 
-    String dialogModeDisplay = I18nHelperApp.getMessage(I18NConstant.MODE_DISPLAY_DUPLICATE);
-    screen().getDialog().setTitle(dialogBaseTitle + dialogModeDisplay);
+    pnlIdentityCardController.applyDisplayModeCopy();
+    pnlConfigurationController.applyDisplayModeCopy();
+    pnlHorodateController.applyDisplayModeCopy();
+    pnlReferenceController.applyDisplayModeCopy();
+    pnlStyleController.applyDisplayModeCopy();
+
+    Platform.runLater(() -> {
+      // build Model
+      model().mapWorkspaceToModel(GUISessionProxy.getCurrentWorkspace().getWorkspace());
+    });
   }
 
   /**
    * Apply display mode create.
    */
-  protected void applyDisplayModeCreate() {
+  @Override
+  public void applyDisplayModeCreate() {
     UtilControl.applyBundleConfigToButton(I18NConstant.ACTION_CREATION, getButtonValidate());
-    String dialogModeDisplay = I18nHelperApp.getMessage(I18NConstant.MODE_DISPLAY_CREATION);
-    screen().getDialog().setTitle(dialogBaseTitle + dialogModeDisplay);
+    applyDisplayModeToDialogTitle(I18NConstant.MODE_DISPLAY_CREATION);
 
+    pnlIdentityCardController.applyDisplayModeCreate();
+    pnlConfigurationController.applyDisplayModeCreate();
+    pnlHorodateController.applyDisplayModeCreate();
+    pnlReferenceController.applyDisplayModeCreate();
+    pnlStyleController.applyDisplayModeCreate();
+  }
+
+  /**
+   * Apply display mode to dialog title.
+   *
+   * @param i18nModeDisplay the i18n mode display
+   */
+  public void applyDisplayModeToDialogTitle(final String i18nModeDisplay) {
+    final String dialogModeDisplay = I18nHelperApp.getMessage(i18nModeDisplay);
+    screen().getDialog().setTitle(dialogBaseTitle + dialogModeDisplay);
   }
 
 }

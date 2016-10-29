@@ -12,9 +12,10 @@ import com.sgu.infowksporga.business.entity.Perspective;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveOut;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveStructureOut;
-import com.sgu.infowksporga.jfx.perspective.cb.CbbPerspectiveItem;
+import com.sgu.infowksporga.jfx.perspective.cbb.CbbPerspectiveItemVo;
 import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
 
+import javafx.application.Platform;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -51,17 +52,25 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
    * @param perspectives the perspectives
    */
   public void fillUI(final FindPerspectiveOut out) {
+    // First store cbbPerspective selected item (in case of refresh of the perspective panel)
+    final CbbPerspectiveItemVo selectedPerspective = (CbbPerspectiveItemVo) view().getCbbPerspective().getSelectionModel().getSelectedItem();
 
     view().getCbbPerspective().getItems().clear();
 
     final List<Perspective> perspectives = out.getPerspectiveLst();
     for (final Perspective perspective : perspectives) {
-      final CbbPerspectiveItem vo = new CbbPerspectiveItem(perspective);
+      final CbbPerspectiveItemVo vo = new CbbPerspectiveItemVo(perspective);
       view().getCbbPerspective().getItems().add(vo);
     }
 
     if (perspectives.size() == 1) {
-      view().getCbbPerspective().getSelectionModel().select(0);
+      Platform.runLater(() -> {
+        view().getCbbPerspective().getSelectionModel().select(0);
+      });
+
+    }
+    else if (selectedPerspective != null) {
+      view().getCbbPerspective().getSelectionModel().select(selectedPerspective);
     }
 
   }
@@ -72,6 +81,14 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
    * @param perspectives the perspectives
    */
   public void fillUI(final FindPerspectiveStructureOut out) {
+    // Store the original workspace order
+    Platform.runLater(() -> {
+      final CbbPerspectiveItemVo selectedPerspective = (CbbPerspectiveItemVo) view().getCbbPerspective().getSelectionModel().getSelectedItem();
+      selectedPerspective.setCurrentWorkspaceIdOrder(out.getCurrentWorkspaceIdOrder());
+    });
+
+    // Store cbbPerspective selected item (in case of refresh of the perspective panel)
+    final PerspectiveTreeItem selectedWksp = (PerspectiveTreeItem) view().getTreeWorkspaces().getSelectionModel().getSelectedItem();
 
     final List<Workspace> workspaces = out.getWorkspaces();
     // sort Workspaces by order
@@ -82,6 +99,10 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
 
     view().getTreeWorkspaces().setRoot(rootItemPerspective);
 
+    if (selectedWksp != null) {
+      view().getTreeWorkspaces().getSelectionModel().select(selectedWksp);
+    }
+
   }
 
   /**
@@ -90,9 +111,8 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
    * @param workspaces the workspaces
    */
   private PerspectiveTreeItem buildPerspectiveTree(final List<Workspace> workspaces) {
-    int treeNodeIdentifier = 0;
     // build the root Node
-    final PerspectiveTreeItem rootItem = new PerspectiveTreeItem(treeNodeIdentifier++, new WorkspaceDto(workspaces.get(0)));
+    final PerspectiveTreeItem rootItem = new PerspectiveTreeItem(new WorkspaceDto(workspaces.get(0)));
     final Map<String, PerspectiveTreeItem> parentWkspById = new HashMap<>(workspaces.size());
     parentWkspById.put(rootItem.getWorkspace().getId(), rootItem);
 
@@ -100,7 +120,7 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
     PerspectiveTreeItem parentWorkspaceTreeItem = rootItem;
     for (int i = 1; i < workspaces.size(); i++) {
       final Workspace workspace = workspaces.get(i);
-      final PerspectiveTreeItem childNode = new PerspectiveTreeItem(treeNodeIdentifier++, new WorkspaceDto(workspaces.get(i)));
+      final PerspectiveTreeItem childNode = new PerspectiveTreeItem(new WorkspaceDto(workspaces.get(i)));
       parentWkspById.put(childNode.getWorkspace().getId(), childNode);
 
       if (workspace.getParent() != null) {

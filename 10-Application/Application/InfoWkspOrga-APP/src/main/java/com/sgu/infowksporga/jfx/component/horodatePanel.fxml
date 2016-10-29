@@ -8,31 +8,31 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TitledPane fx:id="ttlPnlHistory" text="History" xmlns="http://javafx.com/javafx/8.0.60" 
+<TitledPane fx:id="ttlPnlHistory" text="History" style="-fx-text-fill: #11468E" xmlns="http://javafx.com/javafx/8.0.60" 
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.component.HorodatePanelFxml">
    <content>
       <AnchorPane fx:id="achPnlHistory">
          <children>
-            <GGridPane fx:id="grdPnlHistory" hgap="5.0" prefHeight="40.0" prefWidth="572.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <GGridPane fx:id="grdPnlHistory" hgap="0.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <columnConstraints>
-                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="70.0" minWidth="49.0" prefWidth="57.0" />
-                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="199.0" minWidth="70.0" prefWidth="119.0" />
-                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="138.0" minWidth="28.0" prefWidth="29.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="65.0" minWidth="65.0" prefWidth="65.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="119.0" minWidth="119.0" prefWidth="119.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="29.0" minWidth="29.0" prefWidth="29.0" />
                   <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" />
                </columnConstraints>
                <rowConstraints>
-                  <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="10.0" vgrow="NEVER" />
-                  <RowConstraints maxHeight="10.0" minHeight="0.0" prefHeight="10.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="ALWAYS" />
                </rowConstraints>
                <children>
                   <Label fx:id="lblCreatedDate" text="Créer le " />
-                  <Label fx:id="lblUpdatedDate" text="Modifié le " GridPane.rowIndex="1" />
+                  <Label fx:id="lblLastModifiedDate" text="Modifié le " GridPane.rowIndex="1" />
                   <Label fx:id="lblCreatedDateValue" style="-fx-font-weight: bold;" text="01/01/2016 12:12:12" GridPane.columnIndex="1" />
                   <Label fx:id="lblCreatedBy" text="par" GridPane.columnIndex="2" />
-                  <Label fx:id="lblUpdatedBy" text="par" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Label fx:id="lblUpdatedDateValue" style="-fx-font-weight: bold;" text="01/01/2016 12:12:12" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblLastModifiedBy" text="par" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="lblLastModifiedDateValue" style="-fx-font-weight: bold;" text="01/01/2016 12:12:12" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Label fx:id="lblCreatedByValue" maxWidth="1.7976931348623157E308" style="-fx-font-weight: bold;" text="sguisse" GridPane.columnIndex="3" />
-                  <Label fx:id="lblUpdatedByValue" style="-fx-font-weight: bold;" text="cdelrue" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="lblLastModifiedByValue" style="-fx-font-weight: bold;" text="cdelrue" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                </children>
             </GGridPane>
          </children>

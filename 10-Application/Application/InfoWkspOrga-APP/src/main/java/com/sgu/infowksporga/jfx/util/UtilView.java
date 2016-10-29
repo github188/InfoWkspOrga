@@ -1,8 +1,12 @@
 package com.sgu.infowksporga.jfx.util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import org.dockfx.DockPos;
+import org.dockfx.pane.ContentSplitPane;
+import org.dockfx.pane.ContentTabPane;
 
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
@@ -16,9 +20,12 @@ import com.sgu.core.framework.gui.jfx.util.UtilDockFX;
 import com.sgu.core.framework.util.UtilDate;
 import com.sgu.infowksporga.business.entity.View;
 import com.sgu.infowksporga.business.entity.ViewAttribute;
+import com.sgu.infowksporga.business.entity.enumeration.DockPosEnum;
 import com.sgu.infowksporga.jfx.view.ui.AApplicationViewModel;
 import com.sgu.infowksporga.jfx.view.web.ui.WebViewModel;
 import com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen;
+
+import javafx.scene.Node;
 
 /**
  * The Class UtilView.
@@ -54,19 +61,17 @@ public class UtilView {
     xDocView.setLastModifiedDate(UtilDate.formatDate(view.getLastModifiedDate(), "dd/MM/yyyy HH:mm:ss"));
     xDocView.setModelBean(view.getModelBean());
     xDocView.setName(view.getName());
-    xDocView.setNameBgColor(view.getNameBgColor());
-    xDocView.setNameColor(view.getNameColor());
-    xDocView.setOwner(view.getOwner());
-
-    if (view.getPartage() != null) {
-      xDocView.setPartage(view.getPartage().getValue());
-    }
-
+    xDocView.setBgColor(view.getBgColor());
+    xDocView.setColor(view.getColor());
     xDocView.setScreenBean(view.getScreenBean());
     xDocView.setTags(view.getTags());
     xDocView.setDockNodeBean(view.getDockNodeBean());
     xDocView.setWidth(view.getWidth());
     xDocView.setWorkspaceId(view.getWorkspaceId());
+    xDocView.setBold(view.isBold());
+    xDocView.setItalic(view.isItalic());
+    xDocView.setStrike(view.isStrike());
+    xDocView.setUnderline(view.isUnderline());
 
     final Set<ViewAttribute> viewAttributes = view.getAttributes();
     for (final ViewAttribute viewAttribute : viewAttributes) {
@@ -142,6 +147,74 @@ public class UtilView {
     } catch (final Exception e) {
       throw new TechnicalException(e);
     }
+  }
+
+  /**
+   * Serialize dock fx structure.
+   *
+   * @param dockPane the dock pane
+   * @return the x dock
+   */
+  public final static List<View> getViewsFromDockPane(final GDockPane dockPane) {
+
+    final List<Node> root = dockPane.getChildren();
+    final List<View> views = new ArrayList<View>();
+    final ViewInfoWrapper wrapper = new ViewInfoWrapper(0, false);
+    getViewsFromDockPaneRecursively(root, dockPane, views, 0, wrapper);
+
+    return views;
+  }
+
+  /**
+   * Gets the views from dock pane recursively.
+   *
+   * @param children the children
+   * @param parent the parent
+   * @param views the views
+   * @param level the level
+   */
+  public final static void getViewsFromDockPaneRecursively(final List<Node> children, final Node parent, final List<View> views, final int level,
+  final ViewInfoWrapper viewInfo) {
+
+    int childIndex = 0;
+    for (final Node childNode : children) {
+
+      if (childNode instanceof ContentSplitPane) {
+        final ContentSplitPane contentSplitPane = (ContentSplitPane) childNode;
+        getViewsFromDockPaneRecursively(contentSplitPane.getChildrenList(), contentSplitPane, views, level + 1, viewInfo);
+        viewInfo.isNextSibiling = true;
+      }
+      else if (childNode instanceof ContentTabPane) {
+        final ContentTabPane contentTabPane = (ContentTabPane) childNode;
+        getViewsFromDockPaneRecursively(contentTabPane.getChildrenList(), contentTabPane, views, level + 1, viewInfo);
+      }
+      else if (childNode instanceof GDockNode) {
+        final GDockNode dockNode = (GDockNode) childNode;
+        final AApplicationViewModel model = (AApplicationViewModel) dockNode.getModel();
+
+        final View view = model.getEntityView();
+        view.setOrder(viewInfo.viewOrder);
+        view.setDockNodeBean(dockNode.getClass().getName());
+        view.setModelBean(dockNode.getModel().getClass().getName());
+        view.setWidth(dockNode.getWidth());
+        view.setHeight(dockNode.getHeight());
+        final String dockPos = UtilDockFX.getDockPosition(dockNode, parent, childIndex);
+        view.setDockPos(DockPosEnum.valueOf(dockPos));
+        viewInfo.viewOrder += 1;
+        view.setNextSibling(viewInfo.isNextSibiling);
+        viewInfo.isNextSibiling = false;
+
+        //--------------------------------
+
+        views.add(view);
+
+        childIndex++;
+      }
+      else {
+        throw new TechnicalException();
+      }
+    }
+
   }
 
 }

@@ -11,3 +11,10 @@ Integrated workspaces manager
 integrated workspaces builder
 
 build integrated workspaces
+
+Workspaces Administrator and Organizer Utility
+
+
+Utility administration and organization of workspace
+
+WAOU

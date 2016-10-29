@@ -114,7 +114,7 @@ public class ShowWorkspaceFacade extends AbstractBusinessFacade<FindWorkspaceOut
         dockNodes.add(lastAddedDockNode);
       }
 
-      // Update node preferred size
+      // Update node preferred size for all views
       for (final GDockNode dockNode : dockNodes) {
         final AApplicationViewModel appModel = (AApplicationViewModel) dockNode.getModel();
         dockNode.setPrefSize(appModel.getEntityView().getWidth(), appModel.getEntityView().getHeight());

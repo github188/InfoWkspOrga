@@ -12,7 +12,6 @@ import com.sgu.infowksporga.jfx.workspace.dlg.mvc.WorkspaceDlgScreen;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Control;
-import javafx.scene.control.Dialog;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -50,13 +49,7 @@ public class CreateWorkspaceAction extends AppBaseAction<ActionEvent> {
   @Override
   public void handle(final ActionEvent event) {
     WorkspaceDlgScreen screen = new WorkspaceDlgScreen();
-    Dialog<String> dialog = screen.buildDialogBox(IDisplayMode.MODE_CONSULT);
-    dialog.setResizable(true);
-    Object result = dialog.showAndWait();
-    result.toString();
-
-    // Destroy de la boite de dialog
-    dialog.close();
+    screen.showDialog(IDisplayMode.MODE_CREATE);
   }
 
 }

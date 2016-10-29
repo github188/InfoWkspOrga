@@ -1,17 +1,20 @@
 package com.sgu.infowksporga.jfx.util;
 
 import java.io.File;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.ImageIcon;
 
 import com.sgu.core.framework.gui.jfx.util.GUISession;
+import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.core.framework.resources.EnvironmentEnum;
+import com.sgu.infowksporga.business.entity.Perspective;
 import com.sgu.infowksporga.jfx.main.Application;
+import com.sgu.infowksporga.jfx.perspective.cbb.CbbPerspectiveItemVo;
 import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
-import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 
 /**
  * Description : GUISessionProxy class<br>.
@@ -41,6 +44,9 @@ public class GUISessionProxy {
 
   /** The Key for Last file edition mode (CUT / COPY). */
   private static final String LAST_FILE_EDITION_MODE = "LAST_FILE_EDITION_MODE";
+
+  /** The Constant APPLICATION_DATE_TIME_TO_STRING_FORMATTER. */
+  private static DateTimeFormatter APPLICATION_DATE_TIME_TO_STRING_FORMATTER;
 
   /** The gui session. */
   private final static GUISession guiSession = GUISession.getInstance();
@@ -94,10 +100,23 @@ public class GUISessionProxy {
    *
    * @return The current workspace of the application
    */
-  public static WorkspaceItemVo getCurrentWorkspace() {
+  public static PerspectiveTreeItem getCurrentWorkspace() {
     final PerspectiveTreeItem item = (PerspectiveTreeItem) getApplication().getApplicationScreen().getPerspectiveScreen().view().getTreeWorkspaces().getSelectionModel()
                                                                            .getSelectedItem();
-    return item.getWorkspaceItemVo();
+    return item;
+  }
+
+  /**
+   * Gets the application date time formatter.
+   * Used to display date on screen
+   *
+   * @return the application date time formatter
+   */
+  public static DateTimeFormatter getApplicationDateTimeFormatter() {
+    if (APPLICATION_DATE_TIME_TO_STRING_FORMATTER == null) {
+      APPLICATION_DATE_TIME_TO_STRING_FORMATTER = DateTimeFormatter.ofPattern(I18NConstant.getDateHourMinuteFormat());
+    }
+    return APPLICATION_DATE_TIME_TO_STRING_FORMATTER;
   }
 
   /**
@@ -151,12 +170,22 @@ public class GUISessionProxy {
   }
 
   /**
-   * Gets the current perspective.
+   * Gets the current perspective Screen
    *
-   * @return the current perspective
+   * @return the current perspective Screen
    */
   public static PerspectivePanelScreen getPerspectiveScreen() {
     return getApplication().getApplicationScreen().getPerspectiveScreen();
+  }
+
+  /**
+   * Gets the selected perspective entity.
+   *
+   * @return the selected perspective entity
+   */
+  public static Perspective getCurrentPerspectiveEntity() {
+    final CbbPerspectiveItemVo itemVo = (CbbPerspectiveItemVo) getPerspectiveScreen().view().getCbbPerspective().getSelectionModel().getSelectedItem();
+    return itemVo.getPerspective();
   }
 
   /**

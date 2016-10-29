@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<TitledPane fx:id="ttlPnlWorkspaceConfig" text="Configuration" xmlns="http://javafx.com/javafx/8.0.60" 
+<TitledPane fx:id="ttlPnlWorkspaceConfig" text="Configuration" style="-fx-text-fill: #11468E" xmlns="http://javafx.com/javafx/8.0.60" 
 xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.ConfigurationPanelFxml">
    <content>
       <AnchorPane fx:id="ancPnlWorkspaceConfig">
@@ -28,27 +28,26 @@ xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.work
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
                   <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
-                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
                </rowConstraints>
                <children>
-                  <GHBox alignment="CENTER" spacing="20.0" GridPane.columnSpan="4">
+                  <GLabel fx:id="lblWkspPosition" text="Workspace position :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <GTextField fx:id="txtWkspPosition" GridPane.columnIndex="1" GridPane.columnSpan="1" GridPane.rowIndex="0" />
+                  <GHBox alignment="CENTER" spacing="20.0" GridPane.columnIndex="2" GridPane.columnSpan="2">
                      <children>
                         <GCheckBox fx:id="chkEnable" text="Enable" />
                         <GCheckBox fx:id="chkChildrenAllowed" text="Children allowed" />
                      </children>
                   </GHBox>
+                  
                   <GLabel fx:id="lblBaseFolder" text="Base Folder:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
                   <GTextField fx:id="txtBaseFolder" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
                   
-                  <GLabel fx:id="lblCategory" text="Category :" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                  <GTextField fx:id="txtCategory" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <GLabel fx:id="lblTags" text="Tags :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <GTextField fx:id="txtTags" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                   
-                  <GLabel fx:id="lblCbbPartage" alignment="CENTER_RIGHT" text="Partage :" GridPane.rowIndex="3" />
-                  <GComboBox fx:id="cbbPartage" editable="true" maxWidth="1.7976931348623157E308" promptText="Private/Public ?" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <GLabel fx:id="lblCustomer" text="Customer :" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <GTextField fx:id="txtCustomer" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <GLabel fx:id="lblOwner" text="Owner:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                  <GComboBox fx:id="cbbOwner" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <GLabel fx:id="lblCbbPartage" alignment="CENTER_RIGHT" text="Partage :" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <GComboBox fx:id="cbbPartage" maxWidth="1.7976931348623157E308" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  
                </children>
             </GGridPane>
          </children>

@@ -12,8 +12,13 @@ import com.sgu.infowksporga.jfx.main.action.view.AddWebViewAction;
 import com.sgu.infowksporga.jfx.main.action.workspace.CreateWorkspaceAction;
 import com.sgu.infowksporga.jfx.main.action.workspace.EditWorkspaceAction;
 import com.sgu.infowksporga.jfx.main.action.workspace.SaveWorkspaceAction;
+import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.ListChangeListener;
+import javafx.stage.Stage;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -38,7 +43,9 @@ public final class ApplicationController extends AGController<ApplicationModel, 
   @Override
   public void createListeners() {
     super.createListeners();
+    initApplicationMaximizeListener();
     initShowHideMenuAndNotificationsListener();
+    initShowNotificationPanelListener();
 
     //---------------------------------------------------
     // initialize Actions
@@ -68,6 +75,63 @@ public final class ApplicationController extends AGController<ApplicationModel, 
     new SaveWorkspaceAction(view().getBtnSaveWorkspace());
     view().getBtnSaveWorkspace().setText("");
 
+  }
+
+  /**
+   * Inits the show notification panel listener.
+   */
+  private void initShowNotificationPanelListener() {
+    final Stage stage = GUISessionProxy.getApplication().getStage();
+
+    GUISessionProxy.getApplication().getApplicationScreen().view().getTtlPnlNotifications().expandedProperty().addListener(new ChangeListener<Boolean>() {
+
+      @Override
+      public void changed(final ObservableValue<? extends Boolean> observable, final Boolean oldValue, final Boolean newValue) {
+        if (newValue == true) {
+          Platform.runLater(() -> {
+            final double stageHeight = stage.getHeight();
+            final double notificationHeightForce = GUISessionProxy.getApplication().getApplicationScreen().view().getSpnApplication().getPrefHeight();
+            log.debug("notificationHeightForce = {}", notificationHeightForce);
+            final double newSplitPaneNotifPos = notificationHeightForce / stageHeight;
+            GUISessionProxy.getApplication().getApplicationScreen().view().getSpnApplication().setDividerPositions(newSplitPaneNotifPos);
+            log.debug("newSplitPaneNotifPos = {}", newSplitPaneNotifPos);
+
+          });
+        }
+      }
+    });
+
+  }
+
+  /**
+   * Inits the application maximize listener.
+   */
+  private void initApplicationMaximizeListener() {
+    final Stage stage = GUISessionProxy.getApplication().getStage();
+
+    stage.maximizedProperty().addListener(new ChangeListener<Boolean>() {
+
+      @Override
+      public void changed(final ObservableValue<? extends Boolean> observable, final Boolean oldValue, final Boolean newValue) {
+        if (newValue == true) {
+          Platform.runLater(() -> {
+            final double stageWidth = stage.getWidth();
+            final double wkspWidthForce = GUISessionProxy.getApplication().getApplicationScreen().view().getSpnWorkspace().getPrefWidth();
+            log.debug("wkspWidthForce = {}", wkspWidthForce);
+            final double newSplitPaneWkspPos = wkspWidthForce / stageWidth;
+            GUISessionProxy.getApplication().getApplicationScreen().view().getSpnWorkspace().setDividerPositions(newSplitPaneWkspPos);
+            log.debug("newSplitPaneWkspPos = {}", newSplitPaneWkspPos);
+
+            final double stageHeight = stage.getHeight();
+            final double notificationHeightForce = GUISessionProxy.getApplication().getApplicationScreen().view().getSpnApplication().getPrefHeight();
+            log.debug("notificationHeightForce = {}", notificationHeightForce);
+            final double newSplitPaneNotifPos = notificationHeightForce / stageHeight;
+            GUISessionProxy.getApplication().getApplicationScreen().view().getSpnApplication().setDividerPositions(newSplitPaneNotifPos);
+            log.debug("newSplitPaneNotifPos = {}", newSplitPaneNotifPos);
+          });
+        }
+      }
+    });
   }
 
   /**

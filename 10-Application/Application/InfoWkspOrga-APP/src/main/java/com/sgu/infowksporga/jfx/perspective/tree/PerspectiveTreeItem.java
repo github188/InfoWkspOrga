@@ -2,18 +2,22 @@ package com.sgu.infowksporga.jfx.perspective.tree;
 
 import org.springframework.data.domain.Persistable;
 
+import com.sgu.core.framework.gui.jfx.control.list.AbstractItemVo;
 import com.sgu.core.framework.util.Util;
 import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Workspace;
-import com.sgu.infowksporga.jfx.perspective.tree.vo.AbstractItemVo;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.StringItemVo;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 
 import javafx.scene.control.TreeItem;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * The Class PerspectiveTreeItem.
  */
+@Getter
+@Setter
 public class PerspectiveTreeItem extends TreeItem<AbstractItemVo> implements Comparable<PerspectiveTreeItem> {
 
   /**
@@ -29,26 +33,15 @@ public class PerspectiveTreeItem extends TreeItem<AbstractItemVo> implements Com
    * @param treeNodeIdentifier the tree node identifier
    * @param userObject the user object
    */
-  public PerspectiveTreeItem(final long treeNodeIdentifier, final WorkspaceDto workspace) {
+  public PerspectiveTreeItem(final WorkspaceDto workspace) {
     super(null);
-    setWorkspace(new WorkspaceItemVo(treeNodeIdentifier, workspace));
-  }
-
-  /**
-   * The Constructor.
-   *
-   * @param treeNodeIdentifier the tree node identifier
-   * @param userObject the user object
-   */
-  public PerspectiveTreeItem(final int treeNodeIdentifier, final String userObject) {
-    super(null);
-    setString(new StringItemVo(treeNodeIdentifier, userObject));
+    setWorkspace(new WorkspaceItemVo(workspace));
   }
 
   /**
    * {@inheritDoc}
    */
-  protected Object getNewItem() {
+  protected Object buildNewItem() {
     return new PerspectiveTreeItem();
   }
 

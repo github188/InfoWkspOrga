@@ -12,6 +12,7 @@ import com.sgu.infowksporga.business.pivot.orchestration.FindDataToInitApplicati
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveIn;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveStructureIn;
 import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
+import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.rest.RestServiceMapping;
 
 import javafx.scene.control.ProgressBar;
@@ -57,9 +58,13 @@ public class FindDataToInitApplicationFacade extends AbstractBusinessFacade<Find
 
   /** {@inheritDoc} */
   @Override
-  public void refreshScreen(final FindDataToInitApplicationOut output, final PerspectivePanelScreen screen, final StringBuilder reportMessages, final ProgressBar monitor) {
+  public void refreshScreen(final FindDataToInitApplicationOut output, final PerspectivePanelScreen screen, final StringBuilder reportMessages,
+  final ProgressBar monitor) {
     screen.model().fillUI(output.getFindPerspectiveOut());
     screen.model().fillUI(output.getFindPerspectiveStructureOut());
+
+    final PerspectivePanelScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
+    perspectiveScreen.getView().getTreeWorkspaces().expandAll(0);
   }
 
 }

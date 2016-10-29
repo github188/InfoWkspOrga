@@ -22,7 +22,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.controlsfx.control.CheckComboBox?>
 
-<BorderPane prefHeight="900" prefWidth="1600" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.main.mvc.ApplicationViewFxml">
+<BorderPane prefWidth="1024" prefHeight="768"  xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.main.mvc.ApplicationViewFxml">
 	<top>
 		<VBox fx:id="vboxTop" BorderPane.alignment="CENTER">
 			<children>
@@ -61,15 +61,15 @@
 		</VBox>
 	</top>
 	<center>
-		<SplitPane fx:id="spnApplication" dividerPositions="0.23601398601398602" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL"
+		<SplitPane fx:id="spnApplication" dividerPositions="0.23601398601398602" minHeight="0.0" prefHeight="160.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" orientation="VERTICAL"
 			BorderPane.alignment="CENTER"
 		>
 			<items>
-				<TitledPane fx:id="ttlPnlNotifications" animated="false" minHeight="0.0" text="Notifications">
+				<TitledPane fx:id="ttlPnlNotifications" animated="false" minHeight="0.0"  text="Notifications">
 					<content>
 						<AnchorPane minHeight="0.0">
 							<children>
-								<TabPane fx:id="tabPnlNotifications" layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE"
+								<TabPane fx:id="tabPnlNotifications" minHeight="0.0" layoutX="5.0" layoutY="5.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" tabClosingPolicy="UNAVAILABLE"
 									tabMaxHeight="3000.0" tabMaxWidth="3000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"
 								>
 									<tabs>
@@ -90,12 +90,12 @@
 										</Tab>
 										<Tab fx:id="tabChat" text="Chat (2)">
 											<content>
-												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="7.0" prefWidth="591.0" />
+												<AnchorPane minHeight="0.0" />
 											</content>
 										</Tab>
 										<Tab fx:id="tabMail" text="\@Mail (5)">
 											<content>
-												<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+												<AnchorPane minHeight="0.0"/>
 											</content>
 										</Tab>
 									</tabs>
@@ -106,15 +106,15 @@
 				</TitledPane>
 				<BorderPane fx:id="pnlApplication" minHeight="0.0">
 					<center>
-						<SplitPane fx:id="spnWorkspace" dividerPositions="0.24180327868852458" BorderPane.alignment="CENTER">
+						<SplitPane fx:id="spnWorkspace" dividerPositions="0.2272727272" prefWidth="440.0" BorderPane.alignment="CENTER">
 							<items>
 								<AnchorPane fx:id="ancPnlPerspective" minHeight="0.0" minWidth="0.0" prefWidth="184.0">
 									<children>
-										<Accordion fx:id="acdPerspective" minWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+										<Accordion fx:id="acdPerspective" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
 											AnchorPane.topAnchor="0.0"
 										>
 											<panes>
-												<TitledPane fx:id="ttlPnlPerspective" animated="true" expanded="true" maxHeight="1.7976931348623157E308" text="Perspective">
+												<TitledPane fx:id="ttlPnlPerspective" animated="true" expanded="true"   maxHeight="1.7976931348623157E308" text="Perspective">
 													<content>
 														<AnchorPane fx:id="ancPnlPerspective">
 															<children>
