@@ -22,7 +22,6 @@ import com.sgu.core.framework.util.UtilXml;
 import com.sgu.infowksporga.business.dao.repository.PerspectiveRepository;
 import com.sgu.infowksporga.business.dao.repository.PerspectiveWorkspacesRepository;
 import com.sgu.infowksporga.business.dao.repository.WorkspaceRepository;
-import com.sgu.infowksporga.business.service.rest.serialized.api.ILoadPerspectivesStructureService;
 import com.sgu.infowksporga.business.entity.Perspective;
 import com.sgu.infowksporga.business.entity.PerspectiveWorkspaces;
 import com.sgu.infowksporga.business.entity.Workspace;
@@ -30,6 +29,7 @@ import com.sgu.infowksporga.business.mapper.XmlPerspectiveVsEntityPerspectiveMap
 import com.sgu.infowksporga.business.mapper.XmlWorkspaceVsEntityWorkspaceMapper;
 import com.sgu.infowksporga.business.pivot.perspective.LoadPerspectivesStructureIn;
 import com.sgu.infowksporga.business.pivot.perspective.LoadPerspectivesStructureOut;
+import com.sgu.infowksporga.business.service.rest.serialized.api.ILoadPerspectivesStructureService;
 import com.sgu.infowksporga.business.xml.jaxb.perspective.XmlPerspective;
 import com.sgu.infowksporga.business.xml.jaxb.perspective.XmlWorkspace;
 import com.sgu.infowksporga.util.OrderManager;
@@ -59,17 +59,14 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
   private static final XmlPerspectiveVsEntityPerspectiveMapper perspectiveMapper = new XmlPerspectiveVsEntityPerspectiveMapper();
 
   //---------------------------------------------------------------------------------------------------------------------------------------
-  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER,
-  interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api", interfaceName = "ILoadPerspectivesStructureService",
-  pivotIn = "com.sgu.infowksporga.business.pivot.perspective.LoadPerspectivesStructureIn",
+  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER, interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api",
+  interfaceName = "ILoadPerspectivesStructureService", pivotIn = "com.sgu.infowksporga.business.pivot.perspective.LoadPerspectivesStructureIn",
   pivotOut = "com.sgu.infowksporga.business.pivot.perspective.LoadPerspectivesStructureOut")
 
-  @Rest(requestControllerUri = "/perspective", requestServiceUri = "/load/xml/structure",
-  controllerPackage = "com.sgu.infowksporga.web.rest.controller", controllerName = "LoadPerspectivesStructureController",
-  method = "RequestMethod.POST",
+  @Rest(requestControllerUri = "/perspective", requestServiceUri = "/load/xml/structure", controllerPackage = "com.sgu.infowksporga.web.rest.controller",
+  controllerName = "LoadPerspectivesStructureController", method = "RequestMethod.POST",
   produces = "{ GMediaType.APPLICATION_JSON_VALUE, GMediaType.APPLICATION_JAVA_SERIALIZED_OBJECT_VALUE, GMediaType.APPLICATION_XML_VALUE }",
-  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER,
-  restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
+  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER, restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
 
   //---------------------------------------------------------------------------------------------------------------------------------------
   @Override
@@ -113,8 +110,7 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
                 @I18nProperty(key = "load.workspaces.tree.model.message.error.xml.content.bad",
                 value = "Le contenu du fichier XML '{0}' n''est pas conforme.Veuillez le corriger."), // Force /n 
   })
-  private void manageDbPerspectiveStructureFromXML(final String xmlPerspectiveFileUrl, final LoadPerspectivesStructureIn in,
-  final LoadPerspectivesStructureOut out) {
+  private void manageDbPerspectiveStructureFromXML(final String xmlPerspectiveFileUrl, final LoadPerspectivesStructureIn in, final LoadPerspectivesStructureOut out) {
     // Read Xml Configuration from URL or directly in String
     final String strConfig = readXmlConfiguration(xmlPerspectiveFileUrl);
 
@@ -138,11 +134,10 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
       }
 
       // Order is managed by Workspace XML organization order if it is not specified by tag 'order'
-      final OrderManager startWorkspaceOrder = new OrderManager();
-      startWorkspaceOrder.nextOrder = 0;
+      final OrderManager startWorkspaceOrder = new OrderManager(0);
       // Create All Workspaces default from xml structure
-      createDatabaseStructureFromXmlRecursively(xmlPerspective.getId(), xmlPerspective.getXmlWorkspace(), null, in.getUserLogin(),
-                                                startWorkspaceOrder, in.getTreatmentDate());
+      createDatabaseStructureFromXmlRecursively(xmlPerspective.getId(), xmlPerspective.getXmlWorkspace(), null, in.getUserLogin(), startWorkspaceOrder,
+                                                in.getTreatmentDate());
     }
   }
 
@@ -155,8 +150,8 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
    * @param currentUser the current user
    * @return the workspace
    */
-  private void createDatabaseStructureFromXmlRecursively(final Integer perspectiveId, final XmlWorkspace xmlWorkspace,
-  final Workspace dbWorkspaceParent, final String currentUser, final OrderManager orderManager, final Date treatmentDate) {
+  private void createDatabaseStructureFromXmlRecursively(final Integer perspectiveId, final XmlWorkspace xmlWorkspace, final Workspace dbWorkspaceParent,
+  final String currentUser, final OrderManager orderManager, final Date treatmentDate) {
 
     String xmlWorkspaceId = xmlWorkspace.getId();
     if ("${User}".equals(xmlWorkspaceId)) {
@@ -166,8 +161,6 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
     }
 
     Workspace dbWorkspace = repositoryWorkspace.findOne(xmlWorkspaceId);
-    orderManager.nextOrder = orderManager.nextOrder + 1;
-
     // it's a CREATION
     if (dbWorkspace == null) {
       dbWorkspace = workspaceMapper.mapToEntity(xmlWorkspace, currentUser, treatmentDate);
@@ -205,12 +198,11 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
    * @param treatmentDate the treatment date
    * @param dbWorkspace the db workspace
    */
-  private void ManageLinkBetweenPerspectiveAndWorkspace(final Integer perspectiveId, final Workspace dbWorkspace,
-  final Workspace dbWorkspaceParent, final String currentUser, final Date treatmentDate, final OrderManager orderManager) {
+  private void ManageLinkBetweenPerspectiveAndWorkspace(final Integer perspectiveId, final Workspace dbWorkspace, final Workspace dbWorkspaceParent,
+  final String currentUser, final Date treatmentDate, final OrderManager orderManager) {
 
     // Check if Link already exists
-    final List<PerspectiveWorkspaces> result = repositoryPerspectiveWorkspaces.findPerspectiveWorkspaceLink(perspectiveId,
-                                                                                                            dbWorkspace.getId());
+    final List<PerspectiveWorkspaces> result = repositoryPerspectiveWorkspaces.findPerspectiveWorkspaceLink(perspectiveId, dbWorkspace.getId());
 
     if (UtilCollection.isEmpty(result)) {
       // ---------------------------------------------------
@@ -219,7 +211,7 @@ public class LoadPerspectivesStructureService extends AbstractLoadXMLStructureSe
       PerspectiveWorkspaces ppcWkspLink = new PerspectiveWorkspaces();
       ppcWkspLink.setPerspectiveId(perspectiveId);
       ppcWkspLink.setWorkspaceId(dbWorkspace.getId());
-      ppcWkspLink.setWorkspaceOrder(orderManager.nextOrder);
+      ppcWkspLink.setWorkspaceOrder(orderManager.getNextOrder());
 
       ppcWkspLink.setCreationInfo(currentUser, treatmentDate);
       ppcWkspLink = repositoryPerspectiveWorkspaces.save(ppcWkspLink);

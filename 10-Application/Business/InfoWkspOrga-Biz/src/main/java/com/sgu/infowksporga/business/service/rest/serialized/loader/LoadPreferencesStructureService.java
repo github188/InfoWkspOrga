@@ -19,11 +19,11 @@ import com.sgu.core.framework.util.UtilIO;
 import com.sgu.core.framework.util.UtilString;
 import com.sgu.core.framework.util.UtilXml;
 import com.sgu.infowksporga.business.dao.repository.PreferenceRepository;
-import com.sgu.infowksporga.business.service.rest.serialized.api.ILoadPreferencesStructureService;
 import com.sgu.infowksporga.business.entity.Preference;
 import com.sgu.infowksporga.business.mapper.XmlPreferenceVsEntityPreferenceMapper;
 import com.sgu.infowksporga.business.pivot.preference.LoadPreferencesStructureIn;
 import com.sgu.infowksporga.business.pivot.preference.LoadPreferencesStructureOut;
+import com.sgu.infowksporga.business.service.rest.serialized.api.ILoadPreferencesStructureService;
 import com.sgu.infowksporga.business.xml.jaxb.preference.XmlPreference;
 import com.sgu.infowksporga.util.OrderManager;
 
@@ -47,17 +47,14 @@ public class LoadPreferencesStructureService extends AbstractLoadXMLStructureSer
   private static final XmlPreferenceVsEntityPreferenceMapper preferenceMapper = new XmlPreferenceVsEntityPreferenceMapper();
 
   //---------------------------------------------------------------------------------------------------------------------------------------
-  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER,
-  interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api", interfaceName = "ILoadPreferencesStructureService",
-  pivotIn = "com.sgu.infowksporga.business.pivot.preference.LoadPreferencesStructureIn",
+  @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER, interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api",
+  interfaceName = "ILoadPreferencesStructureService", pivotIn = "com.sgu.infowksporga.business.pivot.preference.LoadPreferencesStructureIn",
   pivotOut = "com.sgu.infowksporga.business.pivot.preference.LoadPreferencesStructureOut")
 
-  @Rest(requestControllerUri = "/preference", requestServiceUri = "/load/xml/structure",
-  controllerPackage = "com.sgu.infowksporga.web.rest.controller", controllerName = "LoadPreferencesStructureController",
-  method = "RequestMethod.POST",
+  @Rest(requestControllerUri = "/preference", requestServiceUri = "/load/xml/structure", controllerPackage = "com.sgu.infowksporga.web.rest.controller",
+  controllerName = "LoadPreferencesStructureController", method = "RequestMethod.POST",
   produces = "{ GMediaType.APPLICATION_JSON_VALUE, GMediaType.APPLICATION_JAVA_SERIALIZED_OBJECT_VALUE, GMediaType.APPLICATION_XML_VALUE }",
-  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER,
-  restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
+  controllerBaseSource = AnnotationConfig.REST_CONTROLLER_TARGET_SOURCE_FOLDER, restServiceMappingTargetClass = AnnotationConfig.REST_REQUEST_MAPPING_TARGET)
 
   //---------------------------------------------------------------------------------------------------------------------------------------
   @Override
@@ -97,8 +94,7 @@ public class LoadPreferencesStructureService extends AbstractLoadXMLStructureSer
                 @I18nProperty(key = "load.preferences.message.error.xml.content.bad",
                 value = "Le contenu du fichier XML '{0}' n''est pas conforme. Veuillez le corriger."), // Force /n 
   })
-  private void manageDbPreferencesStructureFromXML(final String xmlPreferenceFileUrl, final LoadPreferencesStructureIn in,
-  final LoadPreferencesStructureOut out) {
+  private void manageDbPreferencesStructureFromXML(final String xmlPreferenceFileUrl, final LoadPreferencesStructureIn in, final LoadPreferencesStructureOut out) {
     // Read Xml Configuration from URL or directly in String
     final String strConfig = readXmlConfiguration(xmlPreferenceFileUrl);
 
@@ -115,8 +111,7 @@ public class LoadPreferencesStructureService extends AbstractLoadXMLStructureSer
 
     if (out.getReturnCode().equals(ReturnCode.OK)) {
       // Order is managed by Workspace XML organization order if it is not specified by tag 'order'
-      final OrderManager startPreferenceOrder = new OrderManager();
-      startPreferenceOrder.nextOrder = 0;
+      final OrderManager startPreferenceOrder = new OrderManager(0);
 
       // Create All Preferences default from xml structure
       createDatabaseStructureFromXmlRecursively(xmlPreference, null, in.getUserLogin(), startPreferenceOrder, in.getTreatmentDate());
@@ -132,10 +127,10 @@ public class LoadPreferencesStructureService extends AbstractLoadXMLStructureSer
    * @param orderManager the order manager
    * @param treatmentDate the treatment date
    */
-  private void createDatabaseStructureFromXmlRecursively(final XmlPreference xmlPreference, final Preference dbPreferenceParent,
-  final String currentUser, final OrderManager orderManager, final Date treatmentDate) {
+  private void createDatabaseStructureFromXmlRecursively(final XmlPreference xmlPreference, final Preference dbPreferenceParent, final String currentUser,
+  final OrderManager orderManager, final Date treatmentDate) {
 
-    Integer xmlPreferenceId = xmlPreference.getId();
+    final Integer xmlPreferenceId = xmlPreference.getId();
 
     Preference dbPreference = repositoryPreference.findOne(xmlPreferenceId);
 
@@ -143,8 +138,7 @@ public class LoadPreferencesStructureService extends AbstractLoadXMLStructureSer
     if (dbPreference == null) {
 
       dbPreference = preferenceMapper.mapToEntity(xmlPreference, currentUser, treatmentDate);
-      orderManager.nextOrder = orderManager.nextOrder + 1;
-      dbPreference.setOrder(orderManager.nextOrder);
+      dbPreference.setOrder(orderManager.getNextOrder());
 
       Preference parent = null;
       if (dbPreferenceParent != null) {

@@ -2,6 +2,7 @@ package com.sgu.infowksporga.business.dao.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -21,8 +22,7 @@ public interface ViewRepository extends GJpaRepository<View, Integer> {
    * @return the list of views Id to Delete
    */
   @Query("SELECT v.id FROM View v WHERE v.workspaceId = :wrkspId and v.id not in :viewsIdToKeep")
-  public List<Integer> findViewsNotInGivenListForWorkspace(@Param("viewsIdToKeep") List<Integer> viewsIdToKeep,
-  @Param("wrkspId") String workspaceId);
+  public List<Integer> findViewsNotInGivenListForWorkspace(@Param("viewsIdToKeep") List<Integer> viewsIdToKeep, @Param("wrkspId") String workspaceId);
 
   /**
    * Find workspace views.
@@ -40,6 +40,7 @@ public interface ViewRepository extends GJpaRepository<View, Integer> {
    * @return the number of deleted items
    */
   @Query("DELETE FROM View v WHERE v.id in :viewsIdToDelete")
-  public int removeViews(@Param("viewsIdToDelete") List<Integer> viewsIdToDelete);
+  @Modifying
+  public void removeViews(@Param("viewsIdToDelete") List<Integer> viewsIdToDelete);
 
 }

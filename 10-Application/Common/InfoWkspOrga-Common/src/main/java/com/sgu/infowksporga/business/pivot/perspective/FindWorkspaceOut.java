@@ -1,7 +1,7 @@
 package com.sgu.infowksporga.business.pivot.perspective;
 
 import com.sgu.core.framework.pivot.AbstractOut;
-import com.sgu.infowksporga.business.dto.WorkspaceDto;
+import com.sgu.infowksporga.business.entity.Workspace;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -20,7 +20,7 @@ public class FindWorkspaceOut extends AbstractOut {
   /**
    * Attribute
    */
-  private WorkspaceDto workspaceDto;
+  private Workspace workspace;
 
   /**
    * Constructor<br>

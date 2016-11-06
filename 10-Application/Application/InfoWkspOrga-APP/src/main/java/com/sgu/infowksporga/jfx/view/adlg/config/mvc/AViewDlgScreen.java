@@ -5,9 +5,15 @@ import java.util.Optional;
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.i18n.I18n;
 import com.sgu.apt.annotation.i18n.I18nProperty;
+import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewFxml;
+import com.sgu.core.framework.gui.jfx.screen.AGController;
+import com.sgu.core.framework.gui.jfx.screen.AGModel;
 import com.sgu.core.framework.gui.jfx.screen.AGScreen;
+import com.sgu.core.framework.gui.jfx.screen.AGView;
 import com.sgu.core.framework.gui.jfx.screen.IDisplayMode;
 import com.sgu.core.framework.gui.jfx.util.UtilGUIMessage;
+import com.sgu.infowksporga.business.entity.View;
+import com.sgu.infowksporga.jfx.view.ui.AAppViewModel;
 
 import javafx.scene.control.Dialog;
 import lombok.Getter;
@@ -21,11 +27,15 @@ properties = { // label create
 
 })
 @Getter
-public abstract class AViewDlgScreen<M extends AViewDlgViewFxml, V extends AViewDlgViewFxml, C extends AViewDlgController>
-                                    extends AGScreen<AViewDlgModel, AViewDlgViewFxml, AViewDlgController> {
+public abstract class AViewDlgScreen<M extends AGModel, V extends AGView, C extends AGController> extends AGScreen<M, V, C> {
 
   /** The Constant VIEW_DLG_TITLE_KEY. */
   public static final String VIEW_DLG_TITLE_KEY = "view.dialog.title";
+
+  /**
+   * We store the parent view to be allow to update it
+   */
+  private ADockableViewFxml viewFxmlParent;
 
   /**
    * The Constructor.
@@ -48,23 +58,25 @@ public abstract class AViewDlgScreen<M extends AViewDlgViewFxml, V extends AView
   public void finalizeMvcBuildOfComponent() {
     super.finalizeMvcBuildOfComponent();
 
+    final AViewDlgViewFxml view = (AViewDlgViewFxml) view();
+
     // Affect the controller to the included views
-    view().getPnlIdentityCardController().setController(controller());
-    view().getPnlConfigurationController().setController(controller());
-    view().getPnlStyleController().setController(controller());
-    view().getPnlHorodateController().setController(controller());
+    view.getPnlIdentityCardController().setController(controller());
+    view.getPnlConfigurationController().setController(controller());
+    view.getPnlStyleController().setController(controller());
+    view.getPnlHorodateController().setController(controller());
 
     // Affect the model to the included views
-    view().getPnlIdentityCardController().setModel(model());
-    view().getPnlConfigurationController().setModel(model());
-    view().getPnlStyleController().setModel(model());
-    view().getPnlHorodateController().setModel(model());
+    view.getPnlIdentityCardController().setModel(model());
+    view.getPnlConfigurationController().setModel(model());
+    view.getPnlStyleController().setModel(model());
+    view.getPnlHorodateController().setModel(model());
 
     // Build the UI of the included views
-    view().getPnlIdentityCardController().buildUI();
-    view().getPnlConfigurationController().buildUI();
-    view().getPnlStyleController().buildUI();
-    view().getPnlHorodateController().buildUI();
+    view.getPnlIdentityCardController().buildUI();
+    view.getPnlConfigurationController().buildUI();
+    view.getPnlStyleController().buildUI();
+    view.getPnlHorodateController().buildUI();
 
   }
 
@@ -73,17 +85,30 @@ public abstract class AViewDlgScreen<M extends AViewDlgViewFxml, V extends AView
    *
    * @param displayMode the display mode
    */
-  public void showDialog(final int displayMode) {
+  public void showDialog(final int displayMode, final AAppViewModel selectedViewModel) {
     final Dialog<Integer> dialog = buildDialogBox(displayMode);
     dialog.setResizable(true);
+
+    // Save parent view this dialog box
+    viewFxmlParent = (ADockableViewFxml) selectedViewModel.view();
+
+    // build Model
+    final View viewEntity = selectedViewModel.getViewEntity();
+
+    // ---------------------------------------------------------
+    // Initialize all config Dialog fields with view entity info
+    // ---------------------------------------------------------
+    final AViewDlgModel dlgModel = (AViewDlgModel) model();
+    dlgModel.mapViewEntityToModel(viewEntity);
 
     // Convert the result to the display mode when the validation (create, update, delete, copy) button is clicked.
     // If Cancel is selected return null
     dialog.setResultConverter(dialogButton -> {
-      if (dialogButton == view().getValidateButtonType()) {
+      final AViewDlgViewFxml view = (AViewDlgViewFxml) view();
+      if (dialogButton == view.getValidateButtonType()) {
         return displayMode;
       }
-      return -1; // Cancel mode 
+      return -1; // Cancel mode
     });
 
     // Show the dialog and wait for the result
@@ -99,7 +124,9 @@ public abstract class AViewDlgScreen<M extends AViewDlgViewFxml, V extends AView
 
       case IDisplayMode.MODE_UPDATE:
         // call service
-        UtilGUIMessage.showNotYetImplementedDlg();
+        final View newViewData = dlgModel.mapModelToViewEntity();
+        selectedViewModel.setViewEntity(newViewData);
+        viewFxmlParent.controller().bindComponentsWithPojo();
         break;
 
       case IDisplayMode.MODE_DELETE:

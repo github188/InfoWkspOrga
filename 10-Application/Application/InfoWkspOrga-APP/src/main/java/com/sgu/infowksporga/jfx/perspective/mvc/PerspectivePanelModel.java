@@ -1,13 +1,10 @@
 package com.sgu.infowksporga.jfx.perspective.mvc;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
-import com.sgu.infowksporga.business.comparator.WorkspaceComparatorOnOrder;
-import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Perspective;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.pivot.perspective.FindPerspectiveOut;
@@ -27,9 +24,6 @@ import lombok.extern.slf4j.Slf4j;
 @Setter
 @Getter
 public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, PerspectivePanelController> {
-
-  /** The Constant comparator. */
-  private static final WorkspaceComparatorOnOrder comparator = new WorkspaceComparatorOnOrder();
 
   /**
    * The Constructor.
@@ -91,12 +85,11 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
     final PerspectiveTreeItem selectedWksp = (PerspectiveTreeItem) view().getTreeWorkspaces().getSelectionModel().getSelectedItem();
 
     final List<Workspace> workspaces = out.getWorkspaces();
-    // sort Workspaces by order
-    Collections.sort(workspaces, comparator);
 
     // Construction de l'arbre contenant les workspaces
     final PerspectiveTreeItem rootItemPerspective = buildPerspectiveTree(workspaces);
 
+    view().getTreeWorkspaces().setRoot(null);
     view().getTreeWorkspaces().setRoot(rootItemPerspective);
 
     if (selectedWksp != null) {
@@ -112,7 +105,7 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
    */
   private PerspectiveTreeItem buildPerspectiveTree(final List<Workspace> workspaces) {
     // build the root Node
-    final PerspectiveTreeItem rootItem = new PerspectiveTreeItem(new WorkspaceDto(workspaces.get(0)));
+    final PerspectiveTreeItem rootItem = new PerspectiveTreeItem(workspaces.get(0));
     final Map<String, PerspectiveTreeItem> parentWkspById = new HashMap<>(workspaces.size());
     parentWkspById.put(rootItem.getWorkspace().getId(), rootItem);
 
@@ -120,7 +113,7 @@ public class PerspectivePanelModel extends AGModel<PerspectivePanelViewFxml, Per
     PerspectiveTreeItem parentWorkspaceTreeItem = rootItem;
     for (int i = 1; i < workspaces.size(); i++) {
       final Workspace workspace = workspaces.get(i);
-      final PerspectiveTreeItem childNode = new PerspectiveTreeItem(new WorkspaceDto(workspaces.get(i)));
+      final PerspectiveTreeItem childNode = new PerspectiveTreeItem(workspaces.get(i));
       parentWkspById.put(childNode.getWorkspace().getId(), childNode);
 
       if (workspace.getParent() != null) {

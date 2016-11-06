@@ -2,6 +2,7 @@ package com.sgu.infowksporga.business.dao.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -20,6 +21,7 @@ public interface ViewAttributeRepository extends GJpaRepository<ViewAttribute, I
    * @return the number of deleted items
    */
   @Query("DELETE FROM ViewAttribute va WHERE va.viewId in :viewsIdToDelete")
-  public int removeViewsAttributes(@Param("viewsIdToDelete") List<Integer> viewsIdToDelete);
+  @Modifying
+  public void removeViewsAttributes(@Param("viewsIdToDelete") List<Integer> viewsIdToDelete);
 
 }

@@ -2,9 +2,10 @@ package com.sgu.infowksporga.jfx.view.web.ui;
 
 import com.sgu.core.framework.gui.jfx.control.pane.dock.serialization.XDockView;
 import com.sgu.infowksporga.business.entity.View;
+import com.sgu.infowksporga.business.entity.ViewAttribute;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.util.UtilView;
-import com.sgu.infowksporga.jfx.view.ui.AApplicationViewModel;
+import com.sgu.infowksporga.jfx.view.ui.AAppViewModel;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,10 +15,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class WebViewModel extends AApplicationViewModel<WebViewFxml, WebViewController> {
-
-  /** The Constant WEB_VIEW_URL. Parameter */
-  public static final String WEB_VIEW_URL = "WEB_VIEW_URL";
+public class WebViewModel extends AAppViewModel<WebViewFxml, WebViewController> {
 
   /**
    * The Constructor.
@@ -29,16 +27,16 @@ public class WebViewModel extends AApplicationViewModel<WebViewFxml, WebViewCont
   /**
    * The Constructor.
    *
-   * @param view the view
+   * @param viewEntity the view
    */
-  public WebViewModel(final View view) {
-    super(view);
+  public WebViewModel(final View viewEntity) {
+    super(viewEntity);
   }
 
   /** {@inheritDoc} */
   @Override
   public XDockView getXDockView() {
-    return UtilView.convertViewEntityToXDockView(entityView);
+    return UtilView.convertViewEntityToXDockView(viewEntity);
   }
 
   /**
@@ -47,7 +45,8 @@ public class WebViewModel extends AApplicationViewModel<WebViewFxml, WebViewCont
    * @return the url
    */
   public String getUrl() {
-    return I18nHelperApp.getMessage(entityView.getAttributesAsMap().get(WEB_VIEW_URL).getValue());
+    final ViewAttribute attribute = viewEntity.getAttributesAsMap().get(ViewAttribute.WEB_VIEW_URL);
+    return I18nHelperApp.getMessage(attribute.getValue());
   }
 
   /**
@@ -55,7 +54,7 @@ public class WebViewModel extends AApplicationViewModel<WebViewFxml, WebViewCont
    */
   @Override
   public void fillUI() {
-    view().getWebEngine().load(getUrl());
+
   }
 
 }

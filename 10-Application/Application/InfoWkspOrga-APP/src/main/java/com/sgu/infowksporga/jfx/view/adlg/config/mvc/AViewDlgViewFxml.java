@@ -15,7 +15,6 @@ import com.sgu.infowksporga.jfx.component.StylePanelFxml;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.view.adlg.config.mvc.panel.AConfigurationPanelFxml;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -32,11 +31,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Getter
 @Setter
-public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewDlgController> extends AGView<AViewDlgModel, AViewDlgController> implements Initializable {
+public abstract class AViewDlgViewFxml<S extends AViewDlgScreen, M extends AViewDlgModel, C extends AViewDlgController> extends AGView<S, M, C> implements Initializable {
 
   /** The dlg pnl worksapce. */
   @FXML
-  private DialogPane dlgPnlworkspace;
+  private DialogPane dlgPnlDockView;
 
   /** The pnl identity card. */
   @FXML
@@ -99,7 +98,7 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
     // Set the button types.
     validateButtonType = new ButtonType("Validate", ButtonData.OK_DONE);
     cancelButtonType = new ButtonType("Cancel", ButtonData.CANCEL_CLOSE);
-    dlgPnlworkspace.getButtonTypes().addAll(validateButtonType, cancelButtonType);
+    dlgPnlDockView.getButtonTypes().addAll(validateButtonType, cancelButtonType);
 
     UtilControl.applyBundleConfigToButton(VALIDATE_ACTION_BUNDLE_KEY, getButtonValidate());
     UtilControl.applyBundleConfigToButton(CANCEL_ACTION_BUNDLE_KEY, getButtonCancel());
@@ -111,7 +110,7 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
    * @return the button validate
    */
   public Button getButtonValidate() {
-    return (Button) dlgPnlworkspace.lookupButton(validateButtonType);
+    return (Button) dlgPnlDockView.lookupButton(validateButtonType);
   }
 
   /**
@@ -120,7 +119,7 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
    * @return the button cancel
    */
   public Button getButtonCancel() {
-    return (Button) dlgPnlworkspace.lookupButton(cancelButtonType);
+    return (Button) dlgPnlDockView.lookupButton(cancelButtonType);
   }
 
   /** {@inheritDoc} */
@@ -151,11 +150,6 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
     pnlHorodateController.applyDisplayModeConsult();
     pnlStyleController.applyDisplayModeConsult();
 
-    Platform.runLater(() -> {
-      // build Model
-      //model().mapworkspaceToModel(GUISessionProxy.getCurrentworkspace().getworkspace());
-    });
-
   }
 
   /**
@@ -171,10 +165,6 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
     pnlHorodateController.applyDisplayModeDelete();
     pnlStyleController.applyDisplayModeDelete();
 
-    Platform.runLater(() -> {
-      // build Model
-      //model().mapworkspaceToModel(GUISessionProxy.getCurrentworkspace().getworkspace());
-    });
   }
 
   /**
@@ -190,30 +180,6 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
     pnlHorodateController.applyDisplayModeUpdate();
     pnlStyleController.applyDisplayModeUpdate();
 
-    Platform.runLater(() -> {
-      // build Model
-      // model().mapViewToModel(GUISessionProxy.getCurrentWorkspace().getworkspace());
-    });
-
-  }
-
-  /**
-   * Apply display mode copy.
-   */
-  @Override
-  public void applyDisplayModeCopy() {
-    UtilControl.applyBundleConfigToButton(I18NConstant.ACTION_DUPLICATE, getButtonValidate());
-    applyDisplayModeToDialogTitle(I18NConstant.MODE_DISPLAY_DUPLICATE);
-
-    pnlIdentityCardController.applyDisplayModeCopy();
-    getPnlConfigurationController().applyDisplayModeCopy();
-    pnlHorodateController.applyDisplayModeCopy();
-    pnlStyleController.applyDisplayModeCopy();
-
-    Platform.runLater(() -> {
-      // build Model
-      //model().mapworkspaceToModel(GUISessionProxy.getCurrentworkspace().getworkspace());
-    });
   }
 
   /**
@@ -243,15 +209,11 @@ public abstract class AViewDlgViewFxml<M extends AViewDlgModel, C extends AViewD
   /**
    * @return the pnlConfigurationController
    */
-  public abstract AConfigurationPanelFxml getPnlConfigurationController(); // {
-  //return pnlConfigurationController;
-  //}
+  public abstract AConfigurationPanelFxml getPnlConfigurationController();
 
   /**
    * @param pnlConfigurationController the pnlConfigurationController to set
    */
-  public abstract void setPnlConfigurationController(final AConfigurationPanelFxml pnlConfigurationController); // {
-  //this.pnlConfigurationController = pnlConfigurationController;
-  //}
+  public abstract void setPnlConfigurationController(final AConfigurationPanelFxml pnlConfigurationController);
 
 }

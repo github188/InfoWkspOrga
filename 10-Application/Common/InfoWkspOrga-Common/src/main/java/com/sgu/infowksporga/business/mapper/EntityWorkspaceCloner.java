@@ -48,15 +48,15 @@ public class EntityWorkspaceCloner extends AbstractEntityCloner<Workspace> {
     clone.setCustomer(source.getCustomer());
     clone.setCategory(source.getCategory());
     clone.setTags(source.getTags());
-    clone.setType(source.getType());
     clone.setColor(source.getColor());
+    clone.setBgColor(source.getBgColor());
     clone.setBold(source.isBold());
     clone.setStrike(source.isStrike());
     clone.setItalic(source.isItalic());
     clone.setUnderline(source.isUnderline());
     clone.setIcon(source.getIcon());
     clone.setEnabled(source.isEnabled());
-    clone.setOrder(source.getOrder());
+    //clone.setOrder(source.getOrder());
     clone.setLayout(source.getLayout());
     clone.setOwner(source.getOwner());
     clone.setPartage(source.getPartage());

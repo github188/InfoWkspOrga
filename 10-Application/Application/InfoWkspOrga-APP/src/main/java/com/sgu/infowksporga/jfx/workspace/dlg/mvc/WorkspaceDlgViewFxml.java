@@ -34,7 +34,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Setter
 @Getter
-public class WorkspaceDlgViewFxml extends AGView<WorkspaceDlgModel, WorkspaceDlgController> implements Initializable {
+public class WorkspaceDlgViewFxml extends AGView<WorkspaceDlgScreen, WorkspaceDlgModel, WorkspaceDlgController> implements Initializable {
 
   /** The dlg pnl worksapce. */
   @FXML

@@ -7,7 +7,6 @@ import com.sgu.core.framework.util.UtilString;
 import com.sgu.infowksporga.business.entity.Project;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.entity.enumeration.PartageEnum;
-import com.sgu.infowksporga.business.entity.enumeration.WorkspaceTypeEnum;
 import com.sgu.infowksporga.business.xml.jaxb.perspective.XmlWorkspace;
 
 /**
@@ -28,7 +27,7 @@ public class XmlWorkspaceVsEntityWorkspaceMapper {
    * @param xmlWorkspace the xml worksapce
    * @return the workspace
    */
-  public Workspace mapToEntity(final XmlWorkspace xmlWorkspace, String currentUser, Date treatmentDate) {
+  public Workspace mapToEntity(final XmlWorkspace xmlWorkspace, final String currentUser, final Date treatmentDate) {
 
     final Workspace entity = new Workspace();
 
@@ -65,8 +64,6 @@ public class XmlWorkspaceVsEntityWorkspaceMapper {
       entity.setCategory("Default");
     }
     entity.setTags(xmlWorkspace.getTags());
-    entity.setType(WorkspaceTypeEnum.getEnumForValue(xmlWorkspace.getType()));
-
     entity.setPartage(PartageEnum.getEnumForValue(xmlWorkspace.getPartage()));
 
     if (xmlWorkspace.getColor() != null) {

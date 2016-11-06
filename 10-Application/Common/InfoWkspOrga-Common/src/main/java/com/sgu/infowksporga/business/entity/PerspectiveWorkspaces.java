@@ -80,8 +80,8 @@ public class PerspectiveWorkspaces extends AbstractAuditedEntity<Integer> {
 
   @Override
   public String toString() {
-    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("perspectiveId", perspectiveId)
-                      .add("workspaceId", workspaceId).toString();
+    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("perspectiveId", perspectiveId).add("workspaceId", workspaceId)
+                      .add("workspaceOrder", workspaceOrder).toString();
   }
 
 }

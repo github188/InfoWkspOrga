@@ -6,8 +6,8 @@ import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewScreen;
  * The Class WebViewScreen.
  *
  * @param <WebViewModel> the generic type
- * @param <WebViewFxml> the generic type
- * @param <WebViewController> the generic type
+ * @param <AAppViewFxml> the generic type
+ * @param <AAppViewController> the generic type
  */
 public class WebViewScreen extends ADockableViewScreen<WebViewModel, WebViewFxml, WebViewController> {
 
@@ -15,6 +15,7 @@ public class WebViewScreen extends ADockableViewScreen<WebViewModel, WebViewFxml
    * The Constructor.
    */
   public WebViewScreen() {
+    super();
   }
 
   /**

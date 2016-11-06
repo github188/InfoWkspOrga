@@ -10,7 +10,6 @@ import com.sgu.apt.annotation.interfaces.GenerateInterface;
 import com.sgu.apt.annotation.rest.Rest;
 import com.sgu.core.framework.exception.TechnicalException;
 import com.sgu.infowksporga.business.dao.api.IWorkspaceDao;
-import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.mapper.EntityWorkspaceCloner;
 import com.sgu.infowksporga.business.pivot.perspective.FindWorkspaceIn;
@@ -49,7 +48,7 @@ public class FindWorkspaceService extends AbstractSerializedService implements I
     final Workspace workspace = dao.findWorkspaceWithViewsAndAttr(in.getWorkspaceId());
 
     if (workspace == null) {
-      out.setWorkspaceDto(null);
+      out.setWorkspace(null);
       return out;
     }
 
@@ -65,12 +64,10 @@ public class FindWorkspaceService extends AbstractSerializedService implements I
     }
 
     // Build return result without proxies
-    final WorkspaceDto workspaceDto = new WorkspaceDto();
-    workspaceDto.setWorkspace(EntityWorkspaceCloner.instance.cloneWithoutProxy(workspace));
+    out.setWorkspace(EntityWorkspaceCloner.instance.cloneWithoutProxy(workspace));
     if (workspaceMaster != null) {
-      workspaceDto.setWorkspaceMaster(EntityWorkspaceCloner.instance.cloneWithoutProxy(workspaceMaster));
+      out.getWorkspace().setMaster(EntityWorkspaceCloner.instance.cloneWithoutProxy(workspaceMaster));
     }
-    out.setWorkspaceDto(workspaceDto);
 
     return out;
   }

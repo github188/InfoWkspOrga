@@ -26,8 +26,8 @@
 	</properties>
 
 	<dependencies>
-
-		<dependency>
+	
+	 <dependency>
 			<groupId>com.sgu.framework</groupId>
 			<artifactId>fwk-javafx</artifactId>
 			<version>${fwk-javafx.version}</version>

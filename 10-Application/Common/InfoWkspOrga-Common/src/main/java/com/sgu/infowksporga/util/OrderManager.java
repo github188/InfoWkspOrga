@@ -6,13 +6,21 @@ package com.sgu.infowksporga.util;
 public class OrderManager {
 
   /** The next order. */
-  public int nextOrder = 0;
+  private int nextOrder = 0;
 
   /**
    * The Constructor.
    */
-  public OrderManager() {
+  public OrderManager(final int initOrder) {
+    nextOrder = initOrder;
+  }
 
+  /**
+   * @return the nextOrder
+   */
+  public final int getNextOrder() {
+    this.nextOrder = this.nextOrder + 1;
+    return this.nextOrder;
   }
 
 }

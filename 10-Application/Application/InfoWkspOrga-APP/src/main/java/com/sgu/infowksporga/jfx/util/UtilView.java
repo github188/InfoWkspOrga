@@ -17,19 +17,24 @@ import com.sgu.core.framework.gui.jfx.control.pane.dock.GDockPane;
 import com.sgu.core.framework.gui.jfx.control.pane.dock.serialization.XAttribute;
 import com.sgu.core.framework.gui.jfx.control.pane.dock.serialization.XDockView;
 import com.sgu.core.framework.gui.jfx.util.UtilDockFX;
+import com.sgu.core.framework.gui.jfx.util.UtilStyle;
 import com.sgu.core.framework.util.UtilDate;
+import com.sgu.infowksporga.business.entity.IStylable;
 import com.sgu.infowksporga.business.entity.View;
 import com.sgu.infowksporga.business.entity.ViewAttribute;
 import com.sgu.infowksporga.business.entity.enumeration.DockPosEnum;
-import com.sgu.infowksporga.jfx.view.ui.AApplicationViewModel;
+import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
+import com.sgu.infowksporga.jfx.view.ui.AAppViewModel;
 import com.sgu.infowksporga.jfx.view.web.ui.WebViewModel;
 import com.sgu.infowksporga.jfx.view.web.ui.WebViewScreen;
 
 import javafx.scene.Node;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The Class UtilView.
  */
+@Slf4j
 public class UtilView {
 
   /**
@@ -41,39 +46,39 @@ public class UtilView {
   /**
    * Convert view entity to x dock view.
    *
-   * @param view the view
+   * @param viewEntity the view
    * @return the x dock view
    */
-  public final static XDockView convertViewEntityToXDockView(final View view) {
+  public final static XDockView convertViewEntityToXDockView(final View viewEntity) {
     final XDockView xDocView = new XDockView();
-    xDocView.setCategory(view.getCategory());
-    xDocView.setCmmiPractices(view.getCmmiPractices());
-    xDocView.setCreatedBy(view.getCreatedBy());
-    xDocView.setCreatedDate(UtilDate.formatDate(view.getCreatedDate(), "dd/MM/yyyy HH:mm:ss"));
-    xDocView.setDescription(view.getDescription());
-    xDocView.setDockPos(view.getDockPos().toString());
-    xDocView.setOrder(view.getOrder());
-    xDocView.setNextSibling(view.isNextSibling());
-    xDocView.setHeight(view.getHeight());
-    xDocView.setIcon(view.getIcon());
-    xDocView.setId(view.getId());
-    xDocView.setLastModifiedBy(view.getLastModifiedBy());
-    xDocView.setLastModifiedDate(UtilDate.formatDate(view.getLastModifiedDate(), "dd/MM/yyyy HH:mm:ss"));
-    xDocView.setModelBean(view.getModelBean());
-    xDocView.setName(view.getName());
-    xDocView.setBgColor(view.getBgColor());
-    xDocView.setColor(view.getColor());
-    xDocView.setScreenBean(view.getScreenBean());
-    xDocView.setTags(view.getTags());
-    xDocView.setDockNodeBean(view.getDockNodeBean());
-    xDocView.setWidth(view.getWidth());
-    xDocView.setWorkspaceId(view.getWorkspaceId());
-    xDocView.setBold(view.isBold());
-    xDocView.setItalic(view.isItalic());
-    xDocView.setStrike(view.isStrike());
-    xDocView.setUnderline(view.isUnderline());
+    xDocView.setCategory(viewEntity.getCategory());
+    xDocView.setCmmiPractices(viewEntity.getCmmiPractices());
+    xDocView.setCreatedBy(viewEntity.getCreatedBy());
+    xDocView.setCreatedDate(UtilDate.formatDate(viewEntity.getCreatedDate(), "dd/MM/yyyy HH:mm:ss"));
+    xDocView.setDescription(viewEntity.getDescription());
+    xDocView.setDockPos(viewEntity.getDockPos().toString());
+    xDocView.setOrder(viewEntity.getOrder());
+    xDocView.setNextSibling(viewEntity.isNextSibling());
+    xDocView.setHeight(viewEntity.getHeight());
+    xDocView.setIcon(viewEntity.getIcon());
+    xDocView.setId(viewEntity.getId());
+    xDocView.setLastModifiedBy(viewEntity.getLastModifiedBy());
+    xDocView.setLastModifiedDate(UtilDate.formatDate(viewEntity.getLastModifiedDate(), "dd/MM/yyyy HH:mm:ss"));
+    xDocView.setModelBean(viewEntity.getModelBean());
+    xDocView.setName(viewEntity.getName());
+    xDocView.setBgColor(viewEntity.getBgColor());
+    xDocView.setColor(viewEntity.getColor());
+    xDocView.setScreenBean(viewEntity.getScreenBean());
+    xDocView.setTags(viewEntity.getTags());
+    xDocView.setDockNodeBean(viewEntity.getDockNodeBean());
+    xDocView.setWidth(viewEntity.getWidth());
+    xDocView.setWorkspaceId(viewEntity.getWorkspaceId());
+    xDocView.setBold(viewEntity.isBold());
+    xDocView.setItalic(viewEntity.isItalic());
+    xDocView.setStrike(viewEntity.isStrike());
+    xDocView.setUnderline(viewEntity.isUnderline());
 
-    final Set<ViewAttribute> viewAttributes = view.getAttributes();
+    final Set<ViewAttribute> viewAttributes = viewEntity.getAttributes();
     for (final ViewAttribute viewAttribute : viewAttributes) {
       final XAttribute xAttribute = new XAttribute();
       xAttribute.setCreatedBy(viewAttribute.getCreatedBy());
@@ -103,18 +108,26 @@ public class UtilView {
                 @I18nProperty(key = "application.web.view.default.url", value = "https://www.google.fr"), // Force /n
                 @I18nProperty(key = "application.web.view.default.icon", value = "/icons/web.png"), // Force /n
   })
-  public final static AApplicationViewModel buildDefaultViewModel() {
+  public final static GDockNode buildDefaultViewDockNode() {
     final WebViewModel model = new WebViewModel();
     final View view = new View();
-    view.setName("application.web.view.default.text");
-    view.setIcon("application.web.view.default.icon");
+    view.setName(I18nHelperApp.getMessage("application.web.view.default.text"));
+    view.setIcon(I18nHelperApp.getMessage("application.web.view.default.icon"));
     view.setScreenBean(WebViewScreen.class.getName());
     view.setModelBean(WebViewModel.class.getName());
     view.setDockNodeBean(GDockNode.class.getName());
-    view.addAttribute(null, null, WebViewModel.WEB_VIEW_URL, "application.web.view.default.url");
+    view.setDockPos(DockPosEnum.getEnumForValue(DockPos.RIGHT.toString()));
+    view.addAttribute(null, null, ViewAttribute.WEB_VIEW_URL, I18nHelperApp.getMessage("application.web.view.default.url"));
 
-    model.setEntityView(view);
-    return model;
+    model.setViewEntity(view);
+
+    final WebViewScreen screen = new WebViewScreen();
+    screen.setModel(model);
+    screen.initMVC();
+
+    final GDockNode dockNode = new GDockNode(screen);
+
+    return dockNode;
   }
 
   /**
@@ -122,8 +135,8 @@ public class UtilView {
    *
    * @param model the model
    */
-  public final static GDockNode addDockPaneView(final AApplicationViewModel model) {
-    return addDockPaneView(model, DockPos.RIGHT, null);
+  public final static GDockNode addDockNodeView(final GDockNode dockNode) {
+    return addDockNodeView(dockNode, DockPos.RIGHT, null);
   }
 
   /**
@@ -132,9 +145,8 @@ public class UtilView {
    * @param model the model
    * @param dockPos the dock pos
    */
-  public final static GDockNode addDockPaneView(final AApplicationViewModel model, final DockPos dockPos, final GDockNode sibling) {
+  public final static GDockNode addDockNodeView(final GDockNode dockNode, final DockPos dockPos, final GDockNode sibling) {
     try {
-      final GDockNode dockNode = UtilDockFX.buildDockableViewNodeFromModel(model);
       final GDockPane dockPane = GUISessionProxy.getApplication().getApplicationScreen().getView().getDockPane();
       if (sibling != null) {
         dockNode.dock(dockPane, dockPos, sibling);
@@ -190,12 +202,13 @@ public class UtilView {
       }
       else if (childNode instanceof GDockNode) {
         final GDockNode dockNode = (GDockNode) childNode;
-        final AApplicationViewModel model = (AApplicationViewModel) dockNode.getModel();
+        final AAppViewModel model = (AAppViewModel) dockNode.getScreen().getModel();
 
-        final View view = model.getEntityView();
+        final View view = model.getViewEntity();
         view.setOrder(viewInfo.viewOrder);
         view.setDockNodeBean(dockNode.getClass().getName());
-        view.setModelBean(dockNode.getModel().getClass().getName());
+        view.setScreenBean(dockNode.getScreen().getClass().getName());
+        view.setModelBean(model.getClass().getName());
         view.setWidth(dockNode.getWidth());
         view.setHeight(dockNode.getHeight());
         final String dockPos = UtilDockFX.getDockPosition(dockNode, parent, childIndex);
@@ -214,7 +227,34 @@ public class UtilView {
         throw new TechnicalException();
       }
     }
+  }
 
+  /**
+   * Builds the style.
+   *
+   * @param stylable the stylable
+   * @return the string
+   */
+  public final static String buildStyle(final IStylable stylable) {
+    String style = "";
+
+    if (stylable.getColor() != null) {
+      style += UtilStyle.getStyleForColor(stylable.getColor());
+    }
+    if (stylable.isBold() == true) {
+      style += UtilStyle.BOLD_FX_CSS;
+    }
+    if (stylable.isItalic() == true) {
+      style += UtilStyle.ITALIC_FX_CSS;
+    }
+    if (stylable.isUnderline() == true) {
+      style += UtilStyle.UNDERLINE_FX_CSS;
+    }
+    if (stylable.isStrike() == true) {
+      style += UtilStyle.STRIKE_FX_CSS;
+    }
+
+    return style;
   }
 
 }

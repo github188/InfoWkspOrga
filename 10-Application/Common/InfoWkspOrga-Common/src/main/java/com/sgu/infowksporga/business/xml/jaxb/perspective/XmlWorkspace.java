@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 /**
  * <p>Classe Java pour anonymous complex type.
  * <p>Le fragment de sch�ma suivant indique le contenu attendu figurant dans cette classe.
- * 
+ *
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -53,7 +53,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;attribute name="projectId" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *       &lt;attribute name="strike" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *       &lt;attribute name="tags" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
- *       &lt;attribute name="type" use="required" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
  *       &lt;attribute name="underline" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -128,9 +127,6 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   @XmlAttribute(name = "tags")
   @XmlSchemaType(name = "anySimpleType")
   protected String tags;
-  @XmlAttribute(name = "type", required = true)
-  @XmlSchemaType(name = "anySimpleType")
-  protected String type;
   @XmlAttribute(name = "underline", required = true)
   protected boolean underline;
 
@@ -143,11 +139,11 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
    * This is why there is not a <CODE>set</CODE> method for the xmlWorkspace property.
    * <p>
    * For example, to add a new item, do as follows:
-   * 
+   *
    * <pre>
    * getXmlWorkspace().add(newItem);
    * </pre>
-   * 
+   *
    * <p>
    * Objects of the following type(s) are allowed in the list
    * {@link XmlWorkspace }
@@ -161,7 +157,7 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * Obtient la valeur de la propri�t� baseFolder.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -172,12 +168,12 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� baseFolder.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setBaseFolder(String value) {
+  public void setBaseFolder(final String value) {
     this.baseFolder = value;
   }
 
@@ -191,13 +187,13 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   /**
    * D�finit la valeur de la propri�t� bold.
    */
-  public void setBold(boolean value) {
+  public void setBold(final boolean value) {
     this.bold = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� category.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -208,12 +204,12 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� category.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setCategory(String value) {
+  public void setCategory(final String value) {
     this.category = value;
   }
 
@@ -227,13 +223,13 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   /**
    * D�finit la valeur de la propri�t� childrenWrkspCreationEnabled.
    */
-  public void setChildrenWrkspCreationEnabled(boolean value) {
+  public void setChildrenWrkspCreationEnabled(final boolean value) {
     this.childrenWrkspCreationEnabled = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� color.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -244,18 +240,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� color.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setColor(String value) {
+  public void setColor(final String value) {
     this.color = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� createdBy.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -266,18 +262,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� createdBy.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setCreatedBy(String value) {
+  public void setCreatedBy(final String value) {
     this.createdBy = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� customer.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -288,18 +284,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� customer.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setCustomer(String value) {
+  public void setCustomer(final String value) {
     this.customer = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� description.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -310,12 +306,12 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� description.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setDescription(String value) {
+  public void setDescription(final String value) {
     this.description = value;
   }
 
@@ -329,13 +325,13 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   /**
    * D�finit la valeur de la propri�t� enabled.
    */
-  public void setEnabled(boolean value) {
+  public void setEnabled(final boolean value) {
     this.enabled = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� icon.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -346,18 +342,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� icon.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setIcon(String value) {
+  public void setIcon(final String value) {
     this.icon = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� id.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -368,12 +364,12 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� id.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setId(String value) {
+  public void setId(final String value) {
     this.id = value;
   }
 
@@ -387,13 +383,13 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   /**
    * D�finit la valeur de la propri�t� italic.
    */
-  public void setItalic(boolean value) {
+  public void setItalic(final boolean value) {
     this.italic = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� layout.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -404,18 +400,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� layout.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setLayout(String value) {
+  public void setLayout(final String value) {
     this.layout = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� masterId.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -426,18 +422,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� masterId.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setMasterId(String value) {
+  public void setMasterId(final String value) {
     this.masterId = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� name.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -448,18 +444,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� name.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setName(String value) {
+  public void setName(final String value) {
     this.name = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� order.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link Integer }
@@ -470,18 +466,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� order.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link Integer }
    */
-  public void setOrder(Integer value) {
+  public void setOrder(final Integer value) {
     this.order = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� owner.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -492,18 +488,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� owner.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setOwner(String value) {
+  public void setOwner(final String value) {
     this.owner = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� parentId.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -514,18 +510,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� parentId.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setParentId(String value) {
+  public void setParentId(final String value) {
     this.parentId = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� partage.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -536,18 +532,18 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� partage.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setPartage(String value) {
+  public void setPartage(final String value) {
     this.partage = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� projectId.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link Integer }
@@ -558,12 +554,12 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� projectId.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link Integer }
    */
-  public void setProjectId(Integer value) {
+  public void setProjectId(final Integer value) {
     this.projectId = value;
   }
 
@@ -577,13 +573,13 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   /**
    * D�finit la valeur de la propri�t� strike.
    */
-  public void setStrike(boolean value) {
+  public void setStrike(final boolean value) {
     this.strike = value;
   }
 
   /**
    * Obtient la valeur de la propri�t� tags.
-   * 
+   *
    * @return
    *         possible object is
    *         {@link String }
@@ -594,35 +590,13 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
 
   /**
    * D�finit la valeur de la propri�t� tags.
-   * 
+   *
    * @param value
    *          allowed object is
    *          {@link String }
    */
-  public void setTags(String value) {
+  public void setTags(final String value) {
     this.tags = value;
-  }
-
-  /**
-   * Obtient la valeur de la propri�t� type.
-   * 
-   * @return
-   *         possible object is
-   *         {@link String }
-   */
-  public String getType() {
-    return type;
-  }
-
-  /**
-   * D�finit la valeur de la propri�t� type.
-   * 
-   * @param value
-   *          allowed object is
-   *          {@link String }
-   */
-  public void setType(String value) {
-    this.type = value;
   }
 
   /**
@@ -635,7 +609,7 @@ public class XmlWorkspace extends AbstractXmlPerspectiveTemplateTag implements S
   /**
    * D�finit la valeur de la propri�t� underline.
    */
-  public void setUnderline(boolean value) {
+  public void setUnderline(final boolean value) {
     this.underline = value;
   }
 

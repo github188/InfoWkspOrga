@@ -1,29 +1,31 @@
 package com.sgu.infowksporga.jfx.perspective.tree.vo;
 
+import com.google.common.base.Objects;
 import com.sgu.core.framework.gui.jfx.control.list.AbstractItemVo;
 import com.sgu.core.framework.gui.jfx.util.UtilControl;
 import com.sgu.core.framework.gui.jfx.util.UtilGUI;
-import com.sgu.core.framework.gui.jfx.util.UtilStyle;
 import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.core.framework.util.UtilString;
-import com.sgu.infowksporga.business.dto.WorkspaceDto;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
+import com.sgu.infowksporga.jfx.util.UtilView;
 
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;
 import lombok.Getter;
+import lombok.Setter;
 
 /**
  * The Class WorkspaceItemVo.
  */
 @Getter
+@Setter
 public class WorkspaceItemVo extends AbstractItemVo {
 
   /** The workspace. */
-  private WorkspaceDto workspaceDto;
+  private Workspace workspace;
 
   /**
    * The Constructor.
@@ -31,8 +33,8 @@ public class WorkspaceItemVo extends AbstractItemVo {
    * @param treeNodeIdentifier the tree node identifier
    * @param workspace the workspace
    */
-  public WorkspaceItemVo(final WorkspaceDto workspaceDto) {
-    this.workspaceDto = workspaceDto;
+  public WorkspaceItemVo(final Workspace workspace) {
+    this.workspace = workspace;
   }
 
   /**
@@ -46,7 +48,6 @@ public class WorkspaceItemVo extends AbstractItemVo {
   /** {@inheritDoc} */
   @Override
   public String getText() {
-    final Workspace workspace = workspaceDto.getWorkspace();
 
     return I18nHelperApp.getMessage(workspace.getName());
   }
@@ -86,8 +87,6 @@ public class WorkspaceItemVo extends AbstractItemVo {
   /** {@inheritDoc} */
   @Override
   public ImageView getIcon() {
-    final Workspace workspace = workspaceDto.getWorkspace();
-
     final PerspectivePanelScreen perspectiveScreen = GUISessionProxy.getApplication().getApplicationScreen().getPerspectiveScreen();
     final String cbbFilterItem = (String) perspectiveScreen.view().getCbbFilterOnWorkspaces().getSelectionModel().getSelectedItem();
 
@@ -116,8 +115,6 @@ public class WorkspaceItemVo extends AbstractItemVo {
    */
   private String getItemDescription() {
 
-    final Workspace workspace = workspaceDto.getWorkspace();
-
     if (UtilString.isNotBlank(workspace.getDescription())) {
       final String description = workspace.getDescription().replace("${User}", GUISessionProxy.getGuiSession().getCurrentUser().getLogin());
       return I18nHelperApp.getMessage(description);
@@ -134,33 +131,27 @@ public class WorkspaceItemVo extends AbstractItemVo {
    */
   @Override
   public String getStyle() {
-    final Workspace workspace = workspaceDto.getWorkspace();
-
-    String style = "";
-
-    if (workspace.getColor() != null) {
-      style += UtilStyle.getStyleForColor(workspace.getColor());
-    }
-    if (workspace.isBold() == true) {
-      style += UtilStyle.BOLD_FX_CSS;
-    }
-    if (workspace.isItalic() == true) {
-      style += UtilStyle.ITALIC_FX_CSS;
-    }
-    if (workspace.isUnderline() == true) {
-      style += UtilStyle.UNDERLINE_FX_CSS;
-    }
-    if (workspace.isStrike() == true) {
-      style += UtilStyle.STRIKE_FX_CSS;
-    }
-
-    return style;
+    return UtilView.buildStyle(workspace);
   }
 
   /** {@inheritDoc} */
   @Override
   public Object getEncapsultatedObject() {
-    return workspaceDto;
+    return workspace;
+  }
+
+  @Override
+  public boolean equals(final Object object) {
+    if (object instanceof WorkspaceItemVo) {
+      final WorkspaceItemVo that = (WorkspaceItemVo) object;
+      return Objects.equal(this.getWorkspace().getId(), that.getWorkspace().getId());
+    }
+    return false;
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hashCode(super.hashCode(), workspace);
   }
 
 }

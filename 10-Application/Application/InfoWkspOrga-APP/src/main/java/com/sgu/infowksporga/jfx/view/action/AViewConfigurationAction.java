@@ -19,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 properties = { // label create
               @I18nProperty(key = WebViewConfigurationAction.ACTION_BUNDLE_KEY + I18NConstant.TEXT, value = ""), // Force /n
               @I18nProperty(key = WebViewConfigurationAction.ACTION_BUNDLE_KEY + I18NConstant.TOOLTIP_TEXT, value = "Configurer la vue"), // Force /n
-              @I18nProperty(key = WebViewConfigurationAction.ACTION_BUNDLE_KEY + I18NConstant.ICON, value = "/icons/view/configuration.gif"), // Force /n
+              @I18nProperty(key = WebViewConfigurationAction.ACTION_BUNDLE_KEY + I18NConstant.ICON, value = "/icons/configuration.gif"), // Force /n
 })
 public abstract class AViewConfigurationAction extends AppBaseAction<ActionEvent> {
 

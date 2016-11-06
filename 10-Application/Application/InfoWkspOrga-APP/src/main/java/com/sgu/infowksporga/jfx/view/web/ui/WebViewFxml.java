@@ -3,13 +3,10 @@ package com.sgu.infowksporga.jfx.view.web.ui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewController;
-import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewFxml;
-import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewModel;
+import com.sgu.infowksporga.jfx.view.ui.AAppViewFxml;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
 import lombok.Getter;
@@ -22,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Setter
 @Getter
-public class WebViewFxml extends ADockableViewFxml<Scene, ADockableViewModel, ADockableViewController> implements Initializable {
+public class WebViewFxml extends AAppViewFxml<WebViewScreen, WebViewModel, WebViewController> implements Initializable {
 
   /** The web view. */
   @FXML

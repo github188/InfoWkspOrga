@@ -11,6 +11,7 @@ import com.sgu.core.framework.gui.jfx.control.GTextField;
 import com.sgu.core.framework.gui.jfx.control.pane.GGridPane;
 import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
+import com.sgu.core.framework.gui.jfx.screen.AGScreen;
 import com.sgu.core.framework.gui.jfx.screen.AGView;
 import com.sgu.core.framework.gui.jfx.util.UtilControl;
 import com.sgu.core.framework.i18n.util.I18NConstant;
@@ -56,7 +57,7 @@ properties = { // Force /n
               @I18nProperty(key = IdentityCardPanelFxml.PROPERTIES_PREFIX + "tags" + I18NConstant.TOOLTIP_TEXT,
               value = "Permet de définir des signets pemettant de faciliter le regroupement d'informations lors des recherches "), // Force /n
 })
-public class IdentityCardPanelFxml extends AGView<AGModel, AGController> implements Initializable {
+public class IdentityCardPanelFxml extends AGView<AGScreen, AGModel, AGController> implements Initializable {
 
   /** The Constant PROPERTIES_PREFIX. */
   public static final String PROPERTIES_PREFIX = "panel.idendity.card.";

@@ -2,13 +2,16 @@ package com.sgu.infowksporga.jfx.workspace.dlg.mvc;
 
 import java.util.Date;
 
+import com.sgu.core.framework.exception.TechnicalException;
+import com.sgu.core.framework.gui.jfx.control.tree.GTreeView;
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
 import com.sgu.core.framework.pivot.UserInfo;
 import com.sgu.core.framework.util.UtilString;
-import com.sgu.infowksporga.business.comparator.WorkspaceComparatorOnOrder;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.jfx.component.cbb.CbbOwnerItemVo;
+import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
 import com.sgu.infowksporga.jfx.project.CbbProjectItemVo;
+import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.cbb.CbbPartageItemVo;
 import com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.cbb.CbbWorkspaceItemVo;
 
@@ -32,15 +35,10 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 public class WorkspaceDlgModel extends AGModel<WorkspaceDlgViewFxml, WorkspaceDlgController> {
 
-  /** The Constant comparator. */
-  private static final WorkspaceComparatorOnOrder comparator = new WorkspaceComparatorOnOrder();
-
   //----------------------------------------------------------------------
   // List of the property used to bind screen components with this Model
   // Bindings are initialized by the controller @see{controller.bindComponentsWithPojo()}
   //----------------------------------------------------------------------
-  private Workspace workspace = new Workspace();
-
   // IdentityCard panel Binding
   private StringProperty idProperty = new SimpleStringProperty();
   private StringProperty nameProperty = new SimpleStringProperty();
@@ -138,7 +136,7 @@ public class WorkspaceDlgModel extends AGModel<WorkspaceDlgViewFxml, WorkspaceDl
     //----------------------------
     // configuration panel Binding
     //----------------------------
-    workspace.setOrder(wkspPositionProperty.getValue());
+    //workspace.setOrder(wkspPositionProperty.getValue());
     workspace.setEnabled(enableProperty.getValue());
     workspace.setChildrenWrkspCreationEnabled(childrenAllowedProperty.getValue());
     workspace.setBaseFolder(baseFolderProperty.getValue());
@@ -212,11 +210,32 @@ public class WorkspaceDlgModel extends AGModel<WorkspaceDlgViewFxml, WorkspaceDl
     // configuration panel Binding
     //----------------------------
     childrenAllowedProperty.setValue(workspace.isChildrenWrkspCreationEnabled());
-    wkspPositionProperty.setValue(workspace.getOrder());
     enableProperty.setValue(workspace.isEnabled());
     baseFolderProperty.setValue(workspace.getBaseFolder());
     ownerProperty.setValue(new CbbOwnerItemVo(new UserInfo(workspace.getOwner())));
     partageProperty.setValue(new CbbPartageItemVo(workspace.getPartage()));
+    //----------------------------
+    // Get the current position of the workspace in his parent
+    final GTreeView<PerspectiveTreeItem> tree = GUISessionProxy.getPerspectiveScreen().getView().getTreeWorkspaces();
+    final PerspectiveTreeItem wkspItemVo = (PerspectiveTreeItem) tree.getSelectionModel().getSelectedItem();
+    if (wkspItemVo != null) {
+      final PerspectiveTreeItem parentWkspItemVo = (PerspectiveTreeItem) wkspItemVo.getParent();
+      if (parentWkspItemVo != null) {
+        for (int i = 0; i < parentWkspItemVo.getChildren().size(); i++) {
+          final PerspectiveTreeItem child = (PerspectiveTreeItem) parentWkspItemVo.getChildren().get(i);
+          if (wkspItemVo.equals(child)) {
+            wkspPositionProperty.setValue(i);
+            break;
+          }
+        }
+      }
+      else {
+        throw new TechnicalException("Root node can't be moved");
+        //wkspPositionProperty.setValue(0);
+      }
+    }
+
+    //
 
     //----------------------------
     // style Binding

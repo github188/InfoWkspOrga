@@ -12,6 +12,7 @@ import com.sgu.core.framework.gui.jfx.control.GTextField;
 import com.sgu.core.framework.gui.jfx.control.pane.GGridPane;
 import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
+import com.sgu.core.framework.gui.jfx.screen.AGScreen;
 import com.sgu.core.framework.gui.jfx.screen.AGView;
 import com.sgu.core.framework.gui.jfx.util.UtilControl;
 import com.sgu.core.framework.gui.jfx.util.UtilGUI;
@@ -20,9 +21,9 @@ import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.core.framework.util.UtilString;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
+import com.sgu.infowksporga.jfx.view.web.dlg.mvc.WebViewDlgModel;
 import com.sgu.infowksporga.jfx.workspace.dlg.mvc.WorkspaceDlgModel;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ColorPicker;
@@ -76,7 +77,7 @@ properties = { // Force /n
               @I18nProperty(key = StylePanelFxml.PROPERTIES_PREFIX + "iconRenderer" + I18NConstant.TOOLTIP_TEXT, value = "Affiche l'icône si celui-ci est retrouvé"), // Force /n
 
 })
-public class StylePanelFxml extends AGView<AGModel, AGController> implements Initializable {
+public class StylePanelFxml extends AGView<AGScreen, AGModel, AGController> implements Initializable {
 
   /** The Constant PROPERTIES_PREFIX. */
   public static final String PROPERTIES_PREFIX = "panel.style.";
@@ -266,18 +267,22 @@ public class StylePanelFxml extends AGView<AGModel, AGController> implements Ini
     // TODO Auto-generated method stub
     // Fill the color of the workspace
     final WorkspaceItemVo workspaceItemVo = GUISessionProxy.getCurrentWorkspace().getWorkspaceItemVo();
-    final String workspaceNameColor = workspaceItemVo.getWorkspaceDto().getWorkspace().getColor();
-    ((WorkspaceDlgModel) model()).getColorProperty().setValue(workspaceNameColor);
+    final String workspaceNameColor = workspaceItemVo.getWorkspace().getColor();
 
-    Platform.runLater(() -> {
-      final String icon = workspaceItemVo.getWorkspaceDto().getWorkspace().getIcon();
-      if (UtilString.isNotBlank(icon)) {
-        lblIconRenderer.setGraphic(UtilGUI.getImageView(icon));
-      }
-      else {
-        lblIconRenderer.setGraphic(null);
-      }
-    });
+    if (model() instanceof WorkspaceDlgModel) {
+      ((WorkspaceDlgModel) model()).getColorProperty().setValue(workspaceNameColor);
+    }
+    else if (model() instanceof WebViewDlgModel) {
+      ((WebViewDlgModel) model()).getColorProperty().setValue(workspaceNameColor);
+    }
+
+    final String icon = workspaceItemVo.getWorkspace().getIcon();
+    if (UtilString.isNotBlank(icon)) {
+      lblIconRenderer.setGraphic(UtilGUI.getImageView(icon));
+    }
+    else {
+      lblIconRenderer.setGraphic(null);
+    }
   }
 
   /** {@inheritDoc} */

@@ -18,7 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Setter
 @Getter
-public abstract class AViewDlgController<M extends AViewDlgModel, V extends AViewDlgViewFxml> extends AGController<AViewDlgModel, AViewDlgViewFxml> {
+public abstract class AViewDlgController<M extends AViewDlgModel, V extends AViewDlgViewFxml> extends AGController<M, V> {
 
   /**
    * The Constructor.
@@ -36,37 +36,43 @@ public abstract class AViewDlgController<M extends AViewDlgModel, V extends AVie
     // initialize Actions
     // set empty String for toolbar buttons
     //---------------------------------------------------
-    view().getPnlStyleController().getChkBold().selectedProperty().addListener((observable, oldValue, newValue) -> {
-      view().getPnlStyleController().applyBoldOnTxtStyleRenderer(newValue);
+    final AViewDlgViewFxml viewDlg = view();
+
+    viewDlg.getPnlStyleController().getChkBold().selectedProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyBoldOnTxtStyleRenderer(newValue);
     });
 
-    view().getPnlStyleController().getChkItalic().selectedProperty().addListener((observable, oldValue, newValue) -> {
-      view().getPnlStyleController().applyItalicOnTxtStyleRenderer(newValue);
+    viewDlg.getPnlStyleController().getChkItalic().selectedProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyItalicOnTxtStyleRenderer(newValue);
     });
 
-    view().getPnlStyleController().getChkStrike().selectedProperty().addListener((observable, oldValue, newValue) -> {
-      view().getPnlStyleController().applyStrikeOnTxtStyleRenderer(newValue);
+    viewDlg.getPnlStyleController().getChkStrike().selectedProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyStrikeOnTxtStyleRenderer(newValue);
     });
 
-    view().getPnlStyleController().getChkUnderline().selectedProperty().addListener((observable, oldValue, newValue) -> {
-      view().getPnlStyleController().applyUnderlineOnTxtStyleRenderer(newValue);
+    viewDlg.getPnlStyleController().getChkUnderline().selectedProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyUnderlineOnTxtStyleRenderer(newValue);
     });
 
     // To change the text color
-    view().getPnlStyleController().getCpkColor().valueProperty().addListener((observable, oldValue, newValue) -> {
-      view().getPnlStyleController().applyColorOnTxtStyleRenderer(newValue);
+    viewDlg.getPnlStyleController().getCpkColor().valueProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyColorOnTxtStyleRenderer(newValue);
     });
 
     // To change the background color of the text
-    view().getPnlStyleController().getCpkBgColor().valueProperty().addListener((observable, oldValue, newValue) -> {
-      view().getPnlStyleController().applyBgColorOnTxtStyleRenderer(newValue);
+    viewDlg.getPnlStyleController().getCpkBgColor().valueProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyBgColorOnTxtStyleRenderer(newValue);
     });
+
     // Update of Icon for pre-visualisation
-    view().getPnlStyleController().getTxtIcon().focusedProperty().addListener((observable, oldValue, newValue) -> {
+    viewDlg.getPnlStyleController().getTxtIcon().focusedProperty().addListener((observable, oldValue, newValue) -> {
       // On focus lost
       if (newValue == false) {
-        view().getPnlStyleController().applyTxtIconUrlOnlblIconRenderer();
+        viewDlg.getPnlStyleController().applyTxtIconUrlOnlblIconRenderer();
       }
+    });
+    viewDlg.getPnlStyleController().getTxtIcon().textProperty().addListener((observable, oldValue, newValue) -> {
+      viewDlg.getPnlStyleController().applyTxtIconUrlOnlblIconRenderer();
     });
 
   }
@@ -87,10 +93,13 @@ public abstract class AViewDlgController<M extends AViewDlgModel, V extends AVie
    * Inits the idendification card panel.
    */
   protected void initIdendificationCardPanel() {
-    Bindings.bindBidirectional(view().getPnlIdentityCardController().getLblIdValue().textProperty(), model().getIdProperty(), new NumberStringConverter());
-    view().getPnlIdentityCardController().getTxtName().textProperty().bindBidirectional(model().getNameProperty());
-    view().getPnlIdentityCardController().getTxtCategory().textProperty().bindBidirectional(model().getCategoryProperty());
-    view().getPnlIdentityCardController().getTxtTags().textProperty().bindBidirectional(model().getTagsProperty());
+    final AViewDlgViewFxml viewDlg = view();
+    final AViewDlgModel mdl = model();
+
+    Bindings.bindBidirectional(viewDlg.getPnlIdentityCardController().getLblIdValue().textProperty(), mdl.getIdProperty(), new NumberStringConverter());
+    viewDlg.getPnlIdentityCardController().getTxtName().textProperty().bindBidirectional(mdl.getNameProperty());
+    viewDlg.getPnlIdentityCardController().getTxtCategory().textProperty().bindBidirectional(mdl.getCategoryProperty());
+    viewDlg.getPnlIdentityCardController().getTxtTags().textProperty().bindBidirectional(mdl.getTagsProperty());
   }
 
   /**
@@ -103,15 +112,17 @@ public abstract class AViewDlgController<M extends AViewDlgModel, V extends AVie
    */
   private void initStylePanelBindings() {
     // First bind component between them to display result of selected style option
-    view().getPnlStyleController().getChkBold().selectedProperty().bindBidirectional(model().getBoldProperty());
-    view().getPnlStyleController().getChkItalic().selectedProperty().bindBidirectional(model().getItalicProperty());
-    view().getPnlStyleController().getChkStrike().selectedProperty().bindBidirectional(model().getStrikeProperty());
-    view().getPnlStyleController().getChkUnderline().selectedProperty().bindBidirectional(model().getUnderlineProperty());
-    view().getPnlStyleController().getTxtIcon().textProperty().bindBidirectional(model().getIconProperty());
+    final AViewDlgViewFxml viewDlg = view();
+    final AViewDlgModel mdl = model();
 
-    Bindings.bindBidirectional(model().getColorProperty(), view().getPnlStyleController().getCpkColor().valueProperty(),
-                               new ColorStringConverter(ColorToStringMode.HTML));
-    Bindings.bindBidirectional(model().getBgColorProperty(), view().getPnlStyleController().getCpkBgColor().valueProperty(),
+    viewDlg.getPnlStyleController().getChkBold().selectedProperty().bindBidirectional(mdl.getBoldProperty());
+    viewDlg.getPnlStyleController().getChkItalic().selectedProperty().bindBidirectional(mdl.getItalicProperty());
+    viewDlg.getPnlStyleController().getChkStrike().selectedProperty().bindBidirectional(mdl.getStrikeProperty());
+    viewDlg.getPnlStyleController().getChkUnderline().selectedProperty().bindBidirectional(mdl.getUnderlineProperty());
+    viewDlg.getPnlStyleController().getTxtIcon().textProperty().bindBidirectional(mdl.getIconProperty());
+
+    Bindings.bindBidirectional(mdl.getColorProperty(), viewDlg.getPnlStyleController().getCpkColor().valueProperty(), new ColorStringConverter(ColorToStringMode.HTML));
+    Bindings.bindBidirectional(mdl.getBgColorProperty(), viewDlg.getPnlStyleController().getCpkBgColor().valueProperty(),
                                new ColorStringConverter(ColorToStringMode.HTML));
 
   }
@@ -120,14 +131,17 @@ public abstract class AViewDlgController<M extends AViewDlgModel, V extends AVie
    * Inits the horodate panel bindings.
    */
   protected void initHorodatePanelBindings() {
-    view().getPnlHorodateController().getLblCreatedByValue().textProperty().bindBidirectional(model().getCreatedByProperty());
-    view().getPnlHorodateController().getLblLastModifiedByValue().textProperty().bindBidirectional(model().getLastModifiedByProperty());
+    final AViewDlgViewFxml viewDlg = view();
+    final AViewDlgModel mdl = model();
 
-    view().getPnlHorodateController().getLblCreatedDateValue().textProperty()
-          .bind(Bindings.createStringBinding(() -> UtilAppUI.formatDate(model().getCreatedDateProperty()), model().getCreatedDateProperty()));
+    viewDlg.getPnlHorodateController().getLblCreatedByValue().textProperty().bindBidirectional(mdl.getCreatedByProperty());
+    viewDlg.getPnlHorodateController().getLblLastModifiedByValue().textProperty().bindBidirectional(mdl.getLastModifiedByProperty());
 
-    view().getPnlHorodateController().getLblLastModifiedDateValue().textProperty()
-          .bind(Bindings.createStringBinding(() -> UtilAppUI.formatDate(model().getLastModifiedDateProperty()), model().getLastModifiedDateProperty()));
+    viewDlg.getPnlHorodateController().getLblCreatedDateValue().textProperty()
+           .bind(Bindings.createStringBinding(() -> UtilAppUI.formatDate(mdl.getCreatedDateProperty()), mdl.getCreatedDateProperty()));
+
+    viewDlg.getPnlHorodateController().getLblLastModifiedDateValue().textProperty()
+           .bind(Bindings.createStringBinding(() -> UtilAppUI.formatDate(mdl.getLastModifiedDateProperty()), mdl.getLastModifiedDateProperty()));
 
   }
 

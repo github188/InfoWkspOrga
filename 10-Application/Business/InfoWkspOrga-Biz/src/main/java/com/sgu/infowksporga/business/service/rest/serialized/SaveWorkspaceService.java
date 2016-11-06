@@ -1,6 +1,5 @@
 package com.sgu.infowksporga.business.service.rest.serialized;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -15,15 +14,10 @@ import org.springframework.stereotype.Service;
 import com.sgu.apt.annotation.AnnotationConfig;
 import com.sgu.apt.annotation.interfaces.GenerateInterface;
 import com.sgu.apt.annotation.rest.Rest;
-import com.sgu.core.framework.util.UtilString;
+import com.sgu.infowksporga.business.dao.api.IWorkspaceDao;
 import com.sgu.infowksporga.business.dao.repository.PerspectiveWorkspacesRepository;
-import com.sgu.infowksporga.business.dao.repository.ViewAttributeRepository;
-import com.sgu.infowksporga.business.dao.repository.ViewRepository;
 import com.sgu.infowksporga.business.dao.repository.WorkspaceRepository;
-import com.sgu.infowksporga.business.dto.PerspectiveWorkspaceOrderDto;
 import com.sgu.infowksporga.business.entity.PerspectiveWorkspaces;
-import com.sgu.infowksporga.business.entity.View;
-import com.sgu.infowksporga.business.entity.ViewAttribute;
 import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceIn;
 import com.sgu.infowksporga.business.pivot.workspace.SaveWorkspaceOut;
@@ -44,13 +38,10 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
   private WorkspaceRepository repositoryWorkspace;
 
   @Autowired
+  private IWorkspaceDao workspaceDao;
+
+  @Autowired
   private PerspectiveWorkspacesRepository repositoryPerspectiveWorkspaces;
-
-  @Autowired
-  private ViewRepository repositoryView;
-
-  @Autowired
-  private ViewAttributeRepository repositoryViewAttribute;
 
   //---------------------------------------------------------------------------------------------------------------------------------------
   @GenerateInterface(baseSource = AnnotationConfig.INTERFACE_SERVICE_TARGET_SOURCE_FOLDER, interfacePackage = "com.sgu.infowksporga.business.service.rest.serialized.api",
@@ -66,101 +57,46 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
   @Override
   public SaveWorkspaceOut executeService(final SaveWorkspaceIn in) {
     // Init du workspace de sortie
-    final SaveWorkspaceOut out = new SaveWorkspaceOut(in.getWorkspaceDto());
+    final SaveWorkspaceOut out = new SaveWorkspaceOut(in.getWorkspace());
 
-    final Date saveDate = new Date(); // Définie au début du servive pour avoir le même horodatage pour tous les enreg
     /*---------------------------*/
     /* Workspace management */
     /*---------------------------*/
-    Workspace workspace = in.getWorkspaceDto().getWorkspace();
+    Workspace workspace = in.getWorkspace();
 
-    if (UtilString.isBlank(workspace.getId())) {
+    if (Workspace.I_AM_A_NEW_WORKSPACE.equals(workspace.getId())) {
       workspace.setId(null);
       log.debug("Workspace Creation");
       //it's a workspace creation
-      workspace.setCreationInfo(in.getUserLogin(), saveDate);
+      workspace.setCreationInfo(in.getUserLogin(), in.getTreatmentDate());
+      workspace.setWidth(-1.0);  // Because they are not null in db, but updated at the same time than the Layout
+      workspace.setHeight(-1.0); // Because they are null in db, but updated at the same time than the Layout
       workspace = repositoryWorkspace.save(workspace);
 
       final PerspectiveWorkspaces pw = new PerspectiveWorkspaces();
-      pw.setPerspectiveId(in.getPerspectiveWorkspaceOrderDto().getPerspectiveId());
+      pw.setPerspectiveId(in.getPerspectiveId());
       pw.setWorkspaceId(workspace.getId());
-      final int newWorkspaceOrder = in.getPerspectiveWorkspaceOrderDto().getNewWorkspaceIdOrder().get("");
+      final int newWorkspaceOrder = in.getNewWorkspacesOrder().get(Workspace.I_AM_A_NEW_WORKSPACE);
       pw.setWorkspaceOrder(newWorkspaceOrder);
-      pw.setCreationInfo(in.getUserLogin(), saveDate);
+      pw.setCreationInfo(in.getUserLogin(), in.getTreatmentDate());
       repositoryPerspectiveWorkspaces.save(pw);
 
       // update workspaceId in NewWorkspaceIdOrder Map (used by reindex order)
-      in.getPerspectiveWorkspaceOrderDto().getNewWorkspaceIdOrder().remove("");
-      in.getPerspectiveWorkspaceOrderDto().getNewWorkspaceIdOrder().put(workspace.getId(), newWorkspaceOrder);
+      in.getNewWorkspacesOrder().remove(Workspace.I_AM_A_NEW_WORKSPACE);
+      in.getNewWorkspacesOrder().put(workspace.getId(), newWorkspaceOrder);
     }
     else {// it's an update
       log.debug("Workspace Update");
-      workspace.setUpdateInfo(in.getUserLogin(), saveDate);
-      repositoryWorkspace.save(workspace);
-
-      //-------------------------------------------------------------------------------------------
-      // Delete all views (with attributes) not in the workspace views list (them deleted by user)
-      removeAllViewsNotReferencedByWorkspace(workspace);
-      //--------------------------------------------------------------------------------------------
+      workspaceDao.updateWorkspaceProperties(workspace, in.getUserLogin(), in.getTreatmentDate());
+      workspace.setUpdateInfo(in.getUserLogin(), in.getTreatmentDate());
     }
 
     /*---------------------------------------------------*/
     /* Re-Index Perspective Workspace order if necessary */
     /*---------------------------------------------------*/
-    reIndexPerspectiveWorkspacesOrder(in, saveDate, workspace);
-
-    /*-------------------------------------------------*/
-    /* Views management */
-    /*-------------------------------------------------*/
-    manageViewsAndAttributes(in, saveDate, workspace);
+    reIndexPerspectiveWorkspacesOrder(in, in.getTreatmentDate(), workspace);
 
     return out;
-  }
-
-  /**
-   * Manage views and attributes.
-   *
-   * @param in the in
-   * @param saveDate the save date
-   * @param workspace the workspace
-   */
-  private void manageViewsAndAttributes(final SaveWorkspaceIn in, final Date saveDate, final Workspace workspace) {
-    final List<View> views = workspace.getViews();
-    for (View view : views) {
-
-      if (view.getId() == null) {
-        log.debug("View Creation");
-        //it's a view creation
-        view.setWorkspaceId(workspace.getId());
-        view.setCreationInfo(in.getUserLogin(), saveDate);
-        view = repositoryView.save(view);
-      }
-      else {// it's an update
-        log.debug("View Update");
-        view.setUpdateInfo(in.getUserLogin(), saveDate);
-        repositoryView.save(view);
-      }
-
-      /*---------------------------------------------*/
-      /* View ATTRIBUTES management */
-      /*---------------------------------------------*/
-      final Set<ViewAttribute> viewAttributes = view.getAttributes();
-      for (ViewAttribute viewAttribute : viewAttributes) {
-        if (viewAttribute.getId() == null) {
-          log.debug("viewAttribute Creation");
-          //it's a view attribute creation
-          viewAttribute.setViewId(view.getId());
-          viewAttribute.setCreationInfo(in.getUserLogin(), saveDate);
-          viewAttribute = repositoryViewAttribute.save(viewAttribute);
-        }
-        else {// it's an update
-          log.debug("View Update");
-          viewAttribute.setUpdateInfo(in.getUserLogin(), saveDate);
-          repositoryViewAttribute.save(viewAttribute);
-        }
-      }
-
-    }
   }
 
   /**
@@ -171,34 +107,35 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
    * @param workspace the workspace
    */
   private void reIndexPerspectiveWorkspacesOrder(final SaveWorkspaceIn in, final Date saveDate, final Workspace workspace) {
-    if (in.getPerspectiveWorkspaceOrderDto() != null) {
-      final Map<String, PerspectiveWorkspaces> currentPerspectiveWorkspacesLst = findAllCurrentPerspectiveWorkspacesLink(in);
+    final Map<String, PerspectiveWorkspaces> currentOrders = findAllCurrentPerspectiveWorkspacesLink(in);
+    final Set<String> keys = in.getNewWorkspacesOrder().keySet();
 
-      final PerspectiveWorkspaceOrderDto orderDto = in.getPerspectiveWorkspaceOrderDto();
-      final Set<String> keys = orderDto.getNewWorkspaceIdOrder().keySet();
+    for (final String workspaceId : keys) {
+      PerspectiveWorkspaces pw = currentOrders.get(workspaceId);
 
-      for (final String workspaceId : keys) {
-        final Integer oldOrder = orderDto.getOldWorkspaceIdOrder().get(workspaceId);
-        final Integer newOrder = orderDto.getNewWorkspaceIdOrder().get(workspaceId);
-        log.debug("odlOrder'{}' --> newOrder '{}'", oldOrder, newOrder);
+      final Integer newOrder = in.getNewWorkspacesOrder().get(workspaceId);
+      final Integer databaseOrder = pw == null ? null : pw.getWorkspaceOrder();
+      log.debug("currentOrder'{}' --> newOrder '{}'", databaseOrder, newOrder);
 
-        if (newOrder != oldOrder) {
-          PerspectiveWorkspaces pw = currentPerspectiveWorkspacesLst.get(workspaceId);
-          if (pw != null) {
-            pw.setUpdateInfo(in.getUserLogin(), saveDate);
-          }
-          else {
-            pw = new PerspectiveWorkspaces();
-            pw.setPerspectiveId(in.getPerspectiveWorkspaceOrderDto().getPerspectiveId());
-            pw.setWorkspaceId(workspace.getId());
-            pw.setCreationInfo(in.getUserLogin(), saveDate);
-          }
+      if (newOrder.equals(databaseOrder) == false) {
 
+        if (databaseOrder == null) { // it's a new workspace to add
+          pw.setUpdateInfo(in.getUserLogin(), saveDate);
+          pw = new PerspectiveWorkspaces();
+          pw.setPerspectiveId(in.getPerspectiveId());
+          pw.setWorkspaceId(workspaceId);
           pw.setWorkspaceOrder(newOrder);
-          repositoryPerspectiveWorkspaces.save(pw);
+          pw.setCreationInfo(in.getUserLogin(), saveDate);
         }
+        else {
+          pw.setWorkspaceOrder(newOrder);
+          pw.setUpdateInfo(in.getUserLogin(), saveDate);
+        }
+
+        repositoryPerspectiveWorkspaces.save(pw);
       }
     }
+
   }
 
   /**
@@ -210,42 +147,12 @@ public class SaveWorkspaceService extends AbstractSerializedService implements I
   private Map<String, PerspectiveWorkspaces> findAllCurrentPerspectiveWorkspacesLink(final SaveWorkspaceIn in) {
     final Map<String, PerspectiveWorkspaces> currentPerspectiveWorkspacesLst = new HashMap<String, PerspectiveWorkspaces>(10);
 
-    final List<PerspectiveWorkspaces> pwLst = repositoryPerspectiveWorkspaces.findAllBy("perspectiveId", in.getPerspectiveWorkspaceOrderDto().getPerspectiveId());
+    final List<PerspectiveWorkspaces> pwLst = repositoryPerspectiveWorkspaces.findAllBy("perspectiveId", in.getPerspectiveId());
     for (final PerspectiveWorkspaces perspectiveWorkspaces : pwLst) {
       currentPerspectiveWorkspacesLst.put(perspectiveWorkspaces.getWorkspaceId(), perspectiveWorkspaces);
     }
 
     return currentPerspectiveWorkspacesLst;
-  }
-
-  /**
-   * Removes the all views not referenced by workspace.
-   *
-   * @param workspace the workspace
-   */
-  private void removeAllViewsNotReferencedByWorkspace(final Workspace workspace) {
-    final List<Integer> viewsIdToKeep = new ArrayList<Integer>();
-
-    for (final View view : workspace.getViews()) {
-      if (view.getId() != null) {
-        viewsIdToKeep.add(view.getId());
-      }
-    }
-
-    List<Integer> viewsIdToDelete = null;
-    if (viewsIdToKeep.size() > 0) {
-      viewsIdToDelete = repositoryView.findViewsNotInGivenListForWorkspace(viewsIdToKeep, workspace.getId());
-    }
-    else { // On peut supprimer toutes les vues
-      viewsIdToDelete = repositoryView.findWorkspaceViews(workspace.getId());
-    }
-
-    if (viewsIdToDelete != null && viewsIdToDelete.size() > 0) {
-      // First remove all attributes for all views to evict reference problem
-      repositoryViewAttribute.removeViewsAttributes(viewsIdToDelete);
-      // Now remove all not needed Views
-      repositoryView.removeViews(viewsIdToDelete);
-    }
   }
 
 }

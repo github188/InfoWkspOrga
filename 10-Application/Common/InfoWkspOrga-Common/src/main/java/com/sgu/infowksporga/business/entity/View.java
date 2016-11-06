@@ -20,16 +20,13 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotBlank;
 
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Objects;
 import com.sgu.core.framework.dao.jpa.converter.BooleanByteConverter;
 import com.sgu.core.framework.dao.jpa.entity.AbstractDescribedAuditedEntity;
 import com.sgu.infowksporga.business.entity.converter.DockPosEnumConverter;
-import com.sgu.infowksporga.business.entity.converter.PartageEnumConverter;
 import com.sgu.infowksporga.business.entity.enumeration.DockPosEnum;
-import com.sgu.infowksporga.business.entity.enumeration.PartageEnum;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -41,7 +38,7 @@ import lombok.Setter;
 @Table(name = "view")
 @Getter
 @Setter
-public class View extends AbstractDescribedAuditedEntity<Integer> {
+public class View extends AbstractDescribedAuditedEntity<Integer> implements IStylable {
   private static final long serialVersionUID = 1L;
 
   @Id
@@ -89,11 +86,11 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
   @NotNull
   private Double width;
 
-  @Column(name = "name_color", nullable = true, length = 20)
-  private String nameColor;
+  @Column(nullable = false, length = 7)
+  private String color = "#000000";
 
-  @Column(name = "name_bg_color", nullable = true, length = 20)
-  private String nameBgColor;
+  @Column(name = "bg_color", nullable = true, length = 7)
+  private String bgColor;
 
   /**
    * Identifies the View Type (Package with .class name)',
@@ -105,26 +102,32 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
    * code de regroupement d''une même famille de views
    */
   @Length(max = 50)
-  @NotBlank
-  @NotNull
   private String category = "Default";
 
   @Column(nullable = true, length = 500)
   private String tags;
+
+  @Column(nullable = false)
+  @Convert(converter = BooleanByteConverter.class)
+  private boolean bold;
+
+  @Column(nullable = false)
+  @Convert(converter = BooleanByteConverter.class)
+  private boolean strike;
+
+  @Column(nullable = false)
+  @Convert(converter = BooleanByteConverter.class)
+  private boolean italic;
+
+  @Column(nullable = false)
+  @Convert(converter = BooleanByteConverter.class)
+  private boolean underline;
 
   /**
    * CMMI relative practices separated by ";"
    */
   @Column(name = "cmmi_practices", nullable = true, length = 500)
   private String cmmiPractices;
-
-  @Column(nullable = false, length = 45)
-  private String owner;
-
-  @Column(nullable = false)
-  @Enumerated(EnumType.STRING)
-  @Convert(converter = PartageEnumConverter.class)
-  private PartageEnum partage = PartageEnum.PUBLIC;
 
   @OneToMany(mappedBy = "viewId", fetch = FetchType.EAGER)
   private Set<ViewAttribute> attributes;
@@ -180,8 +183,8 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
    * @param value the value
    */
   public void addAttribute(final Integer id, final Integer viewId, final String name, final String value) {
-    final ViewAttribute attribute = new ViewAttribute(id, viewId, value);
-    attribute.setName(name);
+    final ViewAttribute attribute = new ViewAttribute(viewId, name, value);
+    attribute.setId(id);
     addAttribute(attribute);
   }
 
@@ -215,8 +218,8 @@ public class View extends AbstractDescribedAuditedEntity<Integer> {
   public String toString() {
     return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("workspaceId", workspaceId).add("modelBean", modelBean)
                       .add("screenBean", screenBean).add("dockNodeBean", dockNodeBean).add("dockPos", dockPos).add("nextSibling", nextSibling).add("order", order)
-                      .add("height", height).add("width", width).add("nameColor", nameColor).add("nameBgColor", nameBgColor).add("icon", icon).add("category", category)
-                      .add("tags", tags).add("cmmiPractices", cmmiPractices).add("owner", owner).add("partage", partage).add("attributes", attributes).toString();
+                      .add("height", height).add("width", width).add("nameColor", color).add("nameBgColor", bgColor).add("icon", icon).add("category", category)
+                      .add("tags", tags).add("cmmiPractices", cmmiPractices).add("attributes", attributes).toString();
   }
 
 }

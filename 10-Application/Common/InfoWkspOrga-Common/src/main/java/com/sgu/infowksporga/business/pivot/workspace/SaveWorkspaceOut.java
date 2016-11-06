@@ -1,7 +1,7 @@
 package com.sgu.infowksporga.business.pivot.workspace;
 
 import com.sgu.core.framework.pivot.AbstractOut;
-import com.sgu.infowksporga.business.dto.WorkspaceDto;
+import com.sgu.infowksporga.business.entity.Workspace;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -15,17 +15,17 @@ public class SaveWorkspaceOut extends AbstractOut {
   /**
    * The attribute serialVersionUID
    */
-  private static final long serialVersionUID = 1471122829990L;
+  private static final long serialVersionUID = 1171122829990L;
 
-  /** The workspace dto. */
-  private WorkspaceDto workspaceDto;
+  /** The workspace. */
+  private Workspace workspace;
 
   /**
    * Constructor<br>
    */
-  public SaveWorkspaceOut(WorkspaceDto workspaceDto) {
+  public SaveWorkspaceOut(final Workspace workspace) {
     super();
-    this.workspaceDto = workspaceDto;
+    this.workspace = workspace;
   }
 
 }

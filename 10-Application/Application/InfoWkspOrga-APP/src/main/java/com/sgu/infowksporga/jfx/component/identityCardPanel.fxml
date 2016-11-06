@@ -33,7 +33,7 @@
                   <GTextField fx:id="txtName" GridPane.columnIndex="3" GridPane.rowIndex="0" />
                  
                   <GLabel fx:id="lblCategory" text="Category :" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                  <GTextField fx:id="txtCategory" alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <GTextField fx:id="txtCategory" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <GLabel fx:id="lblTags" text="Tags :" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <GTextField fx:id="txtTags" GridPane.columnIndex="3" GridPane.rowIndex="1" />
                   

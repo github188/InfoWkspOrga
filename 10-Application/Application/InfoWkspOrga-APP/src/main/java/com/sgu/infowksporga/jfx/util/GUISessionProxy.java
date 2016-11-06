@@ -7,11 +7,13 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 
+import com.sgu.core.framework.gui.jfx.control.pane.dock.GDockNode;
+import com.sgu.core.framework.gui.jfx.control.pane.dock.mvc.ADockableViewFxml;
 import com.sgu.core.framework.gui.jfx.util.GUISession;
 import com.sgu.core.framework.i18n.util.I18NConstant;
 import com.sgu.core.framework.resources.EnvironmentEnum;
 import com.sgu.infowksporga.business.entity.Perspective;
-import com.sgu.infowksporga.jfx.main.Application;
+import com.sgu.infowksporga.jfx.app.ui.Application;
 import com.sgu.infowksporga.jfx.perspective.cbb.CbbPerspectiveItemVo;
 import com.sgu.infowksporga.jfx.perspective.mvc.PerspectivePanelScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
@@ -124,8 +126,14 @@ public class GUISessionProxy {
    *
    * @return the current view
    */
-  public static Object getCurrentView() {
-    return null;//guiSession.getSessionAttribute(CURRENT_VIEW);
+  public static ADockableViewFxml getCurrentView() {
+
+    final GDockNode focusedView = getApplication().getApplicationScreen().getView().getDockPane().getDockNodeFocusedProperty().getValue();
+    if (focusedView == null) {
+      return null;
+    }
+
+    return null;
   }
 
   /**

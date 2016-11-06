@@ -4,12 +4,17 @@ import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.spring.loader.SpringBeanHelper;
 import com.sgu.infowksporga.jfx.perspective.action.ClearWorkspacesFilterAction;
 import com.sgu.infowksporga.jfx.perspective.action.CollapseAllWorkspacesAction;
+import com.sgu.infowksporga.jfx.perspective.action.CreateWorkspaceAction;
+import com.sgu.infowksporga.jfx.perspective.action.EditWorkspaceAction;
 import com.sgu.infowksporga.jfx.perspective.action.ExpandAllWorkspacesAction;
 import com.sgu.infowksporga.jfx.perspective.action.RefreshPerspectivePanelAction;
+import com.sgu.infowksporga.jfx.perspective.action.SaveWorkspaceAction;
 import com.sgu.infowksporga.jfx.perspective.tree.TreeCellChangeListener;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.y_service.remote.FindDataToInitApplicationFacade;
 
+import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
@@ -34,6 +39,27 @@ public final class PerspectivePanelController extends AGController<PerspectivePa
   @Override
   public void createListeners() {
     super.createListeners();
+
+    view().getLblLeaf().addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+      @Override
+      public void handle(MouseEvent event) {
+        boolean currentValue = view().getChkbWorkspaceFilterOnlyOnLeaf().isSelected();
+        view().getChkbWorkspaceFilterOnlyOnLeaf().setSelected(!currentValue);
+        event.consume();
+      }
+    });
+
+    //------------------------------------------
+    /* Workspace Characteristics management */
+    //------------------------------------------
+    new CreateWorkspaceAction(view().getBtnCreateWorkspace());
+    view().getBtnCreateWorkspace().setText("");
+
+    new EditWorkspaceAction(view().getBtnEditWorkspace());
+    view().getBtnEditWorkspace().setText("");
+
+    new SaveWorkspaceAction(view().getBtnSaveWorkspace());
+    view().getBtnSaveWorkspace().setText("");
 
     //---------------------------------------------------
     // initialize Actions

@@ -15,16 +15,15 @@ import com.sgu.core.framework.gui.jfx.control.list.DefaultListCellFactory;
 import com.sgu.core.framework.gui.jfx.control.pane.GGridPane;
 import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
+import com.sgu.core.framework.gui.jfx.screen.AGScreen;
 import com.sgu.core.framework.gui.jfx.screen.AGView;
 import com.sgu.core.framework.gui.jfx.util.UtilControl;
 import com.sgu.core.framework.i18n.util.I18NConstant;
-import com.sgu.infowksporga.business.entity.Workspace;
 import com.sgu.infowksporga.jfx.perspective.tree.PerspectiveTreeItem;
 import com.sgu.infowksporga.jfx.project.CbbProjectItemVo;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.workspace.dlg.mvc.panel.cbb.CbbWorkspaceItemVo;
 
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TitledPane;
@@ -64,7 +63,7 @@ properties = { // Force /n
               @I18nProperty(key = ReferencePanelFxml.PROPERTIES_PREFIX + "project" + I18NConstant.TOOLTIP_TEXT, value = "Projet lié à ce Workspace"), // Force /n
 
 })
-public class ReferencePanelFxml extends AGView<AGModel, AGController> implements Initializable {
+public class ReferencePanelFxml extends AGView<AGScreen, AGModel, AGController> implements Initializable {
 
   /** The Constant PROPERTIES_PREFIX. */
   public static final String PROPERTIES_PREFIX = "dialog.workspace.panel.reference.";
@@ -140,12 +139,9 @@ public class ReferencePanelFxml extends AGView<AGModel, AGController> implements
     // Fill the combo box with ---->ALL<---- Workspaces contained in perspective tree
     cbbParent.getItems().clear();
     final PerspectiveTreeItem root = (PerspectiveTreeItem) GUISessionProxy.getPerspectiveScreen().getView().getTreeWorkspaces().getRoot();
-    cbbParent.getItems().add(new CbbWorkspaceItemVo(null)); // null correspond to the parent of the root node ;-)
+    //cbbParent.getItems().add(new CbbWorkspaceItemVo(null)); // parent can't be null only root has a parent null and it is automatically manage by the application ;-)
     fillCbbParentWithAllTreeItemWorkspaces(cbbParent, root);
 
-    Platform.runLater(() -> {
-      cbbParent.getSelectionModel().select(0);
-    });
   }
 
   /**
@@ -182,8 +178,8 @@ public class ReferencePanelFxml extends AGView<AGModel, AGController> implements
   public void applyDisplayModeCreate() {
     super.applyDisplayModeCreate();
 
-    // In creation all current node could be is parent
-    applyCommonInitialization();
+    final PerspectiveTreeItem selected = (PerspectiveTreeItem) GUISessionProxy.getPerspectiveScreen().getView().getTreeWorkspaces().getSelectionModel().getSelectedItem();
+    cbbParent.getSelectionModel().select(new CbbWorkspaceItemVo(selected.getWorkspace()));
   }
 
   /** {@inheritDoc} */
@@ -191,32 +187,8 @@ public class ReferencePanelFxml extends AGView<AGModel, AGController> implements
   public void applyDisplayModeUpdate() {
     super.applyDisplayModeUpdate();
 
-    applyCommonInitialization();
-
     // In update mode remove himself because it couldn't be is parent
     final PerspectiveTreeItem selected = (PerspectiveTreeItem) GUISessionProxy.getPerspectiveScreen().getView().getTreeWorkspaces().getSelectionModel().getSelectedItem();
-    cbbParent.getItems().clear();
-    cbbParent.getItems().add(new CbbWorkspaceItemVo(selected.getWorkspace()));
-  }
-
-  /**
-   * Apply common initialization.
-   */
-  private void applyCommonInitialization() {
-
-    final PerspectiveTreeItem root = (PerspectiveTreeItem) GUISessionProxy.getPerspectiveScreen().getView().getTreeWorkspaces().getRoot();
-    cbbParent.getItems().clear();
-    cbbParent.getItems().add(new CbbWorkspaceItemVo(null));
-
-    final Workspace workspace = GUISessionProxy.getCurrentWorkspace().getWorkspace();
-    // The parent root node can't me moved by update, it must be = null
-    if (root.getWorkspace().getId().equals(workspace.getId())) {
-      cbbParent.getItems().clear();
-      cbbParent.getItems().add(new CbbWorkspaceItemVo(null));
-    }
-    else {
-      // Remove the current workspace because it can't be parent of himself
-      cbbParent.getItems().remove(new CbbWorkspaceItemVo(workspace));
-    }
+    cbbParent.getItems().remove(new CbbWorkspaceItemVo(selected.getWorkspace()));
   }
 }

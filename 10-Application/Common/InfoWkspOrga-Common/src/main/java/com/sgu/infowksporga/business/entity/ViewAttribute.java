@@ -54,7 +54,7 @@ public class ViewAttribute extends AbstractDescribedAuditedEntity<Integer> {
   /**
    * The Constant WEB_URL.
    */
-  public static final String WEB_URL = "WEB_URL";
+  public static final String WEB_VIEW_URL = "WEB_VIEW_URL";
 
   //---------------------------------------------------
   // ATTRIBUTE NAME Only for View WORKSAPCE_MAP
@@ -93,14 +93,14 @@ public class ViewAttribute extends AbstractDescribedAuditedEntity<Integer> {
   /**
    * The Constructor.
    *
-   * @param id the id
    * @param viewId the view id
+   * @param name the name
    * @param value the value
    */
-  public ViewAttribute(final Integer id, final Integer viewId, final String value) {
+  public ViewAttribute(final Integer viewId, final String name, final String value) {
     super();
-    this.id = id;
     this.viewId = viewId;
+    setName(name);
     this.value = value;
   }
 
@@ -118,24 +118,21 @@ public class ViewAttribute extends AbstractDescribedAuditedEntity<Integer> {
 
   @Override
   public int hashCode() {
-    return Objects.hashCode(super.hashCode(), id);
+    return Objects.hashCode(super.hashCode(), viewId, getName(), value);
   }
 
   @Override
   public boolean equals(final Object object) {
     if (object instanceof ViewAttribute) {
-      if (!super.equals(object)) {
-        return false;
-      }
       final ViewAttribute that = (ViewAttribute) object;
-      return Objects.equal(this.id, that.id);
+      return Objects.equal(this.viewId, that.viewId) && Objects.equal(this.getName(), that.getName()) && Objects.equal(this.value, that.value);
     }
     return false;
   }
 
   @Override
   public String toString() {
-    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("id", id).add("viewId", viewId).add("value", value).toString();
+    return MoreObjects.toStringHelper(this).add("super", super.toString()).add("viewId", viewId).add("name", getName()).add("value", value).toString();
   }
 
 }

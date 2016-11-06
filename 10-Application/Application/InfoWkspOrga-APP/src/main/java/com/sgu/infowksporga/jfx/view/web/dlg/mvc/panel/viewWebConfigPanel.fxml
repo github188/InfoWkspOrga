@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.sgu.core.framework.gui.jfx.control.GCheckBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GComboBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GLabel?>
+<?import com.sgu.core.framework.gui.jfx.control.GTextField?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GGridPane?>
+<?import com.sgu.core.framework.gui.jfx.control.pane.GHBox?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<TitledPane fx:id="ttlPnlViewConfig" text="Configuration" style="-fx-text-fill: #11468E" xmlns="http://javafx.com/javafx/8.0.60" 
+xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sgu.infowksporga.jfx.view.web.dlg.mvc.panel.ViewWebConfigPanelFxml">
+   <content>
+      <AnchorPane fx:id="ancPnlViewConfig">
+         <children>
+            <GGridPane fx:id="grdPnlViewConfig" hgap="5.0" prefHeight="30.0" prefWidth="602.0" vgap="0.0" 
+            AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="NEVER" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="1.7976931348623157E308" minWidth="160.0" prefWidth="160.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+               </rowConstraints>
+               <children>
+                  <GLabel fx:id="lblUrl" text="URL à afficher :" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                  <GTextField fx:id="txtUrl" GridPane.columnIndex="1" GridPane.columnSpan="1" GridPane.rowIndex="0" />
+               </children>
+            </GGridPane>
+         </children>
+      </AnchorPane>
+   </content>
+</TitledPane>

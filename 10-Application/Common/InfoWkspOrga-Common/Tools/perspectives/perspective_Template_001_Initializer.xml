@@ -10,41 +10,41 @@
 	<!-- +++++++++ -->
 	<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" projectId="1" baseFolder="" customer=""
 
-		name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+		name="workspaces.tree.node.root" description="" category="" tags=""  color="" bold="true" strike="true" italic="true" underline="true"
 		icon="" enabled="true" order="12" owner="" partage="" created_by=""
 
 	>
 
 		<xmlWorkspace id="1fdde" masterId="" parentId="" childrenWrkspCreationEnabled="true" projectId="1" baseFolder="" customer=""
-			name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+			name="workspaces.tree.node.root" description="" category="" tags=""  color="" bold="true" strike="true" italic="true" underline="true"
 			icon="" enabled="true" order="12" layout="" owner="" partage="" created_by="" />
 		
-		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" 
 
 			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="" />
 
 	
 	  <xmlWorkspace id="eeed1"  childrenWrkspCreationEnabled="true" 
 
-		name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+		name="workspaces.tree.node.root" description="" category="" tags=""  color="" bold="true" strike="true" italic="true" underline="true"
 		icon="" enabled="true" order="12" layout="" owner="" partage="" created_by=""
 
 	>
 
 		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" projectId="1" baseFolder="" customer=""
-			name="workspaces.tree.node.root" description="" category="" tags="" type="" color="" bold="true" strike="true" italic="true" underline="true"
+			name="workspaces.tree.node.root" description="" category="" tags=""  color="" bold="true" strike="true" italic="true" underline="true"
 			icon="" enabled="true" order="12" layout="" owner="" partage="" created_by="" />
 		
-		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+		<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" 
 
 			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="">
 			
 			
-			<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+			<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" 
 
 			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="" />
 			
-			<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" type=""
+			<xmlWorkspace id="1" masterId="" parentId="" childrenWrkspCreationEnabled="true" name="workspaces.tree.node.root" 
 
 			bold="true" strike="true" italic="true" underline="true" enabled="true" order="12" owner="" partage="PUBLIC" created_by="" />
 			

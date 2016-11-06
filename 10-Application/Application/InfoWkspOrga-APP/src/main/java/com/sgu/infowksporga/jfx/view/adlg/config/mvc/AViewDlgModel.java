@@ -2,9 +2,9 @@ package com.sgu.infowksporga.jfx.view.adlg.config.mvc;
 
 import java.util.Date;
 
-import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
 import com.sgu.infowksporga.business.entity.View;
+import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.IntegerProperty;
@@ -15,22 +15,19 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import lombok.Getter;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
  * The Class AViewDlgModel.
  */
 @Slf4j
-@Setter
 @Getter
-public abstract class AViewDlgModel<V extends AViewDlgViewFxml, C extends AGController> extends AGModel<AViewDlgViewFxml, AViewDlgController> {
+public abstract class AViewDlgModel<V extends AViewDlgViewFxml, C extends AViewDlgController> extends AGModel<V, C> {
 
   //----------------------------------------------------------------------
   // List of the property used to bind screen components with this Model
   // Bindings are initialized by the controller @see{controller.bindComponentsWithPojo()}
   //----------------------------------------------------------------------
-  private View view = new View();
 
   // IdentityCard panel Binding
   private IntegerProperty idProperty = new SimpleIntegerProperty();
@@ -73,57 +70,52 @@ public abstract class AViewDlgModel<V extends AViewDlgViewFxml, C extends AGCont
   }
 
   /**
-   * Map model to view.
+   * Map model to viewEntity.
    *
    * @return the view
    */
-  public View mapModelToView() {
-    final View view = new View();
+  public View mapModelToViewEntity() {
+    final View viewEntity = new View();
 
     //----------------------------
     // IdentityCard panel Binding
     //----------------------------
-    view.setId(idProperty.getValue());
-    view.setName(nameProperty.getValue());
-    view.setDescription(view().getPnlIdentityCardController().getHtmlEdtDescription().getHtmlText());
+    viewEntity.setId(idProperty.getValue());
+    viewEntity.setName(nameProperty.getValue());
+
+    final AViewDlgViewFxml viewDlg = view();
+    viewEntity.setDescription(viewDlg.getPnlIdentityCardController().getHtmlEdtDescription().getHtmlText());
+
+    viewEntity.setCategory(categoryProperty.getValue());
+    viewEntity.setTags(tagsProperty.getValue());
+    viewEntity.setCmmiPractices(cmmiPracticesProperty.getValue());
 
     //----------------------------
     // configuration panel Binding
     //----------------------------
-    mapConfigurationModelToView(view);
+    mapConfigurationModelToView(viewEntity);
 
     //----------------------------
     // style Binding
     //----------------------------
-    view.setBold(boldProperty.getValue());
-    view.setItalic(italicProperty.getValue());
-    view.setStrike(strikeProperty.getValue());
-    view.setUnderline(underlineProperty.getValue());
-    view.setColor(colorProperty.getValue());
-    view.setBgColor(bgColorProperty.getValue());
-    view.setIcon(iconProperty.getValue());
+    viewEntity.setBold(boldProperty.getValue());
+    viewEntity.setItalic(italicProperty.getValue());
+    viewEntity.setStrike(strikeProperty.getValue());
+    viewEntity.setUnderline(underlineProperty.getValue());
+    viewEntity.setColor(colorProperty.getValue());
+    viewEntity.setBgColor(bgColorProperty.getValue());
+    viewEntity.setIcon(iconProperty.getValue());
 
     //----------------------------
     // horodate Binding
     //----------------------------
-    view.setCreatedBy(createdByProperty.getValue());
-    view.setLastModifiedBy(lastModifiedByProperty.getValue());
+    viewEntity.setCreatedBy(createdByProperty.getValue());
+    viewEntity.setLastModifiedBy(lastModifiedByProperty.getValue());
 
-    view.setCreatedDate(createdDateProperty.getValue());
-    view.setLastModifiedDate(lastModifiedDateProperty.getValue());
+    viewEntity.setCreatedDate(createdDateProperty.getValue());
+    viewEntity.setLastModifiedDate(lastModifiedDateProperty.getValue());
 
-    return view;
-  }
-
-  /**
-   * Bind configuration panel.
-   *
-   * @param view the view
-   */
-  public void mapConfigurationModelToView(final View view) {
-    view.setCategory(categoryProperty.getValue());
-    view.setTags(tagsProperty.getValue());
-    view.setCmmiPractices(cmmiPracticesProperty.getValue());
+    return viewEntity;
   }
 
   /**
@@ -131,38 +123,42 @@ public abstract class AViewDlgModel<V extends AViewDlgViewFxml, C extends AGCont
    *
    * @return the view
    */
-  public void mapViewToModel(final View view) {
+  public void mapViewEntityToModel(final View viewEntity) {
     //----------------------------
     // IdentityCard panel Binding
     //----------------------------
-    idProperty.setValue(view.getId());
-    nameProperty.setValue(view.getName());
-    view().getPnlIdentityCardController().getHtmlEdtDescription().setHtmlText(view.getDescription()); // Because binding not worked for HTML Editor
+    idProperty.setValue(viewEntity.getId());
+    nameProperty.setValue(I18nHelperApp.getMessage(viewEntity.getName()));
+    final AViewDlgViewFxml viewDlg = view();
+    viewDlg.getPnlIdentityCardController().getHtmlEdtDescription().setHtmlText(I18nHelperApp.getMessage(viewEntity.getDescription())); // Because binding not worked for HTML Editor
+    categoryProperty.setValue(viewEntity.getCategory());
+    tagsProperty.setValue(viewEntity.getTags());
+    cmmiPracticesProperty.setValue(viewEntity.getCmmiPractices());
 
     //-----------------------------
     // configuration panel Binding
     //-----------------------------
-    mapConfigurationViewToModel(view);
+    mapConfigurationViewToModel(viewEntity);
 
     //----------------------------
     // style Binding
     //----------------------------
-    boldProperty.setValue(view.isBold());
-    italicProperty.setValue(view.isItalic());
-    strikeProperty.setValue(view.isStrike());
-    underlineProperty.setValue(view.isUnderline());
-    colorProperty.setValue(view.getColor());
-    bgColorProperty.setValue(view.getBgColor());
-    iconProperty.setValue(view.getIcon());
+    boldProperty.setValue(viewEntity.isBold());
+    italicProperty.setValue(viewEntity.isItalic());
+    strikeProperty.setValue(viewEntity.isStrike());
+    underlineProperty.setValue(viewEntity.isUnderline());
+    colorProperty.setValue(viewEntity.getColor());
+    bgColorProperty.setValue(viewEntity.getBgColor());
+    iconProperty.setValue(I18nHelperApp.getMessage(viewEntity.getIcon()));
 
     //----------------------------
     // horodate Binding
     //----------------------------
-    createdByProperty.setValue(view.getCreatedBy());
-    lastModifiedByProperty.setValue(view.getLastModifiedBy());
+    createdByProperty.setValue(viewEntity.getCreatedBy());
+    lastModifiedByProperty.setValue(viewEntity.getLastModifiedBy());
 
-    createdDateProperty.setValue(view.getCreatedDate());
-    lastModifiedDateProperty.setValue(view.getLastModifiedDate());
+    createdDateProperty.setValue(viewEntity.getCreatedDate());
+    lastModifiedDateProperty.setValue(viewEntity.getLastModifiedDate());
   }
 
   /**
@@ -170,10 +166,11 @@ public abstract class AViewDlgModel<V extends AViewDlgViewFxml, C extends AGCont
    *
    * @param view the view
    */
-  public void mapConfigurationViewToModel(final View view) {
-    categoryProperty.setValue(view.getCategory());
-    tagsProperty.setValue(view.getTags());
-    cmmiPracticesProperty.setValue(view.getCmmiPractices());
-  }
+  public abstract void mapConfigurationViewToModel(final View viewEntity);
+
+  /**
+   * Map configuration model to view.
+   */
+  public abstract void mapConfigurationModelToView(final View viewEntity);
 
 }

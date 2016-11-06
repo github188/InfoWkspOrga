@@ -6,7 +6,7 @@ import com.sgu.core.framework.gui.jfx.control.list.AbstractItemVo;
 import com.sgu.core.framework.gui.jfx.util.UtilGUI;
 import com.sgu.infowksporga.business.entity.Perspective;
 import com.sgu.infowksporga.jfx.i18n.I18nHelperApp;
-import com.sgu.infowksporga.jfx.perspective.UtilPerspective;
+import com.sgu.infowksporga.jfx.util.UtilPerspective;
 
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.ImageView;

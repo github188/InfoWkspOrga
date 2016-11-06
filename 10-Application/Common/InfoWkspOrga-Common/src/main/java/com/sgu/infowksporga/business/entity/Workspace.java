@@ -1,3 +1,6 @@
+/*
+ *
+ */
 package com.sgu.infowksporga.business.entity;
 
 import java.util.ArrayList;
@@ -19,18 +22,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedAttributeNode;
 import javax.persistence.NamedEntityGraph;
 import javax.persistence.NamedEntityGraphs;
+import javax.persistence.NamedNativeQueries;
+import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.NamedSubgraph;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Parameter;
 import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.NotBlank;
 
 import com.google.common.base.Objects;
 import com.sgu.core.framework.dao.jpa.converter.BooleanByteConverter;
@@ -38,9 +41,7 @@ import com.sgu.core.framework.dao.jpa.entity.AbstractDescribedAuditedEntity;
 import com.sgu.core.framework.i18n.I18nHelperFwk;
 import com.sgu.core.framework.util.UtilGen;
 import com.sgu.infowksporga.business.entity.converter.PartageEnumConverter;
-import com.sgu.infowksporga.business.entity.converter.WorkspaceTypeEnumConverter;
 import com.sgu.infowksporga.business.entity.enumeration.PartageEnum;
-import com.sgu.infowksporga.business.entity.enumeration.WorkspaceTypeEnum;
 import com.sgu.infowksporga.business.mapper.EntityWorkspaceCloner;
 
 import lombok.Getter;
@@ -57,7 +58,43 @@ import lombok.Setter;
 //@formatter:off
 
 //-----------------------------------------------------------------------
-// Named Queries
+//Named Natives Queries
+//-----------------------------------------------------------------------
+@NamedNativeQueries({
+  @NamedNativeQuery(name = Workspace.UPDATE_LAYOUT, query = "UPDATE  workspace SET\r\n" +
+  "  layout = :layout,\r\n" +
+  "  width = :width,\r\n" +
+  "  height = :height,\r\n" +
+  "  last_modified_by = :userLogin,\r\n" +
+  "  last_modified_date = :saveDate \r\n" +
+  "WHERE id = :workspaceId"),
+  @NamedNativeQuery(name = Workspace.UPDATE_PROPERTIES, query = "UPDATE  workspace SET\r\n"  +
+  "  master_id = :master_id,\r\n" +
+  "  parent_id = :parent_id,\r\n" +
+  "  children_wrksp_creation_enabled = :children_wrksp_creation_enabled,\r\n" +
+  "  project_id = :project_id,\r\n" +
+  "  base_folder = :base_folder,\r\n" +
+  "  customer = :customer,\r\n" +
+  "  name = :name,\r\n" +
+  "  description = :description,\r\n" +
+  "  category = :category,\r\n" +
+  "  tags = :tags,\r\n" +
+  "  bg_color = :bg_color,\r\n" +
+  "  color = :color,\r\n" +
+  "  bold = :bold,\r\n" +
+  "  strike = :strike,\r\n" +
+  "  italic = :italic,\r\n" +
+  "  underline = :underline,\r\n" +
+  "  icon = :icon,\r\n" +
+  "  enabled = :enabled,\r\n" +
+  "  owner = :owner,\r\n" +
+  "  partage = :partage,\r\n" +
+  "  last_modified_by = :last_modified_by,\r\n" +
+  "  last_modified_date = :last_modified_date\r\n" +
+  "WHERE id = :workspaceId")
+})
+//-----------------------------------------------------------------------
+// Named JQL Queries
 //-----------------------------------------------------------------------
 @NamedQueries({
 @NamedQuery(name = Workspace.FIND_WORKSPACE_WITH_VIEWS_AND_ATTR, query =
@@ -83,7 +120,7 @@ import lombok.Setter;
  */
 @NamedEntityGraphs({
   @NamedEntityGraph(
-      name = "workspace-Views-ViewAttributes",
+      name = Workspace.GRAPH_WORKSPACE_WITH_VIEWS_AND_ATTR,
       attributeNodes =  @NamedAttributeNode(value = "views", subgraph = "attributes"),
       subgraphs =  @NamedSubgraph(name = "attributes", attributeNodes = @NamedAttributeNode("attributes")))
 })
@@ -92,14 +129,23 @@ import lombok.Setter;
 //-----------------------------------------------------------------------
 // Class definition
 //-----------------------------------------------------------------------
-public class Workspace extends AbstractDescribedAuditedEntity<String> {
+public class Workspace extends AbstractDescribedAuditedEntity<String> implements IStylable {
   private static final long serialVersionUID = 1L;
+
+  /** The Constant I_AM_A_NEW_WORKSPACE. */
+  public static final String I_AM_A_NEW_WORKSPACE = "I_AM_A_NEW_WORKSPACE";
 
   /** The Constant FIND_WORKSPACE_WITH_VIEWS_AND_ATTR. */
   public static final String FIND_WORKSPACE_WITH_VIEWS_AND_ATTR = "findWorkspaceWithViewsAndAttr";
 
   /** The Constant WORKSPACE_WITH_VIEWS_AND_ATTR_GRAPH. */
   public static final String GRAPH_WORKSPACE_WITH_VIEWS_AND_ATTR = "workspace-Views-ViewAttributes";
+
+  /** The Constant UPDATE_LAYOUT. */
+  public static final String UPDATE_LAYOUT = "Update-only-workspace-layout";
+
+  /** The Constant UPDATE_PROPERTIES don't include workspace layout and views. */
+  public static final String UPDATE_PROPERTIES = "Update-only-workspace-properties";
 
   @Id
   @GenericGenerator(name = "MySqlIdentifierGenerator", strategy = "com.sgu.core.framework.dao.mysql.MySqlIdentifierGenerator",
@@ -159,20 +205,16 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
    * code de regroupement d''une même famille de workspaces
    */
   @Length(max = 50)
-  @NotBlank
-  @NotNull
   private String category;
 
   @Column(nullable = true, length = 500)
   private String tags;
 
-  @Column(nullable = false)
-  @Enumerated(EnumType.STRING)
-  @Convert(converter = WorkspaceTypeEnumConverter.class)
-  private WorkspaceTypeEnum type = WorkspaceTypeEnum.CLASSEUR;
+  @Column(nullable = false, length = 7)
+  private String color = "#000000";
 
-  @Column(nullable = false, length = 13)
-  private String color = "0,0,0";
+  @Column(name = "bg_color", nullable = true, length = 7)
+  private String bgColor;
 
   @Column(nullable = false)
   @Convert(converter = BooleanByteConverter.class)
@@ -215,8 +257,12 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
    * Store the workspace order in a specific perspective
    * This info is stored in table perspective_workspaces.workspaceOrder
    */
-  @Transient
-  private transient Integer order;
+  //@Transient
+  //private Integer order;
+
+  /** store the current perspective id in which the workspace is visible to manage Workspace order */
+  //@Transient
+  //private Integer perspectiveId;
 
   /** {@inheritDoc} */
   @Override
@@ -292,7 +338,11 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
 
   @Override
   public String toString() {
-    return I18nHelperFwk.getMessage(getName());
+    String str = "Id : " + id + "; Nom : " + I18nHelperFwk.getMessage(getName());
+    if (parent != null) {
+      str = str + " ; Parent info ==> [id : " + parent.getId() + "  name : " + I18nHelperFwk.getMessage(parent.getName()) + "]";
+    }
+    return str;
   }
 
   @Override
@@ -303,9 +353,6 @@ public class Workspace extends AbstractDescribedAuditedEntity<String> {
   @Override
   public boolean equals(final Object object) {
     if (object instanceof Workspace) {
-      if (!super.equals(object)) {
-        return false;
-      }
       final Workspace that = (Workspace) object;
       return Objects.equal(this.id, that.id);
     }

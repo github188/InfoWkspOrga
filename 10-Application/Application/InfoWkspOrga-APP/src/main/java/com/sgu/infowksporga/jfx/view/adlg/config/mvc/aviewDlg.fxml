@@ -34,26 +34,19 @@
 
 						<AnchorPane GridPane.rowIndex="1">
 							<children>
-								<fx:include fx:id="pnlReference" source="./panel/referencePanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-									AnchorPane.topAnchor="0.0" />
-							</children>
-						</AnchorPane>
-
-						<AnchorPane GridPane.rowIndex="2">
-							<children>
 								<fx:include fx:id="pnlConfiguration" source="./panel/configurationPanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
 									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 							</children>
 						</AnchorPane>
 
-						<AnchorPane GridPane.rowIndex="3">
+						<AnchorPane GridPane.rowIndex="2">
 							<children>
 								<fx:include fx:id="pnlStyle" source="../../../component/stylePanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
 									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
 							</children>
 						</AnchorPane>
 
-						<AnchorPane GridPane.rowIndex="4">
+						<AnchorPane GridPane.rowIndex="3">
 							<children>
 								<fx:include fx:id="pnlHorodate" source="../../../component/horodatePanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
 									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" maxHeight="1.7976931348623157E308"/>

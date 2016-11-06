@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import com.sgu.core.framework.gui.jfx.control.pane.GHBox?>
+<?import com.sgu.core.framework.gui.jfx.control.GButton?>
+
+<DialogPane fx:id="dlgPnlDockView" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.sgu.infowksporga.jfx.view.web.dlg.mvc.WebViewDlgViewFxml">
+	<content>
+		<AnchorPane maxHeight="770.0" maxWidth="1000.0" prefHeight="770.0" prefWidth="760.0">
+			<children>
+				<GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+					<columnConstraints>
+						<ColumnConstraints hgrow="ALWAYS" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints vgrow="SOMETIMES" />
+						<RowConstraints vgrow="SOMETIMES" />
+						<RowConstraints vgrow="SOMETIMES" />
+						<RowConstraints vgrow="ALWAYS" />
+					</rowConstraints>
+					<children>
+						<AnchorPane>
+							<children>
+								<fx:include fx:id="pnlIdentityCard" source="../../../../component/identityCardPanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+
+						<AnchorPane GridPane.rowIndex="1">
+							<children>
+								<fx:include fx:id="pnlConfiguration" source="./panel/viewWebConfigPanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+
+						<AnchorPane GridPane.rowIndex="2">
+							<children>
+								<fx:include fx:id="pnlStyle" source="../../../../component/stylePanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+							</children>
+						</AnchorPane>
+
+						<AnchorPane GridPane.rowIndex="3">
+							<children>
+								<fx:include fx:id="pnlHorodate" source="../../../../component/horodatePanel.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+									AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" maxHeight="1.7976931348623157E308"/>
+							</children>
+						</AnchorPane>
+
+					</children>
+				</GridPane>
+
+			</children>
+		</AnchorPane>
+	</content>
+</DialogPane>

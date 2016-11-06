@@ -1,48 +1,44 @@
 package com.sgu.infowksporga.business.pivot.workspace;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import com.sgu.core.framework.pivot.AbstractIn;
-import com.sgu.infowksporga.business.dto.PerspectiveWorkspaceOrderDto;
-import com.sgu.infowksporga.business.dto.WorkspaceDto;
+import com.sgu.infowksporga.business.entity.Workspace;
 
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * Description : SaveWorkspaceIn class<br>
+ * Description : SaveWorkspaceIn class<br>.
  */
+
 @Getter
 @Setter
 public class SaveWorkspaceIn extends AbstractIn {
-  /**
-   * The attribute serialVersionUID
-   */
+
+  /** The attribute serialVersionUID. */
   private static final long serialVersionUID = 1471122829982L;
 
-  /**
-   * Attribute
-   */
-  private WorkspaceDto workspaceDto;
+  /** The workspace properties to save. */
+  private Workspace workspace;
+
+  /** The perspective id. */
+  private Integer perspectiveId;
 
   /**
-   * The perspective workspace order dto.
-   * Used when we create a new Workspace
+   * The new workspaces order in the current perspective
+   * cf workspace.perspectiveId transient property.
+   * Map<WorkspaceId, newOrder>
    */
-  private PerspectiveWorkspaceOrderDto perspectiveWorkspaceOrderDto;
+  private Map<String, Integer> newWorkspacesOrder;
 
   /**
-   * Constructor<br>
+   * Constructor<br>.
    */
   public SaveWorkspaceIn() {
     super();
-  }
-
-  /**
-   * The Constructor.
-   *
-   * @param workspaceDto the workspace dto
-   */
-  public SaveWorkspaceIn(final WorkspaceDto workspaceDto) {
-    this.workspaceDto = workspaceDto;
+    this.newWorkspacesOrder = new LinkedHashMap<String, Integer>(10);
   }
 
 }

@@ -4,62 +4,68 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.sgu.apt.annotation.AnnotationConfig;
+import com.sgu.apt.annotation.i18n.I18n;
+import com.sgu.apt.annotation.i18n.I18nProperty;
+import com.sgu.core.framework.i18n.I18nHelperFwk;
+import com.sgu.core.framework.i18n.util.I18NConstant;
+
 /**
  * Description : Partage Enum class<br>
  *
  * @author SGU
  */
+
+@I18n(baseProject = AnnotationConfig.I18N_TARGET_APPLICATION_PROPERTIES_FOLDER, filePackage = "i18n", fileName = "application-common",
+properties = { // Force /n
+              @I18nProperty(key = "enum.partage.private" + I18NConstant.TEXT, value = "Personnel"), // Force /n
+              @I18nProperty(key = "enum.partage.private" + I18NConstant.DESCRIPTION, value = "Workspace uniquement visible par le propriétaire"), // Force /n
+              @I18nProperty(key = "enum.partage.private" + I18NConstant.ICON, value = "/icons/user.png"), // Force /n
+              //-----------------
+              @I18nProperty(key = "enum.partage.public" + I18NConstant.TEXT, value = "Public"), // Force /n
+              @I18nProperty(key = "enum.partage.public" + I18NConstant.DESCRIPTION, value = "Workspace visible par tout le monde"), // Force /n
+              @I18nProperty(key = "enum.partage.public" + I18NConstant.ICON, value = "/icons/users.png"), // Force /n
+              //-----------------
+              @I18nProperty(key = "enum.partage.authorization" + I18NConstant.TEXT, value = "Soumis à authorisation"), // Force /n
+              @I18nProperty(key = "enum.partage.authorization" + I18NConstant.DESCRIPTION,
+              value = "Seulement les utilisateurs ayant des droits sur ce Workspace pourront y accéder"), // Force /n
+              @I18nProperty(key = "enum.partage.authorization" + I18NConstant.ICON, value = "/icons/lock.png"), // Force /n
+})
 public enum PartageEnum implements Serializable {
-
-                                                 /**
-                                                  * Private Access
-                                                  */
-                                                 PRIVATE("PRIVATE"),
-
-                                                 /**
-                                                  * Public Access
-                                                  */
-                                                 PUBLIC("PUBLIC"),
-
-                                                 /**
-                                                  * Invisible resource for the user
-                                                  */
-                                                 AUTHORIZATION("AUTHORIZATION");
+                                                 PRIVATE("PRIVATE", "enum.partage.private"),
+                                                 PUBLIC("PUBLIC", "enum.partage.public"),
+                                                 AUTHORIZATION("AUTHORIZATION", "enum.partage.authorization");
 
   /**
-   * Store the value of the enum
+   * The String value of the Enum
    */
   private String value;
+
+  /** The i18n key. */
+  private String bundleKey;
 
   /**
    * Constructor<br>
    *
-   * @param value the enum value
+   * @param value
    */
-  private PartageEnum(final String value) {
+  PartageEnum(final String value, final String bundleKey) {
     this.value = value;
+    this.bundleKey = bundleKey;
   }
 
   /**
-   * @see #value
-   * @return the value : See field description
-   */
-  public String getValue() {
-    return value;
-  }
-
-  /**
-   * Description : Retrieve the Enum corresponding to the value <br>
+   * Description : getEnumFromString method <br>
    *
-   * @author SGU
-   * @param value of enum
-   * @return Enum The Enum
+   * @param value The value to check
+   * @return The enum corresponding to the given String
    */
   public static PartageEnum getEnumForValue(final String value) {
-    final PartageEnum[] enums = values();
-    for (final PartageEnum partage : enums) {
-      if (partage.value.equals(value)) {
-        return partage;
+    if (value != null) {
+      for (final PartageEnum b : PartageEnum.values()) {
+        if (value.equalsIgnoreCase(b.value)) {
+          return b;
+        }
       }
     }
     return null;
@@ -78,6 +84,63 @@ public enum PartageEnum implements Serializable {
     }
 
     return values;
+  }
+
+  /**
+   * Gets the enum as ordered list.
+   *
+   * @return the enum as ordered list
+   */
+  public static List<PartageEnum> getEnumAsOrderedList() {
+    final List<PartageEnum> list = new ArrayList<PartageEnum>(values().length);
+    final PartageEnum[] enumValues = values();
+    for (final PartageEnum partageEnum : enumValues) {
+      list.add(partageEnum);
+    }
+
+    return list;
+  }
+
+  /**
+   * @see #value
+   * @return the value : See field description
+   */
+  public String getValue() {
+    return value;
+  }
+
+  /**
+   * @return the bundleKey
+   */
+  public final String getBundleKey() {
+    return bundleKey;
+  }
+
+  /**
+   * Gets the i18n text.
+   *
+   * @return the i18n text
+   */
+  public String getI18nText() {
+    return I18nHelperFwk.getGivenDefaultMessageIfNull(bundleKey + I18NConstant.TEXT, "???");
+  }
+
+  /**
+   * Gets the i18n icon.
+   *
+   * @return the i18n icon
+   */
+  public String getI18nIcon() {
+    return I18nHelperFwk.getNullMessage(bundleKey + I18NConstant.ICON);
+  }
+
+  /**
+   * Gets the i18n description.
+   *
+   * @return the i18n description
+   */
+  public String getI18nDescription() {
+    return I18nHelperFwk.getNullMessage(bundleKey + I18NConstant.DESCRIPTION);
   }
 
 }

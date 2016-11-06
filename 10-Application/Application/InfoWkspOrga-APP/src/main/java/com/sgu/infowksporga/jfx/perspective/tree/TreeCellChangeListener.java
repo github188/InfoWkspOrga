@@ -2,7 +2,7 @@ package com.sgu.infowksporga.jfx.perspective.tree;
 
 import com.sgu.core.framework.gui.jfx.control.list.AbstractItemVo;
 import com.sgu.core.framework.spring.loader.SpringBeanHelper;
-import com.sgu.infowksporga.jfx.main.mvc.ApplicationScreen;
+import com.sgu.infowksporga.jfx.app.mvc.ApplicationScreen;
 import com.sgu.infowksporga.jfx.perspective.tree.vo.WorkspaceItemVo;
 import com.sgu.infowksporga.jfx.util.GUISessionProxy;
 import com.sgu.infowksporga.jfx.y_service.remote.workspace.ShowWorkspaceFacade;

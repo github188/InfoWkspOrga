@@ -15,6 +15,7 @@ import com.sgu.core.framework.gui.jfx.control.list.DefaultListCellFactory;
 import com.sgu.core.framework.gui.jfx.control.pane.GGridPane;
 import com.sgu.core.framework.gui.jfx.screen.AGController;
 import com.sgu.core.framework.gui.jfx.screen.AGModel;
+import com.sgu.core.framework.gui.jfx.screen.AGScreen;
 import com.sgu.core.framework.gui.jfx.screen.AGView;
 import com.sgu.core.framework.gui.jfx.util.UtilControl;
 import com.sgu.core.framework.i18n.util.I18NConstant;
@@ -34,7 +35,7 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * The Class ConfigurationPanelFxml.
+ * The Class ViewWebConfigPanelFxml.
  *
  * @see {ViewComponentAttributesGenerator}
  */
@@ -45,7 +46,7 @@ import lombok.extern.slf4j.Slf4j;
 properties = {// Force /n
               @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.TEXT, value = "Configuration"), // Force /n
               @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.STYLE_CSS, value = "-fx-text-fill: #11468E"), // Force /n
-              @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.ICON, value = "/icons/view/configuration.gif"), // Force /n
+              @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "title" + I18NConstant.ICON, value = "/icons/configuration.gif"), // Force /n
               //----------
               @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "baseFolder" + I18NConstant.TEXT, value = "Base des dossiers :"), // Force /n
               @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "baseFolder" + I18NConstant.TOOLTIP_TEXT, value = "Utilisées par les vues de type Dossier"), // Force /n
@@ -61,9 +62,9 @@ properties = {// Force /n
               @I18nProperty(key = ConfigurationPanelFxml.PROPERTIES_PREFIX + "wksp.position" + I18NConstant.TOOLTIP_TEXT,
               value = "Indique la position (ordre de 0 à n) à laquelle apparaitra ce workspace au sein de sont parent (si vide ou = 0, il sera ajouter au parent à l''index 0)"), // Force /n
 })
-public class ConfigurationPanelFxml extends AGView<AGModel, AGController> implements Initializable {
+public class ConfigurationPanelFxml extends AGView<AGScreen, AGModel, AGController> implements Initializable {
 
-  /** The Constant ConfigurationPanelFxml.PROPERTIES_PREFIX. */
+  /** The Constant ViewWebConfigPanelFxml.PROPERTIES_PREFIX. */
   public static final String PROPERTIES_PREFIX = "dialog.workspace.panel.configuration.";
 
   //---------------------------------
@@ -161,8 +162,6 @@ public class ConfigurationPanelFxml extends AGView<AGModel, AGController> implem
     cbbOwner.getItems().add(new CbbOwnerItemVo(new UserInfo("jcquentin", "Quentin", "Jean-Christophe", "jean-christophe.quentin@gfi.fr", "fr_FR", "hi_IN")));
     cbbOwner.getItems().add(new CbbOwnerItemVo(new UserInfo("pleriche", "Leriche", "Pierre", "pierre.leriche@gfi.fr", "fr_FR", "ar_QA")));
 
-    // By default select the connected user
-    cbbOwner.getSelectionModel().select(new CbbOwnerItemVo(GUISessionProxy.getGuiSession().getCurrentUser()));
   }
 
   /** {@inheritDoc} */
@@ -175,6 +174,31 @@ public class ConfigurationPanelFxml extends AGView<AGModel, AGController> implem
     UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "cbbPartage", lblCbbPartage);
     UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "owner", lblOwner);
     UtilControl.applyBundleConfigToLabel(PROPERTIES_PREFIX + "wksp.position", lblWkspPosition);
+
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void applyDisplayModeCreate() {
+    super.applyDisplayModeCreate();
+
+    // By Default in creation select the public mode
+    cbbPartage.getSelectionModel().select(new CbbPartageItemVo(PartageEnum.PUBLIC));
+
+    // By default select the connected user
+    cbbOwner.getSelectionModel().select(new CbbOwnerItemVo(GUISessionProxy.getGuiSession().getCurrentUser()));
+
+    chkEnable.setSelected(true);
+    chkChildrenAllowed.setSelected(true);
+
+  }
+
+  /** {@inheritDoc} */
+  @Override
+  public void applyDisplayModeUpdate() {
+    super.applyDisplayModeUpdate();
+
+    // Get the position of the workspace in his parent
 
   }
 
